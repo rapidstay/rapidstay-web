@@ -1,131 +1,219 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>RapidStay – Hotel Search</title>
-    <style>
-        body {
-          font-family: "Noto Sans KR", sans-serif;
-          margin: 0; padding: 0;
-          background: #fafafa;
-        }
-        header {
-          background: #222; color: #fff;
-          padding: 16px 24px; font-size: 20px;
-        }
-        #search-bar {
-          background: #fff;
-          padding: 20px;
-          display: flex;
-          justify-content: center;
-          gap: 10px;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        input, button {
-          padding: 10px; font-size: 14px;
-        }
-        #hotel-list {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-          gap: 20px; padding: 30px;
-        }
-        .hotel-card {
-          background: white;
-          border-radius: 8px;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-          overflow: hidden;
-          transition: transform .2s ease;
-          cursor: pointer;
-        }
-        .hotel-card:hover { transform: translateY(-5px); }
-        .hotel-card img {
-          width: 100%; height: 200px; object-fit: cover;
-        }
-        .hotel-info { padding: 15px; }
-        .hotel-info h3 { margin: 0 0 8px 0; }
-        .amenities { font-size: 13px; color: #666; }
+  <meta charset="UTF-8">
+  <title>RapidStay – Hotel Search</title>
+  <style>
+    body {
+      font-family: "Noto Sans KR", sans-serif;
+      margin: 0; padding: 0;
+      background: #fafafa;
+    }
+    header {
+      background: #222; color: #fff;
+      padding: 16px 24px; font-size: 20px;
+    }
+    #search-bar {
+      background: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    input, button {
+      padding: 10px; font-size: 14px;
+    }
 
-        /* 지도 팝업 */
-        .modal {
-          display: none; position: fixed; z-index: 1000;
-          left: 0; top: 0; width: 100%; height: 100%;
-          background-color: rgba(0,0,0,0.4);
-        }
-        .modal-content {
-          background: #fff; margin: 10% auto; padding: 20px;
-          border-radius: 8px; width: 80%; max-width: 800px;
-        }
-        .close {
-          float: right; font-size: 24px; cursor: pointer;
-        }
-    </style>
+    /* 객실 인원 모달 */
+    #guestModal {
+      display: none;
+      position: fixed; z-index: 9999;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      align-items: center; justify-content: center;
+      overflow-y: auto;
+    }
+    .guest-modal-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 420px;
+    }
+    .room-box {
+      border: 1px solid #eee;
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+    }
+    .row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .row span { flex: 1; }
+    select { padding: 6px; }
+
+    /* 지도 팝업 */
+    .modal {
+      display: none; position: fixed; z-index: 1000;
+      left: 0; top: 0; width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+      background: #fff; margin: 10% auto; padding: 20px;
+      border-radius: 8px; width: 80%; max-width: 800px;
+    }
+    .close {
+      float: right; font-size: 24px; cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 <header>🏨 RapidStay Hotel Search</header>
 
 <section id="search-bar">
-    <input type="text" id="city" placeholder="도시명 (예: Seoul)">
-    <input type="date" id="checkIn">
-    <input type="date" id="checkOut">
-    <button id="searchBtn">검색</button>
+  <input type="text" id="city" placeholder="도시명 (예: Seoul)">
+  <input type="date" id="checkIn">
+  <input type="date" id="checkOut">
+
+  <!-- 객실 인원 버튼 -->
+  <button id="guestBtn">객실 1 • 성인 2 • 아동 0</button>
+
+  <button id="searchBtn">검색</button>
 </section>
 
 <section id="hotel-list"></section>
 
 <div style="text-align:center; margin:20px;">
-    <button id="openMapBtn">전체 지도 보기</button>
+  <button id="openMapBtn">전체 지도 보기</button>
+</div>
+
+<!-- ✅ 객실/인원 모달 -->
+<div id="guestModal">
+  <div class="guest-modal-content" id="guestContent">
+    <h3>객실 설정</h3>
+    <div id="roomsContainer"></div>
+    <button id="addRoomBtn">+ 객실 추가</button>
+    <button id="guestConfirm">확인</button>
+  </div>
 </div>
 
 <!-- 지도 모달 -->
 <div id="mapModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeMap()">&times;</span>
-        <div id="googleMap" style="width:100%;height:500px;"></div>
-    </div>
+  <div class="modal-content">
+    <span class="close" onclick="closeMap()">&times;</span>
+    <div id="googleMap" style="width:100%;height:500px;"></div>
+  </div>
 </div>
 
 <script>
-    const STORAGE_KEY = 'hotelSearchCache';
+const API_BASE_URL =
+  window.location.hostname.includes('localhost') ||
+  window.location.hostname.includes('127.0.0.1')
+    ? 'http://localhost:8081'
+    : 'https://xap-h2xh.onrender.com';
 
-    document.getElementById('searchBtn').addEventListener('click', async () => {
-      const city = document.getElementById('city').value || 'Seoul';
-      const checkIn = document.getElementById('checkIn').value || '2025-11-01';
-      const checkOut = document.getElementById('checkOut').value || '2025-11-03';
-      const cacheKey = `${city}_${checkIn}_${checkOut}`;
+const STORAGE_KEY = 'hotelSearchCache';
+let rooms = [{ adults: 2, children: 0, childAges: [] }];
+let searchState = {}; // ✅ 검색 상태 저장용
 
-      // 캐시 확인
-      const cache = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
-      if (cache[cacheKey]) {
-        console.log('🔁 캐시 데이터 사용');
-        renderHotels(cache[cacheKey]);
-        return;
-      }
+// ---------- 객실 모달 ----------
+const guestBtn = document.getElementById('guestBtn');
+const guestModal = document.getElementById('guestModal');
+const roomsContainer = document.getElementById('roomsContainer');
 
-      // API 호출
-      const res = await fetch(`https://xap-h2xh.onrender.com/api/hotels/search?city=${city}&checkIn=${checkIn}&checkOut=${checkOut}`);
-      const data = await res.json();
+guestBtn.onclick = () => { guestModal.style.display = 'flex'; renderRooms(); };
+document.getElementById('addRoomBtn').onclick = () => {
+  rooms.push({ adults: 2, children: 0, childAges: [] });
+  renderRooms();
+};
+document.getElementById('guestConfirm').onclick = () => {
+  guestModal.style.display = 'none';
+  updateGuestButton();
+};
 
-      // 캐시 저장
-      cache[cacheKey] = data;
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(cache));
+function renderRooms() {
+  roomsContainer.innerHTML = '';
+  rooms.forEach((room, idx) => {
+    const div = document.createElement('div');
+    div.className = 'room-box';
+    div.innerHTML = `
+      <h4>객실 ${idx + 1}</h4>
+      <div class="row">
+        <span>성인</span>
+        <button class="adultMinus">-</button>
+        <span class="adultCount">${room.adults}</span>
+        <button class="adultPlus">+</button>
+      </div>
+      <div class="row">
+        <span>아동</span>
+        <button class="childMinus">-</button>
+        <span class="childCount">${room.children}</span>
+        <button class="childPlus">+</button>
+      </div>
+      <div class="childAges"></div>
+    `;
+    roomsContainer.appendChild(div);
 
-      renderHotels(data);
-    });
+    const ageBox = div.querySelector('.childAges');
+    renderChildAges(ageBox, room);
 
-    // 뒤로가기 시 복원
-    window.addEventListener('pageshow', (event) => {
-      if (event.persisted) {
-        const cache = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
-        const lastKey = Object.keys(cache).pop();
-        if (lastKey) renderHotels(cache[lastKey]);
-      }
-    });
+    div.querySelector('.adultPlus').onclick = () => { room.adults++; div.querySelector('.adultCount').textContent = room.adults; };
+    div.querySelector('.adultMinus').onclick = () => { if (room.adults > 1) room.adults--; div.querySelector('.adultCount').textContent = room.adults; };
+    div.querySelector('.childPlus').onclick = () => { room.children++; room.childAges.push(null); div.querySelector('.childCount').textContent = room.children; renderChildAges(ageBox, room); };
+    div.querySelector('.childMinus').onclick = () => { if (room.children > 0) { room.children--; room.childAges.pop(); } div.querySelector('.childCount').textContent = room.children; renderChildAges(ageBox, room); };
+  });
+}
 
-    // ✅ 비동기 렌더링 + 클릭 이벤트 바인딩 방식
-    function renderHotels(hotels) {
+function renderChildAges(box, room) {
+  box.innerHTML = '';
+  for (let i = 0; i < room.children; i++) {
+    const select = document.createElement('select');
+    select.innerHTML = '<option value="">나이</option>' +
+      Array.from({length: 12}, (_, n) => `<option value="${n}">${n}세</option>`).join('');
+    select.onchange = e => room.childAges[i] = parseInt(e.target.value);
+    box.appendChild(select);
+  }
+}
+
+function updateGuestButton() {
+  const totalRooms = rooms.length;
+  const totalAdults = rooms.reduce((a, r) => a + r.adults, 0);
+  const totalChildren = rooms.reduce((a, r) => a + r.children, 0);
+  guestBtn.textContent = `객실 ${totalRooms} • 성인 ${totalAdults} • 아동 ${totalChildren}`;
+}
+
+// ---------- 검색 ----------
+document.getElementById('searchBtn').addEventListener('click', async () => {
+  const city = document.getElementById('city').value || 'Seoul';
+  const checkIn = document.getElementById('checkIn').value || '2025-11-01';
+  const checkOut = document.getElementById('checkOut').value || '2025-11-03';
+
+  searchState = { city, checkIn, checkOut, rooms };
+
+  const cacheKey = `${city}_${checkIn}_${checkOut}_${JSON.stringify(rooms)}`;
+  const cache = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+  if (cache[cacheKey]) {
+    console.log('🔁 캐시 데이터 사용');
+    renderHotels(cache[cacheKey]);
+    return;
+  }
+
+  const payload = { city, checkIn, checkOut, rooms };
+  const res = await fetch(`${API_BASE_URL}/api/hotels/search`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+  const data = await res.json();
+
+  cache[cacheKey] = data;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(cache));
+  renderHotels(data);
+});
+
+// ---------- 렌더링 ----------
+function renderHotels(hotels) {
   const validHotels = hotels.filter(h => h.id != null);
   const list = document.getElementById('hotel-list');
-
   list.innerHTML = validHotels.map(h => `
     <div class="hotel-card" data-id="${h.id}">
       <img src="https://picsum.photos/seed/${h.name}/400/250" alt="${h.name}">
@@ -140,43 +228,48 @@
   document.querySelectorAll('.hotel-card').forEach(card => {
     card.addEventListener('click', () => {
       const id = card.dataset.id;
-      console.log('➡️ 클릭:', id);
       if (!id) return alert('⚠️ 호텔 ID 없음');
-      window.location.href = `detail.html?id=${id}`;
+
+      // ✅ rooms를 JSON 문자열 그대로 전달 (한 번만 encodeURIComponent)
+      const query = new URLSearchParams({
+        id,
+        city: searchState.city,
+        checkIn: searchState.checkIn,
+        checkOut: searchState.checkOut,
+        rooms: JSON.stringify(searchState.rooms)
+      }).toString();
+
+      window.location.href = `detail.html?${query}`;
     });
   });
 
-  window.currentHotels = hotels; // 지도용 전역 변수 저장
+  window.currentHotels = hotels;
 }
 
-    // ✅ 구글 지도
-    document.getElementById('openMapBtn').onclick = function() {
-      document.getElementById('mapModal').style.display = 'block';
-      initMap();
-    };
-    function closeMap() {
-      document.getElementById('mapModal').style.display = 'none';
-    }
+// ---------- 지도 ----------
+document.getElementById('openMapBtn').onclick = function() {
+  document.getElementById('mapModal').style.display = 'block';
+  initMap();
+};
+function closeMap() { document.getElementById('mapModal').style.display = 'none'; }
 
-    function initMap() {
-      const map = new google.maps.Map(document.getElementById('googleMap'), {
-        zoom: 12,
-        center: { lat: 37.5665, lng: 126.9780 }
-      });
-
-      (window.currentHotels || []).forEach(hotel => {
-        if (hotel.latitude && hotel.longitude) {
-          new google.maps.Marker({
-            position: { lat: hotel.latitude, lng: hotel.longitude },
-            map,
-            title: hotel.name
-          });
-        }
+function initMap() {
+  const map = new google.maps.Map(document.getElementById('googleMap'), {
+    zoom: 12,
+    center: { lat: 37.5665, lng: 126.9780 }
+  });
+  (window.currentHotels || []).forEach(hotel => {
+    if (hotel.latitude && hotel.longitude) {
+      new google.maps.Marker({
+        position: { lat: hotel.latitude, lng: hotel.longitude },
+        map,
+        title: hotel.name
       });
     }
+  });
+}
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMfUN2Rq4MS7VHqNTlbK23JEi_T6QUQPU"></script>
-
 </body>
 </html>
