@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>호텔 상세 정보 - RapidStay</title>
+    <style>
+        body {
+          font-family: "Noto Sans KR", sans-serif;
+          margin: 0; padding: 0;
+          background: #fafafa;
+        }
+        header {
+          background: #222;
+          color: #fff;
+          padding: 16px 24px;
+          font-size: 20px;
+        }
+        .container {
+          max-width: 1000px;
+          margin: 30px auto;
+          background: white;
+          border-radius: 10px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          padding: 30px;
+        }
+        .hotel-header img {
+          width: 100%; height: 350px; object-fit: cover;
+          border-radius: 8px;
+        }
+        .hotel-info {
+          margin-top: 20px;
+        }
+        .hotel-info h2 { margin: 10px 0; }
+        .amenities span {
+          display: inline-block;
+          margin: 4px;
+          background: #f3f3f3;
+          padding: 6px 10px;
+          border-radius: 5px;
+          font-size: 13px;
+          color: #555;
+        }
+        .room-card {
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          margin: 20px 0;
+          overflow: hidden;
+          display: flex;
+          background: #fff;
+          transition: 0.2s ease;
+        }
+        .room-card:hover { transform: translateY(-3px); }
+        .room-card img {
+          width: 250px;
+          object-fit: cover;
+        }
+        .room-info {
+          padding: 16px;
+          flex: 1;
+        }
+        .room-info h3 { margin-top: 0; }
+        .price { font-weight: bold; color: #222; }
+        .cancel-policy {
+          font-size: 13px; color: #888;
+        }
+        #map {
+          margin-top: 30px;
+          height: 350px;
+          border-radius: 10px;
+        }
+
+        .modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+  background: #fff;
+  margin: 8% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 700px;
+}
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+<header>🏨 RapidStay 상세 보기</header>
+
+<div class="container">
+    <div id="hotel-detail"></div>
+    <div id="room-list"></div>
+    <div id="map"></div>
+</div>
+
+<!-- 객실 상세 모달 -->
+<div id="roomModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeRoomModal()">&times;</span>
+        <div id="roomDetail"></div>
+    </div>
+</div>
+
+<script>
+
+    async function loadHotelDetail() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const hotelId = urlParams.get("id");
+
+    const res = await fetch(`https://xap-h2xh.onrender.com/api/hotels/detail?hotelId=${encodeURIComponent(hotelId)}`);
+    console.log("🔍 status:", res.status);
+    const hotel = await res.json();
+
+    window.currentHotel = hotel; // 팝업용 데이터 저장
+
+    const hotelImagesHtml = hotel.images
+      .map(img => `<img src="${img}" alt="${hotel.name}" style="width:180px;height:120px;margin:6px;border-radius:8px;object-fit:cover;">`)
+      .join('');
+
+    document.getElementById('hotel-detail').innerHTML = `
+      <div class="hotel-header">
+        <div>${hotelImagesHtml}</div>
+        <h2>${hotel.name}</h2>
+        <p>📍 ${hotel.address}</p>
+        <p>⭐ ${hotel.rating} / 5.0</p>
+        <div class="amenities">${hotel.amenities.map(a => `<span>${a}</span>`).join('')}</div>
+        <p style="margin-top:10px;">${hotel.description}</p>
+      </div>
+    `;
+
+    // ✅ 객실 목록
+    const roomList = document.getElementById('room-list');
+    roomList.innerHTML = hotel.rooms.map((r, idx) => `
+      <div class="room-card">
+        <img src="${r.images[0]}" alt="${r.roomName}" style="cursor:pointer;" onclick="openRoomModal(${idx})">
+        <div class="room-info">
+          <h3>${r.roomName}</h3>
+          <p>🛏️ ${r.bedType}</p>
+          <p>💰 <span class="price">${r.finalPrice.toLocaleString()}원</span>
+              <span style="text-decoration:line-through; color:#888;">${r.originalPrice.toLocaleString()}원</span></p>
+          <p class="cancel-policy">📆 ${r.cancellationPolicy}</p>
+          <p>🏷️ ${r.amenities.join(' · ')}</p>
+        </div>
+      </div>
+    `).join('');
+
+    // ✅ 지도
+    const map = new google.maps.Map(document.getElementById('map'), {
+      center: { lat: hotel.latitude, lng: hotel.longitude },
+      zoom: 14,
+    });
+    new google.maps.Marker({
+      position: { lat: hotel.latitude, lng: hotel.longitude },
+      map,
+      title: hotel.name
+    });
+  }
+
+  // ✅ 객실 팝업 기능
+function openRoomModal(index) {
+  const room = window.currentHotel.rooms[index];
+  const modal = document.getElementById('roomModal');
+  const detail = document.getElementById('roomDetail');
+
+  // ✅ 이미지 구성
+  const imagesHtml = room.images
+    .map(img => `<img src="${img}" style="width:160px;height:110px;margin:4px;border-radius:6px;object-fit:cover;">`)
+    .join('');
+
+  // ✅ 익스피디아 객실 상세 + 부대시설 정보 표시
+  detail.innerHTML = `
+    <h2>${room.roomName}</h2>
+    <div>${imagesHtml}</div>
+    <div style="margin-top:10px;line-height:1.6;">
+      <p>${room.description || "객실 상세 정보가 제공되지 않습니다."}</p>
+      <p>🏷️ ${room.amenities?.join(' · ') || "부대시설 정보 없음"}</p>
+    </div>
+  `;
+
+  modal.style.display = 'block';
+}
+
+  function closeRoomModal() {
+    document.getElementById('roomModal').style.display = 'none';
+  }
+
+        function initMap() {
+      console.log("✅ Google Map initialized");
+      const mapDiv = document.getElementById("map");
+      if (!mapDiv) return;
+
+      const map = new google.maps.Map(mapDiv, {
+        center: { lat: 37.5665, lng: 126.9780 },
+        zoom: 14
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", loadHotelDetail);
+
+</script>
+
+<!-- ✅ 구글 맵 JS -->
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMfUN2Rq4MS7VHqNTlbK23JEi_T6QUQPU&callback=initMap">
+</script>
+</body>
+</html>
