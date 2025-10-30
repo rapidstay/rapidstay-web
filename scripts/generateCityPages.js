@@ -1,14 +1,8 @@
 /**
- * RapidStay - 도시별 추천 페이지 및 sitemap 자동 생성 스크립트
+ * RapidStay - 도시별 추천 페이지 및 sitemap 자동 생성 (페이징 버전)
  * ---------------------------------------------------
  * 실행 방법:
  *   npm run generate
- *
- * 전제:
- *   - Node.js 환경
- *   - public/city-data, public/city 폴더 존재
- *   - (옵션) fetch 지원을 위해 node-fetch 설치
- *     npm install node-fetch@3
  */
 
 import fs from "fs";
@@ -16,55 +10,115 @@ import path from "path";
 import fetch from "node-fetch";
 
 // === 설정 ==========================
-const API_BASE_URL = "http://localhost:8081"; // 배포 시 변경 가능
+const API_BASE_URL = "http://localhost:8081";
 const OUTPUT_JSON_DIR = "./public/city-data";
 const OUTPUT_HTML_DIR = "./public/city";
+
 const TARGET_CITIES = [
-  { name: "Seoul", display: "서울" },
-  { name: "Busan", display: "부산" },
-  { name: "Jeju", display: "제주" }
+  // 🇰🇷 한국
+  { name: 'Seoul', display: '서울' },
+  { name: 'Busan', display: '부산' },
+  { name: 'Jeju', display: '제주' },
+  { name: 'Incheon', display: '인천' },
+  { name: 'Gangneung', display: '강릉' },
+  { name: 'Sokcho', display: '속초' },
+  { name: 'Gyeongju', display: '경주' },
+  { name: 'Yeosu', display: '여수' },
+  { name: 'Jeonju', display: '전주' },
+  { name: 'Tongyeong', display: '통영' },
+  // 🇯🇵 일본
+  { name: 'Tokyo', display: '도쿄' },
+  { name: 'Osaka', display: '오사카' },
+  { name: 'Kyoto', display: '교토' },
+  { name: 'Fukuoka', display: '후쿠오카' },
+  { name: 'Sapporo', display: '삿포로' },
+  // 🇹🇭 태국
+  { name: 'Bangkok', display: '방콕' },
+  { name: 'ChiangMai', display: '치앙마이' },
+  { name: 'Phuket', display: '푸켓' },
+  // 🇸🇬 싱가포르
+  { name: 'Singapore', display: '싱가포르' },
+  // 🇻🇳 베트남
+  { name: 'Hanoi', display: '하노이' },
+  { name: 'HoChiMinh', display: '호찌민' },
+  { name: 'Danang', display: '다낭' },
+  // 🇲🇾 말레이시아
+  { name: 'KualaLumpur', display: '쿠알라룸푸르' },
+  // 🇫🇷 프랑스
+  { name: 'Paris', display: '파리' },
+  { name: 'Nice', display: '니스' },
+  // 🇮🇹 이탈리아
+  { name: 'Rome', display: '로마' },
+  { name: 'Venice', display: '베네치아' },
+  // 🇺🇸 미국
+  { name: 'NewYork', display: '뉴욕' },
+  { name: 'LosAngeles', display: '로스앤젤레스' },
+  { name: 'LasVegas', display: '라스베이거스' },
+  { name: 'SanFrancisco', display: '샌프란시스코' },
+  // 🇬🇧 영국
+  { name: 'London', display: '런던' },
+  // 🇨🇭 스위스
+  { name: 'Zurich', display: '취리히' },
+  { name: 'Interlaken', display: '인터라켄' }
 ];
 
-// === 헬퍼 함수 ======================
+// === 유틸 ==========================
 function ensureDir(dir) {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
 
 function getDates() {
   const today = new Date();
-  const ci = new Date(today);
-  ci.setDate(today.getDate() + 1);
-  const co = new Date(today);
-  co.setDate(today.getDate() + 2);
+  const ci = new Date(today); ci.setDate(today.getDate() + 1);
+  const co = new Date(today); co.setDate(today.getDate() + 2);
   const fmt = (d) => d.toISOString().split("T")[0];
   return { checkIn: fmt(ci), checkOut: fmt(co) };
 }
 
+// === Expedia API 페이징 기반 데이터 수집 ===
 async function fetchHotelData(city) {
   const { checkIn, checkOut } = getDates();
-  const payload = {
-    city,
-    checkIn,
-    checkOut,
-    rooms: [{ adults: 2, children: 0, childAges: [] }]
-  };
+  const allHotels = [];
+  let page = 1;
+  const pageSize = 100;
 
-  const res = await fetch(`${API_BASE_URL}/api/hotels/search`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload)
-  });
+  while (true) {
+    const payload = {
+      city,
+      checkIn,
+      checkOut,
+      rooms: [{ adults: 2, children: 0, childAges: [] }],
+      page,
+      pageSize
+    };
 
-  if (!res.ok) {
-    console.error(`❌ ${city} 데이터 요청 실패: ${res.status}`);
-    return [];
+    const res = await fetch(`${API_BASE_URL}/api/hotels/search`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    if (!res.ok) {
+      console.error(`❌ ${city} page ${page} 요청 실패 (${res.status})`);
+      break;
+    }
+
+    const data = await res.json();
+    if (!Array.isArray(data) || data.length === 0) break;
+
+    allHotels.push(...data);
+    console.log(`📦 ${city} page ${page} → ${data.length}건 수신`);
+
+    // 응답이 pageSize보다 작으면 마지막 페이지로 간주
+    if (data.length < pageSize) break;
+    page++;
   }
 
-  const data = await res.json();
-  return Array.isArray(data) ? data : [];
+  console.log(`✅ ${city} 전체 ${allHotels.length}건 수집 완료`);
+  return allHotels;
 }
 
-// === JSON 생성 로직 =================
+// === JSON/HTML 생성 ===
 async function generateJson(city, hotels) {
   const topRated = [...hotels]
     .sort((a, b) => (b.rating || 0) - (a.rating || 0))
@@ -79,15 +133,11 @@ async function generateJson(city, hotels) {
     .slice(0, 5);
 
   const jsonData = { topRated, petFriendly, family };
-  const jsonPath = path.join(
-    OUTPUT_JSON_DIR,
-    `${city.toLowerCase()}-top5.json`
-  );
+  const jsonPath = path.join(OUTPUT_JSON_DIR, `${city.toLowerCase()}-top5.json`);
   fs.writeFileSync(jsonPath, JSON.stringify(jsonData, null, 2));
-  console.log(`✅ ${jsonPath} 생성 완료`);
+  console.log(`💾 ${jsonPath} 저장 완료`);
 }
 
-// === HTML 생성 로직 =================
 function generateHtml(city, display) {
   const html = `<!DOCTYPE html>
 <html lang="ko">
@@ -99,32 +149,26 @@ function generateHtml(city, display) {
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://rapidstay.link/city/${city.toLowerCase()}.html" />
   <style>
-    body { font-family: "Noto Sans KR", sans-serif; margin: 0; background: #fafafa; color:#333; }
-    header { background: #222; color:#fff; padding: 18px 24px; font-size: 22px; }
-    h2 { margin: 40px 0 20px; text-align:center; color:#222; }
-    .section { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-    .hotel-card {
-      display: flex; gap:16px; align-items:center;
-      background:#fff; border-radius:8px;
-      box-shadow:0 2px 6px rgba(0,0,0,0.1);
-      padding:12px; margin:10px 0;
-      transition:transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .hotel-card:hover { transform:translateY(-4px); box-shadow:0 6px 18px rgba(0,0,0,0.15); }
-    .hotel-card img { width:180px; height:130px; border-radius:6px; object-fit:cover; }
-    .hotel-info h3 { margin:0 0 4px; font-size:18px; color:#111; }
-    .hotel-info p { margin:0 0 3px; font-size:14px; color:#555; }
-    .hotel-info .price { font-weight:bold; color:#e53935; margin-top:4px; }
-    footer { margin:60px 0 40px; text-align:center; color:#777; font-size:13px; }
+    body { font-family:"Noto Sans KR",sans-serif;margin:0;background:#fafafa;color:#333;}
+    header {background:#222;color:#fff;padding:18px 24px;font-size:22px;}
+    h2 {margin:40px 0 20px;text-align:center;color:#222;}
+    .section {max-width:900px;margin:0 auto;padding:0 20px;}
+    .hotel-card {display:flex;gap:16px;align-items:center;background:#fff;border-radius:8px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);padding:12px;margin:10px 0;
+      transition:transform .2s ease,box-shadow .2s ease;}
+    .hotel-card:hover {transform:translateY(-4px);box-shadow:0 6px 18px rgba(0,0,0,0.15);}
+    .hotel-card img {width:180px;height:130px;border-radius:6px;object-fit:cover;}
+    .hotel-info h3 {margin:0 0 4px;font-size:18px;color:#111;}
+    .hotel-info p {margin:0 0 3px;font-size:14px;color:#555;}
+    .hotel-info .price {font-weight:bold;color:#e53935;margin-top:4px;}
+    footer {margin:60px 0 40px;text-align:center;color:#777;font-size:13px;}
   </style>
 </head>
 <body>
   <header>🏨 ${display} 인기 호텔 추천 | RapidStay</header>
-
   <div class="section" id="topRated"></div>
   <div class="section" id="petFriendly"></div>
   <div class="section" id="family"></div>
-
   <footer>ⓒ 2025 RapidStay | Expedia Partner Data 기반</footer>
 
   <script>
@@ -155,19 +199,18 @@ function generateHtml(city, display) {
 </html>`;
   const htmlPath = path.join(OUTPUT_HTML_DIR, `${city.toLowerCase()}.html`);
   fs.writeFileSync(htmlPath, html);
-  console.log(`✅ ${htmlPath} 생성 완료`);
+  console.log(`📝 ${htmlPath} 생성 완료`);
 }
 
 // === 실행 (sitemap 포함) ==========================
 (async () => {
   ensureDir(OUTPUT_JSON_DIR);
   ensureDir(OUTPUT_HTML_DIR);
-
   const today = new Date().toISOString().split("T")[0];
   const sitemapEntries = [];
 
   for (const c of TARGET_CITIES) {
-    console.log(`▶ ${c.display} 데이터 생성 중...`);
+    console.log(`▶ ${c.display} 데이터 수집 중...`);
     const hotels = await fetchHotelData(c.name);
     await generateJson(c.name, hotels);
     generateHtml(c.name, c.display);
@@ -181,12 +224,11 @@ function generateHtml(city, display) {
     </url>`);
   }
 
-  const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapEntries.join("\n")}
 </urlset>`;
 
-  fs.writeFileSync("./public/sitemap.xml", sitemapContent);
+  fs.writeFileSync("./public/sitemap.xml", sitemap);
   console.log("🗺️  sitemap.xml 생성 완료");
-  console.log("\n🚀 모든 도시 페이지 생성 완료!");
 })();
