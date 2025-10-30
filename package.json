@@ -1,0 +1,12 @@
+{
+  "name": "rapidstay",
+  "version": "1.0.0",
+  "description": "RapidStay SEO generator and deploy scripts",
+  "scripts": {
+    "generate": "node scripts/generateCityPages.js",
+    "deploy": "node seo-batch/deployToFirebase.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}

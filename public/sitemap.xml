@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+      <loc>https://rapidstay-c7f8e.web.app/city/seoul.html</loc>
+      <lastmod>2025-10-30</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>https://rapidstay-c7f8e.web.app/city/busan.html</loc>
+      <lastmod>2025-10-30</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>https://rapidstay-c7f8e.web.app/city/jeju.html</loc>
+      <lastmod>2025-10-30</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+</urlset>

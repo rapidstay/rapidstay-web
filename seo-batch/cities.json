@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Seoul",
+    "slug": "seoul",
+    "description": "Discover top hotels and stays in Seoul with RapidStay.",
+    "imageUrl": "https://yourcdn.com/images/seoul.jpg"
+  },
+  {
+    "name": "Tokyo",
+    "slug": "tokyo",
+    "description": "Book the best Tokyo hotels and ryokans with RapidStay.",
+    "imageUrl": "https://yourcdn.com/images/tokyo.jpg"
+  }
+]

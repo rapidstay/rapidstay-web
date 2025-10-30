@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>부산 호텔 추천 TOP5 | RapidStay</title>
+  <meta name="description" content="부산 인기 호텔, 애견 동반, 가족 여행 추천 숙소 TOP5를 RapidStay에서 한눈에 확인하세요.">
+  <meta name="keywords" content="부산호텔,부산숙소,부산추천호텔,가족여행,애견호텔,RapidStay,익스피디아">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://rapidstay.link/city/busan.html" />
+  <style>
+    body { font-family: "Noto Sans KR", sans-serif; margin: 0; background: #fafafa; color:#333; }
+    header { background: #222; color:#fff; padding: 18px 24px; font-size: 22px; }
+    h2 { margin: 40px 0 20px; text-align:center; color:#222; }
+    .section { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    .hotel-card {
+      display: flex; gap:16px; align-items:center;
+      background:#fff; border-radius:8px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      padding:12px; margin:10px 0;
+      transition:transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .hotel-card:hover { transform:translateY(-4px); box-shadow:0 6px 18px rgba(0,0,0,0.15); }
+    .hotel-card img { width:180px; height:130px; border-radius:6px; object-fit:cover; }
+    .hotel-info h3 { margin:0 0 4px; font-size:18px; color:#111; }
+    .hotel-info p { margin:0 0 3px; font-size:14px; color:#555; }
+    .hotel-info .price { font-weight:bold; color:#e53935; margin-top:4px; }
+    footer { margin:60px 0 40px; text-align:center; color:#777; font-size:13px; }
+  </style>
+</head>
+<body>
+  <header>🏨 부산 인기 호텔 추천 | RapidStay</header>
+
+  <div class="section" id="topRated"></div>
+  <div class="section" id="petFriendly"></div>
+  <div class="section" id="family"></div>
+
+  <footer>ⓒ 2025 RapidStay | Expedia Partner Data 기반</footer>
+
+  <script>
+  fetch('/city-data/busan-top5.json')
+    .then(res => res.json())
+    .then(data => {
+      render('topRated', data.topRated, '⭐ 평점 높은 숙소 TOP5');
+      render('petFriendly', data.petFriendly, '🐶 반려동물 동반 가능 숙소');
+      render('family', data.family, '👨‍👩‍👧 가족 여행 추천 숙소');
+    });
+
+  function render(target, hotels, title) {
+    const el = document.getElementById(target);
+    el.innerHTML = '<h2>' + title + '</h2>' + hotels.map(h => `
+      <div class="hotel-card">
+        <img src="${h.image || 'https://picsum.photos/seed/' + h.name + '/400/250'}" alt="${h.name}">
+        <div class="hotel-info">
+          <h3>${h.name}</h3>
+          <p>📍 ${h.address || h.city}</p>
+          <p>⭐ ${h.rating || '4.5'} / 5.0</p>
+          <p class="price">💰 ${h.lowestPrice ? h.lowestPrice + '원~' : '요금 확인 불가'}</p>
+        </div>
+      </div>
+    `).join('');
+  }
+  </script>
+</body>
+</html>

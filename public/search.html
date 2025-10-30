@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>RapidStay – Search Results</title>
+  <style>
+    body { font-family: "Noto Sans KR", sans-serif; margin: 0; padding: 0; background: #fafafa; color:#333; }
+    header { background: #222; color: #fff; padding: 16px 24px; font-size: 20px; }
+
+    /* 카드 리스트 */
+    .hotel-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .hotel-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+    .hotel-card img {
+      width: 200px; height: 150px;
+      object-fit: cover; border-radius: 6px;
+      flex-shrink: 0;
+    }
+    .hotel-info {
+      padding: 15px; flex: 1;
+    }
+    .hotel-info h3 { margin: 0 0 6px; font-size: 18px; color:#222; }
+    .hotel-info p { margin: 0 0 6px; color:#555; font-size: 14px; }
+    .hotel-info .price {
+      color: #e53935;
+      font-weight: bold;
+      margin: 0;
+      font-size: 16px;
+    }
+
+    /* 지도 버튼 */
+    #openMapBtn {
+      padding: 10px 20px;
+      background: linear-gradient(90deg, #0078d4, #00a5a5);
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+    #openMapBtn:hover { background: linear-gradient(90deg, #0060b8, #008d8d); transform: translateY(-1px); }
+
+    /* 모달 */
+    #mapModal {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 1000;
+    }
+    #mapModal .modal-content {
+      background:#fff;
+      margin: 8% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 800px;
+      position: relative;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      animation: pop 0.25s ease;
+    }
+    @keyframes pop {
+      from { opacity:0; transform: scale(0.9); }
+      to { opacity:1; transform: scale(1); }
+    }
+    #mapModal .close-btn {
+      position: absolute; top: 10px; right: 16px;
+      font-size: 26px; cursor: pointer;
+      color:#666; transition: 0.2s;
+    }
+    #mapModal .close-btn:hover { color:#000; }
+
+    /* 빈 결과 */
+    .empty {
+      text-align:center; margin-top:60px;
+      color:#777; font-size:15px;
+    }
+  </style>
+</head>
+<body>
+<header>🏨 RapidStay – Search Results</header>
+
+<section id="hotel-list"></section>
+
+<div style="text-align:center; margin:24px;">
+  <button id="openMapBtn">전체 지도 보기</button>
+</div>
+
+<!-- 지도 모달 -->
+<div id="mapModal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeMap()">&times;</span>
+    <h2 style="margin:0 0 10px;">호텔 위치 보기</h2>
+    <div id="googleMap" style="width:100%; height:500px; border-radius:8px;"></div>
+  </div>
+</div>
+
+<script>
+const API_BASE_URL =
+  (window.location.hostname.includes('localhost') || window.location.hostname.includes('127.0.0.1'))
+    ? 'http://localhost:8081'
+    : 'https://xap-h2xh.onrender.com';
+
+// URL 파라미터 받기
+const params = new URLSearchParams(window.location.search);
+const city = params.get('city') || 'Seoul';
+document.title = `${city} 호텔 검색 | RapidStay – 실시간 숙소 비교`;
+const checkIn = params.get('checkIn') || '2025-11-01';
+const checkOut = params.get('checkOut') || '2025-11-03';
+let rooms = [{ adults: 2, children: 0, childAges: [] }];
+
+// 페이지 로드 시 검색 실행
+window.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const payload = { city, checkIn, checkOut, rooms };
+    const res = await fetch(`${API_BASE_URL}/api/hotels/search`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    renderHotels(data);
+  } catch (err) {
+    console.error('검색 실패:', err);
+    document.getElementById('hotel-list').innerHTML =
+      `<p class="empty">호텔 데이터를 불러오는 중 문제가 발생했습니다.</p>`;
+  }
+});
+
+// 결과 렌더링
+function renderHotels(hotels) {
+  const validHotels = hotels.filter(h => h.id != null);
+  const list = document.getElementById('hotel-list');
+  if (validHotels.length === 0) {
+    list.innerHTML = `<p class="empty">검색 결과가 없습니다.</p>`;
+    return;
+  }
+
+  list.innerHTML = validHotels.map(h => `
+    <div class="hotel-card" data-id="${h.id}" data-expedia="${h.expediaUrl || ''}">
+      <img src="https://picsum.photos/seed/${h.name}/400/250" alt="${h.name}">
+      <div class="hotel-info">
+        <h3>${h.name}</h3>
+        <p>📍 ${h.address || h.city}</p>
+        <p>⭐ ${h.rating?.toFixed(1) || '4.5'} / 5.0</p>
+        <p class="price">💰 ${h.lowestPrice ? `${h.lowestPrice}원~` : '요금 확인 불가'}</p>
+      </div>
+    </div>
+  `).join('');
+
+  // 카드 클릭 시 로딩창 → Expedia 이동
+  document.querySelectorAll('.hotel-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const expediaUrl = card.dataset.expedia || 'https://www.expedia.com/';
+      sessionStorage.setItem('expediaRedirectUrl', expediaUrl);
+      window.location.href = 'loading.html';
+    });
+  });
+
+  window.currentHotels = validHotels;
+}
+
+// 지도
+document.getElementById('openMapBtn').onclick = function() {
+  document.getElementById('mapModal').style.display = 'block';
+  initMap();
+};
+function closeMap() { document.getElementById('mapModal').style.display = 'none'; }
+
+function initMap() {
+  const map = new google.maps.Map(document.getElementById('googleMap'), {
+    zoom: 12,
+    center: { lat: 37.5665, lng: 126.9780 }
+  });
+  (window.currentHotels || []).forEach(hotel => {
+    if (hotel.latitude && hotel.longitude) {
+      new google.maps.Marker({
+        position: { lat: hotel.latitude, lng: hotel.longitude },
+        map,
+        title: hotel.name
+      });
+    }
+  });
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMfUN2Rq4MS7VHqNTlbK23JEi_T6QUQPU"></script>
+</body>
+</html>

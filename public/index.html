@@ -1,275 +1,639 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>RapidStay – Hotel Search</title>
+<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>서울 호텔 검색 | RapidStay – 실시간 숙소 비교</title>
+  <meta name="description" content="서울, 부산, 제주 등 전 지역 호텔 실시간 검색. RapidStay는 Expedia 기반 최저가 숙소를 빠르게 비교합니다.">
+  <meta name="keywords" content="호텔검색,서울호텔,제주호텔,익스피디아,숙소비교,여행숙박,RapidStay">
+
+  <!-- SNS & 메신저 미리보기용 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RapidStay – 실시간 호텔 검색">
+  <meta property="og:description" content="한눈에 보는 숙소 가격 비교. 익스피디아 공식 파트너.">
+  <meta property="og:image" content="https://rapidstay.link/assets/og-image.png">
+  <meta property="og:url" content="https://rapidstay.link">
+
+  <!-- 트위터 카드 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RapidStay – 호텔 실시간 검색">
+  <meta name="twitter:description" content="서울, 부산, 제주 숙소를 한 번에 검색하세요.">
+  <meta name="twitter:image" content="https://rapidstay.link/assets/og-image.png">
+
+  <!-- 파비콘 & 색상 -->
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="theme-color" content="#0f172a" />
+
   <style>
     body {
       font-family: "Noto Sans KR", sans-serif;
-      margin: 0; padding: 0;
+      margin: 0;
       background: #fafafa;
     }
     header {
-      background: #222; color: #fff;
-      padding: 16px 24px; font-size: 20px;
+      background: #222;
+      color: #fff;
+      padding: 16px 24px;
+      font-size: 20px;
     }
+
+    input, button {
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    /* 검색바 */
     #search-bar {
       background: #fff;
       padding: 20px;
       display: flex;
       justify-content: center;
       gap: 10px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    input, button {
-      padding: 10px; font-size: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-radius: 10px;
+      margin: 32px auto;
+      max-width: 900px;
+      position: relative; /* 기준점 */
     }
 
-    /* 객실 인원 모달 */
-    #guestModal {
-      display: none;
-      position: fixed; z-index: 9999;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5);
-      align-items: center; justify-content: center;
-      overflow-y: auto;
-    }
-    .guest-modal-content {
+    .city-wrap { position: relative; }
+
+    /* 자동완성 */
+    #autocompletelist {
+      position: absolute;
+      top: 100%;
+      left: 0;
       background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      width: 90%;
-      max-width: 420px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      width: 100%;
+      max-height: 240px;
+      overflow-y: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      display: none;
+      z-index: 1000;
     }
-    .room-box {
-      border: 1px solid #eee;
+    .auto-item {
+      padding: 10px 12px;
+      cursor: pointer;
+      font-size: 14px;
+      border-bottom: 1px solid #f3f3f3;
+    }
+    .auto-item:last-child { border-bottom: none; }
+    .auto-item:hover, .auto-item.active { background: #f0f6ff; }
+
+    /* 추천 도시 */
+    .cityQuick {
+      margin: 4px;
+      padding: 6px 12px;
+      font-size: 13px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      background: #fff;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .cityQuick:hover {
+      background: #e7f3ff;
+      border-color: #0078d4;
+      color: #0078d4;
+    }
+
+    /* 버튼 */
+    #searchBtn {
+      background: linear-gradient(90deg, #0078d4, #00a5a5);
+      color: #fff;
+      border: none;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    #searchBtn:hover {
+      background: #005fa3;
+      transform: translateY(-1px);
+    }
+
+    /* 호텔 카드 */
+    .hotel-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #fff;
+      margin: 12px auto;
       padding: 12px;
-      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      max-width: 700px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+    .hotel-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+    .hotel-card img {
+      width: 200px;
+      height: 140px;
+      object-fit: cover;
       border-radius: 6px;
     }
-    .row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-    .row span { flex: 1; }
-    select { padding: 6px; }
+    .hotel-info h3 {
+      margin: 0 0 4px;
+      font-size: 18px;
+    }
+    .hotel-info p {
+      margin: 0 0 4px;
+      color: #555;
+    }
+    .hotel-price {
+      margin: 0;
+      color: #e53935;
+      font-weight: bold;
+      font-size: 16px;
+    }
 
-    /* 지도 팝업 */
-    .modal {
-      display: none; position: fixed; z-index: 1000;
-      left: 0; top: 0; width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.4);
+    /* 객실 팝업 */
+    #guestPopup {
+      display: none;
+      position: absolute;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+      padding: 14px;
+      z-index: 1200;
+      width: 320px;
     }
-    .modal-content {
-      background: #fff; margin: 10% auto; padding: 20px;
-      border-radius: 8px; width: 80%; max-width: 800px;
+    .room-block {
+      border-bottom: 1px solid #eee;
+      padding: 10px 0 12px;
+      margin-bottom: 10px;
     }
-    .close {
-      float: right; font-size: 24px; cursor: pointer;
+    .room-block:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 4px;
+    }
+    .room-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 15px;
+      margin: 0 0 8px;
+      color: #0078d4;
+      font-weight: 600;
+    }
+    .remove-room {
+      color: #e53935;
+      font-size: 18px;
+      line-height: 1;
+      cursor: pointer;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+    .remove-room:hover { background: #ffe8e8; }
+
+    .count-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 6px 0;
+    }
+    .count-row .controls {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .count-row button {
+      width: 28px; height: 28px;
+      border: 1px solid #ccc; background: #f9f9f9;
+      border-radius: 6px; cursor: pointer;
+      font-weight: 700;
+    }
+    .popup-actions {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 10px; margin-top: 10px;
+    }
+    #addRoomBtn {
+      background: #e9f4ff; border: none; color: #0a67c7;
+      border-radius: 8px; padding: 8px 10px; cursor: pointer;
+      font-weight: 600;
+    }
+    #guestSaveBtn {
+      background: #0078d4; color: #fff; border: none;
+      border-radius: 8px; padding: 8px 14px; cursor: pointer;
+      font-weight: 700;
     }
   </style>
+
+    <!-- 구조화 데이터 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "RapidStay",
+    "url": "https://rapidstay.link",
+    "logo": "https://rapidstay.link/assets/logo.png",
+    "description": "익스피디아 기반 실시간 숙소 비교 플랫폼",
+    "sameAs": [
+      "https://youtube.com/@rapidstay",
+      "https://instagram.com/rapidstay"
+    ]
+  }
+  </script>
 </head>
 <body>
-<header>🏨 RapidStay Hotel Search</header>
+  <header>🏨 RapidStay Hotel Search</header>
 
-<section id="search-bar">
-  <input type="text" id="city" placeholder="도시명 (예: Seoul)">
-  <input type="date" id="checkIn">
-  <input type="date" id="checkOut">
+  <section id="search-bar">
+    <div class="city-wrap">
+      <input type="text" id="city" placeholder="도시명 (예: Seoul)" autocomplete="off">
+      <div id="autocompletelist" role="listbox" aria-label="도시 자동완성"></div>
+    </div>
+    <input type="date" id="checkIn">
+    <input type="date" id="checkOut">
+    <button id="guestBtn">객실 1 • 성인 2 • 아동 0</button>
+    <button id="searchBtn">검색</button>
 
-  <!-- 객실 인원 버튼 -->
-  <button id="guestBtn">객실 1 • 성인 2 • 아동 0</button>
+    <!-- 객실 팝업 -->
+    <div id="guestPopup">
+      <div id="roomsContainer"></div>
+      <div class="popup-actions">
+        <button id="addRoomBtn">+ 객실 추가</button>
+        <button id="guestSaveBtn">확인</button>
+      </div>
+    </div>
+  </section>
 
-  <button id="searchBtn">검색</button>
-</section>
-
-<section id="hotel-list"></section>
-
-<div style="text-align:center; margin:20px;">
-  <button id="openMapBtn">전체 지도 보기</button>
-</div>
-
-<!-- ✅ 객실/인원 모달 -->
-<div id="guestModal">
-  <div class="guest-modal-content" id="guestContent">
-    <h3>객실 설정</h3>
-    <div id="roomsContainer"></div>
-    <button id="addRoomBtn">+ 객실 추가</button>
-    <button id="guestConfirm">확인</button>
+  <div style="text-align:center; margin-top:12px; font-size:14px;">
+    <span>인기 여행지:</span>
+    <button class="cityQuick" data-city="서울">서울</button>
+    <button class="cityQuick" data-city="부산">부산</button>
+    <button class="cityQuick" data-city="제주">제주</button>
+    <button class="cityQuick" data-city="도쿄">도쿄</button>
+    <button class="cityQuick" data-city="방콕">방콕</button>
+    <button class="cityQuick" data-city="파리">파리</button>
   </div>
-</div>
 
-<!-- 지도 모달 -->
-<div id="mapModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeMap()">&times;</span>
-    <div id="googleMap" style="width:100%;height:500px;"></div>
-  </div>
-</div>
+  <section id="hotel-list"></section>
+
+  <!-- 주요 도시 미리보기 섹션 -->
+<main id="city-preview" style="max-width:900px;margin:60px auto;padding:0 20px;">
+  <h2 style="text-align:center;margin-bottom:30px;">🌍 주요 도시 추천 숙소</h2>
+  <div id="cityContainer"></div>
+</main>
+
+<footer style="margin:80px 0 40px;text-align:center;color:#777;font-size:13px;">
+  ⓒ 2025 RapidStay | Expedia Partner Data 기반
+</footer>
 
 <script>
+/* 기본 날짜: 내일부터 2박 */
+window.addEventListener('DOMContentLoaded', () => {
+  const today = new Date();
+  const ci = new Date(today); ci.setDate(today.getDate() + 1);
+  const co = new Date(today); co.setDate(today.getDate() + 2);
+  const fmt = (d) => d.toISOString().split('T')[0];
+  document.getElementById('checkIn').value = fmt(ci);
+  document.getElementById('checkOut').value = fmt(co);
+});
+
 const API_BASE_URL =
-  window.location.hostname.includes('localhost') ||
-  window.location.hostname.includes('127.0.0.1')
+  (location.hostname.includes('localhost') || location.hostname.includes('127.0.0.1'))
     ? 'http://localhost:8081'
     : 'https://xap-h2xh.onrender.com';
 
-const STORAGE_KEY = 'hotelSearchCache';
 let rooms = [{ adults: 2, children: 0, childAges: [] }];
-let searchState = {}; // ✅ 검색 상태 저장용
+const cityInput = document.getElementById('city');
+const autoBox   = document.getElementById('autocompletelist');
+let activeIndex = -1;
 
-// ---------- 객실 모달 ----------
-const guestBtn = document.getElementById('guestBtn');
-const guestModal = document.getElementById('guestModal');
-const roomsContainer = document.getElementById('roomsContainer');
+/* =========================
+   자동완성
+========================== */
+cityInput.addEventListener('input', async (e) => {
+  const q = e.target.value.trim();
+  activeIndex = -1;
+  if (!q) { autoBox.style.display = 'none'; return; }
 
-guestBtn.onclick = () => { guestModal.style.display = 'flex'; renderRooms(); };
-document.getElementById('addRoomBtn').onclick = () => {
-  rooms.push({ adults: 2, children: 0, childAges: [] });
-  renderRooms();
-};
-document.getElementById('guestConfirm').onclick = () => {
-  guestModal.style.display = 'none';
-  updateGuestButton();
-};
+  try {
+    const res = await fetch(`${API_BASE_URL}/api/cities/search?query=${encodeURIComponent(q)}`);
+    const data = await res.json();
 
-function renderRooms() {
-  roomsContainer.innerHTML = '';
-  rooms.forEach((room, idx) => {
-    const div = document.createElement('div');
-    div.className = 'room-box';
-    div.innerHTML = `
-      <h4>객실 ${idx + 1}</h4>
-      <div class="row">
-        <span>성인</span>
-        <button class="adultMinus">-</button>
-        <span class="adultCount">${room.adults}</span>
-        <button class="adultPlus">+</button>
+    if (!Array.isArray(data) || data.length === 0) {
+      autoBox.style.display = 'none';
+      return;
+    }
+    autoBox.innerHTML = data.map(d => `
+      <div class="auto-item" role="option"
+           data-name="${d.city_kr}" data-en="${d.city_en}">
+        ${d.city_kr} (${d.city_en})
       </div>
-      <div class="row">
-        <span>아동</span>
-        <button class="childMinus">-</button>
-        <span class="childCount">${room.children}</span>
-        <button class="childPlus">+</button>
-      </div>
-      <div class="childAges"></div>
-    `;
-    roomsContainer.appendChild(div);
+    `).join('');
+    autoBox.style.display = 'block';
+  } catch (err) {
+    console.error('자동완성 오류:', err);
+    autoBox.style.display = 'none';
+  }
+});
 
-    const ageBox = div.querySelector('.childAges');
-    renderChildAges(ageBox, room);
+cityInput.addEventListener('keydown', (e) => {
+  const items = autoBox.querySelectorAll('.auto-item');
+  const listOpen = autoBox.style.display !== 'none' && items.length > 0;
 
-    div.querySelector('.adultPlus').onclick = () => { room.adults++; div.querySelector('.adultCount').textContent = room.adults; };
-    div.querySelector('.adultMinus').onclick = () => { if (room.adults > 1) room.adults--; div.querySelector('.adultCount').textContent = room.adults; };
-    div.querySelector('.childPlus').onclick = () => { room.children++; room.childAges.push(null); div.querySelector('.childCount').textContent = room.children; renderChildAges(ageBox, room); };
-    div.querySelector('.childMinus').onclick = () => { if (room.children > 0) { room.children--; room.childAges.pop(); } div.querySelector('.childCount').textContent = room.children; renderChildAges(ageBox, room); };
-  });
+  if (e.key === 'Enter') {
+    if (listOpen) {
+      e.preventDefault();
+      if (activeIndex >= 0) items[activeIndex].click();
+    } else {
+      e.preventDefault();
+      doSearch?.();
+    }
+    return;
+  }
+
+  if (!listOpen) return;
+
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    activeIndex = (activeIndex + 1) % items.length;
+    setActive(items, activeIndex);
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    activeIndex = (activeIndex - 1 + items.length) % items.length;
+    setActive(items, activeIndex);
+  } else if (e.key === 'Escape') {
+    autoBox.style.display = 'none';
+    activeIndex = -1;
+  }
+});
+
+function setActive(items, idx) {
+  items.forEach(el => el.classList.remove('active'));
+  if (idx < 0) return;
+  const el = items[idx];
+  el.classList.add('active');
+  const boxTop = autoBox.scrollTop;
+  const boxBot = boxTop + autoBox.clientHeight;
+  const elTop  = el.offsetTop;
+  const elBot  = elTop + el.offsetHeight;
+  if (elTop < boxTop) autoBox.scrollTop = elTop;
+  if (elBot > boxBot) autoBox.scrollTop = elBot - autoBox.clientHeight;
 }
 
-function renderChildAges(box, room) {
-  box.innerHTML = '';
-  for (let i = 0; i < room.children; i++) {
-    const select = document.createElement('select');
-    select.innerHTML = '<option value="">나이</option>' +
-      Array.from({length: 12}, (_, n) => `<option value="${n}">${n}세</option>`).join('');
-    select.onchange = e => room.childAges[i] = parseInt(e.target.value);
-    box.appendChild(select);
+autoBox.addEventListener('click', (e) => {
+  const item = e.target.closest('.auto-item');
+  if (!item) return;
+  cityInput.value = item.dataset.name || '';
+  autoBox.style.display = 'none';
+  activeIndex = -1;
+});
+
+document.addEventListener('click', (e) => {
+  if (popupLock) return;
+  if (!cityInput.contains(e.target) && !autoBox.contains(e.target)) {
+    autoBox.style.display = 'none';
+    activeIndex = -1;
+  }
+});
+
+document.querySelectorAll('.cityQuick').forEach(btn => {
+  btn.addEventListener('click', () => {
+    cityInput.value = btn.dataset.city;
+    cityInput.dispatchEvent(new Event('input'));
+  });
+});
+
+/* =========================
+   객실 팝업 (아동 나이 포함)
+========================== */
+const guestBtn = document.getElementById('guestBtn');
+const guestPopup = document.getElementById('guestPopup');
+const roomsContainer = document.getElementById('roomsContainer');
+
+/* 🔒 닫힘 보호 락 */
+let popupLock = false;
+function withPopupLock(fn) {
+  popupLock = true;
+  try { fn?.(); } finally {
+    requestAnimationFrame(() => { popupLock = false; });
   }
 }
 
-function updateGuestButton() {
-  const totalRooms = rooms.length;
-  const totalAdults = rooms.reduce((a, r) => a + r.adults, 0);
-  const totalChildren = rooms.reduce((a, r) => a + r.children, 0);
-  guestBtn.textContent = `객실 ${totalRooms} • 성인 ${totalAdults} • 아동 ${totalChildren}`;
+/* 클릭 시 팝업 닫히는 것 방지 */
+guestPopup.addEventListener('click', (e) => e.stopPropagation());
+
+function updateGuestButtonText() {
+  const totalAdults = rooms.reduce((s, r) => s + r.adults, 0);
+  const totalChildren = rooms.reduce((s, r) => s + r.children, 0);
+  guestBtn.textContent = `객실 ${rooms.length} • 성인 ${totalAdults} • 아동 ${totalChildren}`;
+}
+updateGuestButtonText();
+
+guestBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  const rect = guestBtn.getBoundingClientRect();
+  const parentRect = document.getElementById('search-bar').getBoundingClientRect();
+  guestPopup.style.left = `${rect.left - parentRect.left}px`;
+  guestPopup.style.top  = `${rect.bottom - parentRect.top + 8}px`;
+  guestPopup.style.display = (guestPopup.style.display === 'block') ? 'none' : 'block';
+  withPopupLock(renderGuestPopup);
+});
+
+document.addEventListener('click', (e) => {
+  if (popupLock) return;
+  if (!guestPopup.contains(e.target) && !guestBtn.contains(e.target)) {
+    guestPopup.style.display = 'none';
+  }
+});
+
+document.getElementById('addRoomBtn').addEventListener('click', (e) => {
+  e.stopPropagation();
+  withPopupLock(() => {
+    rooms.push({ adults: 2, children: 0, childAges: [] });
+    renderGuestPopup();
+  });
+});
+
+function removeRoom(index) {
+  withPopupLock(() => {
+    if (rooms.length <= 1) return;
+    rooms.splice(index, 1);
+    renderGuestPopup();
+  });
 }
 
-// ---------- 검색 ----------
+function changeCount(roomIdx, field, delta) {
+  withPopupLock(() => {
+    const next = rooms[roomIdx][field] + delta;
+    if (next < 0) return;
+    rooms[roomIdx][field] = next;
+
+    if (field === 'children') {
+      const c = rooms[roomIdx].children;
+      rooms[roomIdx].childAges = rooms[roomIdx].childAges.slice(0, c);
+      while (rooms[roomIdx].childAges.length < c) rooms[roomIdx].childAges.push(5);
+    }
+    renderGuestPopup();
+  });
+}
+
+function updateChildAge(roomIdx, childIdx, val) {
+  withPopupLock(() => {
+    rooms[roomIdx].childAges[childIdx] = parseInt(val);
+  });
+}
+
+function renderGuestPopup() {
+  roomsContainer.innerHTML = rooms.map((r, idx) => `
+    <div class="room-block">
+      <div class="room-title">
+        <span>객실 ${idx + 1}</span>
+        ${rooms.length > 1 ? `<span class="remove-room" onclick="removeRoom(${idx})">✕</span>` : ''}
+      </div>
+
+      <div class="count-row">
+        <span>성인</span>
+        <div class="controls">
+          <button onclick="changeCount(${idx}, 'adults', -1)">−</button>
+          <strong>${r.adults}</strong>
+          <button onclick="changeCount(${idx}, 'adults', 1)">＋</button>
+        </div>
+      </div>
+
+      <div class="count-row">
+        <span>아동</span>
+        <div class="controls">
+          <button onclick="changeCount(${idx}, 'children', -1)">−</button>
+          <strong>${r.children}</strong>
+          <button onclick="changeCount(${idx}, 'children', 1)">＋</button>
+        </div>
+      </div>
+
+      ${r.children > 0 ? `
+      <div style="margin-top:8px;">
+        <div style="font-size:13px; margin-bottom:4px; color:#444;">아동 나이 선택 (0~17세)</div>
+        <div style="display:flex; flex-wrap:wrap; gap:6px;">
+          ${r.childAges.map((age, cIdx) => `
+            <select onchange="updateChildAge(${idx}, ${cIdx}, this.value)"
+                    style="padding:6px; border-radius:6px; border:1px solid #ccc;">
+              ${Array.from({length:18}, (_, a) =>
+                `<option value="${a}" ${a===age?'selected':''}>${a}세</option>`
+              ).join('')}
+            </select>
+          `).join('')}
+        </div>
+      </div>` : ''}
+    </div>
+  `).join('');
+}
+
+document.getElementById('guestSaveBtn').addEventListener('click', (e) => {
+  e.stopPropagation();
+  updateGuestButtonText();
+  guestPopup.style.display = 'none';
+});
+
+window.removeRoom = removeRoom;
+window.changeCount = changeCount;
+window.updateChildAge = updateChildAge;
+
+/* =========================
+   검색
+========================== */
 document.getElementById('searchBtn').addEventListener('click', async () => {
   const city = document.getElementById('city').value || 'Seoul';
   const checkIn = document.getElementById('checkIn').value || '2025-11-01';
   const checkOut = document.getElementById('checkOut').value || '2025-11-03';
-
-  searchState = { city, checkIn, checkOut, rooms };
-
-  const cacheKey = `${city}_${checkIn}_${checkOut}_${JSON.stringify(rooms)}`;
-  const cache = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
-  if (cache[cacheKey]) {
-    console.log('🔁 캐시 데이터 사용');
-    renderHotels(cache[cacheKey]);
-    return;
-  }
-
   const payload = { city, checkIn, checkOut, rooms };
-  const res = await fetch(`${API_BASE_URL}/api/hotels/search`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload)
-  });
-  const data = await res.json();
 
-  cache[cacheKey] = data;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(cache));
-  renderHotels(data);
+  try {
+    const res = await fetch(`${API_BASE_URL}/api/hotels/search`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    renderHotels(data);
+  } catch (err) {
+    console.error('검색 오류:', err);
+    alert('호텔 데이터를 불러오는 중 문제가 발생했습니다.');
+  }
 });
 
-// ---------- 렌더링 ----------
 function renderHotels(hotels) {
   const validHotels = hotels.filter(h => h.id != null);
   const list = document.getElementById('hotel-list');
   list.innerHTML = validHotels.map(h => `
-    <div class="hotel-card" data-id="${h.id}">
-      <img src="https://picsum.photos/seed/${h.name}/400/250" alt="${h.name}">
+    <div class="hotel-card" data-id="${h.id}" data-expedia="${h.expediaUrl || ''}">
+      <img src="https://picsum.photos/seed/${h.name}/200/140" alt="${h.name}">
       <div class="hotel-info">
         <h3>${h.name}</h3>
         <p>📍 ${h.address || h.city}</p>
         <p>⭐ ${h.rating?.toFixed(1) || '4.5'} / 5.0</p>
+        <p class="hotel-price">💰 ${h.lowestPrice ? `${h.lowestPrice}원~` : '요금 확인 불가'}</p>
       </div>
     </div>
   `).join('');
 
   document.querySelectorAll('.hotel-card').forEach(card => {
     card.addEventListener('click', () => {
-      const id = card.dataset.id;
-      if (!id) return alert('⚠️ 호텔 ID 없음');
-
-      // ✅ rooms를 JSON 문자열 그대로 전달 (한 번만 encodeURIComponent)
-      const query = new URLSearchParams({
-        id,
-        city: searchState.city,
-        checkIn: searchState.checkIn,
-        checkOut: searchState.checkOut,
-        rooms: JSON.stringify(searchState.rooms)
-      }).toString();
-
-      window.location.href = `detail.html?${query}`;
+      const expediaUrl = card.dataset.expedia;
+      if (expediaUrl) {
+        sessionStorage.setItem('expediaRedirectUrl', expediaUrl);
+        window.location.href = 'loading.html';
+      } else {
+        alert('Expedia 링크가 아직 준비되지 않았습니다.');
+      }
     });
   });
-
-  window.currentHotels = hotels;
 }
 
-// ---------- 지도 ----------
-document.getElementById('openMapBtn').onclick = function() {
-  document.getElementById('mapModal').style.display = 'block';
-  initMap();
-};
-function closeMap() { document.getElementById('mapModal').style.display = 'none'; }
+const cityContainer = document.getElementById('cityContainer');
+const cityList = [
+  { name: 'Seoul', display: '서울' },
+  { name: 'Busan', display: '부산' },
+  { name: 'Jeju', display: '제주' }
+];
 
-function initMap() {
-  const map = new google.maps.Map(document.getElementById('googleMap'), {
-    zoom: 12,
-    center: { lat: 37.5665, lng: 126.9780 }
-  });
-  (window.currentHotels || []).forEach(hotel => {
-    if (hotel.latitude && hotel.longitude) {
-      new google.maps.Marker({
-        position: { lat: hotel.latitude, lng: hotel.longitude },
-        map,
-        title: hotel.name
-      });
+async function loadCityPreview() {
+  for (const c of cityList) {
+    try {
+      const res = await fetch(`/city-data/${c.name.toLowerCase()}-top5.json`);
+      const data = await res.json();
+      const hotels = (data.topRated || []).slice(0, 3);
+
+      const cards = hotels.map(h => `
+        <div style="width:260px;background:#fff;border-radius:10px;overflow:hidden;
+                    box-shadow:0 2px 6px rgba(0,0,0,0.1);transition:.2s;">
+          <img src="${h.image || 'https://picsum.photos/seed/' + h.name + '/400/250'}"
+               style="width:100%;height:160px;object-fit:cover;">
+          <div style="padding:10px 12px;">
+            <strong>${h.name}</strong>
+            <p style="margin:4px 0 0;font-size:13px;color:#555;">⭐ ${h.rating || '4.5'} / 5.0</p>
+          </div>
+        </div>
+      `).join('');
+
+      cityContainer.innerHTML += `
+        <section style="margin-bottom:60px;">
+          <h3 style="text-align:center;color:#111;">${c.display} 인기 숙소</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">
+            ${cards}
+            <a href="/city/${c.name.toLowerCase()}.html"
+               style="text-decoration:none;color:#0078d4;font-weight:600;margin-top:10px;display:block;text-align:center;">
+               ▶ ${c.display} TOP5 전체 보기
+            </a>
+          </div>
+        </section>`;
+    } catch (err) {
+      console.warn(`${c.display} 미리보기 로드 실패:`, err);
     }
-  });
+  }
 }
+loadCityPreview();
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMfUN2Rq4MS7VHqNTlbK23JEi_T6QUQPU"></script>
 </body>
 </html>

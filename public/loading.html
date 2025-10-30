@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>RapidStay – 연결 중...</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f9fafb;
+      font-family: "Noto Sans KR", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #333;
+    }
+
+    /* 로딩 애니메이션 */
+    .loader {
+      border: 6px solid #e0e0e0;
+      border-top: 6px solid #0078d4;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* 텍스트 */
+    h1 {
+      font-size: 22px;
+      margin: 8px 0 4px;
+      color: #0078d4;
+    }
+    p {
+      font-size: 14px;
+      color: #555;
+      margin: 0;
+    }
+
+    /* 배경 효과 */
+    .fade-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #eaf6ff, #f9ffff, #e8f3ff);
+      z-index: -1;
+    }
+
+    /* 로고 느낌의 강조 */
+    .logo {
+      font-weight: 700;
+      font-size: 26px;
+      color: #0078d4;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="fade-bg"></div>
+  <div class="logo">🏨 RapidStay</div>
+  <div class="loader"></div>
+  <h1>Expedia 연결 중...</h1>
+  <p>잠시만 기다려주세요. 최적의 호텔 페이지로 이동합니다.</p>
+
+  <script>
+    const expediaUrl = sessionStorage.getItem('expediaRedirectUrl') || 'https://www.expedia.com/';
+    // 실제 환경에서는 API 인증/토큰 교환 등의 로직이 이 사이에 들어감
+    setTimeout(() => {
+      window.location.href = expediaUrl;
+    }, 2500); // 2.5초 후 이동
+  </script>
+</body>
+</html>

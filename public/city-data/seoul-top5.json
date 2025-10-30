@@ -1,0 +1,36 @@
+{
+  "topRated": [
+    {
+      "id": 1,
+      "name": "RapidStay Hotel",
+      "city": "Seoul",
+      "latitude": 37.5665,
+      "longitude": 126.978,
+      "address": "서울특별시 중구 세종대로 110",
+      "rating": 4.7,
+      "description": null,
+      "images": null,
+      "amenities": null,
+      "rooms": null,
+      "lowestPrice": "175000",
+      "expediaUrl": null
+    },
+    {
+      "id": 2,
+      "name": "Eden Garden Hotel",
+      "city": "Busan",
+      "latitude": 35.1587,
+      "longitude": 129.1604,
+      "address": "부산광역시 해운대구 해운대로 321",
+      "rating": 4.5,
+      "description": null,
+      "images": null,
+      "amenities": null,
+      "rooms": null,
+      "lowestPrice": "185000",
+      "expediaUrl": null
+    }
+  ],
+  "petFriendly": [],
+  "family": []
+}
