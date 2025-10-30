@@ -225,6 +225,25 @@
       border-radius: 8px; padding: 8px 14px; cursor: pointer;
       font-weight: 700;
     }
+
+    @media (max-width: 768px) {
+  #search-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .hotel-card {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+
+  .hotel-card img {
+    width: 100%;
+    height: auto;
+  }
+}
   </style>
 
     <!-- 구조화 데이터 -->
@@ -602,7 +621,7 @@ async function loadCityPreview() {
     try {
       const res = await fetch(`/city-data/${c.name.toLowerCase()}-top5.json`);
       const data = await res.json();
-      const hotels = (data.topRated || []).slice(0, 3);
+      const hotels = (data.topRated || []).slice(0, 5);
 
       const cards = hotels.map(h => `
         <div style="width:260px;background:#fff;border-radius:10px;overflow:hidden;
@@ -623,7 +642,7 @@ async function loadCityPreview() {
             ${cards}
             <a href="/city/${c.name.toLowerCase()}.html"
                style="text-decoration:none;color:#0078d4;font-weight:600;margin-top:10px;display:block;text-align:center;">
-               ▶ ${c.display} TOP5 전체 보기
+               ▶ ${c.display} 주요 숙소 보기
             </a>
           </div>
         </section>`;

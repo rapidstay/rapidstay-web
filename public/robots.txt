@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rapidstay.link/sitemap.xml
+Sitemap: https://rapidstay-c7f8e.web.app/sitemap.xml
