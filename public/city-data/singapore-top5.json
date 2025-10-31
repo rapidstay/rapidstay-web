@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "Singapore Hotel 1",
+      "city": "Singapore",
+      "address": "Singapore 중심가 10번지",
+      "rating": "4.6",
+      "lowestPrice": "91852",
+      "image": "https://picsum.photos/seed/Singapore-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Singapore Hotel 2",
+      "city": "Singapore",
+      "address": "Singapore 중심가 11번지",
+      "rating": "4.8",
+      "lowestPrice": "82522",
+      "image": "https://picsum.photos/seed/Singapore-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Singapore Hotel 3",
+      "city": "Singapore",
+      "address": "Singapore 중심가 12번지",
+      "rating": "4.0",
+      "lowestPrice": "81084",
+      "image": "https://picsum.photos/seed/Singapore-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Singapore Hotel 4",
+      "city": "Singapore",
+      "address": "Singapore 중심가 13번지",
+      "rating": "5.0",
+      "lowestPrice": "93737",
+      "image": "https://picsum.photos/seed/Singapore-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Singapore Hotel 5",
+      "city": "Singapore",
+      "address": "Singapore 중심가 14번지",
+      "rating": "4.4",
+      "lowestPrice": "78132",
+      "image": "https://picsum.photos/seed/Singapore-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "Singapore Hotel 2",
+      "city": "Singapore",
+      "address": "Singapore 중심가 11번지",
+      "rating": "4.8",
+      "lowestPrice": "82522",
+      "image": "https://picsum.photos/seed/Singapore-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Singapore Hotel 4",
+      "city": "Singapore",
+      "address": "Singapore 중심가 13번지",
+      "rating": "5.0",
+      "lowestPrice": "93737",
+      "image": "https://picsum.photos/seed/Singapore-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Singapore Hotel 6",
+      "city": "Singapore",
+      "address": "Singapore 중심가 15번지",
+      "rating": "5.0",
+      "lowestPrice": "81774",
+      "image": "https://picsum.photos/seed/Singapore-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Singapore Hotel 8",
+      "city": "Singapore",
+      "address": "Singapore 중심가 17번지",
+      "rating": "5.0",
+      "lowestPrice": "138904",
+      "image": "https://picsum.photos/seed/Singapore-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Singapore Hotel 10",
+      "city": "Singapore",
+      "address": "Singapore 중심가 19번지",
+      "rating": "4.5",
+      "lowestPrice": "99314",
+      "image": "https://picsum.photos/seed/Singapore-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "Singapore Hotel 1",
+      "city": "Singapore",
+      "address": "Singapore 중심가 10번지",
+      "rating": "4.6",
+      "lowestPrice": "91852",
+      "image": "https://picsum.photos/seed/Singapore-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Singapore Hotel 3",
+      "city": "Singapore",
+      "address": "Singapore 중심가 12번지",
+      "rating": "4.0",
+      "lowestPrice": "81084",
+      "image": "https://picsum.photos/seed/Singapore-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Singapore Hotel 5",
+      "city": "Singapore",
+      "address": "Singapore 중심가 14번지",
+      "rating": "4.4",
+      "lowestPrice": "78132",
+      "image": "https://picsum.photos/seed/Singapore-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Singapore Hotel 7",
+      "city": "Singapore",
+      "address": "Singapore 중심가 16번지",
+      "rating": "4.5",
+      "lowestPrice": "89735",
+      "image": "https://picsum.photos/seed/Singapore-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Singapore Hotel 9",
+      "city": "Singapore",
+      "address": "Singapore 중심가 18번지",
+      "rating": "4.6",
+      "lowestPrice": "140907",
+      "image": "https://picsum.photos/seed/Singapore-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

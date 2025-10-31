@@ -1,0 +1,136 @@
+/* ==============================
+   RapidStay - 검색 리스트 (모바일 퍼스트)
+   ============================== */
+
+#search-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 12px;
+}
+
+/* ===== 기본: 모바일 카드형 ===== */
+#hotel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.hotel-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.hotel-card:hover {
+  transform: translateY(-3px);
+}
+
+.hotel-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.hotel-info {
+  padding: 10px 14px;
+}
+
+.hotel-info h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  color: #111;
+}
+
+.hotel-info p {
+  margin: 2px 0;
+  color: #555;
+  font-size: 13px;
+}
+
+.hotel-info .price {
+  color: #0078d4;
+  font-weight: 600;
+}
+
+/* ===== 태블릿 이상 (2열) ===== */
+@media (min-width: 768px) {
+  #hotel-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .hotel-card img {
+    height: 200px;
+  }
+
+  .hotel-info h3 {
+    font-size: 17px;
+  }
+}
+
+/* ===== 데스크탑 이상 (리스트형) ===== */
+@media (min-width: 1024px) {
+  #hotel-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 960px;
+    margin: 30px auto;
+  }
+
+  .hotel-card {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    height: 150px;
+  }
+
+  .hotel-card img {
+    width: 220px;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .hotel-info {
+    flex: 1;
+    padding: 10px 20px;
+  }
+
+  .hotel-info h3 {
+    font-size: 18px;
+  }
+
+  .hotel-info p {
+    font-size: 14px;
+  }
+}
+
+/* ===== 페이지네이션 ===== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 30px 0;
+}
+
+.pagination button {
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.pagination button.active {
+  background: #0078d4;
+  color: #fff;
+  border-color: #0078d4;
+}

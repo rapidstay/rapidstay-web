@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>서울 호텔 추천 | RapidStay</title>
-  <meta name="description" content="서울 인기 호텔, 가족 여행, 반려동물 동반 숙소 모음" />
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="서울 호텔 추천 | RapidStay" />
-  <meta property="og:description" content="서울 인기 호텔, 가족 여행, 반려동물 동반 숙소 모음" />
-  <meta property="og:image" content="https://rapidstay.link/assets/og/seoul.jpg" />
-  <meta property="og:url" content="https://rapidstay.link/city/seoul.html" />
-  <meta name="date" content="2025-10-31" />
-  <link rel="canonical" href="https://rapidstay.link/city/seoul.html" />
+  <meta property="og:title" content="{{title}}" />
+  <meta property="og:description" content="{{description}}" />
+  <meta property="og:image" content="{{imageUrl}}" />
+  <meta property="og:url" content="{{canonicalUrl}}" />
+  <meta name="date" content="{{date}}" />
+  <link rel="canonical" href="{{canonicalUrl}}" />
   <meta name="robots" content="index,follow" />
   
   <!-- ✅ 공통 스타일 -->
@@ -20,74 +20,11 @@
 </head>
 
 <body>
-  <header>🏨 RapidStay Hotel Search</header>
-
-<div id="hotelSearchForm" autocomplete="on">
-<div id="search-bar" style="position: relative; align-items: center;">
-    <!-- ✅ 도시 -->
-    <div style="position:relative; flex:1;">
-      <input type="text" id="city" name="city" placeholder="도시명 (예: Seoul)" autocomplete="off" />
-      <div id="autocompletelist"></div>
-    </div>
-
-    <!-- ✅ 날짜 -->
-    <input type="date" id="checkIn" name="checkIn">
-    <input type="date" id="checkOut" name="checkOut">
-
-    <!-- ✅ 객실/인원 -->
-    <div class="room-selector">
-      <button type="button" id="roomBtn">객실 1개, 성인 2명</button>
-      <div class="room-dropdown" id="roomDropdown" style="display:none;">
-        <div id="roomList">
-          <div class="room-item" data-index="0">
-            <div class="room-header">객실 1</div>
-            <div class="room-row">
-              <span>성인</span>
-              <div class="counter">
-                <button type="button" class="minus adult">−</button>
-                <span class="count adult-count">2</span>
-                <button type="button" class="plus adult">＋</button>
-              </div>
-            </div>
-            <div class="room-row">
-              <span>아동</span>
-              <div class="counter">
-                <button type="button" class="minus child">−</button>
-                <span class="count child-count">0</span>
-                <button type="button" class="plus child">＋</button>
-              </div>
-              <div class="child-ages"></div>
-            </div>
-          </div>
-        </div>
-        <div class="room-controls">
-          <button type="button" id="addRoom">＋ 객실 추가</button>
-          <button type="button" id="removeRoom">－ 객실 삭제</button>
-        </div>
-        <button type="button" id="applyRooms">적용</button>
-      </div>
-    </div>
-
-    <!-- ✅ 검색 버튼 -->
-    <button id="searchBtn">검색</button>
-  </div>
-</div>
-
-<!-- ✅ 인기 여행지 -->
-<div id="popularCities">
-  <span>인기 여행지:</span>
-  <button class="cityQuick" data-city="서울">서울</button>
-  <button class="cityQuick" data-city="부산">부산</button>
-  <button class="cityQuick" data-city="제주">제주</button>
-  <button class="cityQuick" data-city="도쿄">도쿄</button>
-  <button class="cityQuick" data-city="방콕">방콕</button>
-  <button class="cityQuick" data-city="파리">파리</button>
-</div>
-
+  {{HEADER_SEARCH}}
 
 <main style="max-width:900px;margin:60px auto;padding:0 20px;">
   <section class="hotel-section">
-    <h2>서울 인기 숙소</h2>
+    <h2>{{cityName}} 인기 숙소</h2>
     <div class="scroll-wrapper">
       <button class="scroll-btn left" data-target="hotelList-top">‹</button>
       <div class="horizontal-scroll" id="hotelList-top"></div>
@@ -133,7 +70,7 @@
 </script>
 
   <script>
-    const city = "서울";
+    const city = "{{cityName}}";
     const BASE_PATH = "/";
 
     document.addEventListener("DOMContentLoaded", () => {

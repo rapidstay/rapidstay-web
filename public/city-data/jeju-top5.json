@@ -1,36 +1,143 @@
 {
   "topRated": [
     {
-      "id": 1,
-      "name": "RapidStay Hotel",
+      "name": "Jeju Hotel 1",
       "city": "Jeju",
-      "latitude": 37.5665,
-      "longitude": 126.978,
-      "address": "서울특별시 중구 세종대로 110",
-      "rating": 4.7,
-      "description": null,
-      "images": null,
-      "amenities": null,
-      "rooms": null,
-      "lowestPrice": "175000",
-      "expediaUrl": null
+      "address": "Jeju 중심가 10번지",
+      "rating": "4.9",
+      "lowestPrice": "165272",
+      "image": "https://picsum.photos/seed/Jeju-0/400/250",
+      "amenities": "Family, WiFi"
     },
     {
-      "id": 2,
-      "name": "Eden Garden Hotel",
-      "city": "Busan",
-      "latitude": 35.1587,
-      "longitude": 129.1604,
-      "address": "부산광역시 해운대구 해운대로 321",
-      "rating": 4.5,
-      "description": null,
-      "images": null,
-      "amenities": null,
-      "rooms": null,
-      "lowestPrice": "185000",
-      "expediaUrl": null
+      "name": "Jeju Hotel 2",
+      "city": "Jeju",
+      "address": "Jeju 중심가 11번지",
+      "rating": "4.1",
+      "lowestPrice": "154703",
+      "image": "https://picsum.photos/seed/Jeju-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Jeju Hotel 3",
+      "city": "Jeju",
+      "address": "Jeju 중심가 12번지",
+      "rating": "4.5",
+      "lowestPrice": "160727",
+      "image": "https://picsum.photos/seed/Jeju-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Jeju Hotel 4",
+      "city": "Jeju",
+      "address": "Jeju 중심가 13번지",
+      "rating": "4.7",
+      "lowestPrice": "70441",
+      "image": "https://picsum.photos/seed/Jeju-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Jeju Hotel 5",
+      "city": "Jeju",
+      "address": "Jeju 중심가 14번지",
+      "rating": "4.9",
+      "lowestPrice": "122859",
+      "image": "https://picsum.photos/seed/Jeju-4/400/250",
+      "amenities": "Family, WiFi"
     }
   ],
-  "petFriendly": [],
-  "family": []
+  "petFriendly": [
+    {
+      "name": "Jeju Hotel 2",
+      "city": "Jeju",
+      "address": "Jeju 중심가 11번지",
+      "rating": "4.1",
+      "lowestPrice": "154703",
+      "image": "https://picsum.photos/seed/Jeju-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Jeju Hotel 4",
+      "city": "Jeju",
+      "address": "Jeju 중심가 13번지",
+      "rating": "4.7",
+      "lowestPrice": "70441",
+      "image": "https://picsum.photos/seed/Jeju-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Jeju Hotel 6",
+      "city": "Jeju",
+      "address": "Jeju 중심가 15번지",
+      "rating": "4.9",
+      "lowestPrice": "112848",
+      "image": "https://picsum.photos/seed/Jeju-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Jeju Hotel 8",
+      "city": "Jeju",
+      "address": "Jeju 중심가 17번지",
+      "rating": "4.3",
+      "lowestPrice": "148293",
+      "image": "https://picsum.photos/seed/Jeju-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Jeju Hotel 10",
+      "city": "Jeju",
+      "address": "Jeju 중심가 19번지",
+      "rating": "4.8",
+      "lowestPrice": "130434",
+      "image": "https://picsum.photos/seed/Jeju-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "Jeju Hotel 1",
+      "city": "Jeju",
+      "address": "Jeju 중심가 10번지",
+      "rating": "4.9",
+      "lowestPrice": "165272",
+      "image": "https://picsum.photos/seed/Jeju-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Jeju Hotel 3",
+      "city": "Jeju",
+      "address": "Jeju 중심가 12번지",
+      "rating": "4.5",
+      "lowestPrice": "160727",
+      "image": "https://picsum.photos/seed/Jeju-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Jeju Hotel 5",
+      "city": "Jeju",
+      "address": "Jeju 중심가 14번지",
+      "rating": "4.9",
+      "lowestPrice": "122859",
+      "image": "https://picsum.photos/seed/Jeju-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Jeju Hotel 7",
+      "city": "Jeju",
+      "address": "Jeju 중심가 16번지",
+      "rating": "4.3",
+      "lowestPrice": "75211",
+      "image": "https://picsum.photos/seed/Jeju-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Jeju Hotel 9",
+      "city": "Jeju",
+      "address": "Jeju 중심가 18번지",
+      "rating": "4.4",
+      "lowestPrice": "98918",
+      "image": "https://picsum.photos/seed/Jeju-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
 }

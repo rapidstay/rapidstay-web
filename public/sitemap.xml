@@ -2,22 +2,239 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-      <loc>https://rapidstay-c7f8e.web.app/city/seoul.html</loc>
-      <lastmod>2025-10-30</lastmod>
+      <loc>http://127.0.0.1:5500/public/city/seoul.html</loc>
+      <lastmod>2025-10-31</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>
 
     <url>
-      <loc>https://rapidstay-c7f8e.web.app/city/busan.html</loc>
-      <lastmod>2025-10-30</lastmod>
+      <loc>http://127.0.0.1:5500/public/city/busan.html</loc>
+      <lastmod>2025-10-31</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>
 
     <url>
-      <loc>https://rapidstay-c7f8e.web.app/city/jeju.html</loc>
-      <lastmod>2025-10-30</lastmod>
+      <loc>http://127.0.0.1:5500/public/city/jeju.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/incheon.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/gangneung.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/sokcho.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/gyeongju.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/yeosu.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/jeonju.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/tongyeong.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/tokyo.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/osaka.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/kyoto.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/fukuoka.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/sapporo.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/bangkok.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/chiangmai.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/phuket.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/singapore.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/hanoi.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/hochiminh.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/danang.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/kualalumpur.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/paris.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/nice.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/rome.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/venice.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/london.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/zurich.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/interlaken.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/newyork.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/losangeles.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/lasvegas.html</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>http://127.0.0.1:5500/public/city/sanfrancisco.html</loc>
+      <lastmod>2025-10-31</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>

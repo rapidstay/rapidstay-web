@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "Rome Hotel 1",
+      "city": "Rome",
+      "address": "Rome 중심가 10번지",
+      "rating": "4.6",
+      "lowestPrice": "86974",
+      "image": "https://picsum.photos/seed/Rome-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Rome Hotel 2",
+      "city": "Rome",
+      "address": "Rome 중심가 11번지",
+      "rating": "4.6",
+      "lowestPrice": "97567",
+      "image": "https://picsum.photos/seed/Rome-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Rome Hotel 3",
+      "city": "Rome",
+      "address": "Rome 중심가 12번지",
+      "rating": "4.4",
+      "lowestPrice": "161646",
+      "image": "https://picsum.photos/seed/Rome-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Rome Hotel 4",
+      "city": "Rome",
+      "address": "Rome 중심가 13번지",
+      "rating": "4.9",
+      "lowestPrice": "149727",
+      "image": "https://picsum.photos/seed/Rome-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Rome Hotel 5",
+      "city": "Rome",
+      "address": "Rome 중심가 14번지",
+      "rating": "4.5",
+      "lowestPrice": "112690",
+      "image": "https://picsum.photos/seed/Rome-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "Rome Hotel 2",
+      "city": "Rome",
+      "address": "Rome 중심가 11번지",
+      "rating": "4.6",
+      "lowestPrice": "97567",
+      "image": "https://picsum.photos/seed/Rome-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Rome Hotel 4",
+      "city": "Rome",
+      "address": "Rome 중심가 13번지",
+      "rating": "4.9",
+      "lowestPrice": "149727",
+      "image": "https://picsum.photos/seed/Rome-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Rome Hotel 6",
+      "city": "Rome",
+      "address": "Rome 중심가 15번지",
+      "rating": "4.6",
+      "lowestPrice": "120753",
+      "image": "https://picsum.photos/seed/Rome-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Rome Hotel 8",
+      "city": "Rome",
+      "address": "Rome 중심가 17번지",
+      "rating": "4.9",
+      "lowestPrice": "70156",
+      "image": "https://picsum.photos/seed/Rome-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Rome Hotel 10",
+      "city": "Rome",
+      "address": "Rome 중심가 19번지",
+      "rating": "4.6",
+      "lowestPrice": "103580",
+      "image": "https://picsum.photos/seed/Rome-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "Rome Hotel 1",
+      "city": "Rome",
+      "address": "Rome 중심가 10번지",
+      "rating": "4.6",
+      "lowestPrice": "86974",
+      "image": "https://picsum.photos/seed/Rome-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Rome Hotel 3",
+      "city": "Rome",
+      "address": "Rome 중심가 12번지",
+      "rating": "4.4",
+      "lowestPrice": "161646",
+      "image": "https://picsum.photos/seed/Rome-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Rome Hotel 5",
+      "city": "Rome",
+      "address": "Rome 중심가 14번지",
+      "rating": "4.5",
+      "lowestPrice": "112690",
+      "image": "https://picsum.photos/seed/Rome-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Rome Hotel 7",
+      "city": "Rome",
+      "address": "Rome 중심가 16번지",
+      "rating": "4.1",
+      "lowestPrice": "101774",
+      "image": "https://picsum.photos/seed/Rome-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Rome Hotel 9",
+      "city": "Rome",
+      "address": "Rome 중심가 18번지",
+      "rating": "4.3",
+      "lowestPrice": "165051",
+      "image": "https://picsum.photos/seed/Rome-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

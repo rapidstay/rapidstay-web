@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "NewYork Hotel 1",
+      "city": "NewYork",
+      "address": "NewYork 중심가 10번지",
+      "rating": "4.2",
+      "lowestPrice": "77914",
+      "image": "https://picsum.photos/seed/NewYork-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "NewYork Hotel 2",
+      "city": "NewYork",
+      "address": "NewYork 중심가 11번지",
+      "rating": "4.9",
+      "lowestPrice": "71820",
+      "image": "https://picsum.photos/seed/NewYork-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "NewYork Hotel 3",
+      "city": "NewYork",
+      "address": "NewYork 중심가 12번지",
+      "rating": "4.7",
+      "lowestPrice": "141947",
+      "image": "https://picsum.photos/seed/NewYork-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "NewYork Hotel 4",
+      "city": "NewYork",
+      "address": "NewYork 중심가 13번지",
+      "rating": "4.5",
+      "lowestPrice": "159628",
+      "image": "https://picsum.photos/seed/NewYork-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "NewYork Hotel 5",
+      "city": "NewYork",
+      "address": "NewYork 중심가 14번지",
+      "rating": "4.8",
+      "lowestPrice": "109274",
+      "image": "https://picsum.photos/seed/NewYork-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "NewYork Hotel 2",
+      "city": "NewYork",
+      "address": "NewYork 중심가 11번지",
+      "rating": "4.9",
+      "lowestPrice": "71820",
+      "image": "https://picsum.photos/seed/NewYork-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "NewYork Hotel 4",
+      "city": "NewYork",
+      "address": "NewYork 중심가 13번지",
+      "rating": "4.5",
+      "lowestPrice": "159628",
+      "image": "https://picsum.photos/seed/NewYork-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "NewYork Hotel 6",
+      "city": "NewYork",
+      "address": "NewYork 중심가 15번지",
+      "rating": "4.3",
+      "lowestPrice": "81465",
+      "image": "https://picsum.photos/seed/NewYork-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "NewYork Hotel 8",
+      "city": "NewYork",
+      "address": "NewYork 중심가 17번지",
+      "rating": "4.9",
+      "lowestPrice": "142045",
+      "image": "https://picsum.photos/seed/NewYork-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "NewYork Hotel 10",
+      "city": "NewYork",
+      "address": "NewYork 중심가 19번지",
+      "rating": "4.5",
+      "lowestPrice": "130797",
+      "image": "https://picsum.photos/seed/NewYork-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "NewYork Hotel 1",
+      "city": "NewYork",
+      "address": "NewYork 중심가 10번지",
+      "rating": "4.2",
+      "lowestPrice": "77914",
+      "image": "https://picsum.photos/seed/NewYork-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "NewYork Hotel 3",
+      "city": "NewYork",
+      "address": "NewYork 중심가 12번지",
+      "rating": "4.7",
+      "lowestPrice": "141947",
+      "image": "https://picsum.photos/seed/NewYork-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "NewYork Hotel 5",
+      "city": "NewYork",
+      "address": "NewYork 중심가 14번지",
+      "rating": "4.8",
+      "lowestPrice": "109274",
+      "image": "https://picsum.photos/seed/NewYork-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "NewYork Hotel 7",
+      "city": "NewYork",
+      "address": "NewYork 중심가 16번지",
+      "rating": "4.7",
+      "lowestPrice": "143012",
+      "image": "https://picsum.photos/seed/NewYork-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "NewYork Hotel 9",
+      "city": "NewYork",
+      "address": "NewYork 중심가 18번지",
+      "rating": "4.7",
+      "lowestPrice": "152636",
+      "image": "https://picsum.photos/seed/NewYork-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

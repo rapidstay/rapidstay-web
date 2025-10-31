@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "Gangneung Hotel 1",
+      "city": "Gangneung",
+      "address": "Gangneung 중심가 10번지",
+      "rating": "4.4",
+      "lowestPrice": "86562",
+      "image": "https://picsum.photos/seed/Gangneung-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Gangneung Hotel 2",
+      "city": "Gangneung",
+      "address": "Gangneung 중심가 11번지",
+      "rating": "5.0",
+      "lowestPrice": "100531",
+      "image": "https://picsum.photos/seed/Gangneung-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Gangneung Hotel 3",
+      "city": "Gangneung",
+      "address": "Gangneung 중심가 12번지",
+      "rating": "4.5",
+      "lowestPrice": "83654",
+      "image": "https://picsum.photos/seed/Gangneung-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Gangneung Hotel 4",
+      "city": "Gangneung",
+      "address": "Gangneung 중심가 13번지",
+      "rating": "4.7",
+      "lowestPrice": "161079",
+      "image": "https://picsum.photos/seed/Gangneung-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Gangneung Hotel 5",
+      "city": "Gangneung",
+      "address": "Gangneung 중심가 14번지",
+      "rating": "4.5",
+      "lowestPrice": "72671",
+      "image": "https://picsum.photos/seed/Gangneung-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "Gangneung Hotel 2",
+      "city": "Gangneung",
+      "address": "Gangneung 중심가 11번지",
+      "rating": "5.0",
+      "lowestPrice": "100531",
+      "image": "https://picsum.photos/seed/Gangneung-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Gangneung Hotel 4",
+      "city": "Gangneung",
+      "address": "Gangneung 중심가 13번지",
+      "rating": "4.7",
+      "lowestPrice": "161079",
+      "image": "https://picsum.photos/seed/Gangneung-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Gangneung Hotel 6",
+      "city": "Gangneung",
+      "address": "Gangneung 중심가 15번지",
+      "rating": "5.0",
+      "lowestPrice": "142307",
+      "image": "https://picsum.photos/seed/Gangneung-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Gangneung Hotel 8",
+      "city": "Gangneung",
+      "address": "Gangneung 중심가 17번지",
+      "rating": "4.7",
+      "lowestPrice": "145632",
+      "image": "https://picsum.photos/seed/Gangneung-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Gangneung Hotel 10",
+      "city": "Gangneung",
+      "address": "Gangneung 중심가 19번지",
+      "rating": "4.9",
+      "lowestPrice": "99593",
+      "image": "https://picsum.photos/seed/Gangneung-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "Gangneung Hotel 1",
+      "city": "Gangneung",
+      "address": "Gangneung 중심가 10번지",
+      "rating": "4.4",
+      "lowestPrice": "86562",
+      "image": "https://picsum.photos/seed/Gangneung-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Gangneung Hotel 3",
+      "city": "Gangneung",
+      "address": "Gangneung 중심가 12번지",
+      "rating": "4.5",
+      "lowestPrice": "83654",
+      "image": "https://picsum.photos/seed/Gangneung-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Gangneung Hotel 5",
+      "city": "Gangneung",
+      "address": "Gangneung 중심가 14번지",
+      "rating": "4.5",
+      "lowestPrice": "72671",
+      "image": "https://picsum.photos/seed/Gangneung-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Gangneung Hotel 7",
+      "city": "Gangneung",
+      "address": "Gangneung 중심가 16번지",
+      "rating": "4.1",
+      "lowestPrice": "100011",
+      "image": "https://picsum.photos/seed/Gangneung-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Gangneung Hotel 9",
+      "city": "Gangneung",
+      "address": "Gangneung 중심가 18번지",
+      "rating": "4.9",
+      "lowestPrice": "116739",
+      "image": "https://picsum.photos/seed/Gangneung-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

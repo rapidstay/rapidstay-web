@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "Gyeongju Hotel 1",
+      "city": "Gyeongju",
+      "address": "Gyeongju 중심가 10번지",
+      "rating": "4.0",
+      "lowestPrice": "122882",
+      "image": "https://picsum.photos/seed/Gyeongju-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Gyeongju Hotel 2",
+      "city": "Gyeongju",
+      "address": "Gyeongju 중심가 11번지",
+      "rating": "4.4",
+      "lowestPrice": "117281",
+      "image": "https://picsum.photos/seed/Gyeongju-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Gyeongju Hotel 3",
+      "city": "Gyeongju",
+      "address": "Gyeongju 중심가 12번지",
+      "rating": "4.4",
+      "lowestPrice": "127740",
+      "image": "https://picsum.photos/seed/Gyeongju-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Gyeongju Hotel 4",
+      "city": "Gyeongju",
+      "address": "Gyeongju 중심가 13번지",
+      "rating": "4.5",
+      "lowestPrice": "155613",
+      "image": "https://picsum.photos/seed/Gyeongju-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Gyeongju Hotel 5",
+      "city": "Gyeongju",
+      "address": "Gyeongju 중심가 14번지",
+      "rating": "4.1",
+      "lowestPrice": "70658",
+      "image": "https://picsum.photos/seed/Gyeongju-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "Gyeongju Hotel 2",
+      "city": "Gyeongju",
+      "address": "Gyeongju 중심가 11번지",
+      "rating": "4.4",
+      "lowestPrice": "117281",
+      "image": "https://picsum.photos/seed/Gyeongju-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Gyeongju Hotel 4",
+      "city": "Gyeongju",
+      "address": "Gyeongju 중심가 13번지",
+      "rating": "4.5",
+      "lowestPrice": "155613",
+      "image": "https://picsum.photos/seed/Gyeongju-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Gyeongju Hotel 6",
+      "city": "Gyeongju",
+      "address": "Gyeongju 중심가 15번지",
+      "rating": "4.1",
+      "lowestPrice": "126717",
+      "image": "https://picsum.photos/seed/Gyeongju-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Gyeongju Hotel 8",
+      "city": "Gyeongju",
+      "address": "Gyeongju 중심가 17번지",
+      "rating": "4.1",
+      "lowestPrice": "129567",
+      "image": "https://picsum.photos/seed/Gyeongju-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Gyeongju Hotel 10",
+      "city": "Gyeongju",
+      "address": "Gyeongju 중심가 19번지",
+      "rating": "4.3",
+      "lowestPrice": "163481",
+      "image": "https://picsum.photos/seed/Gyeongju-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "Gyeongju Hotel 1",
+      "city": "Gyeongju",
+      "address": "Gyeongju 중심가 10번지",
+      "rating": "4.0",
+      "lowestPrice": "122882",
+      "image": "https://picsum.photos/seed/Gyeongju-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Gyeongju Hotel 3",
+      "city": "Gyeongju",
+      "address": "Gyeongju 중심가 12번지",
+      "rating": "4.4",
+      "lowestPrice": "127740",
+      "image": "https://picsum.photos/seed/Gyeongju-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Gyeongju Hotel 5",
+      "city": "Gyeongju",
+      "address": "Gyeongju 중심가 14번지",
+      "rating": "4.1",
+      "lowestPrice": "70658",
+      "image": "https://picsum.photos/seed/Gyeongju-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Gyeongju Hotel 7",
+      "city": "Gyeongju",
+      "address": "Gyeongju 중심가 16번지",
+      "rating": "4.8",
+      "lowestPrice": "94005",
+      "image": "https://picsum.photos/seed/Gyeongju-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Gyeongju Hotel 9",
+      "city": "Gyeongju",
+      "address": "Gyeongju 중심가 18번지",
+      "rating": "4.4",
+      "lowestPrice": "166389",
+      "image": "https://picsum.photos/seed/Gyeongju-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

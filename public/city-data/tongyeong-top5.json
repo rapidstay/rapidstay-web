@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "Tongyeong Hotel 1",
+      "city": "Tongyeong",
+      "address": "Tongyeong 중심가 10번지",
+      "rating": "4.7",
+      "lowestPrice": "100806",
+      "image": "https://picsum.photos/seed/Tongyeong-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Tongyeong Hotel 2",
+      "city": "Tongyeong",
+      "address": "Tongyeong 중심가 11번지",
+      "rating": "4.6",
+      "lowestPrice": "107102",
+      "image": "https://picsum.photos/seed/Tongyeong-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Tongyeong Hotel 3",
+      "city": "Tongyeong",
+      "address": "Tongyeong 중심가 12번지",
+      "rating": "4.5",
+      "lowestPrice": "140552",
+      "image": "https://picsum.photos/seed/Tongyeong-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Tongyeong Hotel 4",
+      "city": "Tongyeong",
+      "address": "Tongyeong 중심가 13번지",
+      "rating": "4.1",
+      "lowestPrice": "108957",
+      "image": "https://picsum.photos/seed/Tongyeong-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Tongyeong Hotel 5",
+      "city": "Tongyeong",
+      "address": "Tongyeong 중심가 14번지",
+      "rating": "4.6",
+      "lowestPrice": "117085",
+      "image": "https://picsum.photos/seed/Tongyeong-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "Tongyeong Hotel 2",
+      "city": "Tongyeong",
+      "address": "Tongyeong 중심가 11번지",
+      "rating": "4.6",
+      "lowestPrice": "107102",
+      "image": "https://picsum.photos/seed/Tongyeong-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Tongyeong Hotel 4",
+      "city": "Tongyeong",
+      "address": "Tongyeong 중심가 13번지",
+      "rating": "4.1",
+      "lowestPrice": "108957",
+      "image": "https://picsum.photos/seed/Tongyeong-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Tongyeong Hotel 6",
+      "city": "Tongyeong",
+      "address": "Tongyeong 중심가 15번지",
+      "rating": "4.6",
+      "lowestPrice": "99607",
+      "image": "https://picsum.photos/seed/Tongyeong-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Tongyeong Hotel 8",
+      "city": "Tongyeong",
+      "address": "Tongyeong 중심가 17번지",
+      "rating": "4.9",
+      "lowestPrice": "144218",
+      "image": "https://picsum.photos/seed/Tongyeong-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Tongyeong Hotel 10",
+      "city": "Tongyeong",
+      "address": "Tongyeong 중심가 19번지",
+      "rating": "4.7",
+      "lowestPrice": "95956",
+      "image": "https://picsum.photos/seed/Tongyeong-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "Tongyeong Hotel 1",
+      "city": "Tongyeong",
+      "address": "Tongyeong 중심가 10번지",
+      "rating": "4.7",
+      "lowestPrice": "100806",
+      "image": "https://picsum.photos/seed/Tongyeong-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Tongyeong Hotel 3",
+      "city": "Tongyeong",
+      "address": "Tongyeong 중심가 12번지",
+      "rating": "4.5",
+      "lowestPrice": "140552",
+      "image": "https://picsum.photos/seed/Tongyeong-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Tongyeong Hotel 5",
+      "city": "Tongyeong",
+      "address": "Tongyeong 중심가 14번지",
+      "rating": "4.6",
+      "lowestPrice": "117085",
+      "image": "https://picsum.photos/seed/Tongyeong-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Tongyeong Hotel 7",
+      "city": "Tongyeong",
+      "address": "Tongyeong 중심가 16번지",
+      "rating": "4.6",
+      "lowestPrice": "101384",
+      "image": "https://picsum.photos/seed/Tongyeong-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Tongyeong Hotel 9",
+      "city": "Tongyeong",
+      "address": "Tongyeong 중심가 18번지",
+      "rating": "4.7",
+      "lowestPrice": "104441",
+      "image": "https://picsum.photos/seed/Tongyeong-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

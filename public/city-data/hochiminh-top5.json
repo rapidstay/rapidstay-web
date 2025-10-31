@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "HoChiMinh Hotel 1",
+      "city": "HoChiMinh",
+      "address": "HoChiMinh 중심가 10번지",
+      "rating": "4.7",
+      "lowestPrice": "74443",
+      "image": "https://picsum.photos/seed/HoChiMinh-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "HoChiMinh Hotel 2",
+      "city": "HoChiMinh",
+      "address": "HoChiMinh 중심가 11번지",
+      "rating": "4.4",
+      "lowestPrice": "143627",
+      "image": "https://picsum.photos/seed/HoChiMinh-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "HoChiMinh Hotel 3",
+      "city": "HoChiMinh",
+      "address": "HoChiMinh 중심가 12번지",
+      "rating": "4.1",
+      "lowestPrice": "164365",
+      "image": "https://picsum.photos/seed/HoChiMinh-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "HoChiMinh Hotel 4",
+      "city": "HoChiMinh",
+      "address": "HoChiMinh 중심가 13번지",
+      "rating": "4.2",
+      "lowestPrice": "130712",
+      "image": "https://picsum.photos/seed/HoChiMinh-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "HoChiMinh Hotel 5",
+      "city": "HoChiMinh",
+      "address": "HoChiMinh 중심가 14번지",
+      "rating": "4.8",
+      "lowestPrice": "147083",
+      "image": "https://picsum.photos/seed/HoChiMinh-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "HoChiMinh Hotel 2",
+      "city": "HoChiMinh",
+      "address": "HoChiMinh 중심가 11번지",
+      "rating": "4.4",
+      "lowestPrice": "143627",
+      "image": "https://picsum.photos/seed/HoChiMinh-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "HoChiMinh Hotel 4",
+      "city": "HoChiMinh",
+      "address": "HoChiMinh 중심가 13번지",
+      "rating": "4.2",
+      "lowestPrice": "130712",
+      "image": "https://picsum.photos/seed/HoChiMinh-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "HoChiMinh Hotel 6",
+      "city": "HoChiMinh",
+      "address": "HoChiMinh 중심가 15번지",
+      "rating": "4.7",
+      "lowestPrice": "124161",
+      "image": "https://picsum.photos/seed/HoChiMinh-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "HoChiMinh Hotel 8",
+      "city": "HoChiMinh",
+      "address": "HoChiMinh 중심가 17번지",
+      "rating": "4.7",
+      "lowestPrice": "166389",
+      "image": "https://picsum.photos/seed/HoChiMinh-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "HoChiMinh Hotel 10",
+      "city": "HoChiMinh",
+      "address": "HoChiMinh 중심가 19번지",
+      "rating": "4.8",
+      "lowestPrice": "89587",
+      "image": "https://picsum.photos/seed/HoChiMinh-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "HoChiMinh Hotel 1",
+      "city": "HoChiMinh",
+      "address": "HoChiMinh 중심가 10번지",
+      "rating": "4.7",
+      "lowestPrice": "74443",
+      "image": "https://picsum.photos/seed/HoChiMinh-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "HoChiMinh Hotel 3",
+      "city": "HoChiMinh",
+      "address": "HoChiMinh 중심가 12번지",
+      "rating": "4.1",
+      "lowestPrice": "164365",
+      "image": "https://picsum.photos/seed/HoChiMinh-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "HoChiMinh Hotel 5",
+      "city": "HoChiMinh",
+      "address": "HoChiMinh 중심가 14번지",
+      "rating": "4.8",
+      "lowestPrice": "147083",
+      "image": "https://picsum.photos/seed/HoChiMinh-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "HoChiMinh Hotel 7",
+      "city": "HoChiMinh",
+      "address": "HoChiMinh 중심가 16번지",
+      "rating": "4.7",
+      "lowestPrice": "76713",
+      "image": "https://picsum.photos/seed/HoChiMinh-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "HoChiMinh Hotel 9",
+      "city": "HoChiMinh",
+      "address": "HoChiMinh 중심가 18번지",
+      "rating": "4.4",
+      "lowestPrice": "106588",
+      "image": "https://picsum.photos/seed/HoChiMinh-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

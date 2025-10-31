@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "LasVegas Hotel 1",
+      "city": "LasVegas",
+      "address": "LasVegas 중심가 10번지",
+      "rating": "4.9",
+      "lowestPrice": "113008",
+      "image": "https://picsum.photos/seed/LasVegas-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "LasVegas Hotel 2",
+      "city": "LasVegas",
+      "address": "LasVegas 중심가 11번지",
+      "rating": "4.6",
+      "lowestPrice": "72788",
+      "image": "https://picsum.photos/seed/LasVegas-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "LasVegas Hotel 3",
+      "city": "LasVegas",
+      "address": "LasVegas 중심가 12번지",
+      "rating": "4.9",
+      "lowestPrice": "141922",
+      "image": "https://picsum.photos/seed/LasVegas-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "LasVegas Hotel 4",
+      "city": "LasVegas",
+      "address": "LasVegas 중심가 13번지",
+      "rating": "4.7",
+      "lowestPrice": "78135",
+      "image": "https://picsum.photos/seed/LasVegas-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "LasVegas Hotel 5",
+      "city": "LasVegas",
+      "address": "LasVegas 중심가 14번지",
+      "rating": "4.8",
+      "lowestPrice": "76075",
+      "image": "https://picsum.photos/seed/LasVegas-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "LasVegas Hotel 2",
+      "city": "LasVegas",
+      "address": "LasVegas 중심가 11번지",
+      "rating": "4.6",
+      "lowestPrice": "72788",
+      "image": "https://picsum.photos/seed/LasVegas-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "LasVegas Hotel 4",
+      "city": "LasVegas",
+      "address": "LasVegas 중심가 13번지",
+      "rating": "4.7",
+      "lowestPrice": "78135",
+      "image": "https://picsum.photos/seed/LasVegas-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "LasVegas Hotel 6",
+      "city": "LasVegas",
+      "address": "LasVegas 중심가 15번지",
+      "rating": "4.5",
+      "lowestPrice": "142150",
+      "image": "https://picsum.photos/seed/LasVegas-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "LasVegas Hotel 8",
+      "city": "LasVegas",
+      "address": "LasVegas 중심가 17번지",
+      "rating": "4.6",
+      "lowestPrice": "165639",
+      "image": "https://picsum.photos/seed/LasVegas-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "LasVegas Hotel 10",
+      "city": "LasVegas",
+      "address": "LasVegas 중심가 19번지",
+      "rating": "4.7",
+      "lowestPrice": "71290",
+      "image": "https://picsum.photos/seed/LasVegas-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "LasVegas Hotel 1",
+      "city": "LasVegas",
+      "address": "LasVegas 중심가 10번지",
+      "rating": "4.9",
+      "lowestPrice": "113008",
+      "image": "https://picsum.photos/seed/LasVegas-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "LasVegas Hotel 3",
+      "city": "LasVegas",
+      "address": "LasVegas 중심가 12번지",
+      "rating": "4.9",
+      "lowestPrice": "141922",
+      "image": "https://picsum.photos/seed/LasVegas-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "LasVegas Hotel 5",
+      "city": "LasVegas",
+      "address": "LasVegas 중심가 14번지",
+      "rating": "4.8",
+      "lowestPrice": "76075",
+      "image": "https://picsum.photos/seed/LasVegas-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "LasVegas Hotel 7",
+      "city": "LasVegas",
+      "address": "LasVegas 중심가 16번지",
+      "rating": "4.9",
+      "lowestPrice": "104558",
+      "image": "https://picsum.photos/seed/LasVegas-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "LasVegas Hotel 9",
+      "city": "LasVegas",
+      "address": "LasVegas 중심가 18번지",
+      "rating": "4.4",
+      "lowestPrice": "159499",
+      "image": "https://picsum.photos/seed/LasVegas-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

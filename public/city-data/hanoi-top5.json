@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "Hanoi Hotel 1",
+      "city": "Hanoi",
+      "address": "Hanoi 중심가 10번지",
+      "rating": "4.7",
+      "lowestPrice": "93644",
+      "image": "https://picsum.photos/seed/Hanoi-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Hanoi Hotel 2",
+      "city": "Hanoi",
+      "address": "Hanoi 중심가 11번지",
+      "rating": "4.1",
+      "lowestPrice": "169693",
+      "image": "https://picsum.photos/seed/Hanoi-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Hanoi Hotel 3",
+      "city": "Hanoi",
+      "address": "Hanoi 중심가 12번지",
+      "rating": "4.6",
+      "lowestPrice": "107885",
+      "image": "https://picsum.photos/seed/Hanoi-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Hanoi Hotel 4",
+      "city": "Hanoi",
+      "address": "Hanoi 중심가 13번지",
+      "rating": "4.1",
+      "lowestPrice": "125067",
+      "image": "https://picsum.photos/seed/Hanoi-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Hanoi Hotel 5",
+      "city": "Hanoi",
+      "address": "Hanoi 중심가 14번지",
+      "rating": "4.2",
+      "lowestPrice": "98727",
+      "image": "https://picsum.photos/seed/Hanoi-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "Hanoi Hotel 2",
+      "city": "Hanoi",
+      "address": "Hanoi 중심가 11번지",
+      "rating": "4.1",
+      "lowestPrice": "169693",
+      "image": "https://picsum.photos/seed/Hanoi-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Hanoi Hotel 4",
+      "city": "Hanoi",
+      "address": "Hanoi 중심가 13번지",
+      "rating": "4.1",
+      "lowestPrice": "125067",
+      "image": "https://picsum.photos/seed/Hanoi-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Hanoi Hotel 6",
+      "city": "Hanoi",
+      "address": "Hanoi 중심가 15번지",
+      "rating": "4.4",
+      "lowestPrice": "155264",
+      "image": "https://picsum.photos/seed/Hanoi-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Hanoi Hotel 8",
+      "city": "Hanoi",
+      "address": "Hanoi 중심가 17번지",
+      "rating": "4.8",
+      "lowestPrice": "117539",
+      "image": "https://picsum.photos/seed/Hanoi-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Hanoi Hotel 10",
+      "city": "Hanoi",
+      "address": "Hanoi 중심가 19번지",
+      "rating": "4.9",
+      "lowestPrice": "150085",
+      "image": "https://picsum.photos/seed/Hanoi-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "Hanoi Hotel 1",
+      "city": "Hanoi",
+      "address": "Hanoi 중심가 10번지",
+      "rating": "4.7",
+      "lowestPrice": "93644",
+      "image": "https://picsum.photos/seed/Hanoi-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Hanoi Hotel 3",
+      "city": "Hanoi",
+      "address": "Hanoi 중심가 12번지",
+      "rating": "4.6",
+      "lowestPrice": "107885",
+      "image": "https://picsum.photos/seed/Hanoi-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Hanoi Hotel 5",
+      "city": "Hanoi",
+      "address": "Hanoi 중심가 14번지",
+      "rating": "4.2",
+      "lowestPrice": "98727",
+      "image": "https://picsum.photos/seed/Hanoi-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Hanoi Hotel 7",
+      "city": "Hanoi",
+      "address": "Hanoi 중심가 16번지",
+      "rating": "4.1",
+      "lowestPrice": "80913",
+      "image": "https://picsum.photos/seed/Hanoi-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Hanoi Hotel 9",
+      "city": "Hanoi",
+      "address": "Hanoi 중심가 18번지",
+      "rating": "4.3",
+      "lowestPrice": "138247",
+      "image": "https://picsum.photos/seed/Hanoi-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

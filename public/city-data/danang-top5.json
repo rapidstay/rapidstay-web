@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "Danang Hotel 1",
+      "city": "Danang",
+      "address": "Danang 중심가 10번지",
+      "rating": "4.5",
+      "lowestPrice": "117391",
+      "image": "https://picsum.photos/seed/Danang-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Danang Hotel 2",
+      "city": "Danang",
+      "address": "Danang 중심가 11번지",
+      "rating": "4.4",
+      "lowestPrice": "125999",
+      "image": "https://picsum.photos/seed/Danang-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Danang Hotel 3",
+      "city": "Danang",
+      "address": "Danang 중심가 12번지",
+      "rating": "4.6",
+      "lowestPrice": "72927",
+      "image": "https://picsum.photos/seed/Danang-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Danang Hotel 4",
+      "city": "Danang",
+      "address": "Danang 중심가 13번지",
+      "rating": "4.6",
+      "lowestPrice": "121616",
+      "image": "https://picsum.photos/seed/Danang-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Danang Hotel 5",
+      "city": "Danang",
+      "address": "Danang 중심가 14번지",
+      "rating": "4.6",
+      "lowestPrice": "76241",
+      "image": "https://picsum.photos/seed/Danang-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "Danang Hotel 2",
+      "city": "Danang",
+      "address": "Danang 중심가 11번지",
+      "rating": "4.4",
+      "lowestPrice": "125999",
+      "image": "https://picsum.photos/seed/Danang-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Danang Hotel 4",
+      "city": "Danang",
+      "address": "Danang 중심가 13번지",
+      "rating": "4.6",
+      "lowestPrice": "121616",
+      "image": "https://picsum.photos/seed/Danang-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Danang Hotel 6",
+      "city": "Danang",
+      "address": "Danang 중심가 15번지",
+      "rating": "5.0",
+      "lowestPrice": "160602",
+      "image": "https://picsum.photos/seed/Danang-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Danang Hotel 8",
+      "city": "Danang",
+      "address": "Danang 중심가 17번지",
+      "rating": "4.3",
+      "lowestPrice": "92581",
+      "image": "https://picsum.photos/seed/Danang-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Danang Hotel 10",
+      "city": "Danang",
+      "address": "Danang 중심가 19번지",
+      "rating": "4.4",
+      "lowestPrice": "122866",
+      "image": "https://picsum.photos/seed/Danang-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "Danang Hotel 1",
+      "city": "Danang",
+      "address": "Danang 중심가 10번지",
+      "rating": "4.5",
+      "lowestPrice": "117391",
+      "image": "https://picsum.photos/seed/Danang-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Danang Hotel 3",
+      "city": "Danang",
+      "address": "Danang 중심가 12번지",
+      "rating": "4.6",
+      "lowestPrice": "72927",
+      "image": "https://picsum.photos/seed/Danang-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Danang Hotel 5",
+      "city": "Danang",
+      "address": "Danang 중심가 14번지",
+      "rating": "4.6",
+      "lowestPrice": "76241",
+      "image": "https://picsum.photos/seed/Danang-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Danang Hotel 7",
+      "city": "Danang",
+      "address": "Danang 중심가 16번지",
+      "rating": "4.7",
+      "lowestPrice": "157307",
+      "image": "https://picsum.photos/seed/Danang-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Danang Hotel 9",
+      "city": "Danang",
+      "address": "Danang 중심가 18번지",
+      "rating": "4.6",
+      "lowestPrice": "103183",
+      "image": "https://picsum.photos/seed/Danang-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

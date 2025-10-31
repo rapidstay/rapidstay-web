@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "Venice Hotel 1",
+      "city": "Venice",
+      "address": "Venice 중심가 10번지",
+      "rating": "4.6",
+      "lowestPrice": "135200",
+      "image": "https://picsum.photos/seed/Venice-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Venice Hotel 2",
+      "city": "Venice",
+      "address": "Venice 중심가 11번지",
+      "rating": "4.3",
+      "lowestPrice": "162948",
+      "image": "https://picsum.photos/seed/Venice-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Venice Hotel 3",
+      "city": "Venice",
+      "address": "Venice 중심가 12번지",
+      "rating": "4.1",
+      "lowestPrice": "92665",
+      "image": "https://picsum.photos/seed/Venice-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Venice Hotel 4",
+      "city": "Venice",
+      "address": "Venice 중심가 13번지",
+      "rating": "4.2",
+      "lowestPrice": "86285",
+      "image": "https://picsum.photos/seed/Venice-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Venice Hotel 5",
+      "city": "Venice",
+      "address": "Venice 중심가 14번지",
+      "rating": "4.8",
+      "lowestPrice": "154476",
+      "image": "https://picsum.photos/seed/Venice-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "Venice Hotel 2",
+      "city": "Venice",
+      "address": "Venice 중심가 11번지",
+      "rating": "4.3",
+      "lowestPrice": "162948",
+      "image": "https://picsum.photos/seed/Venice-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Venice Hotel 4",
+      "city": "Venice",
+      "address": "Venice 중심가 13번지",
+      "rating": "4.2",
+      "lowestPrice": "86285",
+      "image": "https://picsum.photos/seed/Venice-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Venice Hotel 6",
+      "city": "Venice",
+      "address": "Venice 중심가 15번지",
+      "rating": "4.1",
+      "lowestPrice": "74719",
+      "image": "https://picsum.photos/seed/Venice-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Venice Hotel 8",
+      "city": "Venice",
+      "address": "Venice 중심가 17번지",
+      "rating": "4.0",
+      "lowestPrice": "70770",
+      "image": "https://picsum.photos/seed/Venice-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Venice Hotel 10",
+      "city": "Venice",
+      "address": "Venice 중심가 19번지",
+      "rating": "4.8",
+      "lowestPrice": "154095",
+      "image": "https://picsum.photos/seed/Venice-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "Venice Hotel 1",
+      "city": "Venice",
+      "address": "Venice 중심가 10번지",
+      "rating": "4.6",
+      "lowestPrice": "135200",
+      "image": "https://picsum.photos/seed/Venice-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Venice Hotel 3",
+      "city": "Venice",
+      "address": "Venice 중심가 12번지",
+      "rating": "4.1",
+      "lowestPrice": "92665",
+      "image": "https://picsum.photos/seed/Venice-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Venice Hotel 5",
+      "city": "Venice",
+      "address": "Venice 중심가 14번지",
+      "rating": "4.8",
+      "lowestPrice": "154476",
+      "image": "https://picsum.photos/seed/Venice-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Venice Hotel 7",
+      "city": "Venice",
+      "address": "Venice 중심가 16번지",
+      "rating": "5.0",
+      "lowestPrice": "136842",
+      "image": "https://picsum.photos/seed/Venice-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Venice Hotel 9",
+      "city": "Venice",
+      "address": "Venice 중심가 18번지",
+      "rating": "4.9",
+      "lowestPrice": "161631",
+      "image": "https://picsum.photos/seed/Venice-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

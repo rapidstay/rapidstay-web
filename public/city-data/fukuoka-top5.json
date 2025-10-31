@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "Fukuoka Hotel 1",
+      "city": "Fukuoka",
+      "address": "Fukuoka 중심가 10번지",
+      "rating": "4.5",
+      "lowestPrice": "108635",
+      "image": "https://picsum.photos/seed/Fukuoka-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Fukuoka Hotel 2",
+      "city": "Fukuoka",
+      "address": "Fukuoka 중심가 11번지",
+      "rating": "4.4",
+      "lowestPrice": "78230",
+      "image": "https://picsum.photos/seed/Fukuoka-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Fukuoka Hotel 3",
+      "city": "Fukuoka",
+      "address": "Fukuoka 중심가 12번지",
+      "rating": "4.7",
+      "lowestPrice": "94950",
+      "image": "https://picsum.photos/seed/Fukuoka-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Fukuoka Hotel 4",
+      "city": "Fukuoka",
+      "address": "Fukuoka 중심가 13번지",
+      "rating": "4.5",
+      "lowestPrice": "89209",
+      "image": "https://picsum.photos/seed/Fukuoka-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Fukuoka Hotel 5",
+      "city": "Fukuoka",
+      "address": "Fukuoka 중심가 14번지",
+      "rating": "4.6",
+      "lowestPrice": "73089",
+      "image": "https://picsum.photos/seed/Fukuoka-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "Fukuoka Hotel 2",
+      "city": "Fukuoka",
+      "address": "Fukuoka 중심가 11번지",
+      "rating": "4.4",
+      "lowestPrice": "78230",
+      "image": "https://picsum.photos/seed/Fukuoka-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Fukuoka Hotel 4",
+      "city": "Fukuoka",
+      "address": "Fukuoka 중심가 13번지",
+      "rating": "4.5",
+      "lowestPrice": "89209",
+      "image": "https://picsum.photos/seed/Fukuoka-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Fukuoka Hotel 6",
+      "city": "Fukuoka",
+      "address": "Fukuoka 중심가 15번지",
+      "rating": "4.7",
+      "lowestPrice": "136246",
+      "image": "https://picsum.photos/seed/Fukuoka-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Fukuoka Hotel 8",
+      "city": "Fukuoka",
+      "address": "Fukuoka 중심가 17번지",
+      "rating": "4.3",
+      "lowestPrice": "76428",
+      "image": "https://picsum.photos/seed/Fukuoka-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Fukuoka Hotel 10",
+      "city": "Fukuoka",
+      "address": "Fukuoka 중심가 19번지",
+      "rating": "4.8",
+      "lowestPrice": "91492",
+      "image": "https://picsum.photos/seed/Fukuoka-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "Fukuoka Hotel 1",
+      "city": "Fukuoka",
+      "address": "Fukuoka 중심가 10번지",
+      "rating": "4.5",
+      "lowestPrice": "108635",
+      "image": "https://picsum.photos/seed/Fukuoka-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Fukuoka Hotel 3",
+      "city": "Fukuoka",
+      "address": "Fukuoka 중심가 12번지",
+      "rating": "4.7",
+      "lowestPrice": "94950",
+      "image": "https://picsum.photos/seed/Fukuoka-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Fukuoka Hotel 5",
+      "city": "Fukuoka",
+      "address": "Fukuoka 중심가 14번지",
+      "rating": "4.6",
+      "lowestPrice": "73089",
+      "image": "https://picsum.photos/seed/Fukuoka-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Fukuoka Hotel 7",
+      "city": "Fukuoka",
+      "address": "Fukuoka 중심가 16번지",
+      "rating": "4.1",
+      "lowestPrice": "158063",
+      "image": "https://picsum.photos/seed/Fukuoka-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Fukuoka Hotel 9",
+      "city": "Fukuoka",
+      "address": "Fukuoka 중심가 18번지",
+      "rating": "4.1",
+      "lowestPrice": "147360",
+      "image": "https://picsum.photos/seed/Fukuoka-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "London Hotel 1",
+      "city": "London",
+      "address": "London 중심가 10번지",
+      "rating": "4.7",
+      "lowestPrice": "83629",
+      "image": "https://picsum.photos/seed/London-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "London Hotel 2",
+      "city": "London",
+      "address": "London 중심가 11번지",
+      "rating": "4.7",
+      "lowestPrice": "79328",
+      "image": "https://picsum.photos/seed/London-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "London Hotel 3",
+      "city": "London",
+      "address": "London 중심가 12번지",
+      "rating": "4.5",
+      "lowestPrice": "160760",
+      "image": "https://picsum.photos/seed/London-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "London Hotel 4",
+      "city": "London",
+      "address": "London 중심가 13번지",
+      "rating": "4.2",
+      "lowestPrice": "82843",
+      "image": "https://picsum.photos/seed/London-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "London Hotel 5",
+      "city": "London",
+      "address": "London 중심가 14번지",
+      "rating": "4.1",
+      "lowestPrice": "141084",
+      "image": "https://picsum.photos/seed/London-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "London Hotel 2",
+      "city": "London",
+      "address": "London 중심가 11번지",
+      "rating": "4.7",
+      "lowestPrice": "79328",
+      "image": "https://picsum.photos/seed/London-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "London Hotel 4",
+      "city": "London",
+      "address": "London 중심가 13번지",
+      "rating": "4.2",
+      "lowestPrice": "82843",
+      "image": "https://picsum.photos/seed/London-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "London Hotel 6",
+      "city": "London",
+      "address": "London 중심가 15번지",
+      "rating": "4.1",
+      "lowestPrice": "76465",
+      "image": "https://picsum.photos/seed/London-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "London Hotel 8",
+      "city": "London",
+      "address": "London 중심가 17번지",
+      "rating": "4.1",
+      "lowestPrice": "131275",
+      "image": "https://picsum.photos/seed/London-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "London Hotel 10",
+      "city": "London",
+      "address": "London 중심가 19번지",
+      "rating": "4.3",
+      "lowestPrice": "127218",
+      "image": "https://picsum.photos/seed/London-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "London Hotel 1",
+      "city": "London",
+      "address": "London 중심가 10번지",
+      "rating": "4.7",
+      "lowestPrice": "83629",
+      "image": "https://picsum.photos/seed/London-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "London Hotel 3",
+      "city": "London",
+      "address": "London 중심가 12번지",
+      "rating": "4.5",
+      "lowestPrice": "160760",
+      "image": "https://picsum.photos/seed/London-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "London Hotel 5",
+      "city": "London",
+      "address": "London 중심가 14번지",
+      "rating": "4.1",
+      "lowestPrice": "141084",
+      "image": "https://picsum.photos/seed/London-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "London Hotel 7",
+      "city": "London",
+      "address": "London 중심가 16번지",
+      "rating": "4.9",
+      "lowestPrice": "156584",
+      "image": "https://picsum.photos/seed/London-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "London Hotel 9",
+      "city": "London",
+      "address": "London 중심가 18번지",
+      "rating": "4.9",
+      "lowestPrice": "161036",
+      "image": "https://picsum.photos/seed/London-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "Yeosu Hotel 1",
+      "city": "Yeosu",
+      "address": "Yeosu 중심가 10번지",
+      "rating": "4.2",
+      "lowestPrice": "103214",
+      "image": "https://picsum.photos/seed/Yeosu-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Yeosu Hotel 2",
+      "city": "Yeosu",
+      "address": "Yeosu 중심가 11번지",
+      "rating": "4.0",
+      "lowestPrice": "159904",
+      "image": "https://picsum.photos/seed/Yeosu-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Yeosu Hotel 3",
+      "city": "Yeosu",
+      "address": "Yeosu 중심가 12번지",
+      "rating": "4.2",
+      "lowestPrice": "92330",
+      "image": "https://picsum.photos/seed/Yeosu-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Yeosu Hotel 4",
+      "city": "Yeosu",
+      "address": "Yeosu 중심가 13번지",
+      "rating": "4.9",
+      "lowestPrice": "164034",
+      "image": "https://picsum.photos/seed/Yeosu-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Yeosu Hotel 5",
+      "city": "Yeosu",
+      "address": "Yeosu 중심가 14번지",
+      "rating": "4.2",
+      "lowestPrice": "131461",
+      "image": "https://picsum.photos/seed/Yeosu-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "Yeosu Hotel 2",
+      "city": "Yeosu",
+      "address": "Yeosu 중심가 11번지",
+      "rating": "4.0",
+      "lowestPrice": "159904",
+      "image": "https://picsum.photos/seed/Yeosu-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Yeosu Hotel 4",
+      "city": "Yeosu",
+      "address": "Yeosu 중심가 13번지",
+      "rating": "4.9",
+      "lowestPrice": "164034",
+      "image": "https://picsum.photos/seed/Yeosu-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Yeosu Hotel 6",
+      "city": "Yeosu",
+      "address": "Yeosu 중심가 15번지",
+      "rating": "4.5",
+      "lowestPrice": "153418",
+      "image": "https://picsum.photos/seed/Yeosu-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Yeosu Hotel 8",
+      "city": "Yeosu",
+      "address": "Yeosu 중심가 17번지",
+      "rating": "4.9",
+      "lowestPrice": "110779",
+      "image": "https://picsum.photos/seed/Yeosu-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Yeosu Hotel 10",
+      "city": "Yeosu",
+      "address": "Yeosu 중심가 19번지",
+      "rating": "4.7",
+      "lowestPrice": "112622",
+      "image": "https://picsum.photos/seed/Yeosu-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "Yeosu Hotel 1",
+      "city": "Yeosu",
+      "address": "Yeosu 중심가 10번지",
+      "rating": "4.2",
+      "lowestPrice": "103214",
+      "image": "https://picsum.photos/seed/Yeosu-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Yeosu Hotel 3",
+      "city": "Yeosu",
+      "address": "Yeosu 중심가 12번지",
+      "rating": "4.2",
+      "lowestPrice": "92330",
+      "image": "https://picsum.photos/seed/Yeosu-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Yeosu Hotel 5",
+      "city": "Yeosu",
+      "address": "Yeosu 중심가 14번지",
+      "rating": "4.2",
+      "lowestPrice": "131461",
+      "image": "https://picsum.photos/seed/Yeosu-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Yeosu Hotel 7",
+      "city": "Yeosu",
+      "address": "Yeosu 중심가 16번지",
+      "rating": "4.6",
+      "lowestPrice": "146057",
+      "image": "https://picsum.photos/seed/Yeosu-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Yeosu Hotel 9",
+      "city": "Yeosu",
+      "address": "Yeosu 중심가 18번지",
+      "rating": "4.2",
+      "lowestPrice": "119302",
+      "image": "https://picsum.photos/seed/Yeosu-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<header>🏨 RapidStay Hotel Search</header>
+
+<div id="hotelSearchForm" autocomplete="on">
+<div id="search-bar" style="position: relative; align-items: center;">
+    <!-- ✅ 도시 -->
+    <div style="position:relative; flex:1;">
+      <input type="text" id="city" name="city" placeholder="도시명 (예: Seoul)" autocomplete="off" />
+      <div id="autocompletelist"></div>
+    </div>
+
+    <!-- ✅ 날짜 -->
+    <input type="date" id="checkIn" name="checkIn">
+    <input type="date" id="checkOut" name="checkOut">
+
+    <!-- ✅ 객실/인원 -->
+    <div class="room-selector">
+      <button type="button" id="roomBtn">객실 1개, 성인 2명</button>
+      <div class="room-dropdown" id="roomDropdown" style="display:none;">
+        <div id="roomList">
+          <div class="room-item" data-index="0">
+            <div class="room-header">객실 1</div>
+            <div class="room-row">
+              <span>성인</span>
+              <div class="counter">
+                <button type="button" class="minus adult">−</button>
+                <span class="count adult-count">2</span>
+                <button type="button" class="plus adult">＋</button>
+              </div>
+            </div>
+            <div class="room-row">
+              <span>아동</span>
+              <div class="counter">
+                <button type="button" class="minus child">−</button>
+                <span class="count child-count">0</span>
+                <button type="button" class="plus child">＋</button>
+              </div>
+              <div class="child-ages"></div>
+            </div>
+          </div>
+        </div>
+        <div class="room-controls">
+          <button type="button" id="addRoom">＋ 객실 추가</button>
+          <button type="button" id="removeRoom">－ 객실 삭제</button>
+        </div>
+        <button type="button" id="applyRooms">적용</button>
+      </div>
+    </div>
+
+    <!-- ✅ 검색 버튼 -->
+    <button id="searchBtn">검색</button>
+  </div>
+</div>
+
+<!-- ✅ 인기 여행지 -->
+<div id="popularCities">
+  <span>인기 여행지:</span>
+  <button class="cityQuick" data-city="서울">서울</button>
+  <button class="cityQuick" data-city="부산">부산</button>
+  <button class="cityQuick" data-city="제주">제주</button>
+  <button class="cityQuick" data-city="도쿄">도쿄</button>
+  <button class="cityQuick" data-city="방콕">방콕</button>
+  <button class="cityQuick" data-city="파리">파리</button>
+</div>

@@ -1,294 +1,47 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>RapidStay – 실시간 숙소 검색</title>
-<meta name="description" content="서울, 부산, 제주 등 전 지역 호텔 실시간 검색. RapidStay는 Expedia 기반 최저가 숙소를 빠르게 비교합니다.">
-<meta name="keywords" content="호텔검색,서울호텔,제주호텔,익스피디아,숙소비교,여행숙박,RapidStay">
-<meta property="og:type" content="website">
-<meta property="og:title" content="RapidStay – 실시간 호텔 검색">
-<meta property="og:description" content="한눈에 보는 숙소 가격 비교. 익스피디아 공식 파트너.">
-<meta property="og:image" content="https://rapidstay.link/assets/og-image.png">
-<meta property="og:url" content="https://rapidstay.link">
-<link rel="icon" href="/favicon.ico" />
-<meta name="theme-color" content="#0f172a" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RapidStay – 실시간 숙소 검색</title>
+  <meta name="description" content="서울, 부산, 제주 등 전 지역 호텔 실시간 검색. RapidStay는 Expedia 기반 최저가 숙소를 빠르게 비교합니다.">
+  <meta name="keywords" content="호텔검색,서울호텔,제주호텔,익스피디아,숙소비교,여행숙박,RapidStay">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RapidStay – 실시간 호텔 검색">
+  <meta property="og:description" content="한눈에 보는 숙소 가격 비교. 익스피디아 공식 파트너.">
+  <meta property="og:image" content="https://rapidstay.link/assets/og-image.png">
+  <meta property="og:url" content="https://rapidstay.link">
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="theme-color" content="#0f172a" />
 
-<style>
-body {
-  font-family: "Noto Sans KR", sans-serif;
-  margin: 0;
-  background: #fafafa;
-}
-header {
-  background: #222;
-  color: #fff;
-  padding: 16px 24px;
-  font-size: 20px;
-}
-/* ✅ 검색바 전체 */
-#search-bar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #fff;
-  padding: 12px 16px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  max-width: 900px;
-  margin: 40px auto;
-}
-
-/* ✅ input 통일 */
-#search-bar input[type="text"],
-#search-bar input[type="date"] {
-  flex: 1;
-  height: 42px;
-  padding: 0 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-  box-sizing: border-box;
-}
-/* ✅ 버튼 정렬 */
-#search-bar button {
-  height: 42px;
-  padding: 0 18px;
-  background: #0078d4;
-  border: none;
-  color: #fff;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-}
-#autocompletelist {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  width: 100%;
-  max-height: 240px;
-  overflow-y: auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  display: none;
-  z-index: 1000;
-}
-.auto-item { padding: 10px 12px; cursor: pointer; font-size: 14px; border-bottom: 1px solid #f3f3f3; }
-.auto-item:hover, .auto-item.active { background: #f0f6ff; }
-.cityQuick { margin: 4px; padding: 6px 12px; font-size: 13px; border-radius: 20px; border: 1px solid #ccc; background: #fff; cursor: pointer; }
-.cityQuick:hover { background: #e7f3ff; border-color: #0078d4; color: #0078d4; }
-#searchBtn {
-  background: linear-gradient(90deg, #0078d4, #00a5a5);
-  color: #fff;
-  border: none;
-  font-weight: 600;
-  border-radius: 8px;
-  padding: 0 20px;
-  transition: 0.2s;
-  cursor: pointer;
-}
-.hotel-card {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background: #fff;
-  margin: 12px auto;
-  padding: 12px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  max-width: 700px;
-}
-.hotel-card img { width: 200px; height: 140px; object-fit: cover; border-radius: 6px; }
-.hotel-info h3 { margin: 0 0 4px; font-size: 18px; }
-.hotel-info p { margin: 0 0 4px; color: #555; }
-.hotel-price { margin: 0; color: #e53935; font-weight: bold; font-size: 16px; }
-
-@media (max-width: 768px) {
-  #search-bar { flex-direction: column; gap: 8px; }
-  .hotel-card { flex-direction: column; align-items: flex-start; max-width: 100%; }
-  .hotel-card img { width: 100%; height: auto; }
-}
-</style>
+  <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/home.css">
+  <script type="module" src="/js/home.js"></script>
 </head>
 
 <body>
-<header>🏨 RapidStay Hotel Search</header>
+  <!-- ✅ 공통 헤더 (header-search.html 불러오기) -->
+  <div id="headerContainer"></div>
 
-<section id="search-bar">
-  <div style="position:relative;flex:1;">
-    <input type="text" id="city" placeholder="도시명 (예: Seoul)" autocomplete="off" style="width:100%;padding:10px;font-size:14px;">
-    <div id="autocompletelist"></div>
-  </div>
-  <input type="date" id="checkIn">
-  <input type="date" id="checkOut">
-  <button id="searchBtn">검색</button>
-</section>
+  <main id="content">
+    <!-- ✅ 검색 결과 or 추천 섹션 -->
+    <section id="hotel-list"></section>
 
-<div style="text-align:center; margin-top:12px; font-size:14px;">
-  <span>인기 여행지:</span>
-  <button class="cityQuick" data-city="서울">서울</button>
-  <button class="cityQuick" data-city="부산">부산</button>
-  <button class="cityQuick" data-city="제주">제주</button>
-  <button class="cityQuick" data-city="도쿄">도쿄</button>
-  <button class="cityQuick" data-city="방콕">방콕</button>
-  <button class="cityQuick" data-city="파리">파리</button>
-</div>
+    <section id="city-preview" style="max-width:900px;margin:60px auto;padding:0 20px;">
+      <h2 style="text-align:center;margin-bottom:30px;">🌍 주요 도시 추천 숙소</h2>
+      <div id="cityContainer"></div>
+    </section>
+  </main>
 
-<section id="hotel-list"></section>
+  <footer>ⓒ 2025 RapidStay | Expedia Partner Data 기반</footer>
 
-<main id="city-preview" style="max-width:900px;margin:60px auto;padding:0 20px;">
-  <h2 style="text-align:center;margin-bottom:30px;">🌍 주요 도시 추천 숙소</h2>
-  <div id="cityContainer"></div>
-</main>
+  <!-- ✅ JS -->
+  <script type="module">
+    import { loadPartial } from "/js/common.js";
+    import "/js/home.js";
 
-<footer style="margin:80px 0 40px;text-align:center;color:#777;font-size:13px;">
-  ⓒ 2025 RapidStay | Expedia Partner Data 기반
-</footer>
-
-<script>
-const API_BASE_URL =
-  (location.hostname.includes("localhost") || location.hostname.includes("127.0.0.1"))
-    ? "http://localhost:8081"
-    : "https://xap-h2xh.onrender.com";
-
-let city = "Seoul";
-let checkIn, checkOut;
-let currentPage = 1;
-let isLoading = false;
-let totalCount = 0;
-const PAGE_SIZE = 20;
-
-/** 날짜 초기화 */
-window.addEventListener("DOMContentLoaded", () => {
-  const today = new Date();
-  const ci = new Date(today); ci.setDate(today.getDate() + 1);
-  const co = new Date(today); co.setDate(today.getDate() + 2);
-  const fmt = (d) => d.toISOString().split("T")[0];
-  document.getElementById("checkIn").value = fmt(ci);
-  document.getElementById("checkOut").value = fmt(co);
-  checkIn = fmt(ci);
-  checkOut = fmt(co);
-});
-
-/** 검색 실행 */
-document.getElementById("searchBtn").addEventListener("click", () => {
-  city = document.getElementById("city").value || "Seoul";
-  checkIn = document.getElementById("checkIn").value;
-  checkOut = document.getElementById("checkOut").value;
-  currentPage = 1;
-  document.getElementById("hotel-list").innerHTML = "";
-  fetchAndRenderHotels(false);
-});
-
-/** 무한 스크롤 */
-window.addEventListener("scroll", () => {
-  const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 200;
-  if (nearBottom && !isLoading && (currentPage - 1) * PAGE_SIZE < totalCount) {
-    fetchAndRenderHotels(true);
-  }
-});
-
-/** API 호출 */
-async function fetchAndRenderHotels(loadMore = false) {
-  if (isLoading) return;
-  isLoading = true;
-
-  const payload = {
-    city,
-    checkIn,
-    checkOut,
-    rooms: [{ adults: 2, children: 0, childAges: [] }],
-    page: currentPage,
-    pageSize: PAGE_SIZE
-  };
-
-  try {
-    const res = await fetch(`${API_BASE_URL}/api/hotels/search`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    });
-    const data = await res.json();
-
-    if (!loadMore) document.getElementById("hotel-list").innerHTML = "";
-    renderHotels(data.hotels || []);
-    totalCount = data.totalCount || 0;
-    currentPage++;
-  } catch (e) {
-    console.error("호텔 불러오기 실패:", e);
-  } finally {
-    isLoading = false;
-  }
-}
-
-/** 호텔 카드 렌더링 */
-function renderHotels(hotels) {
-  const list = document.getElementById("hotel-list");
-  if (!hotels.length) {
-    if (currentPage === 1) list.innerHTML = "<p style='text-align:center;color:#777;'>검색 결과가 없습니다.</p>";
-    return;
-  }
-  const html = hotels.map(h => `
-    <div class="hotel-card">
-      <img src="${h.image || 'https://picsum.photos/seed/' + h.name + '/400/250'}" alt="${h.name}">
-      <div class="hotel-info">
-        <h3>${h.name}</h3>
-        <p>📍 ${h.address || h.city}</p>
-        <p>⭐ ${h.rating || '4.5'} / 5.0</p>
-        <p class="hotel-price">💰 ${h.lowestPrice ? h.lowestPrice + '원~' : '요금 확인 불가'}</p>
-      </div>
-    </div>
-  `).join('');
-  list.insertAdjacentHTML("beforeend", html);
-}
-
-/** 주요 도시 미리보기 */
-const cityContainer = document.getElementById("cityContainer");
-const cityList = [
-  { name: "Seoul", display: "서울" },
-  { name: "Busan", display: "부산" },
-  { name: "Jeju", display: "제주" },
-];
-async function loadCityPreview() {
-  for (const c of cityList) {
-    try {
-      const res = await fetch(`/city-data/${c.name.toLowerCase()}-top5.json`);
-      const data = await res.json();
-      const hotels = (data.topRated || []).slice(0, 5);
-      const cards = hotels.map(h => `
-        <div style="width:260px;background:#fff;border-radius:10px;overflow:hidden;
-                    box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-          <img src="${h.image || 'https://picsum.photos/seed/' + h.name + '/400/250'}"
-               style="width:100%;height:160px;object-fit:cover;">
-          <div style="padding:10px 12px;">
-            <strong>${h.name}</strong>
-            <p style="margin:4px 0 0;font-size:13px;color:#555;">⭐ ${h.rating || '4.5'} / 5.0</p>
-          </div>
-        </div>
-      `).join('');
-      cityContainer.innerHTML += `
-        <section style="margin-bottom:60px;">
-          <h3 style="text-align:center;color:#111;">${c.display} 인기 숙소</h3>
-          <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">
-            ${cards}
-          </div>
-          <div style="text-align:center;margin-top:16px;">
-            <a href="/city/${c.name.toLowerCase()}.html"
-              style="display:inline-block;padding:10px 18px;background:#0078d4;
-                      color:#fff;text-decoration:none;border-radius:8px;font-weight:600;
-                      box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-              ${c.display} 주요 숙소 보기 ▶
-            </a>
-          </div>
-        </section>`;
-    } catch (err) {
-      console.warn(`${c.display} 미리보기 로드 실패:`, err);
-    }
-  }
-}
-loadCityPreview();
-</script>
+    // 헤더 로드 후 검색바 초기화
+    loadPartial("headerContainer", "/partials/header-search.html");
+  </script>
 </body>
 </html>

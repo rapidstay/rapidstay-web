@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "Nice Hotel 1",
+      "city": "Nice",
+      "address": "Nice 중심가 10번지",
+      "rating": "4.5",
+      "lowestPrice": "84566",
+      "image": "https://picsum.photos/seed/Nice-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Nice Hotel 2",
+      "city": "Nice",
+      "address": "Nice 중심가 11번지",
+      "rating": "4.3",
+      "lowestPrice": "139165",
+      "image": "https://picsum.photos/seed/Nice-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Nice Hotel 3",
+      "city": "Nice",
+      "address": "Nice 중심가 12번지",
+      "rating": "4.7",
+      "lowestPrice": "127384",
+      "image": "https://picsum.photos/seed/Nice-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Nice Hotel 4",
+      "city": "Nice",
+      "address": "Nice 중심가 13번지",
+      "rating": "4.7",
+      "lowestPrice": "71170",
+      "image": "https://picsum.photos/seed/Nice-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Nice Hotel 5",
+      "city": "Nice",
+      "address": "Nice 중심가 14번지",
+      "rating": "4.8",
+      "lowestPrice": "101360",
+      "image": "https://picsum.photos/seed/Nice-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "Nice Hotel 2",
+      "city": "Nice",
+      "address": "Nice 중심가 11번지",
+      "rating": "4.3",
+      "lowestPrice": "139165",
+      "image": "https://picsum.photos/seed/Nice-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Nice Hotel 4",
+      "city": "Nice",
+      "address": "Nice 중심가 13번지",
+      "rating": "4.7",
+      "lowestPrice": "71170",
+      "image": "https://picsum.photos/seed/Nice-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Nice Hotel 6",
+      "city": "Nice",
+      "address": "Nice 중심가 15번지",
+      "rating": "4.0",
+      "lowestPrice": "92680",
+      "image": "https://picsum.photos/seed/Nice-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Nice Hotel 8",
+      "city": "Nice",
+      "address": "Nice 중심가 17번지",
+      "rating": "5.0",
+      "lowestPrice": "110793",
+      "image": "https://picsum.photos/seed/Nice-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Nice Hotel 10",
+      "city": "Nice",
+      "address": "Nice 중심가 19번지",
+      "rating": "4.8",
+      "lowestPrice": "134366",
+      "image": "https://picsum.photos/seed/Nice-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "Nice Hotel 1",
+      "city": "Nice",
+      "address": "Nice 중심가 10번지",
+      "rating": "4.5",
+      "lowestPrice": "84566",
+      "image": "https://picsum.photos/seed/Nice-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Nice Hotel 3",
+      "city": "Nice",
+      "address": "Nice 중심가 12번지",
+      "rating": "4.7",
+      "lowestPrice": "127384",
+      "image": "https://picsum.photos/seed/Nice-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Nice Hotel 5",
+      "city": "Nice",
+      "address": "Nice 중심가 14번지",
+      "rating": "4.8",
+      "lowestPrice": "101360",
+      "image": "https://picsum.photos/seed/Nice-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Nice Hotel 7",
+      "city": "Nice",
+      "address": "Nice 중심가 16번지",
+      "rating": "4.4",
+      "lowestPrice": "107988",
+      "image": "https://picsum.photos/seed/Nice-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Nice Hotel 9",
+      "city": "Nice",
+      "address": "Nice 중심가 18번지",
+      "rating": "4.3",
+      "lowestPrice": "77031",
+      "image": "https://picsum.photos/seed/Nice-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

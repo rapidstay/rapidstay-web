@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "Sapporo Hotel 1",
+      "city": "Sapporo",
+      "address": "Sapporo 중심가 10번지",
+      "rating": "4.6",
+      "lowestPrice": "114979",
+      "image": "https://picsum.photos/seed/Sapporo-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Sapporo Hotel 2",
+      "city": "Sapporo",
+      "address": "Sapporo 중심가 11번지",
+      "rating": "4.3",
+      "lowestPrice": "95010",
+      "image": "https://picsum.photos/seed/Sapporo-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Sapporo Hotel 3",
+      "city": "Sapporo",
+      "address": "Sapporo 중심가 12번지",
+      "rating": "4.2",
+      "lowestPrice": "78992",
+      "image": "https://picsum.photos/seed/Sapporo-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Sapporo Hotel 4",
+      "city": "Sapporo",
+      "address": "Sapporo 중심가 13번지",
+      "rating": "4.9",
+      "lowestPrice": "151721",
+      "image": "https://picsum.photos/seed/Sapporo-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Sapporo Hotel 5",
+      "city": "Sapporo",
+      "address": "Sapporo 중심가 14번지",
+      "rating": "4.8",
+      "lowestPrice": "121118",
+      "image": "https://picsum.photos/seed/Sapporo-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "Sapporo Hotel 2",
+      "city": "Sapporo",
+      "address": "Sapporo 중심가 11번지",
+      "rating": "4.3",
+      "lowestPrice": "95010",
+      "image": "https://picsum.photos/seed/Sapporo-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Sapporo Hotel 4",
+      "city": "Sapporo",
+      "address": "Sapporo 중심가 13번지",
+      "rating": "4.9",
+      "lowestPrice": "151721",
+      "image": "https://picsum.photos/seed/Sapporo-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Sapporo Hotel 6",
+      "city": "Sapporo",
+      "address": "Sapporo 중심가 15번지",
+      "rating": "4.1",
+      "lowestPrice": "162186",
+      "image": "https://picsum.photos/seed/Sapporo-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Sapporo Hotel 8",
+      "city": "Sapporo",
+      "address": "Sapporo 중심가 17번지",
+      "rating": "4.2",
+      "lowestPrice": "115355",
+      "image": "https://picsum.photos/seed/Sapporo-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Sapporo Hotel 10",
+      "city": "Sapporo",
+      "address": "Sapporo 중심가 19번지",
+      "rating": "4.8",
+      "lowestPrice": "107200",
+      "image": "https://picsum.photos/seed/Sapporo-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "Sapporo Hotel 1",
+      "city": "Sapporo",
+      "address": "Sapporo 중심가 10번지",
+      "rating": "4.6",
+      "lowestPrice": "114979",
+      "image": "https://picsum.photos/seed/Sapporo-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Sapporo Hotel 3",
+      "city": "Sapporo",
+      "address": "Sapporo 중심가 12번지",
+      "rating": "4.2",
+      "lowestPrice": "78992",
+      "image": "https://picsum.photos/seed/Sapporo-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Sapporo Hotel 5",
+      "city": "Sapporo",
+      "address": "Sapporo 중심가 14번지",
+      "rating": "4.8",
+      "lowestPrice": "121118",
+      "image": "https://picsum.photos/seed/Sapporo-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Sapporo Hotel 7",
+      "city": "Sapporo",
+      "address": "Sapporo 중심가 16번지",
+      "rating": "4.8",
+      "lowestPrice": "140331",
+      "image": "https://picsum.photos/seed/Sapporo-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Sapporo Hotel 9",
+      "city": "Sapporo",
+      "address": "Sapporo 중심가 18번지",
+      "rating": "4.6",
+      "lowestPrice": "112852",
+      "image": "https://picsum.photos/seed/Sapporo-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

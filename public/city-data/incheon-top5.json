@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "Incheon Hotel 1",
+      "city": "Incheon",
+      "address": "Incheon 중심가 10번지",
+      "rating": "4.1",
+      "lowestPrice": "145979",
+      "image": "https://picsum.photos/seed/Incheon-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Incheon Hotel 2",
+      "city": "Incheon",
+      "address": "Incheon 중심가 11번지",
+      "rating": "4.1",
+      "lowestPrice": "79790",
+      "image": "https://picsum.photos/seed/Incheon-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Incheon Hotel 3",
+      "city": "Incheon",
+      "address": "Incheon 중심가 12번지",
+      "rating": "4.3",
+      "lowestPrice": "114675",
+      "image": "https://picsum.photos/seed/Incheon-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Incheon Hotel 4",
+      "city": "Incheon",
+      "address": "Incheon 중심가 13번지",
+      "rating": "4.7",
+      "lowestPrice": "136384",
+      "image": "https://picsum.photos/seed/Incheon-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Incheon Hotel 5",
+      "city": "Incheon",
+      "address": "Incheon 중심가 14번지",
+      "rating": "4.2",
+      "lowestPrice": "98254",
+      "image": "https://picsum.photos/seed/Incheon-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "Incheon Hotel 2",
+      "city": "Incheon",
+      "address": "Incheon 중심가 11번지",
+      "rating": "4.1",
+      "lowestPrice": "79790",
+      "image": "https://picsum.photos/seed/Incheon-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Incheon Hotel 4",
+      "city": "Incheon",
+      "address": "Incheon 중심가 13번지",
+      "rating": "4.7",
+      "lowestPrice": "136384",
+      "image": "https://picsum.photos/seed/Incheon-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Incheon Hotel 6",
+      "city": "Incheon",
+      "address": "Incheon 중심가 15번지",
+      "rating": "4.1",
+      "lowestPrice": "151220",
+      "image": "https://picsum.photos/seed/Incheon-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Incheon Hotel 8",
+      "city": "Incheon",
+      "address": "Incheon 중심가 17번지",
+      "rating": "4.8",
+      "lowestPrice": "104899",
+      "image": "https://picsum.photos/seed/Incheon-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Incheon Hotel 10",
+      "city": "Incheon",
+      "address": "Incheon 중심가 19번지",
+      "rating": "4.2",
+      "lowestPrice": "129622",
+      "image": "https://picsum.photos/seed/Incheon-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "Incheon Hotel 1",
+      "city": "Incheon",
+      "address": "Incheon 중심가 10번지",
+      "rating": "4.1",
+      "lowestPrice": "145979",
+      "image": "https://picsum.photos/seed/Incheon-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Incheon Hotel 3",
+      "city": "Incheon",
+      "address": "Incheon 중심가 12번지",
+      "rating": "4.3",
+      "lowestPrice": "114675",
+      "image": "https://picsum.photos/seed/Incheon-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Incheon Hotel 5",
+      "city": "Incheon",
+      "address": "Incheon 중심가 14번지",
+      "rating": "4.2",
+      "lowestPrice": "98254",
+      "image": "https://picsum.photos/seed/Incheon-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Incheon Hotel 7",
+      "city": "Incheon",
+      "address": "Incheon 중심가 16번지",
+      "rating": "4.5",
+      "lowestPrice": "148268",
+      "image": "https://picsum.photos/seed/Incheon-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Incheon Hotel 9",
+      "city": "Incheon",
+      "address": "Incheon 중심가 18번지",
+      "rating": "4.1",
+      "lowestPrice": "74814",
+      "image": "https://picsum.photos/seed/Incheon-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

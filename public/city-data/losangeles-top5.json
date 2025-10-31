@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "LosAngeles Hotel 1",
+      "city": "LosAngeles",
+      "address": "LosAngeles 중심가 10번지",
+      "rating": "4.2",
+      "lowestPrice": "103134",
+      "image": "https://picsum.photos/seed/LosAngeles-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "LosAngeles Hotel 2",
+      "city": "LosAngeles",
+      "address": "LosAngeles 중심가 11번지",
+      "rating": "4.2",
+      "lowestPrice": "167196",
+      "image": "https://picsum.photos/seed/LosAngeles-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "LosAngeles Hotel 3",
+      "city": "LosAngeles",
+      "address": "LosAngeles 중심가 12번지",
+      "rating": "4.5",
+      "lowestPrice": "112566",
+      "image": "https://picsum.photos/seed/LosAngeles-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "LosAngeles Hotel 4",
+      "city": "LosAngeles",
+      "address": "LosAngeles 중심가 13번지",
+      "rating": "4.3",
+      "lowestPrice": "162697",
+      "image": "https://picsum.photos/seed/LosAngeles-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "LosAngeles Hotel 5",
+      "city": "LosAngeles",
+      "address": "LosAngeles 중심가 14번지",
+      "rating": "4.2",
+      "lowestPrice": "146821",
+      "image": "https://picsum.photos/seed/LosAngeles-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "LosAngeles Hotel 2",
+      "city": "LosAngeles",
+      "address": "LosAngeles 중심가 11번지",
+      "rating": "4.2",
+      "lowestPrice": "167196",
+      "image": "https://picsum.photos/seed/LosAngeles-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "LosAngeles Hotel 4",
+      "city": "LosAngeles",
+      "address": "LosAngeles 중심가 13번지",
+      "rating": "4.3",
+      "lowestPrice": "162697",
+      "image": "https://picsum.photos/seed/LosAngeles-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "LosAngeles Hotel 6",
+      "city": "LosAngeles",
+      "address": "LosAngeles 중심가 15번지",
+      "rating": "4.9",
+      "lowestPrice": "80043",
+      "image": "https://picsum.photos/seed/LosAngeles-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "LosAngeles Hotel 8",
+      "city": "LosAngeles",
+      "address": "LosAngeles 중심가 17번지",
+      "rating": "4.9",
+      "lowestPrice": "92079",
+      "image": "https://picsum.photos/seed/LosAngeles-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "LosAngeles Hotel 10",
+      "city": "LosAngeles",
+      "address": "LosAngeles 중심가 19번지",
+      "rating": "4.4",
+      "lowestPrice": "110394",
+      "image": "https://picsum.photos/seed/LosAngeles-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "LosAngeles Hotel 1",
+      "city": "LosAngeles",
+      "address": "LosAngeles 중심가 10번지",
+      "rating": "4.2",
+      "lowestPrice": "103134",
+      "image": "https://picsum.photos/seed/LosAngeles-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "LosAngeles Hotel 3",
+      "city": "LosAngeles",
+      "address": "LosAngeles 중심가 12번지",
+      "rating": "4.5",
+      "lowestPrice": "112566",
+      "image": "https://picsum.photos/seed/LosAngeles-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "LosAngeles Hotel 5",
+      "city": "LosAngeles",
+      "address": "LosAngeles 중심가 14번지",
+      "rating": "4.2",
+      "lowestPrice": "146821",
+      "image": "https://picsum.photos/seed/LosAngeles-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "LosAngeles Hotel 7",
+      "city": "LosAngeles",
+      "address": "LosAngeles 중심가 16번지",
+      "rating": "4.3",
+      "lowestPrice": "163132",
+      "image": "https://picsum.photos/seed/LosAngeles-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "LosAngeles Hotel 9",
+      "city": "LosAngeles",
+      "address": "LosAngeles 중심가 18번지",
+      "rating": "4.3",
+      "lowestPrice": "140376",
+      "image": "https://picsum.photos/seed/LosAngeles-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

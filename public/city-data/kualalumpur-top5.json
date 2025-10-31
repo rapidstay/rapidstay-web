@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "KualaLumpur Hotel 1",
+      "city": "KualaLumpur",
+      "address": "KualaLumpur 중심가 10번지",
+      "rating": "4.5",
+      "lowestPrice": "82306",
+      "image": "https://picsum.photos/seed/KualaLumpur-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "KualaLumpur Hotel 2",
+      "city": "KualaLumpur",
+      "address": "KualaLumpur 중심가 11번지",
+      "rating": "4.2",
+      "lowestPrice": "72973",
+      "image": "https://picsum.photos/seed/KualaLumpur-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "KualaLumpur Hotel 3",
+      "city": "KualaLumpur",
+      "address": "KualaLumpur 중심가 12번지",
+      "rating": "4.6",
+      "lowestPrice": "142920",
+      "image": "https://picsum.photos/seed/KualaLumpur-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "KualaLumpur Hotel 4",
+      "city": "KualaLumpur",
+      "address": "KualaLumpur 중심가 13번지",
+      "rating": "4.7",
+      "lowestPrice": "151270",
+      "image": "https://picsum.photos/seed/KualaLumpur-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "KualaLumpur Hotel 5",
+      "city": "KualaLumpur",
+      "address": "KualaLumpur 중심가 14번지",
+      "rating": "4.7",
+      "lowestPrice": "161709",
+      "image": "https://picsum.photos/seed/KualaLumpur-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "KualaLumpur Hotel 2",
+      "city": "KualaLumpur",
+      "address": "KualaLumpur 중심가 11번지",
+      "rating": "4.2",
+      "lowestPrice": "72973",
+      "image": "https://picsum.photos/seed/KualaLumpur-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "KualaLumpur Hotel 4",
+      "city": "KualaLumpur",
+      "address": "KualaLumpur 중심가 13번지",
+      "rating": "4.7",
+      "lowestPrice": "151270",
+      "image": "https://picsum.photos/seed/KualaLumpur-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "KualaLumpur Hotel 6",
+      "city": "KualaLumpur",
+      "address": "KualaLumpur 중심가 15번지",
+      "rating": "4.0",
+      "lowestPrice": "86496",
+      "image": "https://picsum.photos/seed/KualaLumpur-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "KualaLumpur Hotel 8",
+      "city": "KualaLumpur",
+      "address": "KualaLumpur 중심가 17번지",
+      "rating": "4.8",
+      "lowestPrice": "131658",
+      "image": "https://picsum.photos/seed/KualaLumpur-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "KualaLumpur Hotel 10",
+      "city": "KualaLumpur",
+      "address": "KualaLumpur 중심가 19번지",
+      "rating": "4.2",
+      "lowestPrice": "117026",
+      "image": "https://picsum.photos/seed/KualaLumpur-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "KualaLumpur Hotel 1",
+      "city": "KualaLumpur",
+      "address": "KualaLumpur 중심가 10번지",
+      "rating": "4.5",
+      "lowestPrice": "82306",
+      "image": "https://picsum.photos/seed/KualaLumpur-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "KualaLumpur Hotel 3",
+      "city": "KualaLumpur",
+      "address": "KualaLumpur 중심가 12번지",
+      "rating": "4.6",
+      "lowestPrice": "142920",
+      "image": "https://picsum.photos/seed/KualaLumpur-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "KualaLumpur Hotel 5",
+      "city": "KualaLumpur",
+      "address": "KualaLumpur 중심가 14번지",
+      "rating": "4.7",
+      "lowestPrice": "161709",
+      "image": "https://picsum.photos/seed/KualaLumpur-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "KualaLumpur Hotel 7",
+      "city": "KualaLumpur",
+      "address": "KualaLumpur 중심가 16번지",
+      "rating": "4.8",
+      "lowestPrice": "144454",
+      "image": "https://picsum.photos/seed/KualaLumpur-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "KualaLumpur Hotel 9",
+      "city": "KualaLumpur",
+      "address": "KualaLumpur 중심가 18번지",
+      "rating": "5.0",
+      "lowestPrice": "127802",
+      "image": "https://picsum.photos/seed/KualaLumpur-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

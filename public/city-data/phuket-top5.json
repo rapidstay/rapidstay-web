@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "Phuket Hotel 1",
+      "city": "Phuket",
+      "address": "Phuket 중심가 10번지",
+      "rating": "4.5",
+      "lowestPrice": "101307",
+      "image": "https://picsum.photos/seed/Phuket-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Phuket Hotel 2",
+      "city": "Phuket",
+      "address": "Phuket 중심가 11번지",
+      "rating": "4.4",
+      "lowestPrice": "137273",
+      "image": "https://picsum.photos/seed/Phuket-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Phuket Hotel 3",
+      "city": "Phuket",
+      "address": "Phuket 중심가 12번지",
+      "rating": "4.5",
+      "lowestPrice": "71757",
+      "image": "https://picsum.photos/seed/Phuket-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Phuket Hotel 4",
+      "city": "Phuket",
+      "address": "Phuket 중심가 13번지",
+      "rating": "4.4",
+      "lowestPrice": "132608",
+      "image": "https://picsum.photos/seed/Phuket-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Phuket Hotel 5",
+      "city": "Phuket",
+      "address": "Phuket 중심가 14번지",
+      "rating": "4.4",
+      "lowestPrice": "122236",
+      "image": "https://picsum.photos/seed/Phuket-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "Phuket Hotel 2",
+      "city": "Phuket",
+      "address": "Phuket 중심가 11번지",
+      "rating": "4.4",
+      "lowestPrice": "137273",
+      "image": "https://picsum.photos/seed/Phuket-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Phuket Hotel 4",
+      "city": "Phuket",
+      "address": "Phuket 중심가 13번지",
+      "rating": "4.4",
+      "lowestPrice": "132608",
+      "image": "https://picsum.photos/seed/Phuket-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Phuket Hotel 6",
+      "city": "Phuket",
+      "address": "Phuket 중심가 15번지",
+      "rating": "5.0",
+      "lowestPrice": "143755",
+      "image": "https://picsum.photos/seed/Phuket-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Phuket Hotel 8",
+      "city": "Phuket",
+      "address": "Phuket 중심가 17번지",
+      "rating": "4.8",
+      "lowestPrice": "146940",
+      "image": "https://picsum.photos/seed/Phuket-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Phuket Hotel 10",
+      "city": "Phuket",
+      "address": "Phuket 중심가 19번지",
+      "rating": "4.5",
+      "lowestPrice": "98399",
+      "image": "https://picsum.photos/seed/Phuket-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "Phuket Hotel 1",
+      "city": "Phuket",
+      "address": "Phuket 중심가 10번지",
+      "rating": "4.5",
+      "lowestPrice": "101307",
+      "image": "https://picsum.photos/seed/Phuket-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Phuket Hotel 3",
+      "city": "Phuket",
+      "address": "Phuket 중심가 12번지",
+      "rating": "4.5",
+      "lowestPrice": "71757",
+      "image": "https://picsum.photos/seed/Phuket-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Phuket Hotel 5",
+      "city": "Phuket",
+      "address": "Phuket 중심가 14번지",
+      "rating": "4.4",
+      "lowestPrice": "122236",
+      "image": "https://picsum.photos/seed/Phuket-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Phuket Hotel 7",
+      "city": "Phuket",
+      "address": "Phuket 중심가 16번지",
+      "rating": "4.6",
+      "lowestPrice": "104472",
+      "image": "https://picsum.photos/seed/Phuket-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Phuket Hotel 9",
+      "city": "Phuket",
+      "address": "Phuket 중심가 18번지",
+      "rating": "4.2",
+      "lowestPrice": "133697",
+      "image": "https://picsum.photos/seed/Phuket-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}

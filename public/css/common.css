@@ -1,0 +1,449 @@
+/* ==============================
+   RapidStay - 공통 스타일
+   ============================== */
+
+/* 기본 리셋 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #f9fafb;
+  color: #111;
+  line-height: 1.5;
+}
+
+/* 헤더 & 푸터 */
+header {
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+  padding: 16px 0;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+footer {
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+  font-size: 13px;
+}
+
+/* 입력 폼 및 버튼 */
+input[type="text"],
+input[type="date"] {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+button {
+  background: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+/* 섹션 공통 여백 */
+section {
+  margin: 20px 0;
+}
+
+/* 자동완성 박스 */
+#autocompletelist {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  z-index: 10;
+  display: none;
+}
+
+.auto-item {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.auto-item:hover {
+  background: #f0f0f0;
+}
+
+#search-bar > div {
+  display: flex;
+  align-items: stretch;
+}
+
+/* 검색 폼 (홈 + 검색 공통) */
+#hotelSearchForm {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 90%;
+  max-width: 900px;
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 인풋: 도시명은 넓게, 날짜는 적당히 */
+#search-bar input[type="text"] {
+  flex: 2;
+  min-width: 180px;
+}
+
+#search-bar input[type="date"] {
+  flex: 1;
+  min-width: 140px;
+}
+
+#search-bar button {
+  height: 36px;
+  padding: 0 18px;
+  border-radius: 8px;
+  background: #0078d4;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+#search-bar button:hover {
+  background: #005fa3;
+}
+
+#main-footer {
+  background: #0f172a;
+  color: #ddd;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 14px;
+  margin-top: 80px;
+}
+
+#main-footer .footer-inner p {
+  margin: 4px 0;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px 0;
+  color: #666;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+}
+
+:root{
+  --container: 1200px;
+  --gap-1: 8px; --gap-2: 12px; --gap-3: 16px; --gap-4: 20px;
+  --radius: 10px; --shadow: 0 2px 6px rgba(0,0,0,.08);
+  --brand: #0078d4; --text-1:#111; --text-2:#555; --line:#e8e8e8;
+  --sm: 480px; --md: 768px; --lg: 1024px; --xl: 1280px;
+}
+.container{max-width:var(--container);margin:0 auto;padding:0 12px;}
+.card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.btn{border:1px solid var(--line);background:#fff;border-radius:6px;padding:8px 12px;cursor:pointer}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.hidden{display:none!important}
+
+.scroll-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.horizontal-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0;
+}
+
+.hotel-card {
+  flex: 0 0 calc(25% - 12px);
+  scroll-snap-align: start;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+.hotel-card:hover {
+  transform: translateY(-4px);
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: #1e40af; /* RapidStay 딥블루 */
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.25s ease;
+}
+.scroll-btn:hover {
+  background: #2563eb; /* hover 시 밝은 블루 */
+  transform: translateY(-50%) scale(1.1);
+}
+.scroll-btn.left { left: -14px; }
+.scroll-btn.right { right: -14px; }
+
+/* ==============================
+   RapidStay — 객실 선택창 최종 정리
+   ============================== */
+
+/* 드롭다운 위치 및 기본 스타일 */
+#search-bar .room-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  display: none;
+  width: 284px;
+  max-height: 480px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  padding: 16px 20px;
+  z-index: 999;
+}
+
+.room-dropdown {
+  width: 260px; /* ✅ 기존 320px → 260px */
+  right: 0;
+}
+
+#search-bar .room-dropdown.active {
+  display: block;
+}
+
+/* 객실 단위 */
+.room-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+.room-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.room-header {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* 성인/아동 라인 정렬 */
+.room-row {
+  display: flex;
+  flex-wrap: wrap; /* ✅ 이 줄 추가 */
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.child-ages select {
+  margin-left: 8px;
+  margin-top: 6px; /* ✅ 세로로 내려왔을 때 간격 */
+}
+
+.room-row .child-ages {
+  flex-basis: 100%;  /* ✅ 한 줄 전체 차지 */
+  margin-top: 6px;   /* ✅ 살짝 여백 */
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.counter button {
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  line-height: 1;
+  border-radius: 6px;
+  background: #1e40af;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.counter .count {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* 아동 나이 선택 */
+.room-row select {
+  margin-left: 8px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 0 6px;
+}
+
+/* 하단 버튼 영역 */
+.room-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+#applyRooms {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: #0078d4;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+#applyRooms:hover {
+  background: #005fa3;
+}
+
+/* 스크롤 시 스크롤바 가볍게 */
+#search-bar .room-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+#search-bar .room-dropdown::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+#popularCities {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+#popularCities span {
+  margin-right: 10px;
+  color: #444;
+  font-weight: 600;
+}
+
+#popularCities .cityQuick {
+  background: #f3f6fb;
+  border: 1px solid #cfd8e3;
+  color: #0066cc;
+  padding: 6px 14px;
+  margin: 4px 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+#popularCities .cityQuick:hover {
+  background: #0066cc;
+  color: #fff;
+  border-color: #0066cc;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#popularCities span {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a2a3a; /* 👈 좀 더 진한 네이비톤 */
+  letter-spacing: -0.2px;
+  position: relative;
+  top: 1px;
+}
+
+#popularCities span::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1); /* 👈 그라데이션 대신 은은한 밑줄 */
+  border-radius: 2px;
+}
+
+/* ==============================
+   섹션 타이틀 강화
+   ============================== */
+.hotel-section {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.hotel-section h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 5px;
+  position: relative;
+  display: inline-block;
+  padding-left: 8px;
+}
+
+/* 👇 왼쪽 포인트 라인 */
+.hotel-section h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 22px;
+  background: linear-gradient(180deg, #0078d4, #00a3ff);
+  border-radius: 2px;
+}
+
+/* 👇 섹션 간 구분선 */
+.hotel-section:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.05);
+  margin-top: 40px;
+}

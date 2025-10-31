@@ -1,0 +1,143 @@
+{
+  "topRated": [
+    {
+      "name": "Bangkok Hotel 1",
+      "city": "Bangkok",
+      "address": "Bangkok 중심가 10번지",
+      "rating": "4.6",
+      "lowestPrice": "106074",
+      "image": "https://picsum.photos/seed/Bangkok-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Bangkok Hotel 2",
+      "city": "Bangkok",
+      "address": "Bangkok 중심가 11번지",
+      "rating": "4.8",
+      "lowestPrice": "109658",
+      "image": "https://picsum.photos/seed/Bangkok-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Bangkok Hotel 3",
+      "city": "Bangkok",
+      "address": "Bangkok 중심가 12번지",
+      "rating": "4.1",
+      "lowestPrice": "70652",
+      "image": "https://picsum.photos/seed/Bangkok-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Bangkok Hotel 4",
+      "city": "Bangkok",
+      "address": "Bangkok 중심가 13번지",
+      "rating": "4.9",
+      "lowestPrice": "82500",
+      "image": "https://picsum.photos/seed/Bangkok-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Bangkok Hotel 5",
+      "city": "Bangkok",
+      "address": "Bangkok 중심가 14번지",
+      "rating": "4.0",
+      "lowestPrice": "147832",
+      "image": "https://picsum.photos/seed/Bangkok-4/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ],
+  "petFriendly": [
+    {
+      "name": "Bangkok Hotel 2",
+      "city": "Bangkok",
+      "address": "Bangkok 중심가 11번지",
+      "rating": "4.8",
+      "lowestPrice": "109658",
+      "image": "https://picsum.photos/seed/Bangkok-1/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Bangkok Hotel 4",
+      "city": "Bangkok",
+      "address": "Bangkok 중심가 13번지",
+      "rating": "4.9",
+      "lowestPrice": "82500",
+      "image": "https://picsum.photos/seed/Bangkok-3/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Bangkok Hotel 6",
+      "city": "Bangkok",
+      "address": "Bangkok 중심가 15번지",
+      "rating": "4.7",
+      "lowestPrice": "97615",
+      "image": "https://picsum.photos/seed/Bangkok-5/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Bangkok Hotel 8",
+      "city": "Bangkok",
+      "address": "Bangkok 중심가 17번지",
+      "rating": "4.9",
+      "lowestPrice": "97688",
+      "image": "https://picsum.photos/seed/Bangkok-7/400/250",
+      "amenities": "Pet Friendly, Pool"
+    },
+    {
+      "name": "Bangkok Hotel 10",
+      "city": "Bangkok",
+      "address": "Bangkok 중심가 19번지",
+      "rating": "4.6",
+      "lowestPrice": "167014",
+      "image": "https://picsum.photos/seed/Bangkok-9/400/250",
+      "amenities": "Pet Friendly, Pool"
+    }
+  ],
+  "family": [
+    {
+      "name": "Bangkok Hotel 1",
+      "city": "Bangkok",
+      "address": "Bangkok 중심가 10번지",
+      "rating": "4.6",
+      "lowestPrice": "106074",
+      "image": "https://picsum.photos/seed/Bangkok-0/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Bangkok Hotel 3",
+      "city": "Bangkok",
+      "address": "Bangkok 중심가 12번지",
+      "rating": "4.1",
+      "lowestPrice": "70652",
+      "image": "https://picsum.photos/seed/Bangkok-2/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Bangkok Hotel 5",
+      "city": "Bangkok",
+      "address": "Bangkok 중심가 14번지",
+      "rating": "4.0",
+      "lowestPrice": "147832",
+      "image": "https://picsum.photos/seed/Bangkok-4/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Bangkok Hotel 7",
+      "city": "Bangkok",
+      "address": "Bangkok 중심가 16번지",
+      "rating": "4.2",
+      "lowestPrice": "162016",
+      "image": "https://picsum.photos/seed/Bangkok-6/400/250",
+      "amenities": "Family, WiFi"
+    },
+    {
+      "name": "Bangkok Hotel 9",
+      "city": "Bangkok",
+      "address": "Bangkok 중심가 18번지",
+      "rating": "4.4",
+      "lowestPrice": "71179",
+      "image": "https://picsum.photos/seed/Bangkok-8/400/250",
+      "amenities": "Family, WiFi"
+    }
+  ]
+}
