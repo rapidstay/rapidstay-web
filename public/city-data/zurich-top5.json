@@ -4,8 +4,8 @@
       "name": "Zurich Hotel 1",
       "city": "Zurich",
       "address": "Zurich 중심가 10번지",
-      "rating": "4.3",
-      "lowestPrice": 104417,
+      "rating": "4.2",
+      "lowestPrice": 78858,
       "image": "https://picsum.photos/seed/Zurich-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "Zurich Hotel 2",
       "city": "Zurich",
       "address": "Zurich 중심가 11번지",
-      "rating": "4.7",
-      "lowestPrice": 119086,
+      "rating": "4.1",
+      "lowestPrice": 135185,
       "image": "https://picsum.photos/seed/Zurich-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "Zurich Hotel 3",
       "city": "Zurich",
       "address": "Zurich 중심가 12번지",
-      "rating": "4.6",
-      "lowestPrice": 125293,
+      "rating": "5.0",
+      "lowestPrice": 84463,
       "image": "https://picsum.photos/seed/Zurich-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "Zurich Hotel 4",
       "city": "Zurich",
       "address": "Zurich 중심가 13번지",
-      "rating": "4.6",
-      "lowestPrice": 139134,
+      "rating": "4.8",
+      "lowestPrice": 167954,
       "image": "https://picsum.photos/seed/Zurich-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "Zurich Hotel 5",
       "city": "Zurich",
       "address": "Zurich 중심가 14번지",
-      "rating": "4.4",
-      "lowestPrice": 95709,
+      "rating": "4.1",
+      "lowestPrice": 138522,
       "image": "https://picsum.photos/seed/Zurich-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "Zurich Hotel 2",
       "city": "Zurich",
       "address": "Zurich 중심가 11번지",
-      "rating": "4.7",
-      "lowestPrice": 119086,
+      "rating": "4.1",
+      "lowestPrice": 135185,
       "image": "https://picsum.photos/seed/Zurich-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "Zurich Hotel 4",
       "city": "Zurich",
       "address": "Zurich 중심가 13번지",
-      "rating": "4.6",
-      "lowestPrice": 139134,
+      "rating": "4.8",
+      "lowestPrice": 167954,
       "image": "https://picsum.photos/seed/Zurich-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "Zurich Hotel 6",
       "city": "Zurich",
       "address": "Zurich 중심가 15번지",
-      "rating": "4.9",
-      "lowestPrice": 117241,
+      "rating": "4.4",
+      "lowestPrice": 70778,
       "image": "https://picsum.photos/seed/Zurich-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Zurich Hotel 8",
       "city": "Zurich",
       "address": "Zurich 중심가 17번지",
-      "rating": "5.0",
-      "lowestPrice": 161390,
+      "rating": "4.1",
+      "lowestPrice": 151279,
       "image": "https://picsum.photos/seed/Zurich-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -88,7 +88,7 @@
       "city": "Zurich",
       "address": "Zurich 중심가 19번지",
       "rating": "4.6",
-      "lowestPrice": 91002,
+      "lowestPrice": 108958,
       "image": "https://picsum.photos/seed/Zurich-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Zurich Hotel 1",
       "city": "Zurich",
       "address": "Zurich 중심가 10번지",
-      "rating": "4.3",
-      "lowestPrice": 104417,
+      "rating": "4.2",
+      "lowestPrice": 78858,
       "image": "https://picsum.photos/seed/Zurich-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "Zurich Hotel 3",
       "city": "Zurich",
       "address": "Zurich 중심가 12번지",
-      "rating": "4.6",
-      "lowestPrice": 125293,
+      "rating": "5.0",
+      "lowestPrice": 84463,
       "image": "https://picsum.photos/seed/Zurich-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "Zurich Hotel 5",
       "city": "Zurich",
       "address": "Zurich 중심가 14번지",
-      "rating": "4.4",
-      "lowestPrice": 95709,
+      "rating": "4.1",
+      "lowestPrice": 138522,
       "image": "https://picsum.photos/seed/Zurich-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "Zurich Hotel 7",
       "city": "Zurich",
       "address": "Zurich 중심가 16번지",
-      "rating": "4.3",
-      "lowestPrice": 141951,
+      "rating": "4.4",
+      "lowestPrice": 80520,
       "image": "https://picsum.photos/seed/Zurich-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "Zurich Hotel 9",
       "city": "Zurich",
       "address": "Zurich 중심가 18번지",
-      "rating": "4.6",
-      "lowestPrice": 147833,
+      "rating": "4.3",
+      "lowestPrice": 101766,
       "image": "https://picsum.photos/seed/Zurich-8/400/250",
       "amenities": "Family, WiFi"
     }

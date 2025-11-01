@@ -111,6 +111,7 @@ function generateHtml(city, display) {
   const hotels = createDummyHotels(display);
   const jsonLd = makeJsonLd(hotels, display);
 
+  // ✅ 템플릿에 값 치환
   template = template
     .replace(/{{cityName}}/g, display)
     .replace(/{{title}}/g, title)
@@ -118,14 +119,35 @@ function generateHtml(city, display) {
     .replace(/{{imageUrl}}/g, imageUrl)
     .replace(/{{canonicalUrl}}/g, canonicalUrl)
     .replace(/{{date}}/g, date)
-    .replace(/{{ROBOTS}}/g, robots)   // ✅ 추가된 라인
+    .replace(/{{ROBOTS}}/g, robots)
     .replace("{{HEADER_SEARCH}}", headerHTML)
     .replace("{{HOTEL_JSON}}", jsonLd);
 
+  // ✅ SEO 검증 (template 기반)
+  const requiredTags = [
+    "<title>",
+    '<meta name="description"',
+    '<meta property="og:title"',
+    '<meta property="og:description"',
+    '<link rel="canonical"',
+    '<meta name="robots"',
+  ];
+
+  const missing = requiredTags.filter(tag => !template.includes(tag));
+  if (missing.length > 0) {
+    const color = process.env.PROD ? "\x1b[31m" : "\x1b[33m"; // 빨강(운영) / 노랑(개발)
+    console.log(`${color}⚠️ [${display}] SEO 태그 누락: ${missing.join(", ")}\x1b[0m`);
+  } else {
+    console.log(`✅ [${display}] SEO 태그 검증 완료`);
+  }
+
+  // ✅ 파일 저장
   const htmlPath = path.join(OUTPUT_HTML_DIR, `${city.toLowerCase()}.html`);
   fs.writeFileSync(htmlPath, template);
+
   console.log(`📝 ${htmlPath} 생성 완료`);
 }
+
 
 // === sitemap.xml 자동 생성 ==========================
 function generateSitemap() {

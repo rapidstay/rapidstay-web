@@ -2,6 +2,12 @@
   "projects": {
     "default": "rapidstay-c7f8e"
   },
-  "targets": {},
-  "etags": {}
+  "targets": {
+    "rapidstay-c7f8e": {
+      "hosting": {
+        "prod": ["rapidstay-c7f8e"],
+        "dev": ["rapidstay-dev"]
+      }
+    }
+  }
 }

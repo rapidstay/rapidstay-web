@@ -4,8 +4,8 @@
       "name": "NewYork Hotel 1",
       "city": "NewYork",
       "address": "NewYork 중심가 10번지",
-      "rating": "4.8",
-      "lowestPrice": 83482,
+      "rating": "4.7",
+      "lowestPrice": 144960,
       "image": "https://picsum.photos/seed/NewYork-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "NewYork Hotel 2",
       "city": "NewYork",
       "address": "NewYork 중심가 11번지",
-      "rating": "4.3",
-      "lowestPrice": 99595,
+      "rating": "4.7",
+      "lowestPrice": 91006,
       "image": "https://picsum.photos/seed/NewYork-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "NewYork Hotel 3",
       "city": "NewYork",
       "address": "NewYork 중심가 12번지",
-      "rating": "4.6",
-      "lowestPrice": 114579,
+      "rating": "4.4",
+      "lowestPrice": 154702,
       "image": "https://picsum.photos/seed/NewYork-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "NewYork Hotel 4",
       "city": "NewYork",
       "address": "NewYork 중심가 13번지",
-      "rating": "4.4",
-      "lowestPrice": 116199,
+      "rating": "4.1",
+      "lowestPrice": 72723,
       "image": "https://picsum.photos/seed/NewYork-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "NewYork Hotel 5",
       "city": "NewYork",
       "address": "NewYork 중심가 14번지",
-      "rating": "4.3",
-      "lowestPrice": 114612,
+      "rating": "4.6",
+      "lowestPrice": 82181,
       "image": "https://picsum.photos/seed/NewYork-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "NewYork Hotel 2",
       "city": "NewYork",
       "address": "NewYork 중심가 11번지",
-      "rating": "4.3",
-      "lowestPrice": 99595,
+      "rating": "4.7",
+      "lowestPrice": 91006,
       "image": "https://picsum.photos/seed/NewYork-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "NewYork Hotel 4",
       "city": "NewYork",
       "address": "NewYork 중심가 13번지",
-      "rating": "4.4",
-      "lowestPrice": 116199,
+      "rating": "4.1",
+      "lowestPrice": 72723,
       "image": "https://picsum.photos/seed/NewYork-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "NewYork Hotel 6",
       "city": "NewYork",
       "address": "NewYork 중심가 15번지",
-      "rating": "4.0",
-      "lowestPrice": 84635,
+      "rating": "5.0",
+      "lowestPrice": 156474,
       "image": "https://picsum.photos/seed/NewYork-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "NewYork Hotel 8",
       "city": "NewYork",
       "address": "NewYork 중심가 17번지",
-      "rating": "4.1",
-      "lowestPrice": 107423,
+      "rating": "4.9",
+      "lowestPrice": 166261,
       "image": "https://picsum.photos/seed/NewYork-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "NewYork Hotel 10",
       "city": "NewYork",
       "address": "NewYork 중심가 19번지",
-      "rating": "4.1",
-      "lowestPrice": 88715,
+      "rating": "4.4",
+      "lowestPrice": 165039,
       "image": "https://picsum.photos/seed/NewYork-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "NewYork Hotel 1",
       "city": "NewYork",
       "address": "NewYork 중심가 10번지",
-      "rating": "4.8",
-      "lowestPrice": 83482,
+      "rating": "4.7",
+      "lowestPrice": 144960,
       "image": "https://picsum.photos/seed/NewYork-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "NewYork Hotel 3",
       "city": "NewYork",
       "address": "NewYork 중심가 12번지",
-      "rating": "4.6",
-      "lowestPrice": 114579,
+      "rating": "4.4",
+      "lowestPrice": 154702,
       "image": "https://picsum.photos/seed/NewYork-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "NewYork Hotel 5",
       "city": "NewYork",
       "address": "NewYork 중심가 14번지",
-      "rating": "4.3",
-      "lowestPrice": 114612,
+      "rating": "4.6",
+      "lowestPrice": 82181,
       "image": "https://picsum.photos/seed/NewYork-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "NewYork Hotel 7",
       "city": "NewYork",
       "address": "NewYork 중심가 16번지",
-      "rating": "4.6",
-      "lowestPrice": 135665,
+      "rating": "4.7",
+      "lowestPrice": 93049,
       "image": "https://picsum.photos/seed/NewYork-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "NewYork Hotel 9",
       "city": "NewYork",
       "address": "NewYork 중심가 18번지",
-      "rating": "4.1",
-      "lowestPrice": 121577,
+      "rating": "4.2",
+      "lowestPrice": 74474,
       "image": "https://picsum.photos/seed/NewYork-8/400/250",
       "amenities": "Family, WiFi"
     }

@@ -4,8 +4,8 @@
       "name": "Jeju Hotel 1",
       "city": "Jeju",
       "address": "Jeju 중심가 10번지",
-      "rating": "4.1",
-      "lowestPrice": 129784,
+      "rating": "4.5",
+      "lowestPrice": 89381,
       "image": "https://picsum.photos/seed/Jeju-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -14,7 +14,7 @@
       "city": "Jeju",
       "address": "Jeju 중심가 11번지",
       "rating": "4.1",
-      "lowestPrice": 81380,
+      "lowestPrice": 91235,
       "image": "https://picsum.photos/seed/Jeju-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "Jeju Hotel 3",
       "city": "Jeju",
       "address": "Jeju 중심가 12번지",
-      "rating": "4.6",
-      "lowestPrice": 81551,
+      "rating": "4.3",
+      "lowestPrice": 115729,
       "image": "https://picsum.photos/seed/Jeju-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -32,7 +32,7 @@
       "city": "Jeju",
       "address": "Jeju 중심가 13번지",
       "rating": "4.9",
-      "lowestPrice": 83483,
+      "lowestPrice": 119467,
       "image": "https://picsum.photos/seed/Jeju-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "Jeju Hotel 5",
       "city": "Jeju",
       "address": "Jeju 중심가 14번지",
-      "rating": "4.6",
-      "lowestPrice": 143642,
+      "rating": "4.2",
+      "lowestPrice": 168768,
       "image": "https://picsum.photos/seed/Jeju-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -52,7 +52,7 @@
       "city": "Jeju",
       "address": "Jeju 중심가 11번지",
       "rating": "4.1",
-      "lowestPrice": 81380,
+      "lowestPrice": 91235,
       "image": "https://picsum.photos/seed/Jeju-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -61,7 +61,7 @@
       "city": "Jeju",
       "address": "Jeju 중심가 13번지",
       "rating": "4.9",
-      "lowestPrice": 83483,
+      "lowestPrice": 119467,
       "image": "https://picsum.photos/seed/Jeju-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "Jeju Hotel 6",
       "city": "Jeju",
       "address": "Jeju 중심가 15번지",
-      "rating": "4.6",
-      "lowestPrice": 127573,
+      "rating": "4.2",
+      "lowestPrice": 163799,
       "image": "https://picsum.photos/seed/Jeju-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Jeju Hotel 8",
       "city": "Jeju",
       "address": "Jeju 중심가 17번지",
-      "rating": "4.6",
-      "lowestPrice": 101774,
+      "rating": "4.9",
+      "lowestPrice": 93992,
       "image": "https://picsum.photos/seed/Jeju-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Jeju Hotel 10",
       "city": "Jeju",
       "address": "Jeju 중심가 19번지",
-      "rating": "4.4",
-      "lowestPrice": 113225,
+      "rating": "4.7",
+      "lowestPrice": 86794,
       "image": "https://picsum.photos/seed/Jeju-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Jeju Hotel 1",
       "city": "Jeju",
       "address": "Jeju 중심가 10번지",
-      "rating": "4.1",
-      "lowestPrice": 129784,
+      "rating": "4.5",
+      "lowestPrice": 89381,
       "image": "https://picsum.photos/seed/Jeju-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "Jeju Hotel 3",
       "city": "Jeju",
       "address": "Jeju 중심가 12번지",
-      "rating": "4.6",
-      "lowestPrice": 81551,
+      "rating": "4.3",
+      "lowestPrice": 115729,
       "image": "https://picsum.photos/seed/Jeju-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "Jeju Hotel 5",
       "city": "Jeju",
       "address": "Jeju 중심가 14번지",
-      "rating": "4.6",
-      "lowestPrice": 143642,
+      "rating": "4.2",
+      "lowestPrice": 168768,
       "image": "https://picsum.photos/seed/Jeju-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "Jeju Hotel 7",
       "city": "Jeju",
       "address": "Jeju 중심가 16번지",
-      "rating": "4.7",
-      "lowestPrice": 105191,
+      "rating": "4.5",
+      "lowestPrice": 101966,
       "image": "https://picsum.photos/seed/Jeju-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -135,7 +135,7 @@
       "city": "Jeju",
       "address": "Jeju 중심가 18번지",
       "rating": "4.0",
-      "lowestPrice": 168549,
+      "lowestPrice": 122872,
       "image": "https://picsum.photos/seed/Jeju-8/400/250",
       "amenities": "Family, WiFi"
     }

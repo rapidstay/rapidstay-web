@@ -4,8 +4,8 @@
       "name": "HoChiMinh Hotel 1",
       "city": "HoChiMinh",
       "address": "HoChiMinh 중심가 10번지",
-      "rating": "5.0",
-      "lowestPrice": 164295,
+      "rating": "4.1",
+      "lowestPrice": 150531,
       "image": "https://picsum.photos/seed/HoChiMinh-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "HoChiMinh Hotel 2",
       "city": "HoChiMinh",
       "address": "HoChiMinh 중심가 11번지",
-      "rating": "4.6",
-      "lowestPrice": 108101,
+      "rating": "4.8",
+      "lowestPrice": 106310,
       "image": "https://picsum.photos/seed/HoChiMinh-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "HoChiMinh Hotel 3",
       "city": "HoChiMinh",
       "address": "HoChiMinh 중심가 12번지",
-      "rating": "4.1",
-      "lowestPrice": 120305,
+      "rating": "4.8",
+      "lowestPrice": 96263,
       "image": "https://picsum.photos/seed/HoChiMinh-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "HoChiMinh Hotel 4",
       "city": "HoChiMinh",
       "address": "HoChiMinh 중심가 13번지",
-      "rating": "4.8",
-      "lowestPrice": 152650,
+      "rating": "4.5",
+      "lowestPrice": 127913,
       "image": "https://picsum.photos/seed/HoChiMinh-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "HoChiMinh Hotel 5",
       "city": "HoChiMinh",
       "address": "HoChiMinh 중심가 14번지",
-      "rating": "4.2",
-      "lowestPrice": 103220,
+      "rating": "4.1",
+      "lowestPrice": 102151,
       "image": "https://picsum.photos/seed/HoChiMinh-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "HoChiMinh Hotel 2",
       "city": "HoChiMinh",
       "address": "HoChiMinh 중심가 11번지",
-      "rating": "4.6",
-      "lowestPrice": 108101,
+      "rating": "4.8",
+      "lowestPrice": 106310,
       "image": "https://picsum.photos/seed/HoChiMinh-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "HoChiMinh Hotel 4",
       "city": "HoChiMinh",
       "address": "HoChiMinh 중심가 13번지",
-      "rating": "4.8",
-      "lowestPrice": 152650,
+      "rating": "4.5",
+      "lowestPrice": 127913,
       "image": "https://picsum.photos/seed/HoChiMinh-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -70,7 +70,7 @@
       "city": "HoChiMinh",
       "address": "HoChiMinh 중심가 15번지",
       "rating": "4.8",
-      "lowestPrice": 131387,
+      "lowestPrice": 144814,
       "image": "https://picsum.photos/seed/HoChiMinh-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "HoChiMinh Hotel 8",
       "city": "HoChiMinh",
       "address": "HoChiMinh 중심가 17번지",
-      "rating": "4.5",
-      "lowestPrice": 76908,
+      "rating": "4.7",
+      "lowestPrice": 130143,
       "image": "https://picsum.photos/seed/HoChiMinh-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "HoChiMinh Hotel 10",
       "city": "HoChiMinh",
       "address": "HoChiMinh 중심가 19번지",
-      "rating": "4.2",
-      "lowestPrice": 111633,
+      "rating": "4.1",
+      "lowestPrice": 167155,
       "image": "https://picsum.photos/seed/HoChiMinh-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "HoChiMinh Hotel 1",
       "city": "HoChiMinh",
       "address": "HoChiMinh 중심가 10번지",
-      "rating": "5.0",
-      "lowestPrice": 164295,
+      "rating": "4.1",
+      "lowestPrice": 150531,
       "image": "https://picsum.photos/seed/HoChiMinh-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "HoChiMinh Hotel 3",
       "city": "HoChiMinh",
       "address": "HoChiMinh 중심가 12번지",
-      "rating": "4.1",
-      "lowestPrice": 120305,
+      "rating": "4.8",
+      "lowestPrice": 96263,
       "image": "https://picsum.photos/seed/HoChiMinh-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "HoChiMinh Hotel 5",
       "city": "HoChiMinh",
       "address": "HoChiMinh 중심가 14번지",
-      "rating": "4.2",
-      "lowestPrice": 103220,
+      "rating": "4.1",
+      "lowestPrice": 102151,
       "image": "https://picsum.photos/seed/HoChiMinh-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "HoChiMinh Hotel 7",
       "city": "HoChiMinh",
       "address": "HoChiMinh 중심가 16번지",
-      "rating": "4.6",
-      "lowestPrice": 131915,
+      "rating": "4.2",
+      "lowestPrice": 128865,
       "image": "https://picsum.photos/seed/HoChiMinh-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "HoChiMinh Hotel 9",
       "city": "HoChiMinh",
       "address": "HoChiMinh 중심가 18번지",
-      "rating": "4.8",
-      "lowestPrice": 79817,
+      "rating": "4.2",
+      "lowestPrice": 137250,
       "image": "https://picsum.photos/seed/HoChiMinh-8/400/250",
       "amenities": "Family, WiFi"
     }

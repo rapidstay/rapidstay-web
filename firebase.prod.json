@@ -1,0 +1,8 @@
+{
+  "hosting": {
+    "site": "rapidstay-c7f8e",
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [{ "source": "**", "destination": "/index.html" }]
+  }
+}

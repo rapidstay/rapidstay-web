@@ -4,8 +4,8 @@
       "name": "Singapore Hotel 1",
       "city": "Singapore",
       "address": "Singapore 중심가 10번지",
-      "rating": "4.3",
-      "lowestPrice": 99658,
+      "rating": "4.4",
+      "lowestPrice": 73896,
       "image": "https://picsum.photos/seed/Singapore-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "Singapore Hotel 2",
       "city": "Singapore",
       "address": "Singapore 중심가 11번지",
-      "rating": "4.5",
-      "lowestPrice": 95350,
+      "rating": "4.3",
+      "lowestPrice": 144544,
       "image": "https://picsum.photos/seed/Singapore-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "Singapore Hotel 3",
       "city": "Singapore",
       "address": "Singapore 중심가 12번지",
-      "rating": "4.9",
-      "lowestPrice": 91503,
+      "rating": "4.2",
+      "lowestPrice": 99273,
       "image": "https://picsum.photos/seed/Singapore-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -32,7 +32,7 @@
       "city": "Singapore",
       "address": "Singapore 중심가 13번지",
       "rating": "4.3",
-      "lowestPrice": 151499,
+      "lowestPrice": 74236,
       "image": "https://picsum.photos/seed/Singapore-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "Singapore Hotel 5",
       "city": "Singapore",
       "address": "Singapore 중심가 14번지",
-      "rating": "4.1",
-      "lowestPrice": 81629,
+      "rating": "4.9",
+      "lowestPrice": 88710,
       "image": "https://picsum.photos/seed/Singapore-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "Singapore Hotel 2",
       "city": "Singapore",
       "address": "Singapore 중심가 11번지",
-      "rating": "4.5",
-      "lowestPrice": 95350,
+      "rating": "4.3",
+      "lowestPrice": 144544,
       "image": "https://picsum.photos/seed/Singapore-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -61,7 +61,7 @@
       "city": "Singapore",
       "address": "Singapore 중심가 13번지",
       "rating": "4.3",
-      "lowestPrice": 151499,
+      "lowestPrice": 74236,
       "image": "https://picsum.photos/seed/Singapore-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -70,7 +70,7 @@
       "city": "Singapore",
       "address": "Singapore 중심가 15번지",
       "rating": "4.5",
-      "lowestPrice": 122319,
+      "lowestPrice": 149833,
       "image": "https://picsum.photos/seed/Singapore-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Singapore Hotel 8",
       "city": "Singapore",
       "address": "Singapore 중심가 17번지",
-      "rating": "4.2",
-      "lowestPrice": 86529,
+      "rating": "4.6",
+      "lowestPrice": 161424,
       "image": "https://picsum.photos/seed/Singapore-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Singapore Hotel 10",
       "city": "Singapore",
       "address": "Singapore 중심가 19번지",
-      "rating": "4.3",
-      "lowestPrice": 117117,
+      "rating": "4.2",
+      "lowestPrice": 119936,
       "image": "https://picsum.photos/seed/Singapore-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Singapore Hotel 1",
       "city": "Singapore",
       "address": "Singapore 중심가 10번지",
-      "rating": "4.3",
-      "lowestPrice": 99658,
+      "rating": "4.4",
+      "lowestPrice": 73896,
       "image": "https://picsum.photos/seed/Singapore-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "Singapore Hotel 3",
       "city": "Singapore",
       "address": "Singapore 중심가 12번지",
-      "rating": "4.9",
-      "lowestPrice": 91503,
+      "rating": "4.2",
+      "lowestPrice": 99273,
       "image": "https://picsum.photos/seed/Singapore-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "Singapore Hotel 5",
       "city": "Singapore",
       "address": "Singapore 중심가 14번지",
-      "rating": "4.1",
-      "lowestPrice": 81629,
+      "rating": "4.9",
+      "lowestPrice": 88710,
       "image": "https://picsum.photos/seed/Singapore-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "Singapore Hotel 7",
       "city": "Singapore",
       "address": "Singapore 중심가 16번지",
-      "rating": "4.3",
-      "lowestPrice": 117400,
+      "rating": "4.5",
+      "lowestPrice": 111933,
       "image": "https://picsum.photos/seed/Singapore-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "Singapore Hotel 9",
       "city": "Singapore",
       "address": "Singapore 중심가 18번지",
-      "rating": "4.9",
-      "lowestPrice": 98151,
+      "rating": "4.8",
+      "lowestPrice": 163283,
       "image": "https://picsum.photos/seed/Singapore-8/400/250",
       "amenities": "Family, WiFi"
     }

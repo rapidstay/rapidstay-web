@@ -4,8 +4,8 @@
       "name": "Rome Hotel 1",
       "city": "Rome",
       "address": "Rome 중심가 10번지",
-      "rating": "4.4",
-      "lowestPrice": 138324,
+      "rating": "4.5",
+      "lowestPrice": 137052,
       "image": "https://picsum.photos/seed/Rome-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "Rome Hotel 2",
       "city": "Rome",
       "address": "Rome 중심가 11번지",
-      "rating": "4.7",
-      "lowestPrice": 121842,
+      "rating": "4.4",
+      "lowestPrice": 78970,
       "image": "https://picsum.photos/seed/Rome-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "Rome Hotel 3",
       "city": "Rome",
       "address": "Rome 중심가 12번지",
-      "rating": "4.5",
-      "lowestPrice": 74182,
+      "rating": "5.0",
+      "lowestPrice": 105917,
       "image": "https://picsum.photos/seed/Rome-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "Rome Hotel 4",
       "city": "Rome",
       "address": "Rome 중심가 13번지",
-      "rating": "4.2",
-      "lowestPrice": 74852,
+      "rating": "4.6",
+      "lowestPrice": 119807,
       "image": "https://picsum.photos/seed/Rome-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "Rome Hotel 5",
       "city": "Rome",
       "address": "Rome 중심가 14번지",
-      "rating": "4.1",
-      "lowestPrice": 129342,
+      "rating": "4.6",
+      "lowestPrice": 96662,
       "image": "https://picsum.photos/seed/Rome-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "Rome Hotel 2",
       "city": "Rome",
       "address": "Rome 중심가 11번지",
-      "rating": "4.7",
-      "lowestPrice": 121842,
+      "rating": "4.4",
+      "lowestPrice": 78970,
       "image": "https://picsum.photos/seed/Rome-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "Rome Hotel 4",
       "city": "Rome",
       "address": "Rome 중심가 13번지",
-      "rating": "4.2",
-      "lowestPrice": 74852,
+      "rating": "4.6",
+      "lowestPrice": 119807,
       "image": "https://picsum.photos/seed/Rome-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "Rome Hotel 6",
       "city": "Rome",
       "address": "Rome 중심가 15번지",
-      "rating": "4.0",
-      "lowestPrice": 100610,
+      "rating": "4.8",
+      "lowestPrice": 158754,
       "image": "https://picsum.photos/seed/Rome-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Rome Hotel 8",
       "city": "Rome",
       "address": "Rome 중심가 17번지",
-      "rating": "4.3",
-      "lowestPrice": 80008,
+      "rating": "4.2",
+      "lowestPrice": 101185,
       "image": "https://picsum.photos/seed/Rome-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Rome Hotel 10",
       "city": "Rome",
       "address": "Rome 중심가 19번지",
-      "rating": "5.0",
-      "lowestPrice": 131853,
+      "rating": "4.5",
+      "lowestPrice": 166099,
       "image": "https://picsum.photos/seed/Rome-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Rome Hotel 1",
       "city": "Rome",
       "address": "Rome 중심가 10번지",
-      "rating": "4.4",
-      "lowestPrice": 138324,
+      "rating": "4.5",
+      "lowestPrice": 137052,
       "image": "https://picsum.photos/seed/Rome-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "Rome Hotel 3",
       "city": "Rome",
       "address": "Rome 중심가 12번지",
-      "rating": "4.5",
-      "lowestPrice": 74182,
+      "rating": "5.0",
+      "lowestPrice": 105917,
       "image": "https://picsum.photos/seed/Rome-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "Rome Hotel 5",
       "city": "Rome",
       "address": "Rome 중심가 14번지",
-      "rating": "4.1",
-      "lowestPrice": 129342,
+      "rating": "4.6",
+      "lowestPrice": 96662,
       "image": "https://picsum.photos/seed/Rome-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "Rome Hotel 7",
       "city": "Rome",
       "address": "Rome 중심가 16번지",
-      "rating": "4.7",
-      "lowestPrice": 167911,
+      "rating": "4.3",
+      "lowestPrice": 141159,
       "image": "https://picsum.photos/seed/Rome-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "Rome Hotel 9",
       "city": "Rome",
       "address": "Rome 중심가 18번지",
-      "rating": "4.2",
-      "lowestPrice": 71117,
+      "rating": "5.0",
+      "lowestPrice": 156458,
       "image": "https://picsum.photos/seed/Rome-8/400/250",
       "amenities": "Family, WiFi"
     }
