@@ -3,24 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✅ SEO / OG -->
   <title>취리히 호텔 추천 | RapidStay</title>
-  <meta name="description" content="취리히 인기 호텔, 가족 여행, 반려동물 동반 숙소 모음" />
+  <meta name="description" content="취리히의 인기 호텔, 가족 여행, 반려동물 동반 숙소를 한눈에 비교하세요." />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="취리히 호텔 추천 | RapidStay" />
-  <meta property="og:description" content="취리히 인기 호텔, 가족 여행, 반려동물 동반 숙소 모음" />
-  <meta property="og:image" content="https://rapidstay.link/assets/og/zurich.jpg" />
-  <meta property="og:url" content="https://rapidstay.link/city/zurich.html" />
-  <meta name="date" content="2025-10-31" />
-  <link rel="canonical" href="https://rapidstay.link/city/zurich.html" />
-  <meta name="robots" content="index,follow" />
-  
+  <meta property="og:description" content="취리히의 인기 호텔, 가족 여행, 반려동물 동반 숙소를 한눈에 비교하세요." />
+  <meta property="og:image" content="https://rapidstay-c7f8e.web.app/assets/og/zurich.jpg" />
+  <meta property="og:url" content="https://rapidstay-c7f8e.web.app/city/zurich.html" />
+  <meta property="og:site_name" content="RapidStay" />
+  <meta name="date" content="2025-11-01" />
+  <link rel="canonical" href="https://rapidstay-c7f8e.web.app/city/zurich.html" />
+  <meta name="robots" content="noindex,nofollow" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="취리히 호텔 추천 | RapidStay" />
+  <meta name="twitter:description" content="취리히의 인기 호텔, 가족 여행, 반려동물 동반 숙소를 한눈에 비교하세요." />
+
   <!-- ✅ 공통 스타일 -->
-  <link rel="stylesheet" href="/css/common.css">
-  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/home.css" />
+
+  <style>
+    /* ✅ Hero (SEO 소개 섹션) */
+    .city-hero {
+      background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+      border: 1px solid #e4eaf2;
+      border-radius: 12px;
+      padding: 36px 24px;
+      margin: 40px auto 30px;
+      max-width: 900px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .city-hero h1 {
+      font-size: 1.8rem;
+      color: #1b3b6f;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .city-hero p {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .city-hero .breadcrumb {
+      font-size: 14px;
+      color: #777;
+    }
+    .city-hero .breadcrumb a {
+      color: #0078d4;
+      text-decoration: none;
+    }
+    .city-hero .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
-<body>
-  <header>🏨 RapidStay Hotel Search</header>
+<body class="city-page">
+  <!-- ✅ 공통 헤더 (검색 포함) -->
+  🏨 RapidStay Hotel Search
 
 <div id="hotelSearchForm" autocomplete="on">
 <div id="search-bar" style="position: relative; align-items: center;">
@@ -84,135 +129,231 @@
   <button class="cityQuick" data-city="파리">파리</button>
 </div>
 
-
-<main style="max-width:900px;margin:60px auto;padding:0 20px;">
-  <section class="hotel-section">
-    <h2>취리히 인기 숙소</h2>
-    <div class="scroll-wrapper">
-      <button class="scroll-btn left" data-target="hotelList-top">‹</button>
-      <div class="horizontal-scroll" id="hotelList-top"></div>
-      <button class="scroll-btn right" data-target="hotelList-top">›</button>
-    </div>
+  <!-- ✅ 도시 소개 Hero -->
+  <section class="city-hero">
+    <h1>🏨 취리히 인기 숙소 추천</h1>
+    <p>취리히의 인기 호텔을 한눈에. 가족 여행, 커플 휴식, 반려동물 동반 숙소까지 RapidStay에서 실시간으로 찾아보세요.</p>
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <a href="/">홈</a> ›
+      <a href="/city/">도시별</a> ›
+      <span>취리히</span>
+    </nav>
   </section>
 
-  <section class="hotel-section">
-    <h2>가족과 함께하기 좋은 숙소</h2>
-    <div class="scroll-wrapper">
-      <button class="scroll-btn left" data-target="hotelList-family">‹</button>
-      <div class="horizontal-scroll" id="hotelList-family"></div>
-      <button class="scroll-btn right" data-target="hotelList-family">›</button>
+  <main style="max-width:900px;margin:40px auto;padding:0 20px;">
+    <section class="hotel-section">
+      <h2>🏙️ 취리히 인기 숙소</h2>
+      <div class="scroll-wrapper">
+        <button class="scroll-btn left" data-target="hotelList-top">‹</button>
+        <div class="horizontal-scroll" id="hotelList-top"></div>
+        <button class="scroll-btn right" data-target="hotelList-top">›</button>
+      </div>
+    </section>
+
+    <section class="hotel-section">
+      <h2>👨‍👩‍👧 가족과 함께하기 좋은 숙소</h2>
+      <div class="scroll-wrapper">
+        <button class="scroll-btn left" data-target="hotelList-family">‹</button>
+        <div class="horizontal-scroll" id="hotelList-family"></div>
+        <button class="scroll-btn right" data-target="hotelList-family">›</button>
+      </div>
+    </section>
+
+    <section class="hotel-section">
+      <h2>🐾 반려동물 동반 숙소</h2>
+      <div class="scroll-wrapper">
+        <button class="scroll-btn left" data-target="hotelList-pet">‹</button>
+        <div class="horizontal-scroll" id="hotelList-pet"></div>
+        <button class="scroll-btn right" data-target="hotelList-pet">›</button>
+      </div>
+    </section>
+  </main>
+
+  <footer style="text-align:center;margin:60px 0 30px;color:#666;font-size:14px;">
+    <div class="related-links" style="margin-bottom:8px;">
+      다른 인기 도시 보기:
+      <a href="/city/seoul.html">서울</a> ·
+      <a href="/city/busan.html">부산</a> ·
+      <a href="/city/jeju.html">제주</a>
     </div>
-  </section>
+    ⓒ 2025 RapidStay | Expedia Partner Data 기반
+  </footer>
 
-  <section class="hotel-section">
-    <h2>반려동물 동반 숙소</h2>
-    <div class="scroll-wrapper">
-      <button class="scroll-btn left" data-target="hotelList-pet">‹</button>
-      <div class="horizontal-scroll" id="hotelList-pet"></div>
-      <button class="scroll-btn right" data-target="hotelList-pet">›</button>
-    </div>
-  </section>
-</main>
-
-
-  <footer>ⓒ 2025 RapidStay | Expedia Partner Data 기반</footer>
+  <!-- ✅ JSON-LD 구조화 데이터 -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "취리히 인기 호텔",
+  "itemListElement": [
+    {
+      "@type": "Hotel",
+      "name": "취리히 Hotel 1",
+      "address": "취리히 중심가 10번지",
+      "image": "https://picsum.photos/seed/취리히-0/400/250",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "reviewCount": 208
+      },
+      "priceRange": "₩163,642~",
+      "position": 1
+    },
+    {
+      "@type": "Hotel",
+      "name": "취리히 Hotel 2",
+      "address": "취리히 중심가 11번지",
+      "image": "https://picsum.photos/seed/취리히-1/400/250",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": 231
+      },
+      "priceRange": "₩102,433~",
+      "position": 2
+    },
+    {
+      "@type": "Hotel",
+      "name": "취리히 Hotel 3",
+      "address": "취리히 중심가 12번지",
+      "image": "https://picsum.photos/seed/취리히-2/400/250",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": 55
+      },
+      "priceRange": "₩76,044~",
+      "position": 3
+    },
+    {
+      "@type": "Hotel",
+      "name": "취리히 Hotel 4",
+      "address": "취리히 중심가 13번지",
+      "image": "https://picsum.photos/seed/취리히-3/400/250",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.1",
+        "reviewCount": 190
+      },
+      "priceRange": "₩101,988~",
+      "position": 4
+    },
+    {
+      "@type": "Hotel",
+      "name": "취리히 Hotel 5",
+      "address": "취리히 중심가 14번지",
+      "image": "https://picsum.photos/seed/취리히-4/400/250",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": 75
+      },
+      "priceRange": "₩126,704~",
+      "position": 5
+    }
+  ]
+}
+    </script>
 
   <!-- === JS === -->
   <script type="module">
+    /* 도시명 → slug 매핑 */
     import { TARGET_CITIES } from "/js/cities.js";
     window.citySlugMap = Object.fromEntries(
       TARGET_CITIES.map(c => [c.display, c.name.toLowerCase()])
     );
   </script>
 
-<script type="module" src="/js/common.js"></script>
+  <script type="module" src="/js/common.js"></script>
 
-<script type="module">
-  import { initSearchBar } from "/js/common.js";
-  initSearchBar();
-</script>
+  <script type="module">
+    /* 공통 검색바 초기화 */
+    import { initSearchBar } from "/js/common.js";
+    initSearchBar();
+  </script>
 
   <script>
     const city = "취리히";
     const BASE_PATH = "/";
 
     document.addEventListener("DOMContentLoaded", () => {
-      const slug = window.citySlugMap?.[city] || city.toLowerCase();
-
+      const slug = window.citySlugMap?.[city] || (city || "").toLowerCase();
       fetch(`${BASE_PATH}city-data/${slug}-top5.json`)
         .then(res => res.json())
         .then(data => {
-          renderHotels(data.topRated, "hotelList-top");
-          renderHotels(data.family, "hotelList-family");
-          renderHotels(data.petFriendly, "hotelList-pet");
+          renderHotels(data?.topRated || [], "hotelList-top");
+          renderHotels(data?.family || [], "hotelList-family");
+          renderHotels(data?.petFriendly || [], "hotelList-pet");
         })
-        .catch(err => console.error("❌ 호텔 데이터 로드 실패:", err));
+        .catch(err => {
+          console.error("❌ 호텔 데이터 로드 실패:", err);
+          ["hotelList-top","hotelList-family","hotelList-pet"].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.innerHTML = "<p style='text-align:center;color:#777;'>표시할 숙소가 없습니다.</p>";
+          });
+        });
 
+      /* 좌우 스크롤 버튼 */
       document.querySelectorAll(".scroll-btn").forEach(btn => {
         btn.addEventListener("click", () => {
           const target = document.getElementById(btn.dataset.target);
           if (!target) return;
           target.scrollBy({
-            left: btn.classList.contains("left") ? -target.clientWidth * 0.9 : target.clientWidth * 0.9,
+            left: btn.classList.contains("left")
+              ? -target.clientWidth * 0.9
+              : target.clientWidth * 0.9,
             behavior: "smooth"
           });
         });
       });
     });
 
-function renderHotels(hotels, targetId) {
-  // scroll-wrapper 안의 horizontal-scroll를 찾아야 함
-  const wrapper = document.getElementById(targetId);
-  if (!wrapper) return;
+    /* 호텔 카드 렌더링 + (옵션) 클릭 시 로딩 페이지로 이동 */
+    function renderHotels(hotels, targetId) {
+      const wrapper = document.getElementById(targetId);
+      if (!wrapper) return;
 
-  // wrapper가 이미 horizontal-scroll라면 그대로 사용
-  const el = wrapper.classList.contains("horizontal-scroll")
-    ? wrapper
-    : wrapper.querySelector(".horizontal-scroll");
+      const el = wrapper.classList.contains("horizontal-scroll")
+        ? wrapper
+        : wrapper.querySelector(".horizontal-scroll");
+      if (!el) return;
 
-  if (!el) return;
+      if (!Array.isArray(hotels) || hotels.length === 0) {
+        el.innerHTML = "<p style='text-align:center;color:#777;'>표시할 숙소가 없습니다.</p>";
+        return;
+      }
 
-  if (!hotels?.length) {
-    el.innerHTML = "<p style='text-align:center;color:#777;'>표시할 숙소가 없습니다.</p>";
-    return;
-  }
+      const cards = hotels.map((h) => {
+        const imgSrc =
+          h.image || ("https://picsum.photos/seed/" + encodeURIComponent(h?.name || "hotel") + "/400/250");
+        const name = h?.name || "Hotel";
+        const address = h?.address || h?.city || "";
+        const rating = h?.rating || "4.5";
+        const deepLink = h?.expediaUrl || h?.url || ""; // 있으면 /loading.html로 넘김
 
-  const cards = hotels
-    .map(
-      (h) => `
-        <div class="hotel-card">
-          <img src="${h.image || "https://picsum.photos/seed/" + encodeURIComponent(h.name) + "/400/250"}" alt="${h.name}">
-          <div class="hotel-info">
-            <strong>${h.name}</strong>
-            <p>📍 ${h.address || h.city}</p>
-            <p>⭐ ${h.rating || "4.5"} / 5.0</p>
-          </div>
-        </div>`
-    )
-    .join("");
+        return `
+          <div class="hotel-card" ${deepLink ? `data-link="${encodeURIComponent(deepLink)}"` : ""}>
+            <img src="${imgSrc}" alt="${name.replace(/"/g,'&quot;')}">
+            <div class="hotel-info">
+              <strong>${name}</strong>
+              <p>📍 ${address}</p>
+              <p>⭐ ${rating} / 5.0</p>
+            </div>
+          </div>`;
+      }).join("");
 
-  // ✅ 기존 구조 유지, 카드만 주입
-  el.innerHTML = cards;
-}
+      el.innerHTML = cards;
 
-document.addEventListener("click", (e) => {
-  const btn = e.target.closest(".scroll-btn");
-  if (!btn) return;
-
-  const target = document.getElementById(btn.dataset.target);
-  if (!target) return;
-
-  const scroller = target.classList.contains("horizontal-scroll")
-    ? target
-    : target.querySelector(".horizontal-scroll");
-
-  if (!scroller) return;
-
-  const shift = scroller.clientWidth * 0.9 * (btn.classList.contains("left") ? -1 : 1);
-  scroller.scrollBy({ left: shift, behavior: "smooth" });
-});
-
-
+      // 클릭 → 로딩 페이지 (딥링크 있는 카드만)
+      el.querySelectorAll(".hotel-card[data-link]").forEach(card => {
+        card.addEventListener("click", () => {
+          const encodedUrl = card.getAttribute("data-link");
+          if (!encodedUrl) return;
+          // 로딩 페이지를 거쳐 외부로 이동
+          window.location.href = `/loading.html?hotel=${encodedUrl}`;
+        });
+      });
+    }
   </script>
 </body>
 </html>

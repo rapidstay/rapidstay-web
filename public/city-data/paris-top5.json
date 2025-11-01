@@ -4,8 +4,8 @@
       "name": "Paris Hotel 1",
       "city": "Paris",
       "address": "Paris 중심가 10번지",
-      "rating": "4.1",
-      "lowestPrice": "132857",
+      "rating": "4.6",
+      "lowestPrice": 114112,
       "image": "https://picsum.photos/seed/Paris-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "Paris Hotel 2",
       "city": "Paris",
       "address": "Paris 중심가 11번지",
-      "rating": "4.4",
-      "lowestPrice": "141551",
+      "rating": "4.5",
+      "lowestPrice": 140618,
       "image": "https://picsum.photos/seed/Paris-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "Paris Hotel 3",
       "city": "Paris",
       "address": "Paris 중심가 12번지",
-      "rating": "4.6",
-      "lowestPrice": "155753",
+      "rating": "4.3",
+      "lowestPrice": 119329,
       "image": "https://picsum.photos/seed/Paris-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -32,7 +32,7 @@
       "city": "Paris",
       "address": "Paris 중심가 13번지",
       "rating": "4.4",
-      "lowestPrice": "113061",
+      "lowestPrice": 122895,
       "image": "https://picsum.photos/seed/Paris-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "Paris Hotel 5",
       "city": "Paris",
       "address": "Paris 중심가 14번지",
-      "rating": "4.7",
-      "lowestPrice": "136290",
+      "rating": "4.1",
+      "lowestPrice": 152516,
       "image": "https://picsum.photos/seed/Paris-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "Paris Hotel 2",
       "city": "Paris",
       "address": "Paris 중심가 11번지",
-      "rating": "4.4",
-      "lowestPrice": "141551",
+      "rating": "4.5",
+      "lowestPrice": 140618,
       "image": "https://picsum.photos/seed/Paris-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -61,7 +61,7 @@
       "city": "Paris",
       "address": "Paris 중심가 13번지",
       "rating": "4.4",
-      "lowestPrice": "113061",
+      "lowestPrice": 122895,
       "image": "https://picsum.photos/seed/Paris-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "Paris Hotel 6",
       "city": "Paris",
       "address": "Paris 중심가 15번지",
-      "rating": "4.2",
-      "lowestPrice": "111285",
+      "rating": "4.5",
+      "lowestPrice": 82201,
       "image": "https://picsum.photos/seed/Paris-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Paris Hotel 8",
       "city": "Paris",
       "address": "Paris 중심가 17번지",
-      "rating": "4.3",
-      "lowestPrice": "93827",
+      "rating": "4.4",
+      "lowestPrice": 166352,
       "image": "https://picsum.photos/seed/Paris-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Paris Hotel 10",
       "city": "Paris",
       "address": "Paris 중심가 19번지",
-      "rating": "4.4",
-      "lowestPrice": "124789",
+      "rating": "4.2",
+      "lowestPrice": 90435,
       "image": "https://picsum.photos/seed/Paris-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Paris Hotel 1",
       "city": "Paris",
       "address": "Paris 중심가 10번지",
-      "rating": "4.1",
-      "lowestPrice": "132857",
+      "rating": "4.6",
+      "lowestPrice": 114112,
       "image": "https://picsum.photos/seed/Paris-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "Paris Hotel 3",
       "city": "Paris",
       "address": "Paris 중심가 12번지",
-      "rating": "4.6",
-      "lowestPrice": "155753",
+      "rating": "4.3",
+      "lowestPrice": 119329,
       "image": "https://picsum.photos/seed/Paris-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "Paris Hotel 5",
       "city": "Paris",
       "address": "Paris 중심가 14번지",
-      "rating": "4.7",
-      "lowestPrice": "136290",
+      "rating": "4.1",
+      "lowestPrice": 152516,
       "image": "https://picsum.photos/seed/Paris-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "Paris Hotel 7",
       "city": "Paris",
       "address": "Paris 중심가 16번지",
-      "rating": "4.9",
-      "lowestPrice": "92358",
+      "rating": "4.5",
+      "lowestPrice": 140919,
       "image": "https://picsum.photos/seed/Paris-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "Paris Hotel 9",
       "city": "Paris",
       "address": "Paris 중심가 18번지",
-      "rating": "4.5",
-      "lowestPrice": "99913",
+      "rating": "4.7",
+      "lowestPrice": 91859,
       "image": "https://picsum.photos/seed/Paris-8/400/250",
       "amenities": "Family, WiFi"
     }

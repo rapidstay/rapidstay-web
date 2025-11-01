@@ -1,0 +1,1036 @@
+=====================public/css/city.css=======================
+
+
+/* ==============================
+   🏨 RapidStay - 객실 선택 드롭다운 (Layout Fix)
+   ============================== */
+
+/* ✅ 객실 버튼 */
+.room-selector {
+  position: relative;
+}
+#roomBtn {
+  background: #0078d4;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+#roomBtn:hover {
+  background: #005fa3;
+}
+
+/* ✅ 드롭다운 */
+#roomDropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 16px 18px;
+  display: none;
+  z-index: 1500;
+  font-size: 14px;
+  color: #333;
+}
+
+/* ✅ 객실 카드 */
+.room-item {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+.room-item:last-child {
+  border-bottom: none;
+}
+.room-header {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+/* ✅ 행 정렬 수정 */
+.room-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.room-row span {
+  flex: 0 0 50px;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.counter button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f8f9fa;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+.counter button:hover {
+  background: #e9f2fb;
+  border-color: #0078d4;
+}
+
+.count {
+  width: 28px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ✅ 아동 나이 선택 */
+.child-ages {
+  margin-top: 6px;
+}
+.child-ages select {
+  width: 100%;
+  margin-bottom: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px;
+  font-size: 13px;
+}
+
+/* ✅ 객실 추가/삭제 버튼 */
+.room-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+}
+.room-controls button {
+  flex: 1;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #0078d4;
+  background: #fff;
+  color: #0078d4;
+  font-weight: 500;
+}
+.room-controls button:hover {
+  background: #e6f2fb;
+}
+
+/* ✅ 적용 버튼 */
+#applyRooms {
+  background: #0078d4;
+  color: #fff;
+  font-weight: 600;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+#applyRooms:hover {
+  background: #005fa3;
+}
+
+/* ✅ 반응형 */
+@media (max-width: 768px) {
+  #roomDropdown {
+    width: 90%;
+    left: 5%;
+    top: 120%;
+  }
+}
+
+/* ==============================
+   객실 선택 드롭다운 — 정렬 강제 보정
+   ============================== */
+
+/* 라벨(성인/아동) + 카운터를 정확히 2열로 고정 */
+#roomDropdown .room-row{
+  display: grid !important;
+  grid-template-columns: 60px 1fr !important; /* 좌: 라벨, 우: 카운터 */
+  column-gap: 12px !important;
+  align-items: center !important;
+  margin: 10px 0 !important;
+}
+
+/* 라벨 폭/정렬 고정 */
+#roomDropdown .room-row > span{
+  display: block !important;
+  width: 60px !important;
+  text-align: left !important;
+  font-size: 14px !important;
+  color: #333 !important;
+}
+
+/* 카운터 그룹 정렬 */
+#roomDropdown .counter{
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important; /* 숫자와 버튼이 한 줄로 */
+  gap: 8px !important;
+}
+
+/* +/- 버튼과 숫자 높이/폭 통일 */
+#roomDropdown .counter button{
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 8px !important;
+  border: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+}
+
+/* 숫자도 버튼 높이에 맞춰 수직 중앙 */
+#roomDropdown .counter .count{
+  min-width: 22px !important;
+  height: 34px !important;
+  line-height: 34px !important;
+  text-align: center !important;
+  font-size: 14px !important;
+}
+
+/* 객실 추가/삭제 버튼 간격 약간 확보 */
+#roomDropdown .room-controls{
+  margin-top: 12px !important;
+  gap: 10px !important;
+}
+
+/* 모바일에서도 같은 그리드 유지 */
+@media (max-width: 768px){
+  #roomDropdown .room-row{
+    grid-template-columns: 60px 1fr !important;
+  }
+}
+
+
+
+=====================public/css/common.css=======================
+
+/* ==============================
+   RapidStay - 공통 스타일
+   ============================== */
+
+/* 기본 리셋 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #f9fafb;
+  color: #111;
+  line-height: 1.5;
+}
+
+/* 헤더 & 푸터 */
+header {
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+  padding: 16px 0;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+footer {
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+  font-size: 13px;
+}
+
+/* 입력 폼 및 버튼 */
+input[type="text"],
+input[type="date"] {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+button {
+  background: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+/* 섹션 공통 여백 */
+section {
+  margin: 20px 0;
+}
+
+/* 자동완성 박스 */
+#autocompletelist {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  z-index: 10;
+  display: none;
+}
+
+.auto-item {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.auto-item:hover {
+  background: #f0f0f0;
+}
+
+#search-bar > div {
+  display: flex;
+  align-items: stretch;
+}
+
+/* 검색 폼 (홈 + 검색 공통) */
+#hotelSearchForm {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 90%;
+  max-width: 900px;
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 인풋: 도시명은 넓게, 날짜는 적당히 */
+#search-bar input[type="text"] {
+  flex: 2;
+  min-width: 180px;
+}
+
+#search-bar input[type="date"] {
+  flex: 1;
+  min-width: 140px;
+}
+
+#search-bar button {
+  height: 36px;
+  padding: 0 18px;
+  border-radius: 8px;
+  background: #0078d4;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+#search-bar button:hover {
+  background: #005fa3;
+}
+
+#main-footer {
+  background: #0f172a;
+  color: #ddd;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 14px;
+  margin-top: 80px;
+}
+
+#main-footer .footer-inner p {
+  margin: 4px 0;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px 0;
+  color: #666;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+}
+
+:root{
+  --container: 1200px;
+  --gap-1: 8px; --gap-2: 12px; --gap-3: 16px; --gap-4: 20px;
+  --radius: 10px; --shadow: 0 2px 6px rgba(0,0,0,.08);
+  --brand: #0078d4; --text-1:#111; --text-2:#555; --line:#e8e8e8;
+  --sm: 480px; --md: 768px; --lg: 1024px; --xl: 1280px;
+}
+.container{max-width:var(--container);margin:0 auto;padding:0 12px;}
+.card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.btn{border:1px solid var(--line);background:#fff;border-radius:6px;padding:8px 12px;cursor:pointer}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.hidden{display:none!important}
+
+.scroll-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.horizontal-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0;
+}
+
+.hotel-card {
+  flex: 0 0 calc(25% - 12px);
+  scroll-snap-align: start;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+.hotel-card:hover {
+  transform: translateY(-4px);
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: #1e40af; /* RapidStay 딥블루 */
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.25s ease;
+}
+.scroll-btn:hover {
+  background: #2563eb; /* hover 시 밝은 블루 */
+  transform: translateY(-50%) scale(1.1);
+}
+.scroll-btn.left { left: -14px; }
+.scroll-btn.right { right: -14px; }
+
+/* ==============================
+   RapidStay — 객실 선택창 최종 정리
+   ============================== */
+
+/* 드롭다운 위치 및 기본 스타일 */
+#search-bar .room-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  display: none;
+  width: 284px;
+  max-height: 480px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  padding: 16px 20px;
+  z-index: 999;
+}
+
+.room-dropdown {
+  width: 260px; /* ✅ 기존 320px → 260px */
+  right: 0;
+}
+
+#search-bar .room-dropdown.active {
+  display: block;
+}
+
+/* 객실 단위 */
+.room-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+.room-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.room-header {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* 성인/아동 라인 정렬 */
+.room-row {
+  display: flex;
+  flex-wrap: wrap; /* ✅ 이 줄 추가 */
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.child-ages select {
+  margin-left: 8px;
+  margin-top: 6px; /* ✅ 세로로 내려왔을 때 간격 */
+}
+
+.room-row .child-ages {
+  flex-basis: 100%;  /* ✅ 한 줄 전체 차지 */
+  margin-top: 6px;   /* ✅ 살짝 여백 */
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.counter button {
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  line-height: 1;
+  border-radius: 6px;
+  background: #1e40af;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.counter .count {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* 아동 나이 선택 */
+.room-row select {
+  margin-left: 8px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 0 6px;
+}
+
+/* 하단 버튼 영역 */
+.room-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+#applyRooms {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: #0078d4;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+#applyRooms:hover {
+  background: #005fa3;
+}
+
+/* 스크롤 시 스크롤바 가볍게 */
+#search-bar .room-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+#search-bar .room-dropdown::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+#popularCities {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+#popularCities span {
+  margin-right: 10px;
+  color: #444;
+  font-weight: 600;
+}
+
+#popularCities .cityQuick {
+  background: #f3f6fb;
+  border: 1px solid #cfd8e3;
+  color: #0066cc;
+  padding: 6px 14px;
+  margin: 4px 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+#popularCities .cityQuick:hover {
+  background: #0066cc;
+  color: #fff;
+  border-color: #0066cc;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#popularCities span {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a2a3a; /* 👈 좀 더 진한 네이비톤 */
+  letter-spacing: -0.2px;
+  position: relative;
+  top: 1px;
+}
+
+#popularCities span::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1); /* 👈 그라데이션 대신 은은한 밑줄 */
+  border-radius: 2px;
+}
+
+/* ==============================
+   섹션 타이틀 강화
+   ============================== */
+.hotel-section {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.hotel-section h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 5px;
+  position: relative;
+  display: inline-block;
+  padding-left: 8px;
+}
+
+/* 👇 왼쪽 포인트 라인 */
+.hotel-section h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 22px;
+  background: linear-gradient(180deg, #0078d4, #00a3ff);
+  border-radius: 2px;
+}
+
+/* 👇 섹션 간 구분선 */
+.hotel-section:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.05);
+  margin-top: 40px;
+}
+
+
+=====================public/css/home.css=======================
+
+/* ==============================
+   RapidStay - 홈 전용 스타일
+   ============================== */
+
+#hotelSearchForm {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#search-bar {
+  display: flex;
+  gap: 10px;
+  width: 90%;
+  max-width: 900px;
+}
+
+/* 호텔 리스트 - 카드형 레이아웃 */
+#hotel-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+  align-items: start;
+}
+
+.hotel-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-4px);
+}
+
+.hotel-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.hotel-info {
+  padding: 10px 12px;
+}
+
+.hotel-info h3 {
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #111;
+}
+
+.hotel-info p {
+  font-size: 13px;
+  color: #555;
+  margin: 2px 0;
+}
+
+/* 도시별 섹션 */
+#city-preview h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#cityContainer section {
+  margin-bottom: 60px;
+}
+
+.preview-link {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #0078d4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.preview-link:hover {
+  background: #005fa3;
+}
+
+/* ==============================
+   주요 도시 미리보기 (City Preview)
+   ============================== */
+
+.city-section {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.city-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.city-card {
+  width: 260px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.city-card:hover {
+  transform: translateY(-4px);
+}
+
+.city-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.city-card-info {
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+.city-card-info strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #111;
+}
+
+.city-more {
+  margin-top: 16px;
+}
+
+.city-more a {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #0078d4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.city-more a:hover {
+  background: #005fa3;
+}
+
+/* === 도시별 카드 스타일 === */
+.hotel-section {
+  margin-top: 60px;
+}
+.hotel-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+  color: #1b3b6f;
+  font-weight: 600;
+  border-left: 4px solid #0078d4;
+  padding-left: 8px;
+}
+
+/* 카드와 스크롤 영역 개선 */
+.horizontal-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  background: #fafafa;
+  padding: 10px 0;
+}
+.hotel-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  min-width: 200px;
+}
+.hotel-card:hover {
+  transform: translateY(-3px);
+}
+.hotel-info {
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+
+=====================public/css/search.css=======================
+
+console.log("✅ search.js loaded");
+
+import { initSearchBar } from "./common.js";
+
+const API_BASE_URL =
+  location.hostname.includes("localhost") || location.hostname.includes("127.0.0.1")
+    ? "http://localhost:8081"
+    : "https://xap-h2xh.onrender.com";
+
+const params = new URLSearchParams(window.location.search);
+const city = params.get("city") || "Seoul";
+const checkIn = params.get("checkIn") || "2025-11-01";
+const checkOut = params.get("checkOut") || "2025-11-03";
+document.title = `${city} 호텔 검색 | RapidStay – 실시간 숙소 비교`;
+
+/* ===============================
+   🔍 초기 로드
+=============================== */
+window.addEventListener("DOMContentLoaded", async () => {
+  const mapWrapper = document.getElementById("mapWrapper");
+  mapWrapper.style.display = "none";
+
+  // ✅ header-search.html 내 검색창과 연결
+  initSearchBar(async (payload) => {
+    await handleSearch(payload.city, payload.checkIn, payload.checkOut, payload.rooms);
+  });
+
+  const hasResult = await handleSearch(city, checkIn, checkOut);
+  mapWrapper.style.display = hasResult ? "block" : "none";
+});
+
+/* ===============================
+   🏨 검색 함수
+=============================== */
+export async function handleSearch(city, checkIn, checkOut, rooms) {
+  const target = document.getElementById("hotel-list");
+  target.innerHTML = "<p style='text-align:center;color:#666;'>검색 중...</p>";
+
+  // ✅ 객실 정보 불러오기 (없으면 기본값)
+  const storedRooms =
+    rooms ||
+    JSON.parse(sessionStorage.getItem("searchRooms") || '[{"adults":2,"children":0,"childAges":[]}]');
+
+  const payload = {
+    city,
+    checkIn,
+    checkOut,
+    rooms: storedRooms,
+  };
+
+  try {
+    const res = await fetch(`${API_BASE_URL}/api/hotels/search`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    const hasResult = renderHotels(data);
+    return hasResult;
+  } catch (err) {
+    console.error("❌ 검색 실패:", err);
+    target.innerHTML = "<p class='empty'>호텔 데이터를 불러오는 중 문제가 발생했습니다.</p>";
+    return false;
+  }
+}
+
+/* ===============================
+   🖼️ 렌더링
+=============================== */
+function renderHotels(hotels) {
+  const validHotels = hotels.filter((h) => h.id != null);
+  const list = document.getElementById("hotel-list");
+  const mapSection = document.getElementById("mapSection");
+
+  if (validHotels.length === 0) {
+    list.innerHTML = `<p class="empty">검색 결과가 없습니다.</p>`;
+    mapSection.style.display = "none"; // 지도 버튼 숨김
+    return false;
+  }
+
+  mapSection.style.display = "block"; // ✅ 결과 있을 때만 지도 버튼 표시
+  list.innerHTML = validHotels
+    .map(
+      (h) => `
+      <div class="hotel-card" data-id="${h.id}" data-expedia="${h.expediaUrl || ""}">
+        <img src="https://picsum.photos/seed/${h.name}/400/250" alt="${h.name}">
+        <div class="hotel-info">
+          <h3>${h.name}</h3>
+          <p>📍 ${h.address || h.city}</p>
+          <p>⭐ ${h.rating?.toFixed(1) || "4.5"} / 5.0</p>
+          <p class="price">💰 ${h.lowestPrice ? `${h.lowestPrice}원~` : "요금 확인 불가"}</p>
+        </div>
+      </div>`
+    )
+    .join("");
+
+  // 카드 클릭 이동 이벤트
+  document.querySelectorAll(".hotel-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      const expediaUrl = card.dataset.expedia || "https://www.expedia.com/";
+      sessionStorage.setItem("expediaRedirectUrl", expediaUrl);
+      window.location.href = "loading.html";
+    });
+  });
+
+  window.currentHotels = validHotels;
+  return true;
+}
+
+/* ===============================
+   🗺️ 지도 모달
+=============================== */
+const openMapBtn = document.getElementById("openMapBtn");
+const mapModal = document.getElementById("mapModal");
+
+if (openMapBtn) {
+  openMapBtn.addEventListener("click", () => {
+    if (!window.currentHotels || window.currentHotels.length === 0) {
+      alert("표시할 숙소가 없습니다.");
+      return;
+    }
+    mapModal.style.display = "flex";
+    initMap();
+  });
+}
+
+window.closeMap = function () {
+  mapModal.style.display = "none";
+};
+
+/* ===============================
+   🧭 지도 초기화
+=============================== */
+function initMap() {
+  const mapEl = document.getElementById("googleMap");
+  if (!mapEl) return;
+
+  const map = new google.maps.Map(mapEl, {
+    zoom: 12,
+    center: { lat: 37.5665, lng: 126.978 },
+  });
+
+  (window.currentHotels || []).forEach((hotel) => {
+    if (hotel.latitude && hotel.longitude) {
+      new google.maps.Marker({
+        position: { lat: hotel.latitude, lng: hotel.longitude },
+        map,
+        title: hotel.name,
+      });
+    }
+  });
+}

@@ -4,8 +4,8 @@
       "name": "Tongyeong Hotel 1",
       "city": "Tongyeong",
       "address": "Tongyeong 중심가 10번지",
-      "rating": "4.7",
-      "lowestPrice": "100806",
+      "rating": "4.8",
+      "lowestPrice": 143896,
       "image": "https://picsum.photos/seed/Tongyeong-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "Tongyeong Hotel 2",
       "city": "Tongyeong",
       "address": "Tongyeong 중심가 11번지",
-      "rating": "4.6",
-      "lowestPrice": "107102",
+      "rating": "4.3",
+      "lowestPrice": 150571,
       "image": "https://picsum.photos/seed/Tongyeong-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "Tongyeong Hotel 3",
       "city": "Tongyeong",
       "address": "Tongyeong 중심가 12번지",
-      "rating": "4.5",
-      "lowestPrice": "140552",
+      "rating": "4.7",
+      "lowestPrice": 166677,
       "image": "https://picsum.photos/seed/Tongyeong-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "Tongyeong Hotel 4",
       "city": "Tongyeong",
       "address": "Tongyeong 중심가 13번지",
-      "rating": "4.1",
-      "lowestPrice": "108957",
+      "rating": "4.8",
+      "lowestPrice": 93997,
       "image": "https://picsum.photos/seed/Tongyeong-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "Tongyeong Hotel 5",
       "city": "Tongyeong",
       "address": "Tongyeong 중심가 14번지",
-      "rating": "4.6",
-      "lowestPrice": "117085",
+      "rating": "4.9",
+      "lowestPrice": 125477,
       "image": "https://picsum.photos/seed/Tongyeong-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "Tongyeong Hotel 2",
       "city": "Tongyeong",
       "address": "Tongyeong 중심가 11번지",
-      "rating": "4.6",
-      "lowestPrice": "107102",
+      "rating": "4.3",
+      "lowestPrice": 150571,
       "image": "https://picsum.photos/seed/Tongyeong-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "Tongyeong Hotel 4",
       "city": "Tongyeong",
       "address": "Tongyeong 중심가 13번지",
-      "rating": "4.1",
-      "lowestPrice": "108957",
+      "rating": "4.8",
+      "lowestPrice": 93997,
       "image": "https://picsum.photos/seed/Tongyeong-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "Tongyeong Hotel 6",
       "city": "Tongyeong",
       "address": "Tongyeong 중심가 15번지",
-      "rating": "4.6",
-      "lowestPrice": "99607",
+      "rating": "4.5",
+      "lowestPrice": 93145,
       "image": "https://picsum.photos/seed/Tongyeong-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Tongyeong Hotel 8",
       "city": "Tongyeong",
       "address": "Tongyeong 중심가 17번지",
-      "rating": "4.9",
-      "lowestPrice": "144218",
+      "rating": "4.3",
+      "lowestPrice": 169257,
       "image": "https://picsum.photos/seed/Tongyeong-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Tongyeong Hotel 10",
       "city": "Tongyeong",
       "address": "Tongyeong 중심가 19번지",
-      "rating": "4.7",
-      "lowestPrice": "95956",
+      "rating": "4.1",
+      "lowestPrice": 140000,
       "image": "https://picsum.photos/seed/Tongyeong-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Tongyeong Hotel 1",
       "city": "Tongyeong",
       "address": "Tongyeong 중심가 10번지",
-      "rating": "4.7",
-      "lowestPrice": "100806",
+      "rating": "4.8",
+      "lowestPrice": 143896,
       "image": "https://picsum.photos/seed/Tongyeong-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "Tongyeong Hotel 3",
       "city": "Tongyeong",
       "address": "Tongyeong 중심가 12번지",
-      "rating": "4.5",
-      "lowestPrice": "140552",
+      "rating": "4.7",
+      "lowestPrice": 166677,
       "image": "https://picsum.photos/seed/Tongyeong-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "Tongyeong Hotel 5",
       "city": "Tongyeong",
       "address": "Tongyeong 중심가 14번지",
-      "rating": "4.6",
-      "lowestPrice": "117085",
+      "rating": "4.9",
+      "lowestPrice": 125477,
       "image": "https://picsum.photos/seed/Tongyeong-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "Tongyeong Hotel 7",
       "city": "Tongyeong",
       "address": "Tongyeong 중심가 16번지",
-      "rating": "4.6",
-      "lowestPrice": "101384",
+      "rating": "4.0",
+      "lowestPrice": 150095,
       "image": "https://picsum.photos/seed/Tongyeong-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "Tongyeong Hotel 9",
       "city": "Tongyeong",
       "address": "Tongyeong 중심가 18번지",
-      "rating": "4.7",
-      "lowestPrice": "104441",
+      "rating": "4.2",
+      "lowestPrice": 87541,
       "image": "https://picsum.photos/seed/Tongyeong-8/400/250",
       "amenities": "Family, WiFi"
     }

@@ -1,0 +1,631 @@
+=========index.html==============
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RapidStay – 실시간 숙소 검색</title>
+  <meta name="description" content="서울, 부산, 제주 등 전 지역 호텔 실시간 검색. RapidStay는 Expedia 기반 최저가 숙소를 빠르게 비교합니다.">
+  <meta name="keywords" content="호텔검색,서울호텔,제주호텔,익스피디아,숙소비교,여행숙박,RapidStay">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RapidStay – 실시간 호텔 검색">
+  <meta property="og:description" content="한눈에 보는 숙소 가격 비교. 익스피디아 공식 파트너.">
+  <meta property="og:image" content="https://rapidstay.link/assets/og-image.png">
+  <meta property="og:url" content="https://rapidstay.link">
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/home.css">
+  <script type="module" src="/js/home.js"></script>
+</head>
+
+<body>
+  <!-- ✅ 공통 헤더 (header-search.html 불러오기) -->
+  <div id="headerContainer"></div>
+
+  <main id="content">
+    <!-- ✅ 검색 결과 or 추천 섹션 -->
+    <section id="hotel-list"></section>
+
+    <section id="city-preview" style="max-width:900px;margin:60px auto;padding:0 20px;">
+      <h2 style="text-align:center;margin-bottom:30px;">🌍 주요 도시 추천 숙소</h2>
+      <div id="cityContainer"></div>
+    </section>
+  </main>
+
+  <footer>ⓒ 2025 RapidStay | Expedia Partner Data 기반</footer>
+
+  <!-- ✅ JS -->
+  <script type="module">
+    import { loadPartial } from "/js/common.js";
+    import "/js/home.js";
+
+    // 헤더 로드 후 검색바 초기화
+    loadPartial("headerContainer", "/partials/header-search.html");
+  </script>
+</body>
+</html>
+
+
+
+
+==============search.html=======================
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RapidStay – 숙소 검색 결과</title>
+  <meta name="description" content="실시간 호텔 검색 결과 페이지입니다. Expedia 기반 숙소를 빠르게 확인하세요.">
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/search.css">
+  <style>
+    /* ✅ 지도 모달 기본 숨김 및 중앙 정렬 */
+    #mapModal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 999;
+      justify-content: center;
+      align-items: center;
+    }
+    #mapModal .modal-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 800px;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    #mapModal .close-btn {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      cursor: pointer;
+      font-size: 22px;
+    }
+    footer {
+      text-align: center;
+      margin: 60px 0 30px;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ✅ 공통 헤더 -->
+  <div id="headerContainer"></div>
+
+  <main>
+    <h2 style="text-align:center;margin:30px 0;">🔍 검색 결과</h2>
+
+    <!-- ✅ 검색 결과 리스트 -->
+    <section id="hotel-list"></section>
+
+    <!-- ✅ 결과 있을 때만 노출 -->
+    <div id="mapWrapper" style="text-align:center; margin:24px; display:none;">
+      <button id="openMapBtn">전체 지도 보기</button>
+    </div>
+  </main>
+
+  <!-- ✅ 지도 모달 -->
+  <div id="mapModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeMap()">&times;</span>
+      <h2 style="margin:0 0 10px;">호텔 위치 보기</h2>
+      <div id="googleMap" style="width:100%; height:500px; border-radius:8px;"></div>
+    </div>
+  </div>
+
+  <footer>ⓒ 2025 RapidStay | Expedia Partner Data 기반</footer>
+
+  <!-- ✅ JS -->
+<script type="module">
+  import { loadPartial, initSearchBar, fetchAndRenderHotels } from "/js/common.js";
+
+  const params = new URLSearchParams(location.search);
+  const city = params.get("city");
+  const checkIn = params.get("checkIn");
+  const checkOut = params.get("checkOut");
+  const mapWrapper = document.getElementById("mapWrapper");
+  const storedRooms = JSON.parse(sessionStorage.getItem("searchRooms") || '[{"adults":2,"children":0,"childAges":[]}]');
+
+  // ✅ 헤더 로드 후 완전히 삽입된 다음에 initSearchBar 실행
+  await loadPartial("headerContainer", "/partials/header-search.html");
+  await new Promise((r) => setTimeout(r, 100)); // 헤더 렌더 안정 대기
+
+  initSearchBar(async ({ city, checkIn, checkOut, rooms }) => {
+    const selectedRooms = rooms?.length ? rooms : storedRooms;
+    sessionStorage.setItem("searchRooms", JSON.stringify(selectedRooms));
+    const hasResult = await fetchAndRenderHotels(city, checkIn, checkOut, selectedRooms);
+    mapWrapper.style.display = hasResult ? "block" : "none";
+  });
+
+  // ✅ 페이지 진입 시 최초 렌더링
+  if (city) {
+    const hasResult = await fetchAndRenderHotels(city, checkIn, checkOut, storedRooms);
+    mapWrapper.style.display = hasResult ? "block" : "none";
+  } else {
+    document.getElementById("hotel-list").innerHTML =
+      "<p style='text-align:center;color:#777;'>검색어가 없습니다.</p>";
+    mapWrapper.style.display = "none";
+  }
+
+  // ✅ 지도 모달 동작
+  const mapModal = document.getElementById("mapModal");
+  const openMapBtn = document.getElementById("openMapBtn");
+
+  window.closeMap = () => (mapModal.style.display = "none");
+openMapBtn?.addEventListener("click", openMap);
+</script>
+
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMfUN2Rq4MS7VHqNTlbK23JEi_T6QUQPU"></script>
+  
+  <script>
+    let mapInstance; // 전역에서 재사용
+
+    function initMap() {
+      const mapEl = document.getElementById("googleMap");
+      if (!mapEl) return;
+
+      // 기본 중심 위치 (도쿄 중심)
+      const defaultCenter = { lat: 35.682839, lng: 139.759455 };
+
+      // 이미 생성된 지도 있으면 재활용
+      if (mapInstance) {
+        mapInstance.setCenter(defaultCenter);
+        return;
+      }
+
+      mapInstance = new google.maps.Map(mapEl, {
+        center: defaultCenter,
+        zoom: 12,
+        disableDefaultUI: false,
+      });
+
+      // 예시용 마커
+      new google.maps.Marker({
+        position: defaultCenter,
+        map: mapInstance,
+        title: "도쿄 중심",
+      });
+    }
+
+    // ✅ 모달 열릴 때 지도 초기화
+    window.openMap = function () {
+      const modal = document.getElementById("mapModal");
+      modal.style.display = "flex";
+
+      // DOM이 그려지고 나서 지도 생성
+      setTimeout(() => {
+        if (typeof google !== "undefined" && google.maps) {
+          initMap();
+        } else {
+          console.error("Google Maps not ready.");
+        }
+      }, 200);
+    };
+
+    window.closeMap = function () {
+      document.getElementById("mapModal").style.display = "none";
+    };
+  </script>
+  <script>
+  window.addEventListener("load", () => {
+    if (typeof google !== "undefined" && google.maps) {
+      initMap();
+    } else {
+      console.error("Google Maps API not loaded.");
+    }
+  });
+</script>
+</body>
+</html>
+
+
+========================city-template.html==============
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{title}}" />
+  <meta property="og:description" content="{{description}}" />
+  <meta property="og:image" content="{{imageUrl}}" />
+  <meta property="og:url" content="{{canonicalUrl}}" />
+  <meta name="date" content="{{date}}" />
+  <link rel="canonical" href="{{canonicalUrl}}" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- ✅ 공통 스타일 -->
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/home.css" />
+
+<style>
+  /* ✅ Hero (SEO 소개 섹션) */
+  .city-hero {
+    background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+    border: 1px solid #e4eaf2;
+    border-radius: 12px;
+    padding: 36px 24px;
+    margin: 40px auto 30px;
+    max-width: 900px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .city-hero h1 {
+    font-size: 1.8rem;
+    color: #1b3b6f;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .city-hero p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  .city-hero .breadcrumb {
+    font-size: 14px;
+    color: #777;
+  }
+  .city-hero .breadcrumb a {
+    color: #0078d4;
+    text-decoration: none;
+  }
+  .city-hero .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+</style>
+
+</head>
+
+<body class="city-page">
+  <!-- ✅ 공통 헤더 (검색 포함) -->
+    {{HEADER_SEARCH}}
+
+  <!-- ✅ 도시 소개 Hero -->
+  <section class="city-hero">
+    <h1>🏨 {{cityName}} 인기 숙소 추천</h1>
+    <p>{{cityName}}의 인기 호텔을 한눈에. 가족 여행, 커플 휴식, 반려동물 동반 숙소까지 RapidStay에서 실시간으로 찾아보세요.</p>
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <a href="/">홈</a> ›
+      <a href="/city/">도시별</a> ›
+      <span>{{cityName}}</span>
+    </nav>
+  </section>
+
+  <main style="max-width:900px;margin:40px auto;padding:0 20px;">
+    <section class="hotel-section">
+      <h2>🏙️ {{cityName}} 인기 숙소</h2>
+      <div class="scroll-wrapper">
+        <button class="scroll-btn left" data-target="hotelList-top">‹</button>
+        <div class="horizontal-scroll" id="hotelList-top"></div>
+        <button class="scroll-btn right" data-target="hotelList-top">›</button>
+      </div>
+    </section>
+
+    <section class="hotel-section">
+      <h2>👨‍👩‍👧 가족과 함께하기 좋은 숙소</h2>
+      <div class="scroll-wrapper">
+        <button class="scroll-btn left" data-target="hotelList-family">‹</button>
+        <div class="horizontal-scroll" id="hotelList-family"></div>
+        <button class="scroll-btn right" data-target="hotelList-family">›</button>
+      </div>
+    </section>
+
+    <section class="hotel-section">
+      <h2>🐾 반려동물 동반 숙소</h2>
+      <div class="scroll-wrapper">
+        <button class="scroll-btn left" data-target="hotelList-pet">‹</button>
+        <div class="horizontal-scroll" id="hotelList-pet"></div>
+        <button class="scroll-btn right" data-target="hotelList-pet">›</button>
+      </div>
+    </section>
+  </main>
+
+  <footer style="text-align:center;margin:60px 0 30px;color:#666;font-size:14px;">
+    <div class="related-links" style="margin-bottom:8px;">
+      다른 인기 도시 보기:
+      <a href="/city/seoul.html">서울</a> ·
+      <a href="/city/busan.html">부산</a> ·
+      <a href="/city/jeju.html">제주</a>
+    </div>
+    ⓒ 2025 RapidStay | Expedia Partner Data 기반
+  </footer>
+
+  <!-- ✅ JSON-LD 구조화 데이터 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "{{cityName}} 인기 호텔",
+    "itemListElement": [ {{HOTEL_JSON}} ]
+  }
+  </script>
+
+  <!-- === JS === -->
+  <script type="module">
+    import { TARGET_CITIES } from "/js/cities.js";
+    window.citySlugMap = Object.fromEntries(
+      TARGET_CITIES.map(c => [c.display, c.name.toLowerCase()])
+    );
+  </script>
+
+  <script type="module" src="/js/common.js"></script>
+
+  <script type="module">
+    import { initSearchBar } from "/js/common.js";
+    initSearchBar();
+  </script>
+
+  <script>
+    const city = "{{cityName}}";
+    const BASE_PATH = "/";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const slug = window.citySlugMap?.[city] || city.toLowerCase();
+      fetch(`${BASE_PATH}city-data/${slug}-top5.json`)
+        .then(res => res.json())
+        .then(data => {
+          renderHotels(data.topRated, "hotelList-top");
+          renderHotels(data.family, "hotelList-family");
+          renderHotels(data.petFriendly, "hotelList-pet");
+        })
+        .catch(err => console.error("❌ 호텔 데이터 로드 실패:", err));
+
+      document.querySelectorAll(".scroll-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const target = document.getElementById(btn.dataset.target);
+          if (!target) return;
+          target.scrollBy({
+            left: btn.classList.contains("left")
+              ? -target.clientWidth * 0.9
+              : target.clientWidth * 0.9,
+            behavior: "smooth"
+          });
+        });
+      });
+    });
+
+    function renderHotels(hotels, targetId) {
+      const wrapper = document.getElementById(targetId);
+      if (!wrapper) return;
+      const el = wrapper.classList.contains("horizontal-scroll")
+        ? wrapper
+        : wrapper.querySelector(".horizontal-scroll");
+      if (!el) return;
+
+      if (!hotels?.length) {
+        el.innerHTML = "<p style='text-align:center;color:#777;'>표시할 숙소가 없습니다.</p>";
+        return;
+      }
+
+      const cards = hotels
+        .map(
+          (h) => `
+          <div class="hotel-card">
+            <img src="${h.image || "https://picsum.photos/seed/" + encodeURIComponent(h.name) + "/400/250"}" alt="${h.name}">
+            <div class="hotel-info">
+              <strong>${h.name}</strong>
+              <p>📍 ${h.address || h.city}</p>
+              <p>⭐ ${h.rating || "4.5"} / 5.0</p>
+            </div>
+          </div>`
+        )
+        .join("");
+
+      el.innerHTML = cards;
+    }
+  </script>
+</body>
+</html>
+
+
+===============loading.html===================
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>RapidStay – 연결 중...</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f9fafb;
+      font-family: "Noto Sans KR", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #333;
+    }
+
+    /* 로딩 애니메이션 */
+    .loader {
+      border: 6px solid #e0e0e0;
+      border-top: 6px solid #0078d4;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* 텍스트 */
+    h1 {
+      font-size: 22px;
+      margin: 8px 0 4px;
+      color: #0078d4;
+    }
+    p {
+      font-size: 14px;
+      color: #555;
+      margin: 0;
+    }
+
+    /* 배경 효과 */
+    .fade-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #eaf6ff, #f9ffff, #e8f3ff);
+      z-index: -1;
+    }
+
+    /* 로고 느낌의 강조 */
+    .logo {
+      font-weight: 700;
+      font-size: 26px;
+      color: #0078d4;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="fade-bg"></div>
+  <div class="logo">🏨 RapidStay</div>
+  <div class="loader"></div>
+  <h1>Expedia 연결 중...</h1>
+  <p>잠시만 기다려주세요. 최적의 호텔 페이지로 이동합니다.</p>
+
+  <script>
+    const expediaUrl = sessionStorage.getItem('expediaRedirectUrl') || 'https://www.expedia.com/';
+    // 실제 환경에서는 API 인증/토큰 교환 등의 로직이 이 사이에 들어감
+    setTimeout(() => {
+      window.location.href = expediaUrl;
+    }, 2500); // 2.5초 후 이동
+  </script>
+</body>
+</html>
+
+
+=====================public/partials/header-search.html=======================
+<header>🏨 RapidStay Hotel Search</header>
+
+<div id="hotelSearchForm" autocomplete="on">
+<div id="search-bar" style="position: relative; align-items: center;">
+    <!-- ✅ 도시 -->
+    <div style="position:relative; flex:1;">
+      <input type="text" id="city" name="city" placeholder="도시명 (예: Seoul)" autocomplete="off" />
+      <div id="autocompletelist"></div>
+    </div>
+
+    <!-- ✅ 날짜 -->
+    <input type="date" id="checkIn" name="checkIn">
+    <input type="date" id="checkOut" name="checkOut">
+
+    <!-- ✅ 객실/인원 -->
+    <div class="room-selector">
+      <button type="button" id="roomBtn">객실 1개, 성인 2명</button>
+      <div class="room-dropdown" id="roomDropdown" style="display:none;">
+        <div id="roomList">
+          <div class="room-item" data-index="0">
+            <div class="room-header">객실 1</div>
+            <div class="room-row">
+              <span>성인</span>
+              <div class="counter">
+                <button type="button" class="minus adult">−</button>
+                <span class="count adult-count">2</span>
+                <button type="button" class="plus adult">＋</button>
+              </div>
+            </div>
+            <div class="room-row">
+              <span>아동</span>
+              <div class="counter">
+                <button type="button" class="minus child">−</button>
+                <span class="count child-count">0</span>
+                <button type="button" class="plus child">＋</button>
+              </div>
+              <div class="child-ages"></div>
+            </div>
+          </div>
+        </div>
+        <div class="room-controls">
+          <button type="button" id="addRoom">＋ 객실 추가</button>
+          <button type="button" id="removeRoom">－ 객실 삭제</button>
+        </div>
+        <button type="button" id="applyRooms">적용</button>
+      </div>
+    </div>
+
+    <!-- ✅ 검색 버튼 -->
+    <button id="searchBtn">검색</button>
+  </div>
+</div>
+
+<!-- ✅ 인기 여행지 -->
+<div id="popularCities">
+  <span>인기 여행지:</span>
+  <button class="cityQuick" data-city="서울">서울</button>
+  <button class="cityQuick" data-city="부산">부산</button>
+  <button class="cityQuick" data-city="제주">제주</button>
+  <button class="cityQuick" data-city="도쿄">도쿄</button>
+  <button class="cityQuick" data-city="방콕">방콕</button>
+  <button class="cityQuick" data-city="파리">파리</button>
+</div>
+
+=====================public/partials/header.html=======================
+
+<header id="main-header">
+  <div class="header-inner">
+    <a href="/" class="logo">🏨 RapidStay</a>
+    <nav>
+      <a href="/">홈</a>
+      <a href="/search.html">검색</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+
+
+=====================public/partials/popular-cities.html=======================
+<div id="popularCities">
+  <span>인기 여행지:</span>
+  <button class="cityQuick" data-city="서울">서울</button>
+  <button class="cityQuick" data-city="부산">부산</button>
+  <button class="cityQuick" data-city="제주">제주</button>
+  <button class="cityQuick" data-city="도쿄">도쿄</button>
+  <button class="cityQuick" data-city="방콕">방콕</button>
+  <button class="cityQuick" data-city="파리">파리</button>
+</div>
+
+
+=====================public/partials/search-bar.html=======================
+<section id="hotelSearchForm" autocomplete="on">
+  <div id="search-bar">
+    <div style="position:relative; flex:1;">
+      <input type="text" id="city" name="city" placeholder="도시명 (예: Seoul)" autocomplete="off" />
+      <div id="autocompletelist"></div>
+    </div>
+    <input type="date" id="checkIn" name="checkIn">
+    <input type="date" id="checkOut" name="checkOut">
+    <button id="searchBtn">검색</button>
+  </div>
+</section>
+
+
+=====================public/partials/footer.html=======================
+
+<footer id="main-footer">
+  <div class="footer-inner">
+    <p>ⓒ 2025 RapidStay</p>
+    <p>Powered by <strong>Expedia Partner Data</strong></p>
+  </div>
+</footer>

@@ -1,0 +1,1011 @@
+=====================public/js/cities.js=======================
+
+// ----------------------------------------------
+// RapidStay - 공통 도시 목록 (서버 + 클라이언트 공유)
+// ----------------------------------------------
+export const TARGET_CITIES = [
+  // 🇰🇷 한국
+  { name: 'Seoul', display: '서울' },
+  { name: 'Busan', display: '부산' },
+  { name: 'Jeju', display: '제주' },
+  { name: 'Incheon', display: '인천' },
+  { name: 'Gangneung', display: '강릉' },
+  { name: 'Sokcho', display: '속초' },
+  { name: 'Gyeongju', display: '경주' },
+  { name: 'Yeosu', display: '여수' },
+  { name: 'Jeonju', display: '전주' },
+  { name: 'Tongyeong', display: '통영' },
+
+  // 🇯🇵 일본
+  { name: 'Tokyo', display: '도쿄' },
+  { name: 'Osaka', display: '오사카' },
+  { name: 'Kyoto', display: '교토' },
+  { name: 'Fukuoka', display: '후쿠오카' },
+  { name: 'Sapporo', display: '삿포로' },
+
+  // 🇹🇭 태국
+  { name: 'Bangkok', display: '방콕' },
+  { name: 'ChiangMai', display: '치앙마이' },
+  { name: 'Phuket', display: '푸켓' },
+
+  // 🇸🇬 동남아
+  { name: 'Singapore', display: '싱가포르' },
+  { name: 'Hanoi', display: '하노이' },
+  { name: 'HoChiMinh', display: '호치민' },
+  { name: 'Danang', display: '다낭' },
+  { name: 'KualaLumpur', display: '쿠알라룸푸르' },
+
+  // 🇫🇷🇮🇹🇬🇧🇨🇭 유럽
+  { name: 'Paris', display: '파리' },
+  { name: 'Nice', display: '니스' },
+  { name: 'Rome', display: '로마' },
+  { name: 'Venice', display: '베네치아' },
+  { name: 'London', display: '런던' },
+  { name: 'Zurich', display: '취리히' },
+  { name: 'Interlaken', display: '인터라켄' },
+
+  // 🇺🇸 미국
+  { name: 'NewYork', display: '뉴욕' },
+  { name: 'LosAngeles', display: '로스앤젤레스' },
+  { name: 'LasVegas', display: '라스베이거스' },
+  { name: 'SanFrancisco', display: '샌프란시스코' },
+];
+
+
+=====================public/js/common.js=======================
+
+import { TARGET_CITIES } from "./cities.js"; // ✅ 공통 도시목록 import
+
+// ===============================
+// 🔧 도시 정규화 + 슬러그 변환 유틸
+// ===============================
+function normalizeKrCity(kr) {
+  if (!kr) return "";
+  let s = kr.trim();
+  s = s
+    .replace(/대한민국$/, "")
+    .replace(/특별시$/, "")
+    .replace(/광역시$/, "")
+    .replace(/자치시$/, "")
+    .replace(/시$/, "")
+    .replace(/도$/, "")
+    .trim();
+
+  const map = {
+    "서울특별시": "서울",
+    "서울시": "서울",
+    "부산광역시": "부산",
+    "인천광역시": "인천",
+    "대구광역시": "대구",
+    "대전광역시": "대전",
+    "광주광역시": "광주",
+    "울산광역시": "울산",
+    "제주시": "제주",
+    "서귀포시": "제주",
+  };
+  return map[kr] || s;
+}
+
+function toSlugFromAny(cityAny) {
+  const kr = /[가-힣]/.test(cityAny) ? normalizeKrCity(cityAny) : cityAny;
+  const hit = TARGET_CITIES.find(
+    (c) => c.display === kr || c.name.toLowerCase() === String(cityAny).toLowerCase()
+  );
+  return (hit ? hit.name : kr).toLowerCase();
+}
+
+// ===============================
+const API_BASE_URL =
+  location.hostname.includes("localhost") || location.hostname.includes("127.0.0.1")
+    ? "http://localhost:8081"
+    : "https://xap-h2xh.onrender.com";
+
+// ===============================
+export function initSearchBar(onSearch) {
+  const cityInput = document.querySelector("#city");
+  const checkInInput = document.querySelector("#checkIn");
+  const checkOutInput = document.querySelector("#checkOut");
+  const searchBtn = document.querySelector("#searchBtn");
+
+  if (!cityInput || !searchBtn) {
+    console.warn("검색바 요소를 찾을 수 없습니다. initSearchBar 실행 시점을 확인하세요.");
+    return;
+  }
+
+  // ✅ 날짜 기본값 자동 세팅
+  const today = new Date();
+  const ci = new Date(today);
+  ci.setDate(today.getDate() + 1);
+  const co = new Date(today);
+  co.setDate(today.getDate() + 2);
+  const fmt = (d) => d.toISOString().split("T")[0];
+
+  const params = new URLSearchParams(location.search);
+  cityInput.value = params.get("city") || cityInput.value || "";
+  if (!checkInInput.value) checkInInput.value = params.get("checkIn") || fmt(ci);
+  if (!checkOutInput.value) checkOutInput.value = params.get("checkOut") || fmt(co);
+
+  /* ======================================
+     ✅ 객실 선택 드롭다운 (rooms)
+     ====================================== */
+  const roomBtn = document.getElementById("roomBtn");
+  const dropdown = document.getElementById("roomDropdown");
+  const roomSelector = document.querySelector(".room-selector");
+
+  // ✅ 세션 저장된 객실 정보 복원 (있으면 그대로, 없으면 기본값)
+  let rooms = [];
+  try {
+    const saved = JSON.parse(sessionStorage.getItem("searchRooms") || "[]");
+    if (Array.isArray(saved) && saved.length > 0) {
+      rooms = saved;
+    } else {
+      rooms = [{ adults: 2, children: 0, childAges: [] }];
+    }
+  } catch {
+    rooms = [{ adults: 2, children: 0, childAges: [] }];
+  }
+
+  // ✅ 페이지 로드 시 버튼 텍스트 업데이트
+  const updateRoomBtnText = () => {
+    const totalAdults = rooms.reduce((a, r) => a + r.adults, 0);
+    const totalChildren = rooms.reduce((a, r) => a + r.children, 0);
+    roomBtn.textContent = `객실 ${rooms.length}개, 성인 ${totalAdults}명${
+      totalChildren ? `, 아동 ${totalChildren}명` : ""
+    }`;
+  };
+  if (roomBtn) updateRoomBtnText();
+
+  if (roomBtn && dropdown && roomSelector) {
+    let isOpen = false;
+
+    const openDropdown = () => {
+      dropdown.style.display = "block";
+      isOpen = true;
+    };
+    const closeDropdown = () => {
+      dropdown.style.display = "none";
+      isOpen = false;
+    };
+
+    // 🔒 중복 리스너 방지
+    if (window.__rsRoomsOutsideHandler) {
+      window.removeEventListener("pointerdown", window.__rsRoomsOutsideHandler, true);
+    }
+
+    // ✅ 바깥 클릭 시 닫기
+    window.__rsRoomsOutsideHandler = function (e) {
+      const inside = e.target.closest(".room-selector");
+      if (!inside && isOpen) closeDropdown();
+    };
+    window.addEventListener("pointerdown", window.__rsRoomsOutsideHandler, true);
+
+    // ✅ 버튼 토글
+    roomBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      isOpen ? closeDropdown() : openDropdown();
+    });
+
+    // ✅ 드롭다운 내부 클릭 방지
+    ["pointerdown", "mousedown", "click", "focusin", "change"].forEach((evt) => {
+      dropdown.addEventListener(evt, (e) => e.stopPropagation());
+    });
+
+    dropdown.addEventListener("pointerdown", (e) => {
+      if (e.target.tagName === "SELECT" || e.target.closest("select")) e.stopPropagation();
+    });
+
+    // ✅ 렌더 함수
+    const renderRooms = () => {
+      const roomList = document.getElementById("roomList");
+      const wasOpen = isOpen;
+      roomList.innerHTML = rooms
+        .map(
+          (r, i) => `
+        <div class="room-item" data-index="${i}">
+          <div class="room-header">객실 ${i + 1}</div>
+          <div class="room-row">
+            <span>성인</span>
+            <div class="counter">
+              <button type="button" class="minus adult">−</button>
+              <span class="count adult-count">${r.adults}</span>
+              <button type="button" class="plus adult">＋</button>
+            </div>
+          </div>
+          <div class="room-row">
+            <span>아동</span>
+            <div class="counter">
+              <button type="button" class="minus child">−</button>
+              <span class="count child-count">${r.children}</span>
+              <button type="button" class="plus child">＋</button>
+            </div>
+            <div class="child-ages">
+              ${r.childAges
+                .map(
+                  (age, j) =>
+                    `<select data-room="${i}" data-child="${j}">
+                      ${Array.from({ length: 18 }, (_, n) =>
+                        `<option value="${n}" ${n === age ? "selected" : ""}>${n}세</option>`
+                      ).join("")}
+                    </select>`
+                )
+                .join("")}
+            </div>
+          </div>
+        </div>`
+        )
+        .join("");
+
+      if (wasOpen) openDropdown();
+
+      roomList.querySelectorAll("select").forEach((sel) => {
+        ["pointerdown", "mousedown", "click", "focus"].forEach((evt) => {
+          sel.addEventListener(evt, (e) => e.stopPropagation());
+        });
+      });
+    };
+
+    renderRooms();
+
+    // ✅ 증감 버튼
+    dropdown.addEventListener("click", (e) => {
+      const roomEl = e.target.closest(".room-item");
+      if (!roomEl) return;
+      const idx = parseInt(roomEl.dataset.index, 10);
+
+      if (e.target.classList.contains("plus")) {
+        if (e.target.classList.contains("adult")) rooms[idx].adults++;
+        else if (e.target.classList.contains("child")) {
+          rooms[idx].children++;
+          rooms[idx].childAges.push(0);
+        }
+      } else if (e.target.classList.contains("minus")) {
+        if (e.target.classList.contains("adult") && rooms[idx].adults > 1) rooms[idx].adults--;
+        else if (e.target.classList.contains("child") && rooms[idx].children > 0) {
+          rooms[idx].children--;
+          rooms[idx].childAges.pop();
+        }
+      }
+      renderRooms();
+    });
+
+    // ✅ 아동 나이 선택 반영 (닫힘 방지)
+    dropdown.addEventListener("change", (e) => {
+      if (e.target.tagName === "SELECT") {
+        const r = parseInt(e.target.dataset.room);
+        const c = parseInt(e.target.dataset.child);
+        rooms[r].childAges[c] = parseInt(e.target.value);
+      }
+    });
+
+    // ✅ 객실 추가/삭제
+    document.getElementById("addRoom")?.addEventListener("click", () => {
+      rooms.push({ adults: 2, children: 0, childAges: [] });
+      renderRooms();
+    });
+    document.getElementById("removeRoom")?.addEventListener("click", () => {
+      if (rooms.length > 1) rooms.pop();
+      renderRooms();
+    });
+
+    // ✅ 적용 버튼
+    document.getElementById("applyRooms")?.addEventListener("click", () => {
+      closeDropdown();
+      updateRoomBtnText();
+      sessionStorage.setItem("searchRooms", JSON.stringify(rooms));
+    });
+
+}
+
+
+// ✅ 검색 버튼 클릭 시
+searchBtn.addEventListener("click", async (e) => {
+  e.preventDefault();
+  const city = cityInput.value.trim();
+  const checkIn = checkInInput.value;
+  const checkOut = checkOutInput.value;
+  if (!city) return alert("도시명을 입력하세요.");
+
+  // 👇 여기가 핵심
+  const currentRooms = JSON.parse(JSON.stringify(rooms));
+  sessionStorage.setItem("searchRooms", JSON.stringify(currentRooms));
+
+  const payload = { city, checkIn, checkOut, rooms: currentRooms };
+  const q = new URLSearchParams({ city, checkIn, checkOut }).toString();
+
+  if (window.location.pathname.includes("/search.html")) {
+    onSearch?.(payload);
+  } else {
+      const base = window.location.pathname.includes("/city/") ? ".." : ".";
+      setTimeout(() => {
+        location.href = `${base}/search.html?${q}`;
+      }, 100);
+  }
+});
+
+  /** ===========================
+   *  🔠 자동완성
+   *  =========================== */
+  let autoBox = document.getElementById("autocompletelist");
+  if (!autoBox) {
+    autoBox = document.createElement("div");
+    autoBox.id = "autocompletelist";
+    autoBox.className = "autocomplete-box";
+
+    const parent = cityInput.parentElement;
+    if (parent) {
+      parent.style.position = "relative";
+      parent.appendChild(autoBox);
+    } else {
+      document.body.appendChild(autoBox);
+    }
+  }
+
+  let timer;
+  cityInput.addEventListener("input", () => {
+    const kw = cityInput.value.trim();
+    if (kw.length < 2) {
+      autoBox.style.display = "none";
+      return;
+    }
+    clearTimeout(timer);
+    timer = setTimeout(async () => {
+      try {
+        const res = await fetch(`${API_BASE_URL}/api/cities/search?query=${encodeURIComponent(kw)}`);
+        const list = await res.json();
+        if (!list?.length) {
+          autoBox.style.display = "none";
+          return;
+        }
+
+        autoBox.innerHTML = list
+          .map(
+            (c) => `
+          <div class="auto-item" data-city="${c.city_kr || c.city_en}">
+            ${c.city_kr || c.city_en}
+            <span style="color:#888;font-size:13px;">${c.country || ""}</span>
+          </div>`
+          )
+          .join("");
+
+        autoBox.style.position = "absolute";
+        autoBox.style.left = "0";
+        autoBox.style.top = `${cityInput.offsetHeight + 4}px`;
+        autoBox.style.width = "100%";
+        autoBox.style.background = "#fff";
+        autoBox.style.border = "1px solid #ccc";
+        autoBox.style.borderRadius = "4px";
+        autoBox.style.boxShadow = "0 2px 4px rgba(0,0,0,0.1)";
+        autoBox.style.zIndex = "1000";
+        autoBox.style.display = "block";
+      } catch (err) {
+        console.error("도시 자동완성 실패:", err);
+      }
+    }, 300);
+  });
+
+  autoBox.addEventListener("click", (e) => {
+    const item = e.target.closest(".auto-item");
+    if (!item) return;
+    const picked = item.dataset.city;
+    cityInput.value = normalizeKrCity(picked);
+    autoBox.style.display = "none";
+    cityInput.focus();
+  });
+
+  /** ===========================
+   *  🏙️ 인기 여행지 버튼
+   *  =========================== */
+  const BASE_PATH = window.location.pathname.includes("/city/") ? ".." : ".";
+  document.querySelectorAll(".cityQuick").forEach((b) => {
+    b.addEventListener("click", () => {
+      const raw = b.dataset.city || b.textContent.trim();
+      const cityName = normalizeKrCity(raw);
+      const ci = new Date();
+      ci.setDate(ci.getDate() + 1);
+      const co = new Date();
+      co.setDate(co.getDate() + 2);
+      const fmt = (d) => d.toISOString().split("T")[0];
+      location.href = `${BASE_PATH}/search.html?city=${encodeURIComponent(
+        cityName
+      )}&checkIn=${fmt(ci)}&checkOut=${fmt(co)}`;
+    });
+  });
+}
+
+/** ===========================
+ *  📦 호텔 목록 렌더링
+ *  =========================== */
+export async function fetchAndRenderHotels(city, checkIn, checkOut, roomsParam) {
+  const target = document.getElementById("hotelList") || document.getElementById("hotel-list");
+  if (!target) return false;
+
+  const match = TARGET_CITIES.find(
+    (c) => c.display === city || c.name.toLowerCase() === city.toLowerCase()
+  );
+  const slug = match ? match.name : city;
+  const BASE_PATH = window.location.pathname.includes("/city/") ? ".." : ".";
+  
+  let hotels = [];
+  let useMock = true;
+
+  try {
+    // ✅ roomsParam 우선 사용
+    const storedRooms =
+      roomsParam || JSON.parse(sessionStorage.getItem("searchRooms") || '[{"adults":2,"children":0,"childAges":[]}]');
+
+    const payload = { city: slug, checkIn, checkOut, rooms: storedRooms };
+    const apiRes = await fetch(`${API_BASE_URL}/api/hotels/search`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    if (apiRes.ok) {
+      const apiData = await apiRes.json();
+      if (apiData?.length) {
+        hotels = apiData;
+        useMock = false;
+      }
+    } else {
+      console.warn("API 응답 실패:", apiRes.status);
+    }
+  } catch (e) {
+    console.warn("API 호출 실패, mock 데이터로 대체:", e);
+  }
+
+  if (useMock) {
+    try {
+      const res = await fetch(`${BASE_PATH}/city-data/${slug.toLowerCase()}-top5.json`);
+      const data = await res.json();
+      hotels = data.topRated || [];
+    } catch (e) {
+      console.error("mock 데이터 로드 실패:", e);
+    }
+  }
+
+  if (!hotels.length) {
+    target.innerHTML = "<p style='text-align:center;color:#777;'>표시할 숙소가 없습니다.</p>";
+    return false;
+  }
+
+  target.innerHTML = hotels
+    .map(
+      (h) => `
+    <div class="hotel-card">
+      <img loading="lazy" src="${h.image || "https://picsum.photos/seed/" + h.name + "/400/250"}" alt="${h.name}">
+      <div class="hotel-info">
+        <h3>${h.name}</h3>
+        <p>📍 ${h.address || h.city}</p>
+        <p>⭐ ${h.rating || "4.5"} / 5.0</p>
+        <p class="price">💰 ${h.lowestPrice ? h.lowestPrice + "원~" : "요금 확인 불가"}</p>
+      </div>
+    </div>
+  `
+    )
+    .join("");
+
+  return true;
+}
+
+/** ===========================
+ *  🧩 Partial Loader
+ *  =========================== */
+export async function loadPartial(targetId, path, callback) {
+  try {
+    const res = await fetch(path);
+    if (!res.ok) throw new Error(`Failed to load ${path}`);
+    const html = await res.text();
+    const el = document.getElementById(targetId);
+    if (el) el.innerHTML = html;
+    if (callback) callback();
+  } catch (err) {
+    console.error("❌ partial load failed:", path, err);
+  }
+}
+
+/** ===========================
+ *  📍 city-map.json 자동 로드
+ *  =========================== */
+const cityMapPath = window.location.pathname.includes("/city/")
+  ? "../city-data/city-map.json"
+  : "./city-data/city-map.json";
+
+fetch(cityMapPath)
+  .then((res) => res.json())
+  .then((list) => {
+    window.citySlugMap = Object.fromEntries(
+      list.map((c) => [c.display, c.name.toLowerCase()])
+    );
+  })
+  .catch((err) => console.warn("city-map.json 로드 실패:", err));
+
+
+=====================public/js/home.js=======================
+
+/**
+ * RapidStay - 홈 전용 JS (검색 + 주요 도시 미리보기)
+ * ---------------------------------------------------
+ * /public/index.html 전용
+ */
+
+import { initSearchBar } from "./common.js";
+
+const API_BASE_URL =
+  location.hostname.includes("localhost") || location.hostname.includes("127.0.0.1")
+    ? "http://localhost:8081"
+    : "https://xap-h2xh.onrender.com";
+
+document.addEventListener("DOMContentLoaded", async () => {
+  // ✅ 1. 주요 도시 미리보기 먼저 로드
+  await loadCityPreview();
+
+  // ✅ 2. 검색바 초기화
+  setTimeout(() => {
+    try {
+      initSearchBar();
+    } catch (err) {
+      console.error("검색바 초기화 실패:", err);
+    }
+  }, 100);
+});
+
+/** ===============================
+ *  🌍 주요 도시 미리보기
+ *  =============================== */
+async function loadCityPreview() {
+  const cityContainer = document.getElementById("cityContainer");
+  if (!cityContainer) return;
+
+  const cityList = [
+    { name: "Seoul", display: "서울" },
+    { name: "Busan", display: "부산" },
+    { name: "Jeju", display: "제주" },
+    { name: "Tokyo", display: "도쿄" },
+    { name: "Bangkok", display: "방콕" },
+    { name: "Paris", display: "파리" },
+  ];
+
+  for (const c of cityList) {
+    try {
+      const res = await fetch(`./city-data/${c.name.toLowerCase()}-top5.json`, { cache: "no-store" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+
+      const hotels = (data.topRated || []).slice(0, 5);
+      const cards = hotels
+        .map(
+          (h) => `
+          <div class="hotel-card">
+            <img src="${h.image || "https://picsum.photos/seed/" + h.name + "/400/250"}" alt="${h.name}">
+            <div class="hotel-info">
+              <strong>${h.name}</strong>
+              <p>📍 ${h.address || h.city}</p>
+              <p>⭐ ${h.rating || "4.5"} / 5.0</p>
+            </div>
+          </div>`
+        )
+        .join("");
+
+      cityContainer.insertAdjacentHTML(
+        "beforeend",
+        `
+        <section class="city-section">
+          <h3>${c.display} 인기 숙소</h3>
+          <div class="scroll-wrapper">
+            <button class="scroll-btn left">‹</button>
+            <div class="horizontal-scroll">${cards}</div>
+            <button class="scroll-btn right">›</button>
+          </div>
+          <div class="city-more">
+            <a href="./city/${c.name.toLowerCase()}.html">${c.display} 주요 숙소 보기 ▶</a>
+          </div>
+        </section>
+      `
+      );
+    } catch (err) {
+      console.warn(`${c.display} 미리보기 로드 실패:`, err);
+    }
+  }
+
+  // ✅ 스크롤 버튼 이벤트
+  document.querySelectorAll(".scroll-wrapper").forEach((wrap) => {
+    const scrollArea = wrap.querySelector(".horizontal-scroll");
+    wrap.querySelector(".scroll-btn.left")?.addEventListener("click", () => {
+      scrollArea.scrollBy({ left: -300, behavior: "smooth" });
+    });
+    wrap.querySelector(".scroll-btn.right")?.addEventListener("click", () => {
+      scrollArea.scrollBy({ left: 300, behavior: "smooth" });
+    });
+  });
+}
+
+
+=====================public/js/search.js=======================
+
+console.log("✅ search.js loaded");
+
+import { initSearchBar } from "./common.js";
+
+const API_BASE_URL =
+  location.hostname.includes("localhost") || location.hostname.includes("127.0.0.1")
+    ? "http://localhost:8081"
+    : "https://xap-h2xh.onrender.com";
+
+const params = new URLSearchParams(window.location.search);
+const city = params.get("city") || "Seoul";
+const checkIn = params.get("checkIn") || "2025-11-01";
+const checkOut = params.get("checkOut") || "2025-11-03";
+document.title = `${city} 호텔 검색 | RapidStay – 실시간 숙소 비교`;
+
+/* ===============================
+   🔍 초기 로드
+=============================== */
+window.addEventListener("DOMContentLoaded", async () => {
+  const mapWrapper = document.getElementById("mapWrapper");
+  mapWrapper.style.display = "none";
+
+  // ✅ header-search.html 내 검색창과 연결
+  initSearchBar(async (payload) => {
+    await handleSearch(payload.city, payload.checkIn, payload.checkOut, payload.rooms);
+  });
+
+  const hasResult = await handleSearch(city, checkIn, checkOut);
+  mapWrapper.style.display = hasResult ? "block" : "none";
+});
+
+/* ===============================
+   🏨 검색 함수
+=============================== */
+export async function handleSearch(city, checkIn, checkOut, rooms) {
+  const target = document.getElementById("hotel-list");
+  target.innerHTML = "<p style='text-align:center;color:#666;'>검색 중...</p>";
+
+  // ✅ 객실 정보 불러오기 (없으면 기본값)
+  const storedRooms =
+    rooms ||
+    JSON.parse(sessionStorage.getItem("searchRooms") || '[{"adults":2,"children":0,"childAges":[]}]');
+
+  const payload = {
+    city,
+    checkIn,
+    checkOut,
+    rooms: storedRooms,
+  };
+
+  try {
+    const res = await fetch(`${API_BASE_URL}/api/hotels/search`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    const hasResult = renderHotels(data);
+    return hasResult;
+  } catch (err) {
+    console.error("❌ 검색 실패:", err);
+    target.innerHTML = "<p class='empty'>호텔 데이터를 불러오는 중 문제가 발생했습니다.</p>";
+    return false;
+  }
+}
+
+/* ===============================
+   🖼️ 렌더링
+=============================== */
+function renderHotels(hotels) {
+  const validHotels = hotels.filter((h) => h.id != null);
+  const list = document.getElementById("hotel-list");
+  const mapSection = document.getElementById("mapSection");
+
+  if (validHotels.length === 0) {
+    list.innerHTML = `<p class="empty">검색 결과가 없습니다.</p>`;
+    mapSection.style.display = "none"; // 지도 버튼 숨김
+    return false;
+  }
+
+  mapSection.style.display = "block"; // ✅ 결과 있을 때만 지도 버튼 표시
+  list.innerHTML = validHotels
+    .map(
+      (h) => `
+      <div class="hotel-card" data-id="${h.id}" data-expedia="${h.expediaUrl || ""}">
+        <img src="https://picsum.photos/seed/${h.name}/400/250" alt="${h.name}">
+        <div class="hotel-info">
+          <h3>${h.name}</h3>
+          <p>📍 ${h.address || h.city}</p>
+          <p>⭐ ${h.rating?.toFixed(1) || "4.5"} / 5.0</p>
+          <p class="price">💰 ${h.lowestPrice ? `${h.lowestPrice}원~` : "요금 확인 불가"}</p>
+        </div>
+      </div>`
+    )
+    .join("");
+
+  // 카드 클릭 이동 이벤트
+  document.querySelectorAll(".hotel-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      const expediaUrl = card.dataset.expedia || "https://www.expedia.com/";
+      sessionStorage.setItem("expediaRedirectUrl", expediaUrl);
+      window.location.href = "loading.html";
+    });
+  });
+
+  window.currentHotels = validHotels;
+  return true;
+}
+
+/* ===============================
+   🗺️ 지도 모달
+=============================== */
+const openMapBtn = document.getElementById("openMapBtn");
+const mapModal = document.getElementById("mapModal");
+
+if (openMapBtn) {
+  openMapBtn.addEventListener("click", () => {
+    if (!window.currentHotels || window.currentHotels.length === 0) {
+      alert("표시할 숙소가 없습니다.");
+      return;
+    }
+    mapModal.style.display = "flex";
+    initMap();
+  });
+}
+
+window.closeMap = function () {
+  mapModal.style.display = "none";
+};
+
+/* ===============================
+   🧭 지도 초기화
+=============================== */
+function initMap() {
+  const mapEl = document.getElementById("googleMap");
+  if (!mapEl) return;
+
+  const map = new google.maps.Map(mapEl, {
+    zoom: 12,
+    center: { lat: 37.5665, lng: 126.978 },
+  });
+
+  (window.currentHotels || []).forEach((hotel) => {
+    if (hotel.latitude && hotel.longitude) {
+      new google.maps.Marker({
+        position: { lat: hotel.latitude, lng: hotel.longitude },
+        map,
+        title: hotel.name,
+      });
+    }
+  });
+}
+
+
+==================public/script/generatecitypages.js======================
+/**
+ * RapidStay - 도시별 추천 페이지 + SEO 메타 + 구조화 데이터 + Sitemap 자동 생성 (v4.2)
+ * ---------------------------------------------------
+ * 실행: npm run generate
+ */
+
+import fs from "fs";
+import path from "path";
+import { fileURLToPath, pathToFileURL } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// === 설정 경로 ==========================
+const TEMPLATE_PATH = "./public/city-template.html";
+const HEADER_PATH = "./public/partials/header-search.html";
+const OUTPUT_JSON_DIR = "./public/city-data";
+const OUTPUT_HTML_DIR = "./public/city";
+const PUBLIC_DIR = path.join(__dirname, "../public");
+const BASE_URL = "https://rapidstay-c7f8e.web.app"; // ✅ 실제 배포 경로
+
+// === cities.js 불러오기 ==========================
+const citiesPath = path.join(__dirname, "../public/js/cities.js");
+const citiesModule = await import(pathToFileURL(citiesPath).href);
+const { TARGET_CITIES } = citiesModule;
+
+// === 유틸 ==========================
+function ensureDir(dir) {
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+}
+
+// === 더미 데이터 ==========================
+function createDummyHotels(city) {
+  return Array.from({ length: 10 }).map((_, i) => ({
+    name: `${city} Hotel ${i + 1}`,
+    city,
+    address: `${city} 중심가 ${i + 10}번지`,
+    rating: (4 + Math.random() * 1).toFixed(1),
+    lowestPrice: (70000 + Math.random() * 100000).toFixed(0),
+    image: `https://picsum.photos/seed/${city}-${i}/400/250`,
+    amenities: i % 2 === 0 ? "Family, WiFi" : "Pet Friendly, Pool",
+  }));
+}
+
+// === JSON 생성 ==========================
+async function generateJson(city, hotels) {
+  const topRated = hotels.slice(0, 5);
+  const petFriendly = hotels.filter((h) => h.amenities.includes("Pet")).slice(0, 5);
+  const family = hotels.filter((h) => h.amenities.includes("Family")).slice(0, 5);
+  const data = { topRated, petFriendly, family };
+
+  const jsonPath = path.join(OUTPUT_JSON_DIR, `${city.toLowerCase()}-top5.json`);
+  fs.writeFileSync(jsonPath, JSON.stringify(data, null, 2));
+  console.log(`💾 ${jsonPath} 저장 완료`);
+}
+
+// === JSON-LD 생성 ==========================
+function makeJsonLd(hotels, display) {
+  const items = hotels.slice(0, 5).map((h, idx) => ({
+    "@type": "Hotel",
+    name: h.name,
+    address: h.address,
+    image: h.image,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: h.rating,
+      reviewCount: Math.floor(50 + Math.random() * 200),
+    },
+    priceRange: `₩${Number(h.lowestPrice).toLocaleString()}~`,
+    position: idx + 1,
+  }));
+
+  return JSON.stringify(
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: `${display} 인기 호텔`,
+      itemListElement: items,
+    },
+    null,
+    2
+  );
+}
+
+// === HTML 생성 ==========================
+function generateHtml(city, display) {
+  let template = fs.readFileSync(TEMPLATE_PATH, "utf8");
+
+  // ✅ 헤더 중첩 방지 처리 (내부 <header> 자동 제거 + BOM 제거)
+  let headerHTML = "<div class='fallback-header'>🏨 RapidStay Hotel Search</div>";
+  if (fs.existsSync(HEADER_PATH)) {
+    let rawHeader = fs.readFileSync(HEADER_PATH, "utf8");
+    rawHeader = rawHeader.replace(/^\uFEFF/, ""); // BOM 제거
+    rawHeader = rawHeader.replace(/<\/?header[^>]*>/gi, "").trim(); // header 제거
+    headerHTML = rawHeader;
+  }
+
+  const canonicalUrl = `${BASE_URL}/city/${city.toLowerCase()}.html`;
+  const title = `${display} 호텔 추천 | RapidStay`;
+  const description = `${display} 인기 호텔, 가족 여행, 반려동물 동반 숙소 모음`;
+  const imageUrl = `${BASE_URL}/assets/og/${city.toLowerCase()}.jpg`;
+
+  const hotels = createDummyHotels(display);
+  const jsonLd = makeJsonLd(hotels, display);
+
+  template = template
+    .replace(/{{cityName}}/g, display)
+    .replace(/{{title}}/g, title)
+    .replace(/{{description}}/g, description)
+    .replace(/{{imageUrl}}/g, imageUrl)
+    .replace(/{{canonicalUrl}}/g, canonicalUrl)
+    .replace(/{{date}}/g, new Date().toISOString().split("T")[0])
+    .replace("{{HEADER_SEARCH}}", `${headerHTML}`)
+    .replace("{{HOTEL_JSON}}", jsonLd);
+
+  const htmlPath = path.join(OUTPUT_HTML_DIR, `${city.toLowerCase()}.html`);
+  fs.writeFileSync(htmlPath, template);
+  console.log(`📝 ${htmlPath} 생성 완료`);
+}
+
+// === sitemap.xml 자동 생성 ==========================
+function generateSitemap() {
+  const htmlFiles = new Set();
+
+  function walk(dir) {
+    const files = fs.readdirSync(dir);
+    for (const file of files) {
+      const fullPath = path.join(dir, file);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
+        walk(fullPath);
+      } else if (file.endsWith(".html")) {
+        const relPath = fullPath
+          .replace(PUBLIC_DIR, "")
+          .replace(/\\/g, "/")
+          .replace(/^\/+/, "");
+        htmlFiles.add(`${BASE_URL}/${relPath}`);
+      }
+    }
+  }
+
+  walk(PUBLIC_DIR);
+
+  const sortedUrls = [...htmlFiles].sort();
+  const now = new Date().toISOString();
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+${sortedUrls
+  .map(
+    (url) => `
+  <url>
+    <loc>${url}</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>${url.includes("/city/") ? "0.8" : "1.0"}</priority>
+  </url>`
+  )
+  .join("")}
+</urlset>`;
+
+  const sitemapPath = path.join(PUBLIC_DIR, "sitemap.xml");
+  fs.writeFileSync(sitemapPath, sitemap);
+  console.log(`🌐 sitemap.xml 갱신 완료 (${sortedUrls.length}개 URL 포함)`);
+}
+
+// === 실행 ==========================
+(async () => {
+  ensureDir(OUTPUT_JSON_DIR);
+  ensureDir(OUTPUT_HTML_DIR);
+
+  for (const c of TARGET_CITIES) {
+    const hotels = createDummyHotels(c.name);
+    await generateJson(c.name, hotels);
+    generateHtml(c.name, c.display);
+  }
+
+  generateSitemap();
+  console.log("✅ 모든 도시 페이지 생성 및 sitemap.xml 자동 갱신 완료!");
+  console.log(`📁 출력 경로: ${path.resolve(OUTPUT_HTML_DIR)}`);
+})();
+
+
+
+===================public/seo-batch/deploytofirebase.js===================
+// deployToFirebase.js
+import { execSync } from "child_process";
+import fs from "fs";
+import path from "path";
+
+const __dirname = path.resolve();
+// 날짜 폴더 제거 (현재 구조에 맞춤)
+const src = path.join(__dirname, "seo-batch", "output");
+const dest = path.join(__dirname, "public", "seo");
+
+// 1. 기존 seo 폴더 비우기
+fs.rmSync(dest, { recursive: true, force: true });
+fs.mkdirSync(dest, { recursive: true });
+
+// 2. output 폴더 내 파일 복사
+if (!fs.existsSync(src)) {
+  console.error(`❌ Source folder not found: ${src}`);
+  process.exit(1);
+}
+
+const files = fs.readdirSync(src);
+if (files.length === 0) {
+  console.error(`⚠️ No files found in ${src}`);
+  process.exit(1);
+}
+
+for (const file of files) {
+  const srcPath = path.join(src, file);
+  const destPath = path.join(dest, file);
+  if (fs.lstatSync(srcPath).isDirectory()) {
+    execSync(`cp -r "${srcPath}" "${destPath}"`);
+  } else {
+    fs.copyFileSync(srcPath, destPath);
+  }
+}
+
+console.log("✅ SEO 폴더 갱신 완료");
+
+// 3. Firebase 배포
+try {
+  execSync("firebase deploy --only hosting", { stdio: "inherit" });
+  console.log("🚀 Firebase 배포 완료");
+} catch (err) {
+  console.error("배포 중 오류 발생:", err.message);
+}

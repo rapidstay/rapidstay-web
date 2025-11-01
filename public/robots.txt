@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /loading.html
 
 Sitemap: https://rapidstay-c7f8e.web.app/sitemap.xml

@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "description": "RapidStay SEO generator and deploy scripts",
   "type": "module",
-  "scripts": {
-    "generate": "node scripts/generateCityPages.js",
-    "deploy": "node seo-batch/deployToFirebase.js"
-  },
+"scripts": {
+  "generate": "node scripts/generateCityPages.js",
+  "generate:dev": "node scripts/generateCityPages.js",
+  "generate:prod": "cross-env PROD=true node scripts/generateCityPages.js",
+  "deploy": "node seo-batch/deployToFirebase.js",
+  "deploy:prod": "npm run generate:prod && firebase deploy"
+},
   "dependencies": {
     "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }

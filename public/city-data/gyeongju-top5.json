@@ -4,8 +4,8 @@
       "name": "Gyeongju Hotel 1",
       "city": "Gyeongju",
       "address": "Gyeongju 중심가 10번지",
-      "rating": "4.0",
-      "lowestPrice": "122882",
+      "rating": "4.3",
+      "lowestPrice": 160938,
       "image": "https://picsum.photos/seed/Gyeongju-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "Gyeongju Hotel 2",
       "city": "Gyeongju",
       "address": "Gyeongju 중심가 11번지",
-      "rating": "4.4",
-      "lowestPrice": "117281",
+      "rating": "4.8",
+      "lowestPrice": 123659,
       "image": "https://picsum.photos/seed/Gyeongju-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -23,7 +23,7 @@
       "city": "Gyeongju",
       "address": "Gyeongju 중심가 12번지",
       "rating": "4.4",
-      "lowestPrice": "127740",
+      "lowestPrice": 133927,
       "image": "https://picsum.photos/seed/Gyeongju-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -32,7 +32,7 @@
       "city": "Gyeongju",
       "address": "Gyeongju 중심가 13번지",
       "rating": "4.5",
-      "lowestPrice": "155613",
+      "lowestPrice": 147233,
       "image": "https://picsum.photos/seed/Gyeongju-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "Gyeongju Hotel 5",
       "city": "Gyeongju",
       "address": "Gyeongju 중심가 14번지",
-      "rating": "4.1",
-      "lowestPrice": "70658",
+      "rating": "4.7",
+      "lowestPrice": 88204,
       "image": "https://picsum.photos/seed/Gyeongju-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "Gyeongju Hotel 2",
       "city": "Gyeongju",
       "address": "Gyeongju 중심가 11번지",
-      "rating": "4.4",
-      "lowestPrice": "117281",
+      "rating": "4.8",
+      "lowestPrice": 123659,
       "image": "https://picsum.photos/seed/Gyeongju-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -61,7 +61,7 @@
       "city": "Gyeongju",
       "address": "Gyeongju 중심가 13번지",
       "rating": "4.5",
-      "lowestPrice": "155613",
+      "lowestPrice": 147233,
       "image": "https://picsum.photos/seed/Gyeongju-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "Gyeongju Hotel 6",
       "city": "Gyeongju",
       "address": "Gyeongju 중심가 15번지",
-      "rating": "4.1",
-      "lowestPrice": "126717",
+      "rating": "4.8",
+      "lowestPrice": 146064,
       "image": "https://picsum.photos/seed/Gyeongju-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Gyeongju Hotel 8",
       "city": "Gyeongju",
       "address": "Gyeongju 중심가 17번지",
-      "rating": "4.1",
-      "lowestPrice": "129567",
+      "rating": "4.2",
+      "lowestPrice": 164660,
       "image": "https://picsum.photos/seed/Gyeongju-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Gyeongju Hotel 10",
       "city": "Gyeongju",
       "address": "Gyeongju 중심가 19번지",
-      "rating": "4.3",
-      "lowestPrice": "163481",
+      "rating": "4.9",
+      "lowestPrice": 102568,
       "image": "https://picsum.photos/seed/Gyeongju-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Gyeongju Hotel 1",
       "city": "Gyeongju",
       "address": "Gyeongju 중심가 10번지",
-      "rating": "4.0",
-      "lowestPrice": "122882",
+      "rating": "4.3",
+      "lowestPrice": 160938,
       "image": "https://picsum.photos/seed/Gyeongju-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -108,7 +108,7 @@
       "city": "Gyeongju",
       "address": "Gyeongju 중심가 12번지",
       "rating": "4.4",
-      "lowestPrice": "127740",
+      "lowestPrice": 133927,
       "image": "https://picsum.photos/seed/Gyeongju-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "Gyeongju Hotel 5",
       "city": "Gyeongju",
       "address": "Gyeongju 중심가 14번지",
-      "rating": "4.1",
-      "lowestPrice": "70658",
+      "rating": "4.7",
+      "lowestPrice": 88204,
       "image": "https://picsum.photos/seed/Gyeongju-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "Gyeongju Hotel 7",
       "city": "Gyeongju",
       "address": "Gyeongju 중심가 16번지",
-      "rating": "4.8",
-      "lowestPrice": "94005",
+      "rating": "4.4",
+      "lowestPrice": 160130,
       "image": "https://picsum.photos/seed/Gyeongju-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -135,7 +135,7 @@
       "city": "Gyeongju",
       "address": "Gyeongju 중심가 18번지",
       "rating": "4.4",
-      "lowestPrice": "166389",
+      "lowestPrice": 158508,
       "image": "https://picsum.photos/seed/Gyeongju-8/400/250",
       "amenities": "Family, WiFi"
     }

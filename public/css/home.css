@@ -151,3 +151,40 @@
 .city-more a:hover {
   background: #005fa3;
 }
+
+/* === 도시별 카드 스타일 === */
+.hotel-section {
+  margin-top: 60px;
+}
+.hotel-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+  color: #1b3b6f;
+  font-weight: 600;
+  border-left: 4px solid #0078d4;
+  padding-left: 8px;
+}
+
+/* 카드와 스크롤 영역 개선 */
+.horizontal-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  background: #fafafa;
+  padding: 10px 0;
+}
+.hotel-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  min-width: 200px;
+}
+.hotel-card:hover {
+  transform: translateY(-3px);
+}
+.hotel-info {
+  padding: 10px 12px;
+  font-size: 14px;
+}
