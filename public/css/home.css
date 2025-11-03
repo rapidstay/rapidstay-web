@@ -180,3 +180,12 @@
   padding: 10px 12px;
   font-size: 14px;
 }
+
+/* ✅ 수평 스크롤바 숨기기 */
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+.horizontal-scroll {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;    /* Firefox */
+}

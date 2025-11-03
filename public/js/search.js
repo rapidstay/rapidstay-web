@@ -56,8 +56,8 @@ export async function handleSearch(city, checkIn, checkOut, rooms) {
     });
 
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    const hasResult = renderHotels(data);
+      const data = await res.json();
+      const hasResult = renderHotels(data.hotels || []);
     return hasResult;
   } catch (err) {
     console.error("❌ 검색 실패:", err);

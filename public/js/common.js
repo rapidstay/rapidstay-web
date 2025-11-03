@@ -277,7 +277,9 @@ export function initSearchBar(onSearch) {
     if (window.location.pathname.includes("/search.html")) {
       onSearch?.(payload);
     } else {
-      const base = window.location.pathname.includes("/city/") ? ".." : ".";
+      const base = window.location.pathname.includes("/city") || window.location.pathname.includes("/city-hotel")
+        ? ".."
+        : ".";
       setTimeout(() => {
         location.href = `${base}/search.html?${q}`;
       }, 100);
@@ -357,7 +359,7 @@ export function initSearchBar(onSearch) {
   // ===========================
   // 🏙️ 인기 여행지 버튼
   // ===========================
-  const BASE_PATH = window.location.pathname.includes("/city/") ? ".." : ".";
+  const BASE_PATH = window.location.pathname.includes("/city/") || window.location.pathname.includes("/city-hotel") ? ".." : ".";
   document.querySelectorAll(".cityQuick").forEach((b) => {
     b.addEventListener("click", () => {
       const raw = b.dataset.city || b.textContent.trim();
@@ -385,7 +387,7 @@ export async function fetchAndRenderHotels(city, checkIn, checkOut, roomsParam) 
     (c) => c.display === city || c.name.toLowerCase() === city.toLowerCase()
   );
   const slug = match ? match.name : city;
-  const BASE_PATH = window.location.pathname.includes("/city/") ? ".." : ".";
+  const BASE_PATH = window.location.pathname.includes("/city/") || window.location.pathname.includes("/city-hotel") ? ".." : ".";
   
   let hotels = [];
   let useMock = true;
@@ -403,8 +405,8 @@ export async function fetchAndRenderHotels(city, checkIn, checkOut, roomsParam) 
 
     if (apiRes.ok) {
       const apiData = await apiRes.json();
-      if (apiData?.length) {
-        hotels = apiData;
+      if (apiData?.hotels?.length) {
+        hotels = apiData.hotels;
         useMock = false;
       }
     } else {
@@ -466,7 +468,7 @@ export async function loadPartial(targetId, path, callback) {
 /** ===========================
  *  📍 city-map.json 자동 로드
  *  =========================== */
-const cityMapPath = window.location.pathname.includes("/city/")
+const cityMapPath = window.location.pathname.includes("/city/") || window.location.pathname.includes("/city-hotel")
   ? "../city-data/city-map.json"
   : "./city-data/city-map.json";
 
