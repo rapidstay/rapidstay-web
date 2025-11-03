@@ -1,16 +1,23 @@
-<header>🏨 RapidStay Hotel Search</header>
+<header class="rs-header">
+  <div class="rs-header-inner">
+    <a href="/" class="rs-logo">
+      <img src="https://picsum.photos/seed/rapidstay/40/40" alt="RapidStay Logo">
+      <span>RapidStay <em>Travel Smarter</em></span>
+    </a>
+  </div>
+</header>
 
-<div id="hotelSearchForm" autocomplete="on">
-<div id="search-bar" style="position: relative; align-items: center;">
+<section id="hotelSearchForm" class="rs-search-section" autocomplete="on">
+  <div id="search-bar" class="rs-search-bar">
     <!-- ✅ 도시 -->
-    <div style="position:relative; flex:1;">
+    <div class="city-field">
       <input type="text" id="city" name="city" placeholder="도시명 (예: Seoul)" autocomplete="off" />
       <div id="autocompletelist"></div>
     </div>
 
     <!-- ✅ 날짜 -->
-    <input type="date" id="checkIn" name="checkIn">
-    <input type="date" id="checkOut" name="checkOut">
+    <input type="date" id="checkIn" name="checkIn" />
+    <input type="date" id="checkOut" name="checkOut" />
 
     <!-- ✅ 객실/인원 -->
     <div class="room-selector">
@@ -19,6 +26,7 @@
         <div id="roomList">
           <div class="room-item" data-index="0">
             <div class="room-header">객실 1</div>
+
             <div class="room-row">
               <span>성인</span>
               <div class="counter">
@@ -27,6 +35,7 @@
                 <button type="button" class="plus adult">＋</button>
               </div>
             </div>
+
             <div class="room-row">
               <span>아동</span>
               <div class="counter">
@@ -38,6 +47,7 @@
             </div>
           </div>
         </div>
+
         <div class="room-controls">
           <button type="button" id="addRoom">＋ 객실 추가</button>
           <button type="button" id="removeRoom">－ 객실 삭제</button>
@@ -47,12 +57,12 @@
     </div>
 
     <!-- ✅ 검색 버튼 -->
-    <button id="searchBtn">검색</button>
+    <button id="searchBtn" class="rs-search-btn">검색</button>
   </div>
-</div>
+</section>
 
 <!-- ✅ 인기 여행지 -->
-<div id="popularCities">
+<div id="popularCities" class="rs-popular">
   <span>인기 여행지:</span>
   <button class="cityQuick" data-city="서울">서울</button>
   <button class="cityQuick" data-city="부산">부산</button>

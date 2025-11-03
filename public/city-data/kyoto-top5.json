@@ -4,8 +4,8 @@
       "name": "Kyoto Hotel 1",
       "city": "Kyoto",
       "address": "Kyoto 중심가 10번지",
-      "rating": "4.0",
-      "lowestPrice": 138643,
+      "rating": "4.4",
+      "lowestPrice": 104224,
       "image": "https://picsum.photos/seed/Kyoto-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "Kyoto Hotel 2",
       "city": "Kyoto",
       "address": "Kyoto 중심가 11번지",
-      "rating": "4.2",
-      "lowestPrice": 79411,
+      "rating": "4.0",
+      "lowestPrice": 100519,
       "image": "https://picsum.photos/seed/Kyoto-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "Kyoto Hotel 3",
       "city": "Kyoto",
       "address": "Kyoto 중심가 12번지",
-      "rating": "4.7",
-      "lowestPrice": 123331,
+      "rating": "4.9",
+      "lowestPrice": 169031,
       "image": "https://picsum.photos/seed/Kyoto-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "Kyoto Hotel 4",
       "city": "Kyoto",
       "address": "Kyoto 중심가 13번지",
-      "rating": "4.9",
-      "lowestPrice": 138355,
+      "rating": "4.0",
+      "lowestPrice": 88883,
       "image": "https://picsum.photos/seed/Kyoto-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "Kyoto Hotel 5",
       "city": "Kyoto",
       "address": "Kyoto 중심가 14번지",
-      "rating": "4.6",
-      "lowestPrice": 71632,
+      "rating": "4.7",
+      "lowestPrice": 83741,
       "image": "https://picsum.photos/seed/Kyoto-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "Kyoto Hotel 2",
       "city": "Kyoto",
       "address": "Kyoto 중심가 11번지",
-      "rating": "4.2",
-      "lowestPrice": 79411,
+      "rating": "4.0",
+      "lowestPrice": 100519,
       "image": "https://picsum.photos/seed/Kyoto-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "Kyoto Hotel 4",
       "city": "Kyoto",
       "address": "Kyoto 중심가 13번지",
-      "rating": "4.9",
-      "lowestPrice": 138355,
+      "rating": "4.0",
+      "lowestPrice": 88883,
       "image": "https://picsum.photos/seed/Kyoto-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "Kyoto Hotel 6",
       "city": "Kyoto",
       "address": "Kyoto 중심가 15번지",
-      "rating": "4.1",
-      "lowestPrice": 165240,
+      "rating": "4.0",
+      "lowestPrice": 162597,
       "image": "https://picsum.photos/seed/Kyoto-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -79,7 +79,7 @@
       "city": "Kyoto",
       "address": "Kyoto 중심가 17번지",
       "rating": "4.2",
-      "lowestPrice": 106561,
+      "lowestPrice": 122174,
       "image": "https://picsum.photos/seed/Kyoto-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Kyoto Hotel 10",
       "city": "Kyoto",
       "address": "Kyoto 중심가 19번지",
-      "rating": "4.6",
-      "lowestPrice": 79133,
+      "rating": "4.4",
+      "lowestPrice": 141450,
       "image": "https://picsum.photos/seed/Kyoto-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Kyoto Hotel 1",
       "city": "Kyoto",
       "address": "Kyoto 중심가 10번지",
-      "rating": "4.0",
-      "lowestPrice": 138643,
+      "rating": "4.4",
+      "lowestPrice": 104224,
       "image": "https://picsum.photos/seed/Kyoto-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "Kyoto Hotel 3",
       "city": "Kyoto",
       "address": "Kyoto 중심가 12번지",
-      "rating": "4.7",
-      "lowestPrice": 123331,
+      "rating": "4.9",
+      "lowestPrice": 169031,
       "image": "https://picsum.photos/seed/Kyoto-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "Kyoto Hotel 5",
       "city": "Kyoto",
       "address": "Kyoto 중심가 14번지",
-      "rating": "4.6",
-      "lowestPrice": 71632,
+      "rating": "4.7",
+      "lowestPrice": 83741,
       "image": "https://picsum.photos/seed/Kyoto-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "Kyoto Hotel 7",
       "city": "Kyoto",
       "address": "Kyoto 중심가 16번지",
-      "rating": "4.3",
-      "lowestPrice": 118860,
+      "rating": "4.9",
+      "lowestPrice": 128271,
       "image": "https://picsum.photos/seed/Kyoto-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "Kyoto Hotel 9",
       "city": "Kyoto",
       "address": "Kyoto 중심가 18번지",
-      "rating": "4.6",
-      "lowestPrice": 151372,
+      "rating": "4.0",
+      "lowestPrice": 111617,
       "image": "https://picsum.photos/seed/Kyoto-8/400/250",
       "amenities": "Family, WiFi"
     }

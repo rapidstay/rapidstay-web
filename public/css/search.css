@@ -1,6 +1,28 @@
 /* ==============================
-   RapidStay - 검색 리스트 (모바일 퍼스트)
+   RapidStay - 검색 리스트 (모바일 퍼스트, 정리본)
    ============================== */
+
+   /* ==============================
+   🔍 검색 영역 기본 보정 (공통 검색바 연결)
+   ============================== */
+.rs-search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto 10px;
+  padding: 0 16px;
+}
+
+.rs-search-bar {
+  max-width: 900px;
+  width: 100%;
+}
+
+/* 페이지별로 헤더와 붙는 경우 간격 조정 */
+body.search-page .rs-header + .rs-search-section {
+  margin-top: 20px;
+}
+
 
 #search-container {
   max-width: 1200px;

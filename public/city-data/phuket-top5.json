@@ -4,8 +4,8 @@
       "name": "Phuket Hotel 1",
       "city": "Phuket",
       "address": "Phuket 중심가 10번지",
-      "rating": "4.1",
-      "lowestPrice": 159658,
+      "rating": "4.6",
+      "lowestPrice": 156199,
       "image": "https://picsum.photos/seed/Phuket-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "Phuket Hotel 2",
       "city": "Phuket",
       "address": "Phuket 중심가 11번지",
-      "rating": "4.1",
-      "lowestPrice": 107245,
+      "rating": "4.7",
+      "lowestPrice": 168419,
       "image": "https://picsum.photos/seed/Phuket-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "Phuket Hotel 3",
       "city": "Phuket",
       "address": "Phuket 중심가 12번지",
-      "rating": "4.7",
-      "lowestPrice": 169406,
+      "rating": "4.6",
+      "lowestPrice": 166310,
       "image": "https://picsum.photos/seed/Phuket-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -32,7 +32,7 @@
       "city": "Phuket",
       "address": "Phuket 중심가 13번지",
       "rating": "4.2",
-      "lowestPrice": 103764,
+      "lowestPrice": 167050,
       "image": "https://picsum.photos/seed/Phuket-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -41,7 +41,7 @@
       "city": "Phuket",
       "address": "Phuket 중심가 14번지",
       "rating": "4.4",
-      "lowestPrice": 164742,
+      "lowestPrice": 111387,
       "image": "https://picsum.photos/seed/Phuket-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "Phuket Hotel 2",
       "city": "Phuket",
       "address": "Phuket 중심가 11번지",
-      "rating": "4.1",
-      "lowestPrice": 107245,
+      "rating": "4.7",
+      "lowestPrice": 168419,
       "image": "https://picsum.photos/seed/Phuket-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -61,7 +61,7 @@
       "city": "Phuket",
       "address": "Phuket 중심가 13번지",
       "rating": "4.2",
-      "lowestPrice": 103764,
+      "lowestPrice": 167050,
       "image": "https://picsum.photos/seed/Phuket-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "Phuket Hotel 6",
       "city": "Phuket",
       "address": "Phuket 중심가 15번지",
-      "rating": "4.7",
-      "lowestPrice": 91359,
+      "rating": "4.9",
+      "lowestPrice": 108892,
       "image": "https://picsum.photos/seed/Phuket-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Phuket Hotel 8",
       "city": "Phuket",
       "address": "Phuket 중심가 17번지",
-      "rating": "4.7",
-      "lowestPrice": 135186,
+      "rating": "4.2",
+      "lowestPrice": 89096,
       "image": "https://picsum.photos/seed/Phuket-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Phuket Hotel 10",
       "city": "Phuket",
       "address": "Phuket 중심가 19번지",
-      "rating": "4.4",
-      "lowestPrice": 144741,
+      "rating": "4.7",
+      "lowestPrice": 73929,
       "image": "https://picsum.photos/seed/Phuket-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Phuket Hotel 1",
       "city": "Phuket",
       "address": "Phuket 중심가 10번지",
-      "rating": "4.1",
-      "lowestPrice": 159658,
+      "rating": "4.6",
+      "lowestPrice": 156199,
       "image": "https://picsum.photos/seed/Phuket-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "Phuket Hotel 3",
       "city": "Phuket",
       "address": "Phuket 중심가 12번지",
-      "rating": "4.7",
-      "lowestPrice": 169406,
+      "rating": "4.6",
+      "lowestPrice": 166310,
       "image": "https://picsum.photos/seed/Phuket-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -117,7 +117,7 @@
       "city": "Phuket",
       "address": "Phuket 중심가 14번지",
       "rating": "4.4",
-      "lowestPrice": 164742,
+      "lowestPrice": 111387,
       "image": "https://picsum.photos/seed/Phuket-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "Phuket Hotel 7",
       "city": "Phuket",
       "address": "Phuket 중심가 16번지",
-      "rating": "4.7",
-      "lowestPrice": 137787,
+      "rating": "4.8",
+      "lowestPrice": 110098,
       "image": "https://picsum.photos/seed/Phuket-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "Phuket Hotel 9",
       "city": "Phuket",
       "address": "Phuket 중심가 18번지",
-      "rating": "4.5",
-      "lowestPrice": 119111,
+      "rating": "4.1",
+      "lowestPrice": 76963,
       "image": "https://picsum.photos/seed/Phuket-8/400/250",
       "amenities": "Family, WiFi"
     }

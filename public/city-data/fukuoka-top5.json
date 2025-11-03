@@ -4,8 +4,8 @@
       "name": "Fukuoka Hotel 1",
       "city": "Fukuoka",
       "address": "Fukuoka 중심가 10번지",
-      "rating": "4.5",
-      "lowestPrice": 104806,
+      "rating": "4.9",
+      "lowestPrice": 142832,
       "image": "https://picsum.photos/seed/Fukuoka-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "Fukuoka Hotel 2",
       "city": "Fukuoka",
       "address": "Fukuoka 중심가 11번지",
-      "rating": "4.9",
-      "lowestPrice": 157399,
+      "rating": "4.3",
+      "lowestPrice": 109287,
       "image": "https://picsum.photos/seed/Fukuoka-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "Fukuoka Hotel 3",
       "city": "Fukuoka",
       "address": "Fukuoka 중심가 12번지",
-      "rating": "4.9",
-      "lowestPrice": 122797,
+      "rating": "4.0",
+      "lowestPrice": 74198,
       "image": "https://picsum.photos/seed/Fukuoka-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "Fukuoka Hotel 4",
       "city": "Fukuoka",
       "address": "Fukuoka 중심가 13번지",
-      "rating": "4.4",
-      "lowestPrice": 115024,
+      "rating": "4.5",
+      "lowestPrice": 70320,
       "image": "https://picsum.photos/seed/Fukuoka-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "Fukuoka Hotel 5",
       "city": "Fukuoka",
       "address": "Fukuoka 중심가 14번지",
-      "rating": "4.7",
-      "lowestPrice": 153616,
+      "rating": "4.8",
+      "lowestPrice": 140374,
       "image": "https://picsum.photos/seed/Fukuoka-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "Fukuoka Hotel 2",
       "city": "Fukuoka",
       "address": "Fukuoka 중심가 11번지",
-      "rating": "4.9",
-      "lowestPrice": 157399,
+      "rating": "4.3",
+      "lowestPrice": 109287,
       "image": "https://picsum.photos/seed/Fukuoka-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "Fukuoka Hotel 4",
       "city": "Fukuoka",
       "address": "Fukuoka 중심가 13번지",
-      "rating": "4.4",
-      "lowestPrice": 115024,
+      "rating": "4.5",
+      "lowestPrice": 70320,
       "image": "https://picsum.photos/seed/Fukuoka-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -70,7 +70,7 @@
       "city": "Fukuoka",
       "address": "Fukuoka 중심가 15번지",
       "rating": "4.3",
-      "lowestPrice": 94337,
+      "lowestPrice": 128705,
       "image": "https://picsum.photos/seed/Fukuoka-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Fukuoka Hotel 8",
       "city": "Fukuoka",
       "address": "Fukuoka 중심가 17번지",
-      "rating": "4.8",
-      "lowestPrice": 85188,
+      "rating": "4.3",
+      "lowestPrice": 123811,
       "image": "https://picsum.photos/seed/Fukuoka-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Fukuoka Hotel 10",
       "city": "Fukuoka",
       "address": "Fukuoka 중심가 19번지",
-      "rating": "4.1",
-      "lowestPrice": 130173,
+      "rating": "4.5",
+      "lowestPrice": 94785,
       "image": "https://picsum.photos/seed/Fukuoka-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Fukuoka Hotel 1",
       "city": "Fukuoka",
       "address": "Fukuoka 중심가 10번지",
-      "rating": "4.5",
-      "lowestPrice": 104806,
+      "rating": "4.9",
+      "lowestPrice": 142832,
       "image": "https://picsum.photos/seed/Fukuoka-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "Fukuoka Hotel 3",
       "city": "Fukuoka",
       "address": "Fukuoka 중심가 12번지",
-      "rating": "4.9",
-      "lowestPrice": 122797,
+      "rating": "4.0",
+      "lowestPrice": 74198,
       "image": "https://picsum.photos/seed/Fukuoka-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "Fukuoka Hotel 5",
       "city": "Fukuoka",
       "address": "Fukuoka 중심가 14번지",
-      "rating": "4.7",
-      "lowestPrice": 153616,
+      "rating": "4.8",
+      "lowestPrice": 140374,
       "image": "https://picsum.photos/seed/Fukuoka-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "Fukuoka Hotel 7",
       "city": "Fukuoka",
       "address": "Fukuoka 중심가 16번지",
-      "rating": "4.4",
-      "lowestPrice": 139753,
+      "rating": "4.9",
+      "lowestPrice": 113489,
       "image": "https://picsum.photos/seed/Fukuoka-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -135,7 +135,7 @@
       "city": "Fukuoka",
       "address": "Fukuoka 중심가 18번지",
       "rating": "4.1",
-      "lowestPrice": 162009,
+      "lowestPrice": 148395,
       "image": "https://picsum.photos/seed/Fukuoka-8/400/250",
       "amenities": "Family, WiFi"
     }

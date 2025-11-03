@@ -4,8 +4,8 @@
       "name": "Tokyo Hotel 1",
       "city": "Tokyo",
       "address": "Tokyo 중심가 10번지",
-      "rating": "4.7",
-      "lowestPrice": 126519,
+      "rating": "4.9",
+      "lowestPrice": 106012,
       "image": "https://picsum.photos/seed/Tokyo-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "Tokyo Hotel 2",
       "city": "Tokyo",
       "address": "Tokyo 중심가 11번지",
-      "rating": "4.6",
-      "lowestPrice": 101668,
+      "rating": "4.3",
+      "lowestPrice": 99368,
       "image": "https://picsum.photos/seed/Tokyo-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "Tokyo Hotel 3",
       "city": "Tokyo",
       "address": "Tokyo 중심가 12번지",
-      "rating": "4.8",
-      "lowestPrice": 132163,
+      "rating": "5.0",
+      "lowestPrice": 86573,
       "image": "https://picsum.photos/seed/Tokyo-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "Tokyo Hotel 4",
       "city": "Tokyo",
       "address": "Tokyo 중심가 13번지",
-      "rating": "4.2",
-      "lowestPrice": 120142,
+      "rating": "4.8",
+      "lowestPrice": 112103,
       "image": "https://picsum.photos/seed/Tokyo-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "Tokyo Hotel 5",
       "city": "Tokyo",
       "address": "Tokyo 중심가 14번지",
-      "rating": "4.6",
-      "lowestPrice": 70993,
+      "rating": "4.2",
+      "lowestPrice": 74582,
       "image": "https://picsum.photos/seed/Tokyo-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "Tokyo Hotel 2",
       "city": "Tokyo",
       "address": "Tokyo 중심가 11번지",
-      "rating": "4.6",
-      "lowestPrice": 101668,
+      "rating": "4.3",
+      "lowestPrice": 99368,
       "image": "https://picsum.photos/seed/Tokyo-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "Tokyo Hotel 4",
       "city": "Tokyo",
       "address": "Tokyo 중심가 13번지",
-      "rating": "4.2",
-      "lowestPrice": 120142,
+      "rating": "4.8",
+      "lowestPrice": 112103,
       "image": "https://picsum.photos/seed/Tokyo-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "Tokyo Hotel 6",
       "city": "Tokyo",
       "address": "Tokyo 중심가 15번지",
-      "rating": "4.8",
-      "lowestPrice": 80573,
+      "rating": "4.1",
+      "lowestPrice": 108370,
       "image": "https://picsum.photos/seed/Tokyo-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Tokyo Hotel 8",
       "city": "Tokyo",
       "address": "Tokyo 중심가 17번지",
-      "rating": "4.3",
-      "lowestPrice": 166260,
+      "rating": "4.0",
+      "lowestPrice": 130587,
       "image": "https://picsum.photos/seed/Tokyo-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Tokyo Hotel 10",
       "city": "Tokyo",
       "address": "Tokyo 중심가 19번지",
-      "rating": "4.1",
-      "lowestPrice": 149350,
+      "rating": "4.8",
+      "lowestPrice": 146720,
       "image": "https://picsum.photos/seed/Tokyo-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Tokyo Hotel 1",
       "city": "Tokyo",
       "address": "Tokyo 중심가 10번지",
-      "rating": "4.7",
-      "lowestPrice": 126519,
+      "rating": "4.9",
+      "lowestPrice": 106012,
       "image": "https://picsum.photos/seed/Tokyo-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "Tokyo Hotel 3",
       "city": "Tokyo",
       "address": "Tokyo 중심가 12번지",
-      "rating": "4.8",
-      "lowestPrice": 132163,
+      "rating": "5.0",
+      "lowestPrice": 86573,
       "image": "https://picsum.photos/seed/Tokyo-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "Tokyo Hotel 5",
       "city": "Tokyo",
       "address": "Tokyo 중심가 14번지",
-      "rating": "4.6",
-      "lowestPrice": 70993,
+      "rating": "4.2",
+      "lowestPrice": 74582,
       "image": "https://picsum.photos/seed/Tokyo-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "Tokyo Hotel 7",
       "city": "Tokyo",
       "address": "Tokyo 중심가 16번지",
-      "rating": "4.3",
-      "lowestPrice": 138275,
+      "rating": "4.0",
+      "lowestPrice": 118466,
       "image": "https://picsum.photos/seed/Tokyo-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "Tokyo Hotel 9",
       "city": "Tokyo",
       "address": "Tokyo 중심가 18번지",
-      "rating": "4.6",
-      "lowestPrice": 151282,
+      "rating": "4.4",
+      "lowestPrice": 72445,
       "image": "https://picsum.photos/seed/Tokyo-8/400/250",
       "amenities": "Family, WiFi"
     }

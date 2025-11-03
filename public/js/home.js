@@ -66,14 +66,14 @@ async function loadCityPreview() {
         "beforeend",
         `
         <section class="city-section">
-          <h3>${c.display} 인기 숙소</h3>
+          <h3><span class="city-name">${c.display}</span> 인기 숙소</h3>
           <div class="scroll-wrapper">
             <button class="scroll-btn left">‹</button>
             <div class="horizontal-scroll">${cards}</div>
             <button class="scroll-btn right">›</button>
           </div>
           <div class="city-more">
-            <a href="./city/${c.name.toLowerCase()}.html">${c.display} 주요 숙소 보기 ▶</a>
+            <a href="./city-hotel/${c.name.toLowerCase()}.html">${c.display} 주요 숙소 보기 ▶</a>
           </div>
         </section>
       `

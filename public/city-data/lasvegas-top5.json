@@ -4,8 +4,8 @@
       "name": "LasVegas Hotel 1",
       "city": "LasVegas",
       "address": "LasVegas 중심가 10번지",
-      "rating": "4.4",
-      "lowestPrice": 78628,
+      "rating": "4.6",
+      "lowestPrice": 115816,
       "image": "https://picsum.photos/seed/LasVegas-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "LasVegas Hotel 2",
       "city": "LasVegas",
       "address": "LasVegas 중심가 11번지",
-      "rating": "4.4",
-      "lowestPrice": 115300,
+      "rating": "4.1",
+      "lowestPrice": 161565,
       "image": "https://picsum.photos/seed/LasVegas-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "LasVegas Hotel 3",
       "city": "LasVegas",
       "address": "LasVegas 중심가 12번지",
-      "rating": "4.5",
-      "lowestPrice": 70122,
+      "rating": "4.6",
+      "lowestPrice": 165107,
       "image": "https://picsum.photos/seed/LasVegas-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "LasVegas Hotel 4",
       "city": "LasVegas",
       "address": "LasVegas 중심가 13번지",
-      "rating": "4.4",
-      "lowestPrice": 157937,
+      "rating": "4.7",
+      "lowestPrice": 126668,
       "image": "https://picsum.photos/seed/LasVegas-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -41,7 +41,7 @@
       "city": "LasVegas",
       "address": "LasVegas 중심가 14번지",
       "rating": "4.8",
-      "lowestPrice": 107764,
+      "lowestPrice": 145894,
       "image": "https://picsum.photos/seed/LasVegas-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "LasVegas Hotel 2",
       "city": "LasVegas",
       "address": "LasVegas 중심가 11번지",
-      "rating": "4.4",
-      "lowestPrice": 115300,
+      "rating": "4.1",
+      "lowestPrice": 161565,
       "image": "https://picsum.photos/seed/LasVegas-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "LasVegas Hotel 4",
       "city": "LasVegas",
       "address": "LasVegas 중심가 13번지",
-      "rating": "4.4",
-      "lowestPrice": 157937,
+      "rating": "4.7",
+      "lowestPrice": 126668,
       "image": "https://picsum.photos/seed/LasVegas-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "LasVegas Hotel 6",
       "city": "LasVegas",
       "address": "LasVegas 중심가 15번지",
-      "rating": "4.5",
-      "lowestPrice": 166868,
+      "rating": "4.1",
+      "lowestPrice": 140882,
       "image": "https://picsum.photos/seed/LasVegas-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "LasVegas Hotel 8",
       "city": "LasVegas",
       "address": "LasVegas 중심가 17번지",
-      "rating": "4.3",
-      "lowestPrice": 164051,
+      "rating": "4.7",
+      "lowestPrice": 120260,
       "image": "https://picsum.photos/seed/LasVegas-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "LasVegas Hotel 10",
       "city": "LasVegas",
       "address": "LasVegas 중심가 19번지",
-      "rating": "4.4",
-      "lowestPrice": 153312,
+      "rating": "4.0",
+      "lowestPrice": 115982,
       "image": "https://picsum.photos/seed/LasVegas-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "LasVegas Hotel 1",
       "city": "LasVegas",
       "address": "LasVegas 중심가 10번지",
-      "rating": "4.4",
-      "lowestPrice": 78628,
+      "rating": "4.6",
+      "lowestPrice": 115816,
       "image": "https://picsum.photos/seed/LasVegas-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "LasVegas Hotel 3",
       "city": "LasVegas",
       "address": "LasVegas 중심가 12번지",
-      "rating": "4.5",
-      "lowestPrice": 70122,
+      "rating": "4.6",
+      "lowestPrice": 165107,
       "image": "https://picsum.photos/seed/LasVegas-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -117,7 +117,7 @@
       "city": "LasVegas",
       "address": "LasVegas 중심가 14번지",
       "rating": "4.8",
-      "lowestPrice": 107764,
+      "lowestPrice": 145894,
       "image": "https://picsum.photos/seed/LasVegas-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -126,7 +126,7 @@
       "city": "LasVegas",
       "address": "LasVegas 중심가 16번지",
       "rating": "4.7",
-      "lowestPrice": 142375,
+      "lowestPrice": 104987,
       "image": "https://picsum.photos/seed/LasVegas-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "LasVegas Hotel 9",
       "city": "LasVegas",
       "address": "LasVegas 중심가 18번지",
-      "rating": "4.3",
-      "lowestPrice": 100074,
+      "rating": "4.6",
+      "lowestPrice": 115089,
       "image": "https://picsum.photos/seed/LasVegas-8/400/250",
       "amenities": "Family, WiFi"
     }

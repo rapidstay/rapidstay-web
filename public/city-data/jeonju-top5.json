@@ -4,8 +4,8 @@
       "name": "Jeonju Hotel 1",
       "city": "Jeonju",
       "address": "Jeonju 중심가 10번지",
-      "rating": "4.8",
-      "lowestPrice": 90540,
+      "rating": "4.1",
+      "lowestPrice": 165970,
       "image": "https://picsum.photos/seed/Jeonju-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "Jeonju Hotel 2",
       "city": "Jeonju",
       "address": "Jeonju 중심가 11번지",
-      "rating": "4.9",
-      "lowestPrice": 154920,
+      "rating": "4.5",
+      "lowestPrice": 107117,
       "image": "https://picsum.photos/seed/Jeonju-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "Jeonju Hotel 3",
       "city": "Jeonju",
       "address": "Jeonju 중심가 12번지",
-      "rating": "4.3",
-      "lowestPrice": 131127,
+      "rating": "4.7",
+      "lowestPrice": 150287,
       "image": "https://picsum.photos/seed/Jeonju-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "Jeonju Hotel 4",
       "city": "Jeonju",
       "address": "Jeonju 중심가 13번지",
-      "rating": "4.7",
-      "lowestPrice": 166987,
+      "rating": "4.0",
+      "lowestPrice": 89765,
       "image": "https://picsum.photos/seed/Jeonju-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "Jeonju Hotel 5",
       "city": "Jeonju",
       "address": "Jeonju 중심가 14번지",
-      "rating": "4.3",
-      "lowestPrice": 91658,
+      "rating": "4.9",
+      "lowestPrice": 137533,
       "image": "https://picsum.photos/seed/Jeonju-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "Jeonju Hotel 2",
       "city": "Jeonju",
       "address": "Jeonju 중심가 11번지",
-      "rating": "4.9",
-      "lowestPrice": 154920,
+      "rating": "4.5",
+      "lowestPrice": 107117,
       "image": "https://picsum.photos/seed/Jeonju-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "Jeonju Hotel 4",
       "city": "Jeonju",
       "address": "Jeonju 중심가 13번지",
-      "rating": "4.7",
-      "lowestPrice": 166987,
+      "rating": "4.0",
+      "lowestPrice": 89765,
       "image": "https://picsum.photos/seed/Jeonju-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "Jeonju Hotel 6",
       "city": "Jeonju",
       "address": "Jeonju 중심가 15번지",
-      "rating": "4.5",
-      "lowestPrice": 165677,
+      "rating": "4.4",
+      "lowestPrice": 100480,
       "image": "https://picsum.photos/seed/Jeonju-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Jeonju Hotel 8",
       "city": "Jeonju",
       "address": "Jeonju 중심가 17번지",
-      "rating": "4.5",
-      "lowestPrice": 95188,
+      "rating": "4.7",
+      "lowestPrice": 122789,
       "image": "https://picsum.photos/seed/Jeonju-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Jeonju Hotel 10",
       "city": "Jeonju",
       "address": "Jeonju 중심가 19번지",
-      "rating": "4.1",
-      "lowestPrice": 151477,
+      "rating": "4.6",
+      "lowestPrice": 151642,
       "image": "https://picsum.photos/seed/Jeonju-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Jeonju Hotel 1",
       "city": "Jeonju",
       "address": "Jeonju 중심가 10번지",
-      "rating": "4.8",
-      "lowestPrice": 90540,
+      "rating": "4.1",
+      "lowestPrice": 165970,
       "image": "https://picsum.photos/seed/Jeonju-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "Jeonju Hotel 3",
       "city": "Jeonju",
       "address": "Jeonju 중심가 12번지",
-      "rating": "4.3",
-      "lowestPrice": 131127,
+      "rating": "4.7",
+      "lowestPrice": 150287,
       "image": "https://picsum.photos/seed/Jeonju-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "Jeonju Hotel 5",
       "city": "Jeonju",
       "address": "Jeonju 중심가 14번지",
-      "rating": "4.3",
-      "lowestPrice": 91658,
+      "rating": "4.9",
+      "lowestPrice": 137533,
       "image": "https://picsum.photos/seed/Jeonju-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "Jeonju Hotel 7",
       "city": "Jeonju",
       "address": "Jeonju 중심가 16번지",
-      "rating": "4.3",
-      "lowestPrice": 159914,
+      "rating": "4.8",
+      "lowestPrice": 143816,
       "image": "https://picsum.photos/seed/Jeonju-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "Jeonju Hotel 9",
       "city": "Jeonju",
       "address": "Jeonju 중심가 18번지",
-      "rating": "4.7",
-      "lowestPrice": 163964,
+      "rating": "4.0",
+      "lowestPrice": 169495,
       "image": "https://picsum.photos/seed/Jeonju-8/400/250",
       "amenities": "Family, WiFi"
     }

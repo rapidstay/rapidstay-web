@@ -12,10 +12,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // === 설정 경로 ==========================
-const TEMPLATE_PATH = "./public/city-template.html";
+const TEMPLATE_PATH = "./public/templates/city-template.html";
 const HEADER_PATH = "./public/partials/header-search.html";
 const OUTPUT_JSON_DIR = "./public/city-data";
-const OUTPUT_HTML_DIR = "./public/city";
+const OUTPUT_HTML_DIR = "./public/city-hotel";
 const PUBLIC_DIR = path.join(__dirname, "../public");
 const BASE_URL = "https://rapidstay-c7f8e.web.app"; // ✅ 실제 배포 경로
 
@@ -93,12 +93,12 @@ function generateHtml(city, display) {
   if (fs.existsSync(HEADER_PATH)) {
     let rawHeader = fs.readFileSync(HEADER_PATH, "utf8");
     rawHeader = rawHeader.replace(/^\uFEFF/, ""); // BOM 제거
-    rawHeader = rawHeader.replace(/<\/?header[^>]*>/gi, "").trim();
+    rawHeader = rawHeader.replace(/^\uFEFF/, "").trim();
     headerHTML = rawHeader;
   }
 
   // === SEO / OG 메타 정보 자동 생성 ===
-  const canonicalUrl = `${BASE_URL}/city/${city.toLowerCase()}.html`;
+  const canonicalUrl = `${BASE_URL}/city-hotel/${city.toLowerCase()}.html`;
   const title = `${display} 호텔 추천 | RapidStay`;
   const description = `${display}의 인기 호텔, 가족 여행, 반려동물 동반 숙소를 한눈에 비교하세요.`;
   const imageUrl = `${BASE_URL}/assets/og/${city.toLowerCase()}.jpg`;
@@ -166,8 +166,8 @@ function generateSitemap() {
         // ✅ 내부 템플릿 / 오류 페이지 / partials 제외
         if (
           file === "404.html" ||
-          file === "city-template.html" ||
-          fullPath.includes("/partials/")
+          fullPath.includes("/partials/") ||
+          fullPath.includes("/templates/")
         ) {
           continue;
         }
@@ -196,7 +196,7 @@ ${sortedUrls
     <loc>${url}</loc>
     <lastmod>${now}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${url.includes("/city/") ? "0.8" : "1.0"}</priority>
+    <priority>${url.includes("/city-hotel/") ? "0.8" : "1.0"}</priority>
   </url>`
   )
   .join("")}

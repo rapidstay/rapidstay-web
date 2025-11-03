@@ -1,0 +1,167 @@
+/* ===============================
+   🏙️ City Info Page Styles
+   =============================== */
+
+/* ✅ Hero Section */
+.city-hero {
+  position: relative;
+  max-width: 960px;
+  margin: 50px auto 40px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  border: 1px solid #e6ecf3;
+  text-align: center;
+}
+
+/* 메인 이미지 */
+.city-hero img {
+  width: 100%;
+  height: 420px;
+  min-height: 240px;
+  background-color: #f0f4fa;
+  object-fit: cover;
+  display: block;
+}
+
+/* 설명 영역 */
+.city-hero-content {
+  padding: 28px 32px 36px;
+}
+
+.city-hero-content h1 {
+  font-size: 1.9rem;
+  color: #16396b;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.city-hero-content p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* 태그 */
+.city-tags {
+  margin-bottom: 18px;
+}
+
+.city-tags span {
+  display: inline-block;
+  background: #eef4ff;
+  color: #0059b2;
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin: 3px;
+  transition: background 0.2s;
+}
+
+.city-tags span:hover {
+  background: #d8e7ff;
+}
+
+/* 브레드크럼 */
+.city-breadcrumb {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+}
+
+.city-breadcrumb a {
+  color: #0078d4;
+  text-decoration: none;
+}
+
+.city-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Section Titles & Table */
+.section-title {
+  font-size: 1.4rem;
+  color: #16396b;
+  margin: 40px 0 18px;
+  border-left: 4px solid #0078d4;
+  padding-left: 10px;
+  font-weight: 700;
+  border-bottom: 1px solid #e4eaf2;
+  padding-bottom: 6px;
+}
+
+.city-facilities {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.city-facilities th,
+.city-facilities td {
+  border: 1px solid #e2e8f0;
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.city-facilities th {
+  background: #f9fbfd;
+  width: 160px;
+  color: #1b3b6f;
+}
+
+/* ✅ 인접 도시 / CTA */
+.nearby-wrap a,
+.cta-row a {
+  display: inline-block;
+  margin: 6px;
+  padding: 10px 14px;
+  background: #eef4ff;
+  border-radius: 8px;
+  color: #0059b2;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.nearby-wrap a:hover,
+.cta-row a:hover {
+  background: #d8e7ff;
+}
+
+.cta-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+/* ✅ 반응형 */
+@media (max-width: 768px) {
+  .city-hero img {
+    height: 280px;
+  }
+
+  .city-hero-content {
+    padding: 22px 20px 28px;
+  }
+
+  .city-hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .city-hero-content p {
+    font-size: 14px;
+  }
+}
+
+.city-hero-img {
+  width: 100%;
+  height: 400px; /* ✅ 이미지가 보이게 고정 높이 추가 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #e4eaf2;
+}

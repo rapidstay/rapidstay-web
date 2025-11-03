@@ -794,7 +794,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // === 설정 경로 ==========================
-const TEMPLATE_PATH = "./public/city-template.html";
+const TEMPLATE_PATH = "./public/templates/city-template.html";
 const HEADER_PATH = "./public/partials/header-search.html";
 const OUTPUT_JSON_DIR = "./public/city-data";
 const OUTPUT_HTML_DIR = "./public/city";

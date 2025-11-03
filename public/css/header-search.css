@@ -1,0 +1,228 @@
+/* ======================================
+   🧭 RapidStay Header + Search (최종 안정화 완성본)
+   ====================================== */
+
+/* ==============================
+   🧭 Modern Header (2025 Ver.)
+   ============================== */
+.rs-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.rs-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rs-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.rs-logo img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+  margin-top: 1px;
+}
+
+.rs-logo span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e3a8a;
+  letter-spacing: -0.3px;
+}
+
+.rs-logo span em {
+  font-style: normal;
+  color: #2563eb;
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 6px;
+  opacity: 0.85;
+}
+
+/* 모바일 헤더 */
+@media (max-width: 640px) {
+  .rs-header-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* ==============================
+   🔍 검색 영역
+   ============================== */
+.rs-search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 48px auto 20px; /* 기존보다 위쪽 여백 늘림 */
+  padding: 0 20px;
+  width: 100%;
+}
+
+.rs-search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+  width: 100%;
+}
+
+/* 입력창 */
+.city-field input[type="text"],
+.rs-search-bar input[type="date"] {
+  flex: 1 1 160px;
+  min-width: 150px;
+  max-width: 220px;
+  border: 1px solid #d1d5db;
+  padding: 0 12px;
+  outline: none;
+  height: 44px;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rs-search-bar input:focus {
+  border-color: #0078d4;
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.15);
+}
+
+/* 객실 버튼 */
+.room-selector button#roomBtn {
+  height: 44px;
+  border: 1px solid #0078d4;
+  background: #0078d4;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0 16px;
+  cursor: pointer;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.room-selector button#roomBtn:hover {
+  background: #005fa3;
+}
+.room-selector button#roomBtn:active {
+  transform: scale(0.97);
+}
+
+/* 검색 버튼 */
+.rs-search-btn {
+  height: 44px !important;
+  background: #0078d4 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 0 18px !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  transition: background 0.3s ease;
+  flex: 0 0 auto;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.rs-search-btn:hover {
+  background: #005fa3 !important;
+}
+.rs-search-btn:active {
+  transform: scale(0.96);
+}
+
+/* 반응형 - 모바일 */
+@media (max-width: 640px) {
+  .rs-search-bar {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .rs-search-bar input,
+  .rs-search-bar button {
+    width: 100%;
+  }
+}
+
+/* ==============================
+   🌍 인기 여행지 버튼 (리디자인)
+   ============================== */
+.rs-popular {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 15px;
+  color: #374151;
+}
+
+.rs-popular span {
+  font-weight: 600;
+  color: #374151;
+  margin-right: 4px;
+}
+
+/* 버튼 스타일 */
+.rs-popular button {
+  background: #ffffff;
+  border: 1px solid #dbe3ef;
+  color: #1e3a8a;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* hover */
+.rs-popular button:hover {
+  background: #0078d4;
+  border-color: #0078d4;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 120, 212, 0.25);
+}
+
+/* active */
+.rs-popular button:active {
+  transform: scale(0.96);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 모바일 대응 */
+@media (max-width: 640px) {
+  .rs-popular {
+    gap: 8px;
+    font-size: 14px;
+  }
+  .rs-popular button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}

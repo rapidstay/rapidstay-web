@@ -69,6 +69,35 @@ export function initSearchBar(onSearch) {
   if (!checkInInput.value) checkInInput.value = params.get("checkIn") || fmt(ci);
   if (!checkOutInput.value) checkOutInput.value = params.get("checkOut") || fmt(co);
 
+  // ✅ 달력 제약 조건 (오늘 이전 막기 + 최소 1일 간격 유지)
+  const todayStr = today.toISOString().split("T")[0];
+  checkInInput.min = todayStr;
+  checkOutInput.min = todayStr;
+
+  checkInInput.addEventListener("change", () => {
+    const checkInDate = new Date(checkInInput.value);
+    if (isNaN(checkInDate)) return;
+
+    const nextDay = new Date(checkInDate);
+    nextDay.setDate(checkInDate.getDate() + 1);
+    const nextDayStr = nextDay.toISOString().split("T")[0];
+    checkOutInput.min = nextDayStr;
+
+    // 종료일이 체크인보다 빠르면 자동 보정
+    if (!checkOutInput.value || checkOutInput.value <= checkInInput.value) {
+      checkOutInput.value = nextDayStr;
+    }
+  });
+
+  checkOutInput.addEventListener("change", () => {
+    if (checkOutInput.value <= checkInInput.value) {
+      alert("체크아웃 날짜는 체크인 다음날 이후여야 합니다.");
+      const newOut = new Date(checkInInput.value);
+      newOut.setDate(newOut.getDate() + 1);
+      checkOutInput.value = newOut.toISOString().split("T")[0];
+    }
+  });
+
   /* ======================================
      ✅ 객실 선택 드롭다운 (rooms)
      ====================================== */
@@ -111,26 +140,22 @@ export function initSearchBar(onSearch) {
       isOpen = false;
     };
 
-    // 🔒 중복 리스너 방지
     if (window.__rsRoomsOutsideHandler) {
       window.removeEventListener("pointerdown", window.__rsRoomsOutsideHandler, true);
     }
 
-    // ✅ 바깥 클릭 시 닫기
     window.__rsRoomsOutsideHandler = function (e) {
       const inside = e.target.closest(".room-selector");
       if (!inside && isOpen) closeDropdown();
     };
     window.addEventListener("pointerdown", window.__rsRoomsOutsideHandler, true);
 
-    // ✅ 버튼 토글
     roomBtn.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
       isOpen ? closeDropdown() : openDropdown();
     });
 
-    // ✅ 드롭다운 내부 클릭 방지
     ["pointerdown", "mousedown", "click", "focusin", "change"].forEach((evt) => {
       dropdown.addEventListener(evt, (e) => e.stopPropagation());
     });
@@ -139,7 +164,6 @@ export function initSearchBar(onSearch) {
       if (e.target.tagName === "SELECT" || e.target.closest("select")) e.stopPropagation();
     });
 
-    // ✅ 렌더 함수
     const renderRooms = () => {
       const roomList = document.getElementById("roomList");
       const wasOpen = isOpen;
@@ -191,7 +215,6 @@ export function initSearchBar(onSearch) {
 
     renderRooms();
 
-    // ✅ 증감 버튼
     dropdown.addEventListener("click", (e) => {
       const roomEl = e.target.closest(".room-item");
       if (!roomEl) return;
@@ -213,7 +236,6 @@ export function initSearchBar(onSearch) {
       renderRooms();
     });
 
-    // ✅ 아동 나이 선택 반영 (닫힘 방지)
     dropdown.addEventListener("change", (e) => {
       if (e.target.tagName === "SELECT") {
         const r = parseInt(e.target.dataset.room);
@@ -222,7 +244,6 @@ export function initSearchBar(onSearch) {
       }
     });
 
-    // ✅ 객실 추가/삭제
     document.getElementById("addRoom")?.addEventListener("click", () => {
       rooms.push({ adults: 2, children: 0, childAges: [] });
       renderRooms();
@@ -232,44 +253,40 @@ export function initSearchBar(onSearch) {
       renderRooms();
     });
 
-    // ✅ 적용 버튼
     document.getElementById("applyRooms")?.addEventListener("click", () => {
       closeDropdown();
       updateRoomBtnText();
       sessionStorage.setItem("searchRooms", JSON.stringify(rooms));
     });
+  }
 
-}
+  // ✅ 검색 버튼 클릭 시
+  searchBtn.addEventListener("click", async (e) => {
+    e.preventDefault();
+    const city = cityInput.value.trim();
+    const checkIn = checkInInput.value;
+    const checkOut = checkOutInput.value;
+    if (!city) return alert("도시명을 입력하세요.");
 
+    const currentRooms = JSON.parse(JSON.stringify(rooms));
+    sessionStorage.setItem("searchRooms", JSON.stringify(currentRooms));
 
-// ✅ 검색 버튼 클릭 시
-searchBtn.addEventListener("click", async (e) => {
-  e.preventDefault();
-  const city = cityInput.value.trim();
-  const checkIn = checkInInput.value;
-  const checkOut = checkOutInput.value;
-  if (!city) return alert("도시명을 입력하세요.");
+    const payload = { city, checkIn, checkOut, rooms: currentRooms };
+    const q = new URLSearchParams({ city, checkIn, checkOut }).toString();
 
-  // 👇 여기가 핵심
-  const currentRooms = JSON.parse(JSON.stringify(rooms));
-  sessionStorage.setItem("searchRooms", JSON.stringify(currentRooms));
-
-  const payload = { city, checkIn, checkOut, rooms: currentRooms };
-  const q = new URLSearchParams({ city, checkIn, checkOut }).toString();
-
-  if (window.location.pathname.includes("/search.html")) {
-    onSearch?.(payload);
-  } else {
+    if (window.location.pathname.includes("/search.html")) {
+      onSearch?.(payload);
+    } else {
       const base = window.location.pathname.includes("/city/") ? ".." : ".";
       setTimeout(() => {
         location.href = `${base}/search.html?${q}`;
       }, 100);
-  }
-});
+    }
+  });
 
-  /** ===========================
-   *  🔠 자동완성
-   *  =========================== */
+  // ===========================
+  // 🔠 자동완성
+  // ===========================
   let autoBox = document.getElementById("autocompletelist");
   if (!autoBox) {
     autoBox = document.createElement("div");
@@ -305,8 +322,8 @@ searchBtn.addEventListener("click", async (e) => {
         autoBox.innerHTML = list
           .map(
             (c) => `
-          <div class="auto-item" data-city="${c.city_kr || c.city_en}">
-            ${c.city_kr || c.city_en}
+          <div class="auto-item" data-city="${c.cityNameKr || c.cityName}">
+            ${c.cityNameKr || c.cityName}
             <span style="color:#888;font-size:13px;">${c.country || ""}</span>
           </div>`
           )
@@ -337,9 +354,9 @@ searchBtn.addEventListener("click", async (e) => {
     cityInput.focus();
   });
 
-  /** ===========================
-   *  🏙️ 인기 여행지 버튼
-   *  =========================== */
+  // ===========================
+  // 🏙️ 인기 여행지 버튼
+  // ===========================
   const BASE_PATH = window.location.pathname.includes("/city/") ? ".." : ".";
   document.querySelectorAll(".cityQuick").forEach((b) => {
     b.addEventListener("click", () => {
@@ -374,7 +391,6 @@ export async function fetchAndRenderHotels(city, checkIn, checkOut, roomsParam) 
   let useMock = true;
 
   try {
-    // ✅ roomsParam 우선 사용
     const storedRooms =
       roomsParam || JSON.parse(sessionStorage.getItem("searchRooms") || '[{"adults":2,"children":0,"childAges":[]}]');
 
@@ -424,8 +440,7 @@ export async function fetchAndRenderHotels(city, checkIn, checkOut, roomsParam) 
         <p>⭐ ${h.rating || "4.5"} / 5.0</p>
         <p class="price">💰 ${h.lowestPrice ? h.lowestPrice + "원~" : "요금 확인 불가"}</p>
       </div>
-    </div>
-  `
+    </div>`
     )
     .join("");
 

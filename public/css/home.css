@@ -1,20 +1,8 @@
 /* ==============================
-   RapidStay - 홈 전용 스타일
+   RapidStay - 홈 전용 스타일 (정리본)
    ============================== */
 
-#hotelSearchForm {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-#search-bar {
-  display: flex;
-  gap: 10px;
-  width: 90%;
-  max-width: 900px;
-}
-
+   
 /* 호텔 리스트 - 카드형 레이아웃 */
 #hotel-list {
   display: grid;
@@ -156,6 +144,7 @@
 .hotel-section {
   margin-top: 60px;
 }
+
 .hotel-section h2 {
   font-size: 1.3rem;
   margin-bottom: 18px;
@@ -174,16 +163,19 @@
   background: #fafafa;
   padding: 10px 0;
 }
+
 .hotel-card {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
   min-width: 200px;
 }
+
 .hotel-card:hover {
   transform: translateY(-3px);
 }
+
 .hotel-info {
   padding: 10px 12px;
   font-size: 14px;

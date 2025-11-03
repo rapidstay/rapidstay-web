@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ✅ SEO / OG -->
+  <title>통영 여행 정보 | RapidStay</title>
+  <meta name="description" content="통영의 주요 관광지, 맛집, 숙소 정보를 한눈에 확인하세요." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="통영 여행 정보 | RapidStay" />
+  <meta property="og:description" content="통영의 주요 관광지, 맛집, 숙소 정보를 한눈에 확인하세요." />
+  <meta property="og:image" content="/images/city/tongyeong-main.jpg" />
+  <meta property="og:url" content="https://rapidstay-c7f8e.web.app/city-info/tongyeong.html" />
+  <meta property="og:site_name" content="RapidStay" />
+  <meta name="date" content="2025-11-01" />
+  <link rel="canonical" href="https://rapidstay-c7f8e.web.app/city-info/tongyeong.html" />
+  <meta name="robots" content="index,follow" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="통영 여행 정보 | RapidStay" />
+  <meta name="twitter:description" content="통영의 주요 관광지, 맛집, 숙소 정보를 한눈에 확인하세요." />
+
+  <!-- ✅ 스타일 -->
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/header-search.css" />
+  <link rel="stylesheet" href="/css/city-info.css" />
+
+  <style>
+    main{max-width:960px;margin:0 auto;padding:0 20px 64px}
+    h2.section-title{font-size:1.4rem;color:#16396b;margin:40px 0 18px;border-left:4px solid #0078d4;padding-left:10px;font-weight:700}
+    table.city-facilities{width:100%;border-collapse:collapse;margin-bottom:30px}
+    table.city-facilities th,table.city-facilities td{border:1px solid #e2e8f0;padding:10px 14px;text-align:left;vertical-align:top}
+    table.city-facilities th{background:#f9fbfd;width:160px;color:#1b3b6f}
+    .nearby-wrap a{display:inline-block;margin:6px;padding:10px 14px;background:#eef4ff;border-radius:8px;color:#0059b2;text-decoration:none}
+    .nearby-wrap a:hover{background:#d8e7ff}
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;justify-content:center}
+    .cta-row a{display:inline-block;padding:10px 14px;border-radius:8px;border:1px solid #d8e7ff;color:#0059b2;text-decoration:none}
+    .cta-row a:hover{background:#f0f6ff}
+  </style>
+</head>
+
+<body class="city-info-page">
+  <!-- ✅ 공통 헤더 -->
+  <header class="rs-header">
+  <div class="rs-header-inner">
+    <a href="/" class="rs-logo">
+      <img src="https://picsum.photos/seed/rapidstay/40/40" alt="RapidStay Logo">
+      <span>RapidStay <em>Travel Smarter</em></span>
+    </a>
+  </div>
+</header>
+
+<section id="hotelSearchForm" class="rs-search-section" autocomplete="on">
+  <div id="search-bar" class="rs-search-bar">
+    <!-- ✅ 도시 -->
+    <div class="city-field">
+      <input type="text" id="city" name="city" placeholder="도시명 (예: Seoul)" autocomplete="off" />
+      <div id="autocompletelist"></div>
+    </div>
+
+    <!-- ✅ 날짜 -->
+    <input type="date" id="checkIn" name="checkIn" />
+    <input type="date" id="checkOut" name="checkOut" />
+
+    <!-- ✅ 객실/인원 -->
+    <div class="room-selector">
+      <button type="button" id="roomBtn">객실 1개, 성인 2명</button>
+      <div class="room-dropdown" id="roomDropdown" style="display:none;">
+        <div id="roomList">
+          <div class="room-item" data-index="0">
+            <div class="room-header">객실 1</div>
+
+            <div class="room-row">
+              <span>성인</span>
+              <div class="counter">
+                <button type="button" class="minus adult">−</button>
+                <span class="count adult-count">2</span>
+                <button type="button" class="plus adult">＋</button>
+              </div>
+            </div>
+
+            <div class="room-row">
+              <span>아동</span>
+              <div class="counter">
+                <button type="button" class="minus child">−</button>
+                <span class="count child-count">0</span>
+                <button type="button" class="plus child">＋</button>
+              </div>
+              <div class="child-ages"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-controls">
+          <button type="button" id="addRoom">＋ 객실 추가</button>
+          <button type="button" id="removeRoom">－ 객실 삭제</button>
+        </div>
+        <button type="button" id="applyRooms">적용</button>
+      </div>
+    </div>
+
+    <!-- ✅ 검색 버튼 -->
+    <button id="searchBtn" class="rs-search-btn">검색</button>
+  </div>
+</section>
+
+<!-- ✅ 인기 여행지 -->
+<div id="popularCities" class="rs-popular">
+  <span>인기 여행지:</span>
+  <button class="cityQuick" data-city="서울">서울</button>
+  <button class="cityQuick" data-city="부산">부산</button>
+  <button class="cityQuick" data-city="제주">제주</button>
+  <button class="cityQuick" data-city="도쿄">도쿄</button>
+  <button class="cityQuick" data-city="방콕">방콕</button>
+  <button class="cityQuick" data-city="파리">파리</button>
+</div>
+
+  <!-- ✅ 도시 Hero (이미지/제목/설명/태그/브레드크럼) -->
+  <section class="city-hero" id="cityHero">
+    <!-- JS가 렌더링 -->
+  </section>
+
+  <main>
+    <!-- ✅ 주요 관광지 & 시설 -->
+    <h2 class="section-title">🏛️ 주요 관광지 & 시설</h2>
+    <table class="city-facilities" id="facilityTable">
+      <tr><th>대표 명소</th><td>-</td></tr>
+      <tr><th>공항 / 교통</th><td>-</td></tr>
+      <tr><th>쇼핑 / 음식</th><td>-</td></tr>
+      <tr><th>숙소 밀집 지역</th><td>-</td></tr>
+    </table>
+
+    <!-- ✅ 인접 도시 -->
+    <h2 class="section-title">🌏 인접 도시 추천</h2>
+    <div class="nearby-wrap" id="nearbyCities"></div>
+
+    <!-- ✅ 관련 링크 (호텔 페이지 이동) -->
+    <div class="cta-row" id="ctaLinks"></div>
+  </main>
+
+  <footer style="text-align:center;margin:60px 0 30px;color:#777;font-size:13px;">
+    ⓒ 2025 RapidStay | Expedia Partner Data 기반
+  </footer>
+
+  <!-- ✅ (선택) 구조화 데이터: WebPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"통영 여행 정보 | RapidStay",
+    "description":"통영의 주요 관광지, 맛집, 숙소 정보를 한눈에 확인하세요.",
+    "url":"https://rapidstay-c7f8e.web.app/city-info/tongyeong.html",
+    "inLanguage":"ko"
+  }
+  </script>
+
+  <!-- === JS === -->
+  <script type="module">
+    /* 도시 슬러그 매핑 (display → name.lower) */
+    import { TARGET_CITIES } from "/js/cities.js";
+    window.citySlugMap = Object.fromEntries(
+      TARGET_CITIES.map(c => [c.display, c.name.toLowerCase()])
+    );
+  </script>
+
+  <script>
+    // 템플릿 치환값
+const CITY_NAME_DISPLAY = "통영";
+
+// 안전한 Fallback 처리
+let OG_IMAGE_FALLBACK = "/images/city/tongyeong-main.jpg";
+if (!OG_IMAGE_FALLBACK || OG_IMAGE_FALLBACK.includes("{{")) {
+  OG_IMAGE_FALLBACK = `https://picsum.photos/seed/${CITY_NAME_DISPLAY}/1200/600`;
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const slug = window.citySlugMap?.[CITY_NAME_DISPLAY] || (CITY_NAME_DISPLAY||"").toLowerCase();
+
+  // city-map.json 로드
+  let cityMap = [];
+  try {
+    const res = await fetch("/city-data/city-map.json");
+    cityMap = await res.json();
+  } catch (e) {
+    console.error("❌ city-map.json 로드 실패:", e);
+  }
+
+  const info = cityMap.find(c =>
+    c.name.toLowerCase() === slug || c.display === CITY_NAME_DISPLAY
+  ) || { name: slug, display: CITY_NAME_DISPLAY, description: "통영의 주요 관광지, 맛집, 숙소 정보를 한눈에 확인하세요.", image: "", tags: [] };
+
+  // 최종 이미지 결정
+  const imgSrc = (info.image && !info.image.includes("{{")) ? info.image : OG_IMAGE_FALLBACK;
+
+  // ✅ Hero 렌더링 (배경이미지 방식: 영역 항상 유지)
+  const hero = document.getElementById("cityHero");
+  hero.innerHTML = `
+    <div class="city-hero-img" style="background-image:url('${imgSrc}');"></div>
+    <div class="city-hero-content">
+      <h1>🌆 ${info.display}</h1>
+      <p>${info.description || ""}</p>
+      <div class="city-tags">
+        ${(info.tags||[]).map(t => `<span>#${t}</span>`).join("")}
+      </div>
+      <nav class="city-breadcrumb">
+        <a href="/">홈</a> › <a href="/city-info/">도시정보</a> › <span>${info.display}</span>
+      </nav>
+    </div>
+  `;
+
+  // 시설표 초기화(지금은 플레이스홀더)
+  const facilityTable = document.getElementById("facilityTable");
+  if (facilityTable) facilityTable.querySelectorAll("td").forEach(td => td.textContent = "-");
+
+
+      // ✅ 인접 도시 3개 랜덤
+      const nearby = (cityMap.filter(c => c.name.toLowerCase() !== (info.name||"").toLowerCase()))
+        .sort(() => 0.5 - Math.random()).slice(0, 3);
+      const nearbyDiv = document.getElementById("nearbyCities");
+      nearbyDiv.innerHTML = nearby.map(c =>
+        `<a href="/city-info/${c.name.toLowerCase()}.html">${c.display}</a>`
+      ).join("");
+
+      // ✅ 호텔 페이지 CTA
+      const cta = document.getElementById("ctaLinks");
+      cta.innerHTML = `
+        <a href="/city-hotel/${slug}.html">🏨 ${info.display} 호텔 바로 보기</a>
+        <a href="/city-hotel/${slug}.html#hotelList-top">인기 숙소</a>
+        <a href="/city-hotel/${slug}.html#hotelList-family">가족여행</a>
+        <a href="/city-hotel/${slug}.html#hotelList-pet">반려동물</a>
+      `;
+    });
+  </script>
+</body>
+</html>

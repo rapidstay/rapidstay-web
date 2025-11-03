@@ -1,138 +1,240 @@
 [
   {
     "name": "Seoul",
-    "display": "서울"
+    "display": "서울",
+    "description": "전통과 현대가 공존하는 대한민국의 수도. 경복궁, 남산타워, 홍대, 강남 등 다채로운 매력을 품은 도시다.",
+    "image": "/images/city/seoul-main.jpg",
+    "tags": ["문화", "쇼핑", "야경", "맛집"]
   },
   {
     "name": "Busan",
-    "display": "부산"
+    "display": "부산",
+    "description": "바다의 도시 부산. 해운대와 광안리, 자갈치시장으로 대표되는 활기찬 해변 도시다.",
+    "image": "/images/city/busan-main.jpg",
+    "tags": ["해변", "시장", "야경", "축제"]
   },
   {
     "name": "Jeju",
-    "display": "제주"
+    "display": "제주",
+    "description": "대한민국 최고의 휴양섬. 한라산과 협재해수욕장, 돌하르방과 감귤밭으로 상징되는 천혜의 자연을 간직했다.",
+    "image": "/images/city/jeju-main.jpg",
+    "tags": ["자연", "휴양", "맛집", "드라이브"]
   },
   {
     "name": "Incheon",
-    "display": "인천"
+    "display": "인천",
+    "description": "공항 도시를 넘어 문화와 바다가 어우러진 도시. 송도, 차이나타운, 월미도에서 다채로운 경험을 즐길 수 있다.",
+    "image": "/images/city/incheon-main.jpg",
+    "tags": ["도시", "항구", "문화", "쇼핑"]
   },
   {
     "name": "Gangneung",
-    "display": "강릉"
+    "display": "강릉",
+    "description": "동해의 감성과 커피 향이 어우러진 해변 도시. 경포대, 안목해변, 주문진 등 사계절 관광지로 인기다.",
+    "image": "/images/city/gangneung-main.jpg",
+    "tags": ["해변", "카페거리", "드라이브", "바다"]
   },
   {
     "name": "Sokcho",
-    "display": "속초"
+    "display": "속초",
+    "description": "설악산과 동해를 동시에 즐길 수 있는 도시. 싱싱한 해산물과 천연 절경으로 사랑받는다.",
+    "image": "/images/city/sokcho-main.jpg",
+    "tags": ["자연", "산", "해변", "휴식"]
   },
   {
     "name": "Gyeongju",
-    "display": "경주"
+    "display": "경주",
+    "description": "천년고도 경주. 불국사, 첨성대, 대릉원 등 찬란한 신라의 역사가 살아 숨 쉰다.",
+    "image": "/images/city/gyeongju-main.jpg",
+    "tags": ["역사", "문화", "유적", "전통"]
   },
   {
     "name": "Yeosu",
-    "display": "여수"
+    "display": "여수",
+    "description": "밤바다로 유명한 낭만의 도시. 돌산대교와 오동도, 해상케이블카로 대표되는 해양 관광지다.",
+    "image": "/images/city/yeosu-main.jpg",
+    "tags": ["바다", "야경", "낭만", "섬"]
   },
   {
     "name": "Jeonju",
-    "display": "전주"
+    "display": "전주",
+    "description": "한옥마을과 비빔밥의 도시. 전통문화와 미식이 공존하는 감성 여행지다.",
+    "image": "/images/city/jeonju-main.jpg",
+    "tags": ["한옥", "음식", "전통", "문화"]
   },
   {
     "name": "Tongyeong",
-    "display": "통영"
+    "display": "통영",
+    "description": "한국의 나폴리라 불리는 바다 도시. 동피랑벽화마을과 욕지도 등으로 유명하다.",
+    "image": "/images/city/tongyeong-main.jpg",
+    "tags": ["바다", "섬", "예술", "감성"]
   },
   {
     "name": "Tokyo",
-    "display": "도쿄"
+    "display": "도쿄",
+    "description": "세계적인 대도시 도쿄. 시부야와 아사쿠사, 신주쿠 등에서 전통과 미래가 공존한다.",
+    "image": "/images/city/tokyo-main.jpg",
+    "tags": ["도시", "쇼핑", "문화", "트렌드"]
   },
   {
     "name": "Osaka",
-    "display": "오사카"
+    "display": "오사카",
+    "description": "먹거리 천국 오사카. 도톤보리, 오사카성, 유니버설 스튜디오로 대표되는 활력의 도시.",
+    "image": "/images/city/osaka-main.jpg",
+    "tags": ["음식", "유흥", "쇼핑", "축제"]
   },
   {
     "name": "Kyoto",
-    "display": "교토"
+    "display": "교토",
+    "description": "일본의 고도 교토. 금각사, 후시미이나리 등 전통미와 사계절 풍경이 아름답다.",
+    "image": "/images/city/kyoto-main.jpg",
+    "tags": ["역사", "전통", "신사", "풍경"]
   },
   {
     "name": "Fukuoka",
-    "display": "후쿠오카"
+    "display": "후쿠오카",
+    "description": "규슈 여행의 관문. 하카타라멘과 캐널시티, 모모치 해변이 매력적인 도시.",
+    "image": "/images/city/fukuoka-main.jpg",
+    "tags": ["음식", "해변", "쇼핑", "휴식"]
   },
   {
     "name": "Sapporo",
-    "display": "삿포로"
+    "display": "삿포로",
+    "description": "홋카이도의 중심 도시. 눈 축제와 맥주, 라멘으로 유명한 북국의 감성 도시.",
+    "image": "/images/city/sapporo-main.jpg",
+    "tags": ["눈축제", "맥주", "겨울", "자연"]
   },
   {
     "name": "Bangkok",
-    "display": "방콕"
+    "display": "방콕",
+    "description": "태국의 수도이자 활기 넘치는 여행 도시. 왕궁, 야시장, 마사지로 대표된다.",
+    "image": "/images/city/bangkok-main.jpg",
+    "tags": ["야시장", "맛집", "문화", "관광"]
   },
   {
     "name": "ChiangMai",
-    "display": "치앙마이"
+    "display": "치앙마이",
+    "description": "북부 태국의 문화 도시. 사원, 나이트바자, 치유 여행지로 유명하다.",
+    "image": "/images/city/chiangmai-main.jpg",
+    "tags": ["사원", "휴식", "전통", "시장"]
   },
   {
     "name": "Phuket",
-    "display": "푸켓"
+    "display": "푸켓",
+    "description": "태국 대표 휴양섬. 푸른 바다와 리조트, 스노클링 명소로 가득하다.",
+    "image": "/images/city/phuket-main.jpg",
+    "tags": ["해변", "휴양", "리조트", "액티비티"]
   },
   {
     "name": "Singapore",
-    "display": "싱가포르"
+    "display": "싱가포르",
+    "description": "작지만 세계적인 도시국가. 마리나베이샌즈와 가든스바이더베이로 상징된다.",
+    "image": "/images/city/singapore-main.jpg",
+    "tags": ["도시", "야경", "쇼핑", "미식"]
   },
   {
     "name": "Hanoi",
-    "display": "하노이"
+    "display": "하노이",
+    "description": "베트남의 수도 하노이. 올드쿼터와 호안끼엠 호수, 커피 문화가 매력적이다.",
+    "image": "/images/city/hanoi-main.jpg",
+    "tags": ["문화", "거리", "커피", "시장"]
   },
   {
     "name": "HoChiMinh",
-    "display": "호치민"
+    "display": "호치민",
+    "description": "베트남 남부의 경제 중심지. 벤탄시장과 노트르담 성당, 루프탑바로 유명하다.",
+    "image": "/images/city/hochiminh-main.jpg",
+    "tags": ["도시", "야경", "맛집", "쇼핑"]
   },
   {
     "name": "Danang",
-    "display": "다낭"
+    "display": "다낭",
+    "description": "중부 베트남의 휴양 도시. 미케비치와 한강 야경, 바나힐이 인기다.",
+    "image": "/images/city/danang-main.jpg",
+    "tags": ["해변", "휴양", "야경", "리조트"]
   },
   {
     "name": "KualaLumpur",
-    "display": "쿠알라룸푸르"
+    "display": "쿠알라룸푸르",
+    "description": "말레이시아의 수도. 페트로나스 트윈타워로 대표되는 현대적 도시다.",
+    "image": "/images/city/kualalumpur-main.jpg",
+    "tags": ["도시", "쇼핑", "건축", "문화"]
   },
   {
     "name": "Paris",
-    "display": "파리"
+    "display": "파리",
+    "description": "예술과 낭만의 도시 파리. 에펠탑, 루브르, 세느강이 어우러진 유럽의 심장.",
+    "image": "/images/city/paris-main.jpg",
+    "tags": ["예술", "패션", "낭만", "건축"]
   },
   {
     "name": "Nice",
-    "display": "니스"
+    "display": "니스",
+    "description": "남프랑스의 휴양 도시. 푸른 해안과 올드타운의 감성이 매력적이다.",
+    "image": "/images/city/nice-main.jpg",
+    "tags": ["해변", "휴양", "예술", "감성"]
   },
   {
     "name": "Rome",
-    "display": "로마"
+    "display": "로마",
+    "description": "고대 로마 제국의 중심. 콜로세움과 바티칸으로 대표되는 역사도시다.",
+    "image": "/images/city/rome-main.jpg",
+    "tags": ["역사", "유적", "예술", "문화"]
   },
   {
     "name": "Venice",
-    "display": "베네치아"
+    "display": "베네치아",
+    "description": "물의 도시 베네치아. 곤돌라와 산마르코광장이 낭만을 더한다.",
+    "image": "/images/city/venice-main.jpg",
+    "tags": ["수로", "낭만", "예술", "건축"]
   },
   {
     "name": "London",
-    "display": "런던"
+    "display": "런던",
+    "description": "영국의 수도이자 글로벌 문화도시. 버킹엄궁, 템즈강, 빅벤으로 상징된다.",
+    "image": "/images/city/london-main.jpg",
+    "tags": ["역사", "문화", "도시", "예술"]
   },
   {
     "name": "Zurich",
-    "display": "취리히"
+    "display": "취리히",
+    "description": "스위스의 금융 중심이자 호수 도시. 알프스 여행의 관문이다.",
+    "image": "/images/city/zurich-main.jpg",
+    "tags": ["자연", "호수", "도시", "휴식"]
   },
   {
     "name": "Interlaken",
-    "display": "인터라켄"
+    "display": "인터라켄",
+    "description": "스위스 알프스의 대표 관광지. 툰호수와 브리엔츠호 사이에 자리한 천혜의 휴양지다.",
+    "image": "/images/city/interlaken-main.jpg",
+    "tags": ["자연", "산", "휴양", "트레킹"]
   },
   {
     "name": "NewYork",
-    "display": "뉴욕"
+    "display": "뉴욕",
+    "description": "세계의 중심 도시. 타임스퀘어, 센트럴파크, 브로드웨이로 대표된다.",
+    "image": "/images/city/newyork-main.jpg",
+    "tags": ["도시", "문화", "예술", "쇼핑"]
   },
   {
     "name": "LosAngeles",
-    "display": "로스앤젤레스"
+    "display": "로스앤젤레스",
+    "description": "캘리포니아의 햇살과 영화의 도시. 할리우드와 산타모니카가 상징적이다.",
+    "image": "/images/city/losangeles-main.jpg",
+    "tags": ["영화", "해변", "문화", "여행"]
   },
   {
     "name": "LasVegas",
-    "display": "라스베이거스"
+    "display": "라스베이거스",
+    "description": "불야성의 도시. 화려한 카지노와 쇼, 호텔로 세계적인 엔터테인먼트 중심지다.",
+    "image": "/images/city/lasvegas-main.jpg",
+    "tags": ["야경", "카지노", "공연", "여행"]
   },
   {
     "name": "SanFrancisco",
-    "display": "샌프란시스코"
+    "display": "샌프란시스코",
+    "description": "골든게이트브리지로 상징되는 자유의 도시. 예술과 기술이 공존한다.",
+    "image": "/images/city/sanfrancisco-main.jpg",
+    "tags": ["도시", "예술", "자유", "건축"]
   }
 ]
