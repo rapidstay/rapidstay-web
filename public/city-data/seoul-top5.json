@@ -4,8 +4,8 @@
       "name": "Seoul Hotel 1",
       "city": "Seoul",
       "address": "Seoul 중심가 10번지",
-      "rating": "4.9",
-      "lowestPrice": 108243,
+      "rating": "4.0",
+      "lowestPrice": 128757,
       "image": "https://picsum.photos/seed/Seoul-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "Seoul Hotel 2",
       "city": "Seoul",
       "address": "Seoul 중심가 11번지",
-      "rating": "4.3",
-      "lowestPrice": 161368,
+      "rating": "4.7",
+      "lowestPrice": 127131,
       "image": "https://picsum.photos/seed/Seoul-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "Seoul Hotel 3",
       "city": "Seoul",
       "address": "Seoul 중심가 12번지",
-      "rating": "4.3",
-      "lowestPrice": 131219,
+      "rating": "4.5",
+      "lowestPrice": 157538,
       "image": "https://picsum.photos/seed/Seoul-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "Seoul Hotel 4",
       "city": "Seoul",
       "address": "Seoul 중심가 13번지",
-      "rating": "5.0",
-      "lowestPrice": 120714,
+      "rating": "4.1",
+      "lowestPrice": 105125,
       "image": "https://picsum.photos/seed/Seoul-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "Seoul Hotel 5",
       "city": "Seoul",
       "address": "Seoul 중심가 14번지",
-      "rating": "4.5",
-      "lowestPrice": 92374,
+      "rating": "4.8",
+      "lowestPrice": 140456,
       "image": "https://picsum.photos/seed/Seoul-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "Seoul Hotel 2",
       "city": "Seoul",
       "address": "Seoul 중심가 11번지",
-      "rating": "4.3",
-      "lowestPrice": 161368,
+      "rating": "4.7",
+      "lowestPrice": 127131,
       "image": "https://picsum.photos/seed/Seoul-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "Seoul Hotel 4",
       "city": "Seoul",
       "address": "Seoul 중심가 13번지",
-      "rating": "5.0",
-      "lowestPrice": 120714,
+      "rating": "4.1",
+      "lowestPrice": 105125,
       "image": "https://picsum.photos/seed/Seoul-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "Seoul Hotel 6",
       "city": "Seoul",
       "address": "Seoul 중심가 15번지",
-      "rating": "4.2",
-      "lowestPrice": 78955,
+      "rating": "4.4",
+      "lowestPrice": 127168,
       "image": "https://picsum.photos/seed/Seoul-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Seoul Hotel 8",
       "city": "Seoul",
       "address": "Seoul 중심가 17번지",
-      "rating": "4.2",
-      "lowestPrice": 148847,
+      "rating": "4.1",
+      "lowestPrice": 136959,
       "image": "https://picsum.photos/seed/Seoul-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Seoul Hotel 10",
       "city": "Seoul",
       "address": "Seoul 중심가 19번지",
-      "rating": "4.5",
-      "lowestPrice": 86831,
+      "rating": "4.1",
+      "lowestPrice": 109463,
       "image": "https://picsum.photos/seed/Seoul-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Seoul Hotel 1",
       "city": "Seoul",
       "address": "Seoul 중심가 10번지",
-      "rating": "4.9",
-      "lowestPrice": 108243,
+      "rating": "4.0",
+      "lowestPrice": 128757,
       "image": "https://picsum.photos/seed/Seoul-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "Seoul Hotel 3",
       "city": "Seoul",
       "address": "Seoul 중심가 12번지",
-      "rating": "4.3",
-      "lowestPrice": 131219,
+      "rating": "4.5",
+      "lowestPrice": 157538,
       "image": "https://picsum.photos/seed/Seoul-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "Seoul Hotel 5",
       "city": "Seoul",
       "address": "Seoul 중심가 14번지",
-      "rating": "4.5",
-      "lowestPrice": 92374,
+      "rating": "4.8",
+      "lowestPrice": 140456,
       "image": "https://picsum.photos/seed/Seoul-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "Seoul Hotel 7",
       "city": "Seoul",
       "address": "Seoul 중심가 16번지",
-      "rating": "4.8",
-      "lowestPrice": 130519,
+      "rating": "4.1",
+      "lowestPrice": 146453,
       "image": "https://picsum.photos/seed/Seoul-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "Seoul Hotel 9",
       "city": "Seoul",
       "address": "Seoul 중심가 18번지",
-      "rating": "4.3",
-      "lowestPrice": 158134,
+      "rating": "4.2",
+      "lowestPrice": 134916,
       "image": "https://picsum.photos/seed/Seoul-8/400/250",
       "amenities": "Family, WiFi"
     }

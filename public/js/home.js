@@ -9,7 +9,7 @@ import { initSearchBar } from "./common.js";
 const API_BASE_URL =
   location.hostname.includes("localhost") || location.hostname.includes("127.0.0.1")
     ? "http://localhost:8081"
-    : "https://xap-h2xh.onrender.com";
+    : "https://rapidstay-api.onrender.com";
 
 document.addEventListener("DOMContentLoaded", async () => {
   // ✅ 1. 주요 도시 미리보기 먼저 로드

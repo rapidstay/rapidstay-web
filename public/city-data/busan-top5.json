@@ -4,8 +4,8 @@
       "name": "Busan Hotel 1",
       "city": "Busan",
       "address": "Busan 중심가 10번지",
-      "rating": "4.4",
-      "lowestPrice": 78765,
+      "rating": "4.1",
+      "lowestPrice": 109737,
       "image": "https://picsum.photos/seed/Busan-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -14,7 +14,7 @@
       "city": "Busan",
       "address": "Busan 중심가 11번지",
       "rating": "4.7",
-      "lowestPrice": 76790,
+      "lowestPrice": 96301,
       "image": "https://picsum.photos/seed/Busan-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "Busan Hotel 3",
       "city": "Busan",
       "address": "Busan 중심가 12번지",
-      "rating": "4.4",
-      "lowestPrice": 144261,
+      "rating": "4.3",
+      "lowestPrice": 110835,
       "image": "https://picsum.photos/seed/Busan-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "Busan Hotel 4",
       "city": "Busan",
       "address": "Busan 중심가 13번지",
-      "rating": "4.1",
-      "lowestPrice": 87047,
+      "rating": "5.0",
+      "lowestPrice": 141159,
       "image": "https://picsum.photos/seed/Busan-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -41,7 +41,7 @@
       "city": "Busan",
       "address": "Busan 중심가 14번지",
       "rating": "4.2",
-      "lowestPrice": 88559,
+      "lowestPrice": 160560,
       "image": "https://picsum.photos/seed/Busan-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -52,7 +52,7 @@
       "city": "Busan",
       "address": "Busan 중심가 11번지",
       "rating": "4.7",
-      "lowestPrice": 76790,
+      "lowestPrice": 96301,
       "image": "https://picsum.photos/seed/Busan-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "Busan Hotel 4",
       "city": "Busan",
       "address": "Busan 중심가 13번지",
-      "rating": "4.1",
-      "lowestPrice": 87047,
+      "rating": "5.0",
+      "lowestPrice": 141159,
       "image": "https://picsum.photos/seed/Busan-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "Busan Hotel 6",
       "city": "Busan",
       "address": "Busan 중심가 15번지",
-      "rating": "4.8",
-      "lowestPrice": 140941,
+      "rating": "4.3",
+      "lowestPrice": 105750,
       "image": "https://picsum.photos/seed/Busan-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Busan Hotel 8",
       "city": "Busan",
       "address": "Busan 중심가 17번지",
-      "rating": "5.0",
-      "lowestPrice": 86115,
+      "rating": "4.6",
+      "lowestPrice": 159644,
       "image": "https://picsum.photos/seed/Busan-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Busan Hotel 10",
       "city": "Busan",
       "address": "Busan 중심가 19번지",
-      "rating": "4.6",
-      "lowestPrice": 118952,
+      "rating": "4.9",
+      "lowestPrice": 88936,
       "image": "https://picsum.photos/seed/Busan-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Busan Hotel 1",
       "city": "Busan",
       "address": "Busan 중심가 10번지",
-      "rating": "4.4",
-      "lowestPrice": 78765,
+      "rating": "4.1",
+      "lowestPrice": 109737,
       "image": "https://picsum.photos/seed/Busan-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "Busan Hotel 3",
       "city": "Busan",
       "address": "Busan 중심가 12번지",
-      "rating": "4.4",
-      "lowestPrice": 144261,
+      "rating": "4.3",
+      "lowestPrice": 110835,
       "image": "https://picsum.photos/seed/Busan-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -117,7 +117,7 @@
       "city": "Busan",
       "address": "Busan 중심가 14번지",
       "rating": "4.2",
-      "lowestPrice": 88559,
+      "lowestPrice": 160560,
       "image": "https://picsum.photos/seed/Busan-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -126,7 +126,7 @@
       "city": "Busan",
       "address": "Busan 중심가 16번지",
       "rating": "4.9",
-      "lowestPrice": 75088,
+      "lowestPrice": 118106,
       "image": "https://picsum.photos/seed/Busan-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "Busan Hotel 9",
       "city": "Busan",
       "address": "Busan 중심가 18번지",
-      "rating": "5.0",
-      "lowestPrice": 116390,
+      "rating": "4.1",
+      "lowestPrice": 114361,
       "image": "https://picsum.photos/seed/Busan-8/400/250",
       "amenities": "Family, WiFi"
     }

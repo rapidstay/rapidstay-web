@@ -42,7 +42,7 @@ function toSlugFromAny(cityAny) {
 const API_BASE_URL =
   location.hostname.includes("localhost") || location.hostname.includes("127.0.0.1")
     ? "http://localhost:8081"
-    : "https://xap-h2xh.onrender.com";
+    : "https://rapidstay-api.onrender.com";
 
 // ===============================
 export function initSearchBar(onSearch) {

@@ -4,8 +4,8 @@
       "name": "Bangkok Hotel 1",
       "city": "Bangkok",
       "address": "Bangkok 중심가 10번지",
-      "rating": "4.3",
-      "lowestPrice": 126031,
+      "rating": "4.8",
+      "lowestPrice": 129735,
       "image": "https://picsum.photos/seed/Bangkok-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "Bangkok Hotel 2",
       "city": "Bangkok",
       "address": "Bangkok 중심가 11번지",
-      "rating": "4.1",
-      "lowestPrice": 134890,
+      "rating": "4.8",
+      "lowestPrice": 161611,
       "image": "https://picsum.photos/seed/Bangkok-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "Bangkok Hotel 3",
       "city": "Bangkok",
       "address": "Bangkok 중심가 12번지",
-      "rating": "4.7",
-      "lowestPrice": 134030,
+      "rating": "4.4",
+      "lowestPrice": 154968,
       "image": "https://picsum.photos/seed/Bangkok-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "Bangkok Hotel 4",
       "city": "Bangkok",
       "address": "Bangkok 중심가 13번지",
-      "rating": "4.9",
-      "lowestPrice": 141553,
+      "rating": "4.1",
+      "lowestPrice": 123502,
       "image": "https://picsum.photos/seed/Bangkok-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "Bangkok Hotel 5",
       "city": "Bangkok",
       "address": "Bangkok 중심가 14번지",
-      "rating": "4.5",
-      "lowestPrice": 89240,
+      "rating": "4.4",
+      "lowestPrice": 114325,
       "image": "https://picsum.photos/seed/Bangkok-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "Bangkok Hotel 2",
       "city": "Bangkok",
       "address": "Bangkok 중심가 11번지",
-      "rating": "4.1",
-      "lowestPrice": 134890,
+      "rating": "4.8",
+      "lowestPrice": 161611,
       "image": "https://picsum.photos/seed/Bangkok-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "Bangkok Hotel 4",
       "city": "Bangkok",
       "address": "Bangkok 중심가 13번지",
-      "rating": "4.9",
-      "lowestPrice": 141553,
+      "rating": "4.1",
+      "lowestPrice": 123502,
       "image": "https://picsum.photos/seed/Bangkok-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "Bangkok Hotel 6",
       "city": "Bangkok",
       "address": "Bangkok 중심가 15번지",
-      "rating": "4.3",
-      "lowestPrice": 141363,
+      "rating": "4.4",
+      "lowestPrice": 136441,
       "image": "https://picsum.photos/seed/Bangkok-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Bangkok Hotel 8",
       "city": "Bangkok",
       "address": "Bangkok 중심가 17번지",
-      "rating": "4.0",
-      "lowestPrice": 114781,
+      "rating": "4.8",
+      "lowestPrice": 84755,
       "image": "https://picsum.photos/seed/Bangkok-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Bangkok Hotel 10",
       "city": "Bangkok",
       "address": "Bangkok 중심가 19번지",
-      "rating": "4.7",
-      "lowestPrice": 155712,
+      "rating": "4.4",
+      "lowestPrice": 141886,
       "image": "https://picsum.photos/seed/Bangkok-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Bangkok Hotel 1",
       "city": "Bangkok",
       "address": "Bangkok 중심가 10번지",
-      "rating": "4.3",
-      "lowestPrice": 126031,
+      "rating": "4.8",
+      "lowestPrice": 129735,
       "image": "https://picsum.photos/seed/Bangkok-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "Bangkok Hotel 3",
       "city": "Bangkok",
       "address": "Bangkok 중심가 12번지",
-      "rating": "4.7",
-      "lowestPrice": 134030,
+      "rating": "4.4",
+      "lowestPrice": 154968,
       "image": "https://picsum.photos/seed/Bangkok-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "Bangkok Hotel 5",
       "city": "Bangkok",
       "address": "Bangkok 중심가 14번지",
-      "rating": "4.5",
-      "lowestPrice": 89240,
+      "rating": "4.4",
+      "lowestPrice": 114325,
       "image": "https://picsum.photos/seed/Bangkok-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "Bangkok Hotel 7",
       "city": "Bangkok",
       "address": "Bangkok 중심가 16번지",
-      "rating": "4.1",
-      "lowestPrice": 140593,
+      "rating": "4.4",
+      "lowestPrice": 125810,
       "image": "https://picsum.photos/seed/Bangkok-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "Bangkok Hotel 9",
       "city": "Bangkok",
       "address": "Bangkok 중심가 18번지",
-      "rating": "4.4",
-      "lowestPrice": 144500,
+      "rating": "4.3",
+      "lowestPrice": 85880,
       "image": "https://picsum.photos/seed/Bangkok-8/400/250",
       "amenities": "Family, WiFi"
     }
