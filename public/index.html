@@ -27,18 +27,25 @@
   <meta name="theme-color" content="#0f172a" />
 
   <!-- ✅ CSS -->
-<link rel="stylesheet" href="/css/common.css" />
-<link rel="stylesheet" href="/css/header-search.css" />
-<link rel="stylesheet" href="/css/home.css" />
-  
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/header-search.css" />
+  <link rel="stylesheet" href="/css/home.css" />
 
   <!-- ✅ JS -->
   <script type="module" src="/js/home.js"></script>
+  <script type="module" src="/js/auth.js"></script>
 </head>
 
 <body>
   <!-- ✅ 공통 헤더 -->
   <div id="headerContainer"></div>
+
+  <!-- ✅ 로그인 버튼 -->
+  <div id="authWrapper" style="position:fixed;top:20px;right:20px;z-index:1000;display:none;">
+    <button id="authBtn" style="padding:8px 14px;border-radius:8px;cursor:pointer;background:#0f172a;color:white;border:none;">
+      로그인
+    </button>
+  </div>
 
   <main id="content">
     <!-- ✅ 검색 결과 or 추천 섹션 -->
@@ -52,13 +59,61 @@
 
   <footer>ⓒ 2025 RapidStay | Expedia Partner Data 기반</footer>
 
+  <!-- ✅ 로그인 모달 -->
+  <div id="loginModal"
+       style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.45); z-index:2000; backdrop-filter: blur(2px);">
+    <div style="width:320px; margin:10% auto; background:white; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2);">
+      <h3 style="margin-top:0;text-align:center;">RapidStay 로그인</h3>
+      <input id="loginEmail" type="email" placeholder="이메일" style="width:100%;margin:8px 0;padding:10px;border:1px solid #ddd;border-radius:6px;">
+      <input id="loginPw" type="password" placeholder="비밀번호" style="width:100%;margin:8px 0;padding:10px;border:1px solid #ddd;border-radius:6px;">
+      <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:14px;">
+        <button id="loginCancel" style="padding:6px 12px;border:none;background:#ccc;border-radius:6px;">취소</button>
+        <button id="loginSubmit" style="padding:6px 12px;border:none;background:#0f172a;color:white;border-radius:6px;">로그인</button>
+      </div>
+    </div>
+  </div>
+
   <!-- ✅ JS -->
   <script type="module">
     import { loadPartial } from "/js/common.js";
     import "/js/home.js";
+    import { login, getToken, isTokenExpired, logout, authFetch } from "/js/auth.js";
 
-    // 헤더 로드 후 검색바 초기화
+    // 헤더 로드
     loadPartial("headerContainer", "/partials/header-search.html");
+
+    const authBtn = document.getElementById("authBtn");
+    const modal = document.getElementById("loginModal");
+    const emailEl = document.getElementById("loginEmail");
+    const pwEl = document.getElementById("loginPw");
+    const cancelEl = document.getElementById("loginCancel");
+    const submitEl = document.getElementById("loginSubmit");
+
+    function updateAuthButton() {
+      const token = getToken();
+      if (token && !isTokenExpired()) {
+        authBtn.textContent = "로그아웃";
+        authBtn.onclick = () => logout();
+      } else {
+        authBtn.textContent = "로그인";
+        authBtn.onclick = () => (modal.style.display = "block");
+      }
+    }
+
+    cancelEl.onclick = () => (modal.style.display = "none");
+
+    submitEl.onclick = async () => {
+      try {
+        await login(emailEl.value.trim(), pwEl.value.trim());
+        modal.style.display = "none";
+        updateAuthButton();
+        alert("✅ 로그인 성공!");
+      } catch (e) {
+        alert(e.message || "로그인 실패");
+      }
+    };
+
+    updateAuthButton();
   </script>
 </body>
 </html>

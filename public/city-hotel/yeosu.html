@@ -13,7 +13,7 @@
   <meta property="og:image" content="https://rapidstay-c7f8e.web.app/assets/og/yeosu.jpg" />
   <meta property="og:url" content="https://rapidstay-c7f8e.web.app/city-hotel/yeosu.html" />
   <meta property="og:site_name" content="RapidStay" />
-  <meta name="date" content="2025-11-03" />
+  <meta name="date" content="2025-11-04" />
   <link rel="canonical" href="https://rapidstay-c7f8e.web.app/city-hotel/yeosu.html" />
   <meta name="robots" content="noindex,nofollow" />
   <!-- Twitter -->
@@ -204,10 +204,10 @@
       "image": "https://picsum.photos/seed/여수-0/400/250",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.4",
-        "reviewCount": 167
+        "ratingValue": "4.5",
+        "reviewCount": 212
       },
-      "priceRange": "₩94,111~",
+      "priceRange": "₩98,472~",
       "position": 1
     },
     {
@@ -217,10 +217,10 @@
       "image": "https://picsum.photos/seed/여수-1/400/250",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.3",
-        "reviewCount": 244
+        "ratingValue": "4.7",
+        "reviewCount": 239
       },
-      "priceRange": "₩167,211~",
+      "priceRange": "₩96,368~",
       "position": 2
     },
     {
@@ -230,10 +230,10 @@
       "image": "https://picsum.photos/seed/여수-2/400/250",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.4",
-        "reviewCount": 243
+        "ratingValue": "4.2",
+        "reviewCount": 124
       },
-      "priceRange": "₩115,607~",
+      "priceRange": "₩71,627~",
       "position": 3
     },
     {
@@ -243,10 +243,10 @@
       "image": "https://picsum.photos/seed/여수-3/400/250",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": 124
+        "ratingValue": "4.0",
+        "reviewCount": 97
       },
-      "priceRange": "₩166,210~",
+      "priceRange": "₩117,082~",
       "position": 4
     },
     {
@@ -256,10 +256,10 @@
       "image": "https://picsum.photos/seed/여수-4/400/250",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.4",
-        "reviewCount": 206
+        "ratingValue": "4.7",
+        "reviewCount": 141
       },
-      "priceRange": "₩166,922~",
+      "priceRange": "₩76,794~",
       "position": 5
     }
   ]
@@ -384,19 +384,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const hero = document.querySelector(".city-hero");
       if (hero) {
         hero.innerHTML = `
-          <img src="${info.image || 'https://picsum.photos/seed/' + slug + '/1200/600'}"
-               alt="${info.display}" 
-               style="width:100%;border-radius:12px;object-fit:cover;margin-bottom:20px;"/>
           <h1>🏨 ${info.display} 인기 숙소 추천</h1>
           <p>${info.description}</p>
           <div style="margin:10px 0;">
             ${info.tags.map(t => `<span style="display:inline-block;background:#eef4ff;color:#0066cc;font-size:13px;padding:4px 10px;border-radius:20px;margin:3px;">#${t}</span>`).join("")}
           </div>
-          <nav aria-label="Breadcrumb" class="breadcrumb">
-            <a href="/">홈</a> ›
-            <a href="/city-hotel/">도시별</a> ›
-            <span>${info.display}</span>
-          </nav>
         `;
       }
     })

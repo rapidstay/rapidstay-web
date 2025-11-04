@@ -4,8 +4,8 @@
       "name": "Gangneung Hotel 1",
       "city": "Gangneung",
       "address": "Gangneung 중심가 10번지",
-      "rating": "4.9",
-      "lowestPrice": 148640,
+      "rating": "4.6",
+      "lowestPrice": 102607,
       "image": "https://picsum.photos/seed/Gangneung-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "Gangneung Hotel 2",
       "city": "Gangneung",
       "address": "Gangneung 중심가 11번지",
-      "rating": "4.9",
-      "lowestPrice": 92112,
+      "rating": "4.6",
+      "lowestPrice": 83554,
       "image": "https://picsum.photos/seed/Gangneung-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "Gangneung Hotel 3",
       "city": "Gangneung",
       "address": "Gangneung 중심가 12번지",
-      "rating": "4.1",
-      "lowestPrice": 76514,
+      "rating": "4.3",
+      "lowestPrice": 104237,
       "image": "https://picsum.photos/seed/Gangneung-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "Gangneung Hotel 4",
       "city": "Gangneung",
       "address": "Gangneung 중심가 13번지",
-      "rating": "4.4",
-      "lowestPrice": 137197,
+      "rating": "4.7",
+      "lowestPrice": 127514,
       "image": "https://picsum.photos/seed/Gangneung-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "Gangneung Hotel 5",
       "city": "Gangneung",
       "address": "Gangneung 중심가 14번지",
-      "rating": "4.5",
-      "lowestPrice": 148549,
+      "rating": "4.7",
+      "lowestPrice": 143287,
       "image": "https://picsum.photos/seed/Gangneung-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "Gangneung Hotel 2",
       "city": "Gangneung",
       "address": "Gangneung 중심가 11번지",
-      "rating": "4.9",
-      "lowestPrice": 92112,
+      "rating": "4.6",
+      "lowestPrice": 83554,
       "image": "https://picsum.photos/seed/Gangneung-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "Gangneung Hotel 4",
       "city": "Gangneung",
       "address": "Gangneung 중심가 13번지",
-      "rating": "4.4",
-      "lowestPrice": 137197,
+      "rating": "4.7",
+      "lowestPrice": 127514,
       "image": "https://picsum.photos/seed/Gangneung-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "Gangneung Hotel 6",
       "city": "Gangneung",
       "address": "Gangneung 중심가 15번지",
-      "rating": "5.0",
-      "lowestPrice": 75553,
+      "rating": "4.2",
+      "lowestPrice": 130768,
       "image": "https://picsum.photos/seed/Gangneung-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Gangneung Hotel 8",
       "city": "Gangneung",
       "address": "Gangneung 중심가 17번지",
-      "rating": "4.8",
-      "lowestPrice": 76502,
+      "rating": "4.5",
+      "lowestPrice": 87912,
       "image": "https://picsum.photos/seed/Gangneung-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Gangneung Hotel 10",
       "city": "Gangneung",
       "address": "Gangneung 중심가 19번지",
-      "rating": "4.5",
-      "lowestPrice": 88647,
+      "rating": "4.0",
+      "lowestPrice": 161796,
       "image": "https://picsum.photos/seed/Gangneung-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Gangneung Hotel 1",
       "city": "Gangneung",
       "address": "Gangneung 중심가 10번지",
-      "rating": "4.9",
-      "lowestPrice": 148640,
+      "rating": "4.6",
+      "lowestPrice": 102607,
       "image": "https://picsum.photos/seed/Gangneung-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "Gangneung Hotel 3",
       "city": "Gangneung",
       "address": "Gangneung 중심가 12번지",
-      "rating": "4.1",
-      "lowestPrice": 76514,
+      "rating": "4.3",
+      "lowestPrice": 104237,
       "image": "https://picsum.photos/seed/Gangneung-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "Gangneung Hotel 5",
       "city": "Gangneung",
       "address": "Gangneung 중심가 14번지",
-      "rating": "4.5",
-      "lowestPrice": 148549,
+      "rating": "4.7",
+      "lowestPrice": 143287,
       "image": "https://picsum.photos/seed/Gangneung-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "Gangneung Hotel 7",
       "city": "Gangneung",
       "address": "Gangneung 중심가 16번지",
-      "rating": "4.1",
-      "lowestPrice": 104897,
+      "rating": "4.2",
+      "lowestPrice": 144018,
       "image": "https://picsum.photos/seed/Gangneung-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "Gangneung Hotel 9",
       "city": "Gangneung",
       "address": "Gangneung 중심가 18번지",
-      "rating": "4.5",
-      "lowestPrice": 158075,
+      "rating": "4.9",
+      "lowestPrice": 124614,
       "image": "https://picsum.photos/seed/Gangneung-8/400/250",
       "amenities": "Family, WiFi"
     }

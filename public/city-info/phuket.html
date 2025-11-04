@@ -13,7 +13,7 @@
   <meta property="og:image" content="/images/city/phuket-main.jpg" />
   <meta property="og:url" content="https://rapidstay-c7f8e.web.app/city-info/phuket.html" />
   <meta property="og:site_name" content="RapidStay" />
-  <meta name="date" content="2025-11-03" />
+  <meta name="date" content="2025-11-04" />
   <link rel="canonical" href="https://rapidstay-c7f8e.web.app/city-info/phuket.html" />
   <meta name="robots" content="noindex,nofollow" />
   <!-- Twitter -->
@@ -196,16 +196,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   // ✅ Hero 렌더링 (배경이미지 방식: 영역 항상 유지)
   const hero = document.getElementById("cityHero");
   hero.innerHTML = `
-    <div class="city-hero-img" style="background-image:url('${imgSrc}');"></div>
     <div class="city-hero-content">
       <h1>🌆 ${info.display}</h1>
       <p>${info.description || ""}</p>
       <div class="city-tags">
         ${(info.tags||[]).map(t => `<span>#${t}</span>`).join("")}
       </div>
-      <nav class="city-breadcrumb">
-        <a href="/">홈</a> › <a href="/city-info/">도시정보</a> › <span>${info.display}</span>
-      </nav>
     </div>
   `;
 

@@ -4,8 +4,8 @@
       "name": "ChiangMai Hotel 1",
       "city": "ChiangMai",
       "address": "ChiangMai 중심가 10번지",
-      "rating": "4.8",
-      "lowestPrice": 118162,
+      "rating": "4.2",
+      "lowestPrice": 151246,
       "image": "https://picsum.photos/seed/ChiangMai-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "ChiangMai Hotel 2",
       "city": "ChiangMai",
       "address": "ChiangMai 중심가 11번지",
-      "rating": "4.9",
-      "lowestPrice": 105002,
+      "rating": "4.6",
+      "lowestPrice": 75052,
       "image": "https://picsum.photos/seed/ChiangMai-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "ChiangMai Hotel 3",
       "city": "ChiangMai",
       "address": "ChiangMai 중심가 12번지",
-      "rating": "4.3",
-      "lowestPrice": 138094,
+      "rating": "4.1",
+      "lowestPrice": 157915,
       "image": "https://picsum.photos/seed/ChiangMai-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "ChiangMai Hotel 4",
       "city": "ChiangMai",
       "address": "ChiangMai 중심가 13번지",
-      "rating": "4.6",
-      "lowestPrice": 102361,
+      "rating": "4.1",
+      "lowestPrice": 116130,
       "image": "https://picsum.photos/seed/ChiangMai-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "ChiangMai Hotel 5",
       "city": "ChiangMai",
       "address": "ChiangMai 중심가 14번지",
-      "rating": "4.9",
-      "lowestPrice": 102080,
+      "rating": "4.7",
+      "lowestPrice": 93878,
       "image": "https://picsum.photos/seed/ChiangMai-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "ChiangMai Hotel 2",
       "city": "ChiangMai",
       "address": "ChiangMai 중심가 11번지",
-      "rating": "4.9",
-      "lowestPrice": 105002,
+      "rating": "4.6",
+      "lowestPrice": 75052,
       "image": "https://picsum.photos/seed/ChiangMai-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "ChiangMai Hotel 4",
       "city": "ChiangMai",
       "address": "ChiangMai 중심가 13번지",
-      "rating": "4.6",
-      "lowestPrice": 102361,
+      "rating": "4.1",
+      "lowestPrice": 116130,
       "image": "https://picsum.photos/seed/ChiangMai-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "ChiangMai Hotel 6",
       "city": "ChiangMai",
       "address": "ChiangMai 중심가 15번지",
-      "rating": "4.2",
-      "lowestPrice": 85285,
+      "rating": "4.9",
+      "lowestPrice": 150488,
       "image": "https://picsum.photos/seed/ChiangMai-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "ChiangMai Hotel 8",
       "city": "ChiangMai",
       "address": "ChiangMai 중심가 17번지",
-      "rating": "4.8",
-      "lowestPrice": 136104,
+      "rating": "4.6",
+      "lowestPrice": 98690,
       "image": "https://picsum.photos/seed/ChiangMai-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "ChiangMai Hotel 10",
       "city": "ChiangMai",
       "address": "ChiangMai 중심가 19번지",
-      "rating": "4.6",
-      "lowestPrice": 134784,
+      "rating": "4.7",
+      "lowestPrice": 152643,
       "image": "https://picsum.photos/seed/ChiangMai-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "ChiangMai Hotel 1",
       "city": "ChiangMai",
       "address": "ChiangMai 중심가 10번지",
-      "rating": "4.8",
-      "lowestPrice": 118162,
+      "rating": "4.2",
+      "lowestPrice": 151246,
       "image": "https://picsum.photos/seed/ChiangMai-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "ChiangMai Hotel 3",
       "city": "ChiangMai",
       "address": "ChiangMai 중심가 12번지",
-      "rating": "4.3",
-      "lowestPrice": 138094,
+      "rating": "4.1",
+      "lowestPrice": 157915,
       "image": "https://picsum.photos/seed/ChiangMai-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "ChiangMai Hotel 5",
       "city": "ChiangMai",
       "address": "ChiangMai 중심가 14번지",
-      "rating": "4.9",
-      "lowestPrice": 102080,
+      "rating": "4.7",
+      "lowestPrice": 93878,
       "image": "https://picsum.photos/seed/ChiangMai-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -126,7 +126,7 @@
       "city": "ChiangMai",
       "address": "ChiangMai 중심가 16번지",
       "rating": "4.7",
-      "lowestPrice": 146227,
+      "lowestPrice": 137304,
       "image": "https://picsum.photos/seed/ChiangMai-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "ChiangMai Hotel 9",
       "city": "ChiangMai",
       "address": "ChiangMai 중심가 18번지",
-      "rating": "4.7",
-      "lowestPrice": 105628,
+      "rating": "5.0",
+      "lowestPrice": 168192,
       "image": "https://picsum.photos/seed/ChiangMai-8/400/250",
       "amenities": "Family, WiFi"
     }

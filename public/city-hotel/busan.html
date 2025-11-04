@@ -13,7 +13,7 @@
   <meta property="og:image" content="https://rapidstay-c7f8e.web.app/assets/og/busan.jpg" />
   <meta property="og:url" content="https://rapidstay-c7f8e.web.app/city-hotel/busan.html" />
   <meta property="og:site_name" content="RapidStay" />
-  <meta name="date" content="2025-11-03" />
+  <meta name="date" content="2025-11-04" />
   <link rel="canonical" href="https://rapidstay-c7f8e.web.app/city-hotel/busan.html" />
   <meta name="robots" content="noindex,nofollow" />
   <!-- Twitter -->
@@ -204,10 +204,10 @@
       "image": "https://picsum.photos/seed/부산-0/400/250",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.5",
-        "reviewCount": 112
+        "ratingValue": "4.9",
+        "reviewCount": 159
       },
-      "priceRange": "₩127,825~",
+      "priceRange": "₩153,555~",
       "position": 1
     },
     {
@@ -217,10 +217,10 @@
       "image": "https://picsum.photos/seed/부산-1/400/250",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": 180
+        "ratingValue": "4.1",
+        "reviewCount": 94
       },
-      "priceRange": "₩147,670~",
+      "priceRange": "₩77,517~",
       "position": 2
     },
     {
@@ -230,10 +230,10 @@
       "image": "https://picsum.photos/seed/부산-2/400/250",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": 193
+        "ratingValue": "4.5",
+        "reviewCount": 116
       },
-      "priceRange": "₩143,363~",
+      "priceRange": "₩83,626~",
       "position": 3
     },
     {
@@ -243,10 +243,10 @@
       "image": "https://picsum.photos/seed/부산-3/400/250",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.5",
-        "reviewCount": 84
+        "ratingValue": "4.8",
+        "reviewCount": 55
       },
-      "priceRange": "₩76,403~",
+      "priceRange": "₩125,077~",
       "position": 4
     },
     {
@@ -256,10 +256,10 @@
       "image": "https://picsum.photos/seed/부산-4/400/250",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "reviewCount": 208
+        "ratingValue": "4.9",
+        "reviewCount": 156
       },
-      "priceRange": "₩148,088~",
+      "priceRange": "₩150,286~",
       "position": 5
     }
   ]
@@ -384,19 +384,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const hero = document.querySelector(".city-hero");
       if (hero) {
         hero.innerHTML = `
-          <img src="${info.image || 'https://picsum.photos/seed/' + slug + '/1200/600'}"
-               alt="${info.display}" 
-               style="width:100%;border-radius:12px;object-fit:cover;margin-bottom:20px;"/>
           <h1>🏨 ${info.display} 인기 숙소 추천</h1>
           <p>${info.description}</p>
           <div style="margin:10px 0;">
             ${info.tags.map(t => `<span style="display:inline-block;background:#eef4ff;color:#0066cc;font-size:13px;padding:4px 10px;border-radius:20px;margin:3px;">#${t}</span>`).join("")}
           </div>
-          <nav aria-label="Breadcrumb" class="breadcrumb">
-            <a href="/">홈</a> ›
-            <a href="/city-hotel/">도시별</a> ›
-            <span>${info.display}</span>
-          </nav>
         `;
       }
     })

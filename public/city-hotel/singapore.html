@@ -13,7 +13,7 @@
   <meta property="og:image" content="https://rapidstay-c7f8e.web.app/assets/og/singapore.jpg" />
   <meta property="og:url" content="https://rapidstay-c7f8e.web.app/city-hotel/singapore.html" />
   <meta property="og:site_name" content="RapidStay" />
-  <meta name="date" content="2025-11-03" />
+  <meta name="date" content="2025-11-04" />
   <link rel="canonical" href="https://rapidstay-c7f8e.web.app/city-hotel/singapore.html" />
   <meta name="robots" content="noindex,nofollow" />
   <!-- Twitter -->
@@ -204,10 +204,10 @@
       "image": "https://picsum.photos/seed/싱가포르-0/400/250",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.5",
-        "reviewCount": 134
+        "ratingValue": "4.9",
+        "reviewCount": 179
       },
-      "priceRange": "₩118,993~",
+      "priceRange": "₩156,199~",
       "position": 1
     },
     {
@@ -217,10 +217,10 @@
       "image": "https://picsum.photos/seed/싱가포르-1/400/250",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": 222
+        "ratingValue": "4.7",
+        "reviewCount": 216
       },
-      "priceRange": "₩70,173~",
+      "priceRange": "₩90,726~",
       "position": 2
     },
     {
@@ -230,10 +230,10 @@
       "image": "https://picsum.photos/seed/싱가포르-2/400/250",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "reviewCount": 100
+        "ratingValue": "4.5",
+        "reviewCount": 226
       },
-      "priceRange": "₩86,322~",
+      "priceRange": "₩149,178~",
       "position": 3
     },
     {
@@ -243,10 +243,10 @@
       "image": "https://picsum.photos/seed/싱가포르-3/400/250",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "reviewCount": 233
+        "ratingValue": "4.2",
+        "reviewCount": 59
       },
-      "priceRange": "₩144,590~",
+      "priceRange": "₩74,693~",
       "position": 4
     },
     {
@@ -257,9 +257,9 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
-        "reviewCount": 201
+        "reviewCount": 249
       },
-      "priceRange": "₩86,275~",
+      "priceRange": "₩93,151~",
       "position": 5
     }
   ]
@@ -384,19 +384,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const hero = document.querySelector(".city-hero");
       if (hero) {
         hero.innerHTML = `
-          <img src="${info.image || 'https://picsum.photos/seed/' + slug + '/1200/600'}"
-               alt="${info.display}" 
-               style="width:100%;border-radius:12px;object-fit:cover;margin-bottom:20px;"/>
           <h1>🏨 ${info.display} 인기 숙소 추천</h1>
           <p>${info.description}</p>
           <div style="margin:10px 0;">
             ${info.tags.map(t => `<span style="display:inline-block;background:#eef4ff;color:#0066cc;font-size:13px;padding:4px 10px;border-radius:20px;margin:3px;">#${t}</span>`).join("")}
           </div>
-          <nav aria-label="Breadcrumb" class="breadcrumb">
-            <a href="/">홈</a> ›
-            <a href="/city-hotel/">도시별</a> ›
-            <span>${info.display}</span>
-          </nav>
         `;
       }
     })

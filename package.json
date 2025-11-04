@@ -4,14 +4,14 @@
   "description": "RapidStay SEO generator and deploy scripts",
   "type": "module",
   "scripts": {
-    "generate:dev": "cross-env PROD=false node scripts/generateCityPages.js",
-    "generate:prod": "cross-env PROD=true node scripts/generateCityPages.js",
-    "deploy:dev": "npm run generate:dev && firebase deploy --only hosting:rapidstay-dev --config firebase.dev.json",
-    "deploy:prod": "npm run generate:prod && firebase deploy --only hosting:rapidstay-c7f8e --config firebase.prod.json",
+  "generate:dev": "cross-env PROD=false node scripts/generateCityPages.js",
+  "generate:prod": "cross-env PROD=true node scripts/generateCityPages.js",
+  "deploy:dev": "npm run generate:dev && firebase deploy --only hosting:rapidstay-dev --config firebase.dev.json",
+  "deploy:prod": "npm run generate:prod && firebase deploy --only hosting:rapidstay-c7f8e --config firebase.prod.json",
 
-    "generate:info": "cross-env PROD=true node scripts/generateCityInfoPages.js",
-    "generate:info:dev": "cross-env PROD=false node scripts/generateCityInfoPages.js"
-  },
+  "generate:info": "cross-env PROD=true node scripts/generateCityInfoPages.js",
+  "generate:info:dev": "cross-env PROD=false node scripts/generateCityInfoPages.js"
+},
   "dependencies": {
     "node-fetch": "^3.3.2"
   },

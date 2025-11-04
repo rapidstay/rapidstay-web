@@ -4,8 +4,8 @@
       "name": "Sokcho Hotel 1",
       "city": "Sokcho",
       "address": "Sokcho 중심가 10번지",
-      "rating": "4.7",
-      "lowestPrice": 97308,
+      "rating": "4.5",
+      "lowestPrice": 107145,
       "image": "https://picsum.photos/seed/Sokcho-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "Sokcho Hotel 2",
       "city": "Sokcho",
       "address": "Sokcho 중심가 11번지",
-      "rating": "4.4",
-      "lowestPrice": 117880,
+      "rating": "4.6",
+      "lowestPrice": 82810,
       "image": "https://picsum.photos/seed/Sokcho-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "Sokcho Hotel 3",
       "city": "Sokcho",
       "address": "Sokcho 중심가 12번지",
-      "rating": "4.5",
-      "lowestPrice": 160253,
+      "rating": "4.4",
+      "lowestPrice": 87456,
       "image": "https://picsum.photos/seed/Sokcho-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "Sokcho Hotel 4",
       "city": "Sokcho",
       "address": "Sokcho 중심가 13번지",
-      "rating": "4.9",
-      "lowestPrice": 89332,
+      "rating": "4.1",
+      "lowestPrice": 82638,
       "image": "https://picsum.photos/seed/Sokcho-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "Sokcho Hotel 5",
       "city": "Sokcho",
       "address": "Sokcho 중심가 14번지",
-      "rating": "4.7",
-      "lowestPrice": 75015,
+      "rating": "4.8",
+      "lowestPrice": 74599,
       "image": "https://picsum.photos/seed/Sokcho-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "Sokcho Hotel 2",
       "city": "Sokcho",
       "address": "Sokcho 중심가 11번지",
-      "rating": "4.4",
-      "lowestPrice": 117880,
+      "rating": "4.6",
+      "lowestPrice": 82810,
       "image": "https://picsum.photos/seed/Sokcho-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "Sokcho Hotel 4",
       "city": "Sokcho",
       "address": "Sokcho 중심가 13번지",
-      "rating": "4.9",
-      "lowestPrice": 89332,
+      "rating": "4.1",
+      "lowestPrice": 82638,
       "image": "https://picsum.photos/seed/Sokcho-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -70,7 +70,7 @@
       "city": "Sokcho",
       "address": "Sokcho 중심가 15번지",
       "rating": "4.8",
-      "lowestPrice": 155886,
+      "lowestPrice": 106425,
       "image": "https://picsum.photos/seed/Sokcho-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Sokcho Hotel 8",
       "city": "Sokcho",
       "address": "Sokcho 중심가 17번지",
-      "rating": "4.6",
-      "lowestPrice": 157095,
+      "rating": "4.9",
+      "lowestPrice": 143756,
       "image": "https://picsum.photos/seed/Sokcho-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Sokcho Hotel 10",
       "city": "Sokcho",
       "address": "Sokcho 중심가 19번지",
-      "rating": "4.8",
-      "lowestPrice": 151896,
+      "rating": "4.6",
+      "lowestPrice": 145601,
       "image": "https://picsum.photos/seed/Sokcho-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Sokcho Hotel 1",
       "city": "Sokcho",
       "address": "Sokcho 중심가 10번지",
-      "rating": "4.7",
-      "lowestPrice": 97308,
+      "rating": "4.5",
+      "lowestPrice": 107145,
       "image": "https://picsum.photos/seed/Sokcho-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "Sokcho Hotel 3",
       "city": "Sokcho",
       "address": "Sokcho 중심가 12번지",
-      "rating": "4.5",
-      "lowestPrice": 160253,
+      "rating": "4.4",
+      "lowestPrice": 87456,
       "image": "https://picsum.photos/seed/Sokcho-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "Sokcho Hotel 5",
       "city": "Sokcho",
       "address": "Sokcho 중심가 14번지",
-      "rating": "4.7",
-      "lowestPrice": 75015,
+      "rating": "4.8",
+      "lowestPrice": 74599,
       "image": "https://picsum.photos/seed/Sokcho-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "Sokcho Hotel 7",
       "city": "Sokcho",
       "address": "Sokcho 중심가 16번지",
-      "rating": "4.5",
-      "lowestPrice": 84697,
+      "rating": "4.1",
+      "lowestPrice": 77508,
       "image": "https://picsum.photos/seed/Sokcho-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "Sokcho Hotel 9",
       "city": "Sokcho",
       "address": "Sokcho 중심가 18번지",
-      "rating": "4.4",
-      "lowestPrice": 104251,
+      "rating": "4.8",
+      "lowestPrice": 128999,
       "image": "https://picsum.photos/seed/Sokcho-8/400/250",
       "amenities": "Family, WiFi"
     }

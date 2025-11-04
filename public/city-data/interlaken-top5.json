@@ -4,8 +4,8 @@
       "name": "Interlaken Hotel 1",
       "city": "Interlaken",
       "address": "Interlaken 중심가 10번지",
-      "rating": "4.1",
-      "lowestPrice": 124165,
+      "rating": "4.4",
+      "lowestPrice": 166538,
       "image": "https://picsum.photos/seed/Interlaken-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "Interlaken Hotel 2",
       "city": "Interlaken",
       "address": "Interlaken 중심가 11번지",
-      "rating": "4.6",
-      "lowestPrice": 119036,
+      "rating": "4.7",
+      "lowestPrice": 136710,
       "image": "https://picsum.photos/seed/Interlaken-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -23,7 +23,7 @@
       "city": "Interlaken",
       "address": "Interlaken 중심가 12번지",
       "rating": "4.6",
-      "lowestPrice": 127753,
+      "lowestPrice": 86497,
       "image": "https://picsum.photos/seed/Interlaken-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "Interlaken Hotel 4",
       "city": "Interlaken",
       "address": "Interlaken 중심가 13번지",
-      "rating": "4.9",
-      "lowestPrice": 135794,
+      "rating": "4.2",
+      "lowestPrice": 115363,
       "image": "https://picsum.photos/seed/Interlaken-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "Interlaken Hotel 5",
       "city": "Interlaken",
       "address": "Interlaken 중심가 14번지",
-      "rating": "4.5",
-      "lowestPrice": 134059,
+      "rating": "4.2",
+      "lowestPrice": 113463,
       "image": "https://picsum.photos/seed/Interlaken-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "Interlaken Hotel 2",
       "city": "Interlaken",
       "address": "Interlaken 중심가 11번지",
-      "rating": "4.6",
-      "lowestPrice": 119036,
+      "rating": "4.7",
+      "lowestPrice": 136710,
       "image": "https://picsum.photos/seed/Interlaken-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "Interlaken Hotel 4",
       "city": "Interlaken",
       "address": "Interlaken 중심가 13번지",
-      "rating": "4.9",
-      "lowestPrice": 135794,
+      "rating": "4.2",
+      "lowestPrice": 115363,
       "image": "https://picsum.photos/seed/Interlaken-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "Interlaken Hotel 6",
       "city": "Interlaken",
       "address": "Interlaken 중심가 15번지",
-      "rating": "4.3",
-      "lowestPrice": 162917,
+      "rating": "4.6",
+      "lowestPrice": 157404,
       "image": "https://picsum.photos/seed/Interlaken-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Interlaken Hotel 8",
       "city": "Interlaken",
       "address": "Interlaken 중심가 17번지",
-      "rating": "4.9",
-      "lowestPrice": 92204,
+      "rating": "4.4",
+      "lowestPrice": 81035,
       "image": "https://picsum.photos/seed/Interlaken-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Interlaken Hotel 10",
       "city": "Interlaken",
       "address": "Interlaken 중심가 19번지",
-      "rating": "4.6",
-      "lowestPrice": 91204,
+      "rating": "4.7",
+      "lowestPrice": 139889,
       "image": "https://picsum.photos/seed/Interlaken-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Interlaken Hotel 1",
       "city": "Interlaken",
       "address": "Interlaken 중심가 10번지",
-      "rating": "4.1",
-      "lowestPrice": 124165,
+      "rating": "4.4",
+      "lowestPrice": 166538,
       "image": "https://picsum.photos/seed/Interlaken-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -108,7 +108,7 @@
       "city": "Interlaken",
       "address": "Interlaken 중심가 12번지",
       "rating": "4.6",
-      "lowestPrice": 127753,
+      "lowestPrice": 86497,
       "image": "https://picsum.photos/seed/Interlaken-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "Interlaken Hotel 5",
       "city": "Interlaken",
       "address": "Interlaken 중심가 14번지",
-      "rating": "4.5",
-      "lowestPrice": 134059,
+      "rating": "4.2",
+      "lowestPrice": 113463,
       "image": "https://picsum.photos/seed/Interlaken-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -125,8 +125,8 @@
       "name": "Interlaken Hotel 7",
       "city": "Interlaken",
       "address": "Interlaken 중심가 16번지",
-      "rating": "4.7",
-      "lowestPrice": 98712,
+      "rating": "4.5",
+      "lowestPrice": 132801,
       "image": "https://picsum.photos/seed/Interlaken-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -135,7 +135,7 @@
       "city": "Interlaken",
       "address": "Interlaken 중심가 18번지",
       "rating": "4.5",
-      "lowestPrice": 165291,
+      "lowestPrice": 70079,
       "image": "https://picsum.photos/seed/Interlaken-8/400/250",
       "amenities": "Family, WiFi"
     }

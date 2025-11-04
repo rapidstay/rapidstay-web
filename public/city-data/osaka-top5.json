@@ -4,8 +4,8 @@
       "name": "Osaka Hotel 1",
       "city": "Osaka",
       "address": "Osaka 중심가 10번지",
-      "rating": "4.1",
-      "lowestPrice": 115251,
+      "rating": "4.5",
+      "lowestPrice": 72274,
       "image": "https://picsum.photos/seed/Osaka-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -13,8 +13,8 @@
       "name": "Osaka Hotel 2",
       "city": "Osaka",
       "address": "Osaka 중심가 11번지",
-      "rating": "4.1",
-      "lowestPrice": 150029,
+      "rating": "4.4",
+      "lowestPrice": 77259,
       "image": "https://picsum.photos/seed/Osaka-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -22,8 +22,8 @@
       "name": "Osaka Hotel 3",
       "city": "Osaka",
       "address": "Osaka 중심가 12번지",
-      "rating": "4.3",
-      "lowestPrice": 113827,
+      "rating": "4.0",
+      "lowestPrice": 78787,
       "image": "https://picsum.photos/seed/Osaka-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -31,8 +31,8 @@
       "name": "Osaka Hotel 4",
       "city": "Osaka",
       "address": "Osaka 중심가 13번지",
-      "rating": "4.1",
-      "lowestPrice": 159134,
+      "rating": "4.2",
+      "lowestPrice": 102563,
       "image": "https://picsum.photos/seed/Osaka-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -40,8 +40,8 @@
       "name": "Osaka Hotel 5",
       "city": "Osaka",
       "address": "Osaka 중심가 14번지",
-      "rating": "4.3",
-      "lowestPrice": 157656,
+      "rating": "4.7",
+      "lowestPrice": 152344,
       "image": "https://picsum.photos/seed/Osaka-4/400/250",
       "amenities": "Family, WiFi"
     }
@@ -51,8 +51,8 @@
       "name": "Osaka Hotel 2",
       "city": "Osaka",
       "address": "Osaka 중심가 11번지",
-      "rating": "4.1",
-      "lowestPrice": 150029,
+      "rating": "4.4",
+      "lowestPrice": 77259,
       "image": "https://picsum.photos/seed/Osaka-1/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -60,8 +60,8 @@
       "name": "Osaka Hotel 4",
       "city": "Osaka",
       "address": "Osaka 중심가 13번지",
-      "rating": "4.1",
-      "lowestPrice": 159134,
+      "rating": "4.2",
+      "lowestPrice": 102563,
       "image": "https://picsum.photos/seed/Osaka-3/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -69,8 +69,8 @@
       "name": "Osaka Hotel 6",
       "city": "Osaka",
       "address": "Osaka 중심가 15번지",
-      "rating": "4.4",
-      "lowestPrice": 136295,
+      "rating": "4.1",
+      "lowestPrice": 105874,
       "image": "https://picsum.photos/seed/Osaka-5/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -78,8 +78,8 @@
       "name": "Osaka Hotel 8",
       "city": "Osaka",
       "address": "Osaka 중심가 17번지",
-      "rating": "4.5",
-      "lowestPrice": 101039,
+      "rating": "4.6",
+      "lowestPrice": 137829,
       "image": "https://picsum.photos/seed/Osaka-7/400/250",
       "amenities": "Pet Friendly, Pool"
     },
@@ -87,8 +87,8 @@
       "name": "Osaka Hotel 10",
       "city": "Osaka",
       "address": "Osaka 중심가 19번지",
-      "rating": "4.3",
-      "lowestPrice": 102756,
+      "rating": "4.7",
+      "lowestPrice": 107908,
       "image": "https://picsum.photos/seed/Osaka-9/400/250",
       "amenities": "Pet Friendly, Pool"
     }
@@ -98,8 +98,8 @@
       "name": "Osaka Hotel 1",
       "city": "Osaka",
       "address": "Osaka 중심가 10번지",
-      "rating": "4.1",
-      "lowestPrice": 115251,
+      "rating": "4.5",
+      "lowestPrice": 72274,
       "image": "https://picsum.photos/seed/Osaka-0/400/250",
       "amenities": "Family, WiFi"
     },
@@ -107,8 +107,8 @@
       "name": "Osaka Hotel 3",
       "city": "Osaka",
       "address": "Osaka 중심가 12번지",
-      "rating": "4.3",
-      "lowestPrice": 113827,
+      "rating": "4.0",
+      "lowestPrice": 78787,
       "image": "https://picsum.photos/seed/Osaka-2/400/250",
       "amenities": "Family, WiFi"
     },
@@ -116,8 +116,8 @@
       "name": "Osaka Hotel 5",
       "city": "Osaka",
       "address": "Osaka 중심가 14번지",
-      "rating": "4.3",
-      "lowestPrice": 157656,
+      "rating": "4.7",
+      "lowestPrice": 152344,
       "image": "https://picsum.photos/seed/Osaka-4/400/250",
       "amenities": "Family, WiFi"
     },
@@ -126,7 +126,7 @@
       "city": "Osaka",
       "address": "Osaka 중심가 16번지",
       "rating": "4.2",
-      "lowestPrice": 77480,
+      "lowestPrice": 124760,
       "image": "https://picsum.photos/seed/Osaka-6/400/250",
       "amenities": "Family, WiFi"
     },
@@ -134,8 +134,8 @@
       "name": "Osaka Hotel 9",
       "city": "Osaka",
       "address": "Osaka 중심가 18번지",
-      "rating": "4.7",
-      "lowestPrice": 147466,
+      "rating": "4.4",
+      "lowestPrice": 103011,
       "image": "https://picsum.photos/seed/Osaka-8/400/250",
       "amenities": "Family, WiFi"
     }
