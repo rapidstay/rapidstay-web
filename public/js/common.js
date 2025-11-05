@@ -69,7 +69,7 @@ export function initSearchBar(onSearch) {
   if (!checkInInput.value) checkInInput.value = params.get("checkIn") || fmt(ci);
   if (!checkOutInput.value) checkOutInput.value = params.get("checkOut") || fmt(co);
 
-  // ✅ 달력 제약 조건 (오늘 이전 막기 + 최소 1일 간격 유지)
+  // ✅ 달력 제약 조건
   const todayStr = today.toISOString().split("T")[0];
   checkInInput.min = todayStr;
   checkOutInput.min = todayStr;
@@ -77,16 +77,12 @@ export function initSearchBar(onSearch) {
   checkInInput.addEventListener("change", () => {
     const checkInDate = new Date(checkInInput.value);
     if (isNaN(checkInDate)) return;
-
     const nextDay = new Date(checkInDate);
     nextDay.setDate(checkInDate.getDate() + 1);
     const nextDayStr = nextDay.toISOString().split("T")[0];
     checkOutInput.min = nextDayStr;
-
-    // 종료일이 체크인보다 빠르면 자동 보정
-    if (!checkOutInput.value || checkOutInput.value <= checkInInput.value) {
+    if (!checkOutInput.value || checkOutInput.value <= checkInInput.value)
       checkOutInput.value = nextDayStr;
-    }
   });
 
   checkOutInput.addEventListener("change", () => {
@@ -104,21 +100,15 @@ export function initSearchBar(onSearch) {
   const roomBtn = document.getElementById("roomBtn");
   const dropdown = document.getElementById("roomDropdown");
   const roomSelector = document.querySelector(".room-selector");
-
-  // ✅ 세션 저장된 객실 정보 복원 (있으면 그대로, 없으면 기본값)
   let rooms = [];
+
   try {
     const saved = JSON.parse(sessionStorage.getItem("searchRooms") || "[]");
-    if (Array.isArray(saved) && saved.length > 0) {
-      rooms = saved;
-    } else {
-      rooms = [{ adults: 2, children: 0, childAges: [] }];
-    }
+    rooms = Array.isArray(saved) && saved.length > 0 ? saved : [{ adults: 2, children: 0, childAges: [] }];
   } catch {
     rooms = [{ adults: 2, children: 0, childAges: [] }];
   }
 
-  // ✅ 페이지 로드 시 버튼 텍스트 업데이트
   const updateRoomBtnText = () => {
     const totalAdults = rooms.reduce((a, r) => a + r.adults, 0);
     const totalChildren = rooms.reduce((a, r) => a + r.children, 0);
@@ -130,23 +120,12 @@ export function initSearchBar(onSearch) {
 
   if (roomBtn && dropdown && roomSelector) {
     let isOpen = false;
+    const openDropdown = () => (dropdown.style.display = "block", isOpen = true);
+    const closeDropdown = () => (dropdown.style.display = "none", isOpen = false);
 
-    const openDropdown = () => {
-      dropdown.style.display = "block";
-      isOpen = true;
-    };
-    const closeDropdown = () => {
-      dropdown.style.display = "none";
-      isOpen = false;
-    };
-
-    if (window.__rsRoomsOutsideHandler) {
-      window.removeEventListener("pointerdown", window.__rsRoomsOutsideHandler, true);
-    }
-
-    window.__rsRoomsOutsideHandler = function (e) {
-      const inside = e.target.closest(".room-selector");
-      if (!inside && isOpen) closeDropdown();
+    window.__rsRoomsOutsideHandler && window.removeEventListener("pointerdown", window.__rsRoomsOutsideHandler, true);
+    window.__rsRoomsOutsideHandler = (e) => {
+      if (!e.target.closest(".room-selector") && isOpen) closeDropdown();
     };
     window.addEventListener("pointerdown", window.__rsRoomsOutsideHandler, true);
 
@@ -154,14 +133,6 @@ export function initSearchBar(onSearch) {
       e.preventDefault();
       e.stopPropagation();
       isOpen ? closeDropdown() : openDropdown();
-    });
-
-    ["pointerdown", "mousedown", "click", "focusin", "change"].forEach((evt) => {
-      dropdown.addEventListener(evt, (e) => e.stopPropagation());
-    });
-
-    dropdown.addEventListener("pointerdown", (e) => {
-      if (e.target.tagName === "SELECT" || e.target.closest("select")) e.stopPropagation();
     });
 
     const renderRooms = () => {
@@ -203,159 +174,181 @@ export function initSearchBar(onSearch) {
         </div>`
         )
         .join("");
-
-      if (wasOpen) openDropdown();
-
-      roomList.querySelectorAll("select").forEach((sel) => {
-        ["pointerdown", "mousedown", "click", "focus"].forEach((evt) => {
-          sel.addEventListener(evt, (e) => e.stopPropagation());
-        });
-      });
+      wasOpen && openDropdown();
     };
-
     renderRooms();
-
-    dropdown.addEventListener("click", (e) => {
-      const roomEl = e.target.closest(".room-item");
-      if (!roomEl) return;
-      const idx = parseInt(roomEl.dataset.index, 10);
-
-      if (e.target.classList.contains("plus")) {
-        if (e.target.classList.contains("adult")) rooms[idx].adults++;
-        else if (e.target.classList.contains("child")) {
-          rooms[idx].children++;
-          rooms[idx].childAges.push(0);
-        }
-      } else if (e.target.classList.contains("minus")) {
-        if (e.target.classList.contains("adult") && rooms[idx].adults > 1) rooms[idx].adults--;
-        else if (e.target.classList.contains("child") && rooms[idx].children > 0) {
-          rooms[idx].children--;
-          rooms[idx].childAges.pop();
-        }
-      }
-      renderRooms();
-    });
-
-    dropdown.addEventListener("change", (e) => {
-      if (e.target.tagName === "SELECT") {
-        const r = parseInt(e.target.dataset.room);
-        const c = parseInt(e.target.dataset.child);
-        rooms[r].childAges[c] = parseInt(e.target.value);
-      }
-    });
-
-    document.getElementById("addRoom")?.addEventListener("click", () => {
-      rooms.push({ adults: 2, children: 0, childAges: [] });
-      renderRooms();
-    });
-    document.getElementById("removeRoom")?.addEventListener("click", () => {
-      if (rooms.length > 1) rooms.pop();
-      renderRooms();
-    });
-
-    document.getElementById("applyRooms")?.addEventListener("click", () => {
-      closeDropdown();
-      updateRoomBtnText();
-      sessionStorage.setItem("searchRooms", JSON.stringify(rooms));
-    });
   }
 
-  // ✅ 검색 버튼 클릭 시
-  searchBtn.addEventListener("click", async (e) => {
-    e.preventDefault();
-    const city = cityInput.value.trim();
-    const checkIn = checkInInput.value;
-    const checkOut = checkOutInput.value;
-    if (!city) return alert("도시명을 입력하세요.");
+/* ======================================
+   ✅ 검색 버튼 클릭 (cityId 안전 전송)
+   ====================================== */
+searchBtn.addEventListener("click", async (e) => {
+  e.preventDefault();
 
-    const currentRooms = JSON.parse(JSON.stringify(rooms));
-    sessionStorage.setItem("searchRooms", JSON.stringify(currentRooms));
+  const cityName = cityInput.value.trim();
+  if (!cityName) {
+    alert("도시명을 입력하세요.");
+    return;
+  }
 
-    const payload = { city, checkIn, checkOut, rooms: currentRooms };
-    const q = new URLSearchParams({ city, checkIn, checkOut }).toString();
+  // 체크인/체크아웃 날짜 확보
+  const checkIn = checkInInput.value;
+  const checkOut = checkOutInput.value;
 
-    if (window.location.pathname.includes("/search.html")) {
-      onSearch?.(payload);
-    } else {
-      const base = window.location.pathname.includes("/city") || window.location.pathname.includes("/city-hotel")
-        ? ".."
-        : ".";
-      setTimeout(() => {
-        location.href = `${base}/search.html?${q}`;
-      }, 100);
-    }
-  });
+  // 자동완성 선택 시 dataset 값 사용
+  let cityId = cityInput.dataset.id?.trim() || "";
+  let cityType = cityInput.dataset.type?.trim() || "";
 
-  // ===========================
-  // 🔠 자동완성
-  // ===========================
-  let autoBox = document.getElementById("autocompletelist");
-  if (!autoBox) {
-    autoBox = document.createElement("div");
-    autoBox.id = "autocompletelist";
-    autoBox.className = "autocomplete-box";
-
-    const parent = cityInput.parentElement;
-    if (parent) {
-      parent.style.position = "relative";
-      parent.appendChild(autoBox);
-    } else {
-      document.body.appendChild(autoBox);
+  // ✅ cityId가 비어있으면 cityName 기반으로 fallback
+  if (!cityId) {
+    const normalized = normalizeKrCity(cityName);
+    const match = TARGET_CITIES.find(
+      (c) =>
+        c.display === normalized ||
+        c.name.toLowerCase() === normalized.toLowerCase()
+    );
+    if (match) {
+      cityId = match.id || match.name || normalized;
+      cityType = match.type || "city";
     }
   }
 
-  let timer;
-  cityInput.addEventListener("input", () => {
-    const kw = cityInput.value.trim();
-    if (kw.length < 2) {
-      autoBox.style.display = "none";
-      return;
-    }
-    clearTimeout(timer);
-    timer = setTimeout(async () => {
-      try {
-        const res = await fetch(`${API_BASE_URL}/api/cities/search?query=${encodeURIComponent(kw)}`);
-        const list = await res.json();
-        if (!list?.length) {
-          autoBox.style.display = "none";
-          return;
-        }
+  // ✅ rooms 정보 복원
+  const currentRooms = JSON.parse(
+    sessionStorage.getItem("searchRooms") ||
+      '[{"adults":2,"children":0,"childAges":[]}]'
+  );
+  sessionStorage.setItem("searchRooms", JSON.stringify(currentRooms));
 
-        autoBox.innerHTML = list
-          .map(
-            (c) => `
-          <div class="auto-item" data-city="${c.cityNameKr || c.cityName}">
-            ${c.cityNameKr || c.cityName}
-            <span style="color:#888;font-size:13px;">${c.country || ""}</span>
-          </div>`
-          )
-          .join("");
+  // ✅ 최종 payload
+  const payload = {
+    cityId,
+    cityType,
+    city: cityName,
+    checkIn,
+    checkOut,
+    rooms: currentRooms,
+  };
 
-        autoBox.style.position = "absolute";
-        autoBox.style.left = "0";
-        autoBox.style.top = `${cityInput.offsetHeight + 4}px`;
-        autoBox.style.width = "100%";
-        autoBox.style.background = "#fff";
-        autoBox.style.border = "1px solid #ccc";
-        autoBox.style.borderRadius = "4px";
-        autoBox.style.boxShadow = "0 2px 4px rgba(0,0,0,0.1)";
-        autoBox.style.zIndex = "1000";
-        autoBox.style.display = "block";
-      } catch (err) {
-        console.error("도시 자동완성 실패:", err);
-      }
-    }, 300);
-  });
+  console.log("🔍 검색 요청:", payload);
 
-  autoBox.addEventListener("click", (e) => {
-    const item = e.target.closest(".auto-item");
-    if (!item) return;
-    const picked = item.dataset.city;
-    cityInput.value = normalizeKrCity(picked);
+  // ✅ 쿼리스트링 생성
+  const q = new URLSearchParams({
+    cityId,
+    cityType,
+    city: cityName,
+    checkIn,
+    checkOut,
+  }).toString();
+
+  // ✅ 현재 페이지 경로 따라 이동 or 검색 실행
+  const isSearchPage = window.location.pathname.includes("/search.html");
+  const base =
+    window.location.pathname.includes("/city") ||
+    window.location.pathname.includes("/city-hotel")
+      ? ".."
+      : ".";
+
+  if (isSearchPage) {
+    // 같은 페이지면 콜백으로 검색 실행
+    onSearch?.(payload);
+  } else {
+    // 다른 페이지면 이동
+    location.href = `${base}/search.html?${q}`;
+  }
+});
+
+
+  // ===========================
+// 🔠 자동완성
+// ===========================
+let autoBox = document.getElementById("autocompletelist");
+if (!autoBox) {
+  autoBox = document.createElement("div");
+  autoBox.id = "autocompletelist";
+  autoBox.className = "autocomplete-box";
+  const parent = cityInput.parentElement;
+  if (parent) {
+    parent.style.position = "relative";
+    parent.appendChild(autoBox);
+  } else {
+    document.body.appendChild(autoBox);
+  }
+}
+
+let timer;
+cityInput.addEventListener("input", () => {
+
+  const kw = cityInput.value.trim();
+
+  if (kw !== (cityInput.dataset.name || "")) {
+    cityInput.dataset.id = "";
+    cityInput.dataset.type = "";
+  }
+
+  if (kw.length < 2) {
     autoBox.style.display = "none";
-    cityInput.focus();
-  });
+    return;
+  }
+  clearTimeout(timer);
+  timer = setTimeout(async () => {
+    try {
+      const normalized = kw.toLowerCase().replace(/[^a-z0-9가-힣]/g, "");
+      const res = await fetch(`${API_BASE_URL}/api/cities/search?query=${encodeURIComponent(normalized)}`);
+      const list = await res.json();
+      if (!list?.length) {
+        autoBox.style.display = "none";
+        return;
+      }
 
+      // ✅ 국가코드 완전 제거, 도시명만 출력
+      autoBox.innerHTML = list
+        .map((c) => {
+          const name = c.cityNameKr || c.cityName;
+          return `
+            <div class="auto-item"
+              data-id="${c.id || ''}"
+              data-type="${c.type || ''}"
+              data-name="${name}">
+              ${name}
+            </div>`;
+        })
+        .join("");
+
+      Object.assign(autoBox.style, {
+        position: "absolute",
+        left: "0",
+        top: `${cityInput.offsetHeight + 4}px`,
+        width: "100%",
+        background: "#fff",
+        border: "1px solid #ccc",
+        borderRadius: "4px",
+        boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+        zIndex: "1000",
+        display: "block",
+      });
+    } catch (err) {
+      console.error("도시 자동완성 실패:", err);
+    }
+  }, 300);
+});
+
+autoBox.addEventListener("click", (e) => {
+  const item = e.target.closest(".auto-item");
+  if (!item) return;
+
+  const picked = item.dataset.name || item.textContent.trim();
+  cityInput.value = normalizeKrCity(picked);
+
+  // ✅ 반드시 dataset 저장
+  cityInput.dataset.id = item.dataset.id || "";
+  cityInput.dataset.type = item.dataset.type || "";
+
+  console.log("🟢 선택된 cityId=", cityInput.dataset.id, "type=", cityInput.dataset.type);
+
+  autoBox.style.display = "none";
+  cityInput.focus();
+});
   // ===========================
   // 🏙️ 인기 여행지 버튼
   // ===========================
@@ -379,7 +372,7 @@ export function initSearchBar(onSearch) {
 /** ===========================
  *  📦 호텔 목록 렌더링
  *  =========================== */
-export async function fetchAndRenderHotels(city, checkIn, checkOut, roomsParam) {
+export async function fetchAndRenderHotels(city, checkIn, checkOut, roomsParam, cityId = "", cityType = "city") {
   const target = document.getElementById("hotelList") || document.getElementById("hotel-list");
   if (!target) return false;
 
@@ -387,8 +380,10 @@ export async function fetchAndRenderHotels(city, checkIn, checkOut, roomsParam) 
     (c) => c.display === city || c.name.toLowerCase() === city.toLowerCase()
   );
   const slug = match ? match.name : city;
-  const BASE_PATH = window.location.pathname.includes("/city/") || window.location.pathname.includes("/city-hotel") ? ".." : ".";
-  
+  const BASE_PATH = window.location.pathname.includes("/city/") || window.location.pathname.includes("/city-hotel")
+    ? ".."
+    : ".";
+
   let hotels = [];
   let useMock = true;
 
@@ -396,7 +391,10 @@ export async function fetchAndRenderHotels(city, checkIn, checkOut, roomsParam) 
     const storedRooms =
       roomsParam || JSON.parse(sessionStorage.getItem("searchRooms") || '[{"adults":2,"children":0,"childAges":[]}]');
 
-    const payload = { city: slug, checkIn, checkOut, rooms: storedRooms };
+    // ✅ cityId, cityType 포함
+    const payload = { cityId, cityType, city: slug, checkIn, checkOut, rooms: storedRooms };
+    console.log("📦 API 요청 payload:", payload);
+
     const apiRes = await fetch(`${API_BASE_URL}/api/hotels/search`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

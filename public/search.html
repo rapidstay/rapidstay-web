@@ -82,6 +82,9 @@
   const city = params.get("city");
   const checkIn = params.get("checkIn");
   const checkOut = params.get("checkOut");
+  console.log("params=",params.get("cityId"));
+  const cityId = params.get("cityId") || "";
+  const cityType = params.get("cityType") || "city";
   const mapWrapper = document.getElementById("mapWrapper");
   const storedRooms = JSON.parse(sessionStorage.getItem("searchRooms") || '[{"adults":2,"children":0,"childAges":[]}]');
 
@@ -92,13 +95,13 @@
   initSearchBar(async ({ city, checkIn, checkOut, rooms }) => {
     const selectedRooms = rooms?.length ? rooms : storedRooms;
     sessionStorage.setItem("searchRooms", JSON.stringify(selectedRooms));
-    const hasResult = await fetchAndRenderHotels(city, checkIn, checkOut, selectedRooms);
+const hasResult = await fetchAndRenderHotels(city, checkIn, checkOut, storedRooms, cityId, cityType);
     mapWrapper.style.display = hasResult ? "block" : "none";
   });
 
   // ✅ 페이지 진입 시 최초 렌더링
   if (city) {
-    const hasResult = await fetchAndRenderHotels(city, checkIn, checkOut, storedRooms);
+const hasResult = await fetchAndRenderHotels(city, checkIn, checkOut, storedRooms, cityId, cityType);
     mapWrapper.style.display = hasResult ? "block" : "none";
   } else {
     document.getElementById("hotel-list").innerHTML =
