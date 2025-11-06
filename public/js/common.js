@@ -95,52 +95,52 @@ export function initSearchBar(onSearch) {
   });
 
   /* ======================================
-     ✅ 객실 선택 드롭다운 (rooms)
-     ====================================== */
-  const roomBtn = document.getElementById("roomBtn");
-  const dropdown = document.getElementById("roomDropdown");
-  const roomSelector = document.querySelector(".room-selector");
-  let rooms = [];
+   ✅ 객실 선택 드롭다운 (rooms)
+   ====================================== */
+const roomBtn = document.getElementById("roomBtn");
+const dropdown = document.getElementById("roomDropdown");
+const roomSelector = document.querySelector(".room-selector");
+let rooms = [];
 
-  try {
-    const saved = JSON.parse(sessionStorage.getItem("searchRooms") || "[]");
-    rooms = Array.isArray(saved) && saved.length > 0 ? saved : [{ adults: 2, children: 0, childAges: [] }];
-  } catch {
-    rooms = [{ adults: 2, children: 0, childAges: [] }];
-  }
+try {
+  const saved = JSON.parse(sessionStorage.getItem("searchRooms") || "[]");
+  rooms = Array.isArray(saved) && saved.length > 0 ? saved : [{ adults: 2, children: 0, childAges: [] }];
+} catch {
+  rooms = [{ adults: 2, children: 0, childAges: [] }];
+}
 
-  const updateRoomBtnText = () => {
-    const totalAdults = rooms.reduce((a, r) => a + r.adults, 0);
-    const totalChildren = rooms.reduce((a, r) => a + r.children, 0);
-    roomBtn.textContent = `객실 ${rooms.length}개, 성인 ${totalAdults}명${
-      totalChildren ? `, 아동 ${totalChildren}명` : ""
-    }`;
+const updateRoomBtnText = () => {
+  const totalAdults = rooms.reduce((a, r) => a + r.adults, 0);
+  const totalChildren = rooms.reduce((a, r) => a + r.children, 0);
+  roomBtn.textContent = `객실 ${rooms.length}개, 성인 ${totalAdults}명${totalChildren ? `, 아동 ${totalChildren}명` : ""}`;
+};
+if (roomBtn) updateRoomBtnText();
+
+if (roomBtn && dropdown && roomSelector) {
+  let isOpen = false;
+  const openDropdown = () => (dropdown.style.display = "block", isOpen = true);
+  const closeDropdown = () => (dropdown.style.display = "none", isOpen = false);
+
+  window.__rsRoomsOutsideHandler && window.removeEventListener("pointerdown", window.__rsRoomsOutsideHandler, true);
+  window.__rsRoomsOutsideHandler = (e) => {
+    if (!e.target.closest(".room-selector") && isOpen) closeDropdown();
   };
-  if (roomBtn) updateRoomBtnText();
+  window.addEventListener("pointerdown", window.__rsRoomsOutsideHandler, true);
 
-  if (roomBtn && dropdown && roomSelector) {
-    let isOpen = false;
-    const openDropdown = () => (dropdown.style.display = "block", isOpen = true);
-    const closeDropdown = () => (dropdown.style.display = "none", isOpen = false);
+  roomBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    isOpen ? closeDropdown() : openDropdown();
+  });
 
-    window.__rsRoomsOutsideHandler && window.removeEventListener("pointerdown", window.__rsRoomsOutsideHandler, true);
-    window.__rsRoomsOutsideHandler = (e) => {
-      if (!e.target.closest(".room-selector") && isOpen) closeDropdown();
-    };
-    window.addEventListener("pointerdown", window.__rsRoomsOutsideHandler, true);
+  // ✅ 객실 아이템 렌더 함수 (footer 생성 X)
+  const renderRooms = () => {
+    const roomList = document.getElementById("roomList");
+    const wasOpen = isOpen;
 
-    roomBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      isOpen ? closeDropdown() : openDropdown();
-    });
-
-    const renderRooms = () => {
-      const roomList = document.getElementById("roomList");
-      const wasOpen = isOpen;
-      roomList.innerHTML = rooms
-        .map(
-          (r, i) => `
+    roomList.innerHTML = rooms
+      .map(
+        (r, i) => `
         <div class="room-item" data-index="${i}">
           <div class="room-header">객실 ${i + 1}</div>
           <div class="room-row">
@@ -172,13 +172,90 @@ export function initSearchBar(onSearch) {
             </div>
           </div>
         </div>`
-        )
-        .join("");
-      wasOpen && openDropdown();
-    };
-    renderRooms();
-  }
+      )
+      .join("");
 
+    wasOpen && openDropdown();
+  };
+
+  renderRooms();
+
+  // ✅ 이벤트 위임 (footer 포함)
+  dropdown.addEventListener("click", (e) => {
+    const btn = e.target.closest("button");
+    if (!btn) return;
+
+    const item = e.target.closest(".room-item");
+    const idx = item ? Number(item.dataset.index) : -1;
+
+    // ➕➖ 성인/아동
+    if (btn.classList.contains("plus") || btn.classList.contains("minus")) {
+      if (idx < 0) return;
+
+      const isAdult = btn.classList.contains("adult");
+      const isPlus = btn.classList.contains("plus");
+      const r = rooms[idx];
+
+      if (isAdult) {
+        r.adults = Math.max(1, r.adults + (isPlus ? 1 : -1));
+      } else {
+        const next = r.children + (isPlus ? 1 : -1);
+        r.children = Math.max(0, next);
+
+        // 아동 수 증감 시 childAges 동기화
+        if (r.children > r.childAges.length) {
+          while (r.childAges.length < r.children) r.childAges.push(0);
+        } else if (r.children < r.childAges.length) {
+          r.childAges = r.childAges.slice(0, r.children);
+        }
+      }
+
+      renderRooms();
+      updateRoomBtnText();
+      return;
+    }
+
+    // ➕ 객실 추가
+    if (btn.id === "addRoom") {
+      rooms.push({ adults: 2, children: 0, childAges: [] });
+      renderRooms();
+      updateRoomBtnText();
+      return;
+    }
+
+    // ➖ 객실 삭제
+    if (btn.id === "removeRoom") {
+      if (rooms.length > 1) {
+        rooms.pop();
+        renderRooms();
+        updateRoomBtnText();
+      }
+      return;
+    }
+
+    // ✅ 적용 버튼
+    if (btn.id === "applyRooms") {
+      sessionStorage.setItem("searchRooms", JSON.stringify(rooms));
+      closeDropdown();
+      updateRoomBtnText();
+      return;
+    }
+  });
+
+  dropdown.addEventListener("change", (e) => {
+    const sel = e.target.closest("select");
+    if (!sel) return;
+    const roomIdx = Number(sel.dataset.room);
+    const childIdx = Number(sel.dataset.child);
+    const age = Number(sel.value || 0);
+    if (!Number.isNaN(roomIdx) && !Number.isNaN(childIdx) && rooms[roomIdx]) {
+      rooms[roomIdx].childAges[childIdx] = age;
+    }
+  });
+}
+
+
+  
 /* ======================================
    ✅ 검색 버튼 클릭 (cityId 안전 전송)
    ====================================== */

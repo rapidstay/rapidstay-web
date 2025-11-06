@@ -22,37 +22,23 @@
     <!-- ✅ 객실/인원 -->
     <div class="room-selector">
       <button type="button" id="roomBtn">객실 1개, 성인 2명</button>
+
       <div class="room-dropdown" id="roomDropdown" style="display:none;">
+        <!-- 🔹 객실 리스트 -->
         <div id="roomList">
-          <div class="room-item" data-index="0">
-            <div class="room-header">객실 1</div>
-
-            <div class="room-row">
-              <span>성인</span>
-              <div class="counter">
-                <button type="button" class="minus adult">−</button>
-                <span class="count adult-count">2</span>
-                <button type="button" class="plus adult">＋</button>
-              </div>
-            </div>
-
-            <div class="room-row">
-              <span>아동</span>
-              <div class="counter">
-                <button type="button" class="minus child">−</button>
-                <span class="count child-count">0</span>
-                <button type="button" class="plus child">＋</button>
-              </div>
-              <div class="child-ages"></div>
-            </div>
-          </div>
+          <!-- JS에서 자동 렌더링 -->
         </div>
 
+        <!-- 🔹 객실 컨트롤 영역 -->
         <div class="room-controls">
           <button type="button" id="addRoom">＋ 객실 추가</button>
           <button type="button" id="removeRoom">－ 객실 삭제</button>
         </div>
-        <button type="button" id="applyRooms">적용</button>
+
+        <!-- 🔹 적용 버튼 -->
+        <div class="room-apply-wrap">
+          <button type="button" id="applyRooms">적용</button>
+        </div>
       </div>
     </div>
 
